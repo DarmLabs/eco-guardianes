@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1766,6 +1766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 8205473930186847099, guid: 5f767a11c7cf23b44aed8db0be6cf286,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f767a11c7cf23b44aed8db0be6cf286, type: 3}
 --- !u!4 &1099800685 stripped
@@ -2090,6 +2095,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909071813490200322, guid: 25fde94c24e6463479da5390ade94260,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25fde94c24e6463479da5390ade94260, type: 3}
@@ -2639,7 +2649,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299283563}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1299283567
 Transform:
   m_ObjectHideFlags: 0
