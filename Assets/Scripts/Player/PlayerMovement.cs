@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     Camera mainCamera;
     bool wallAhed;
     NavMeshAgent navMesh;
+    [SerializeField] ActionPanelManager actionPanel;
+    [HideInInspector] public bool isMoving;
     void Awake()
     {
         mainCamera = Camera.main;
@@ -30,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             ClearNavMeshPath();
+            actionPanel.DisableActionPanel();
             if (!wallAhed)
             {
                 Movement();
@@ -68,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TravelToDestination(Transform target)
     {
+        isMoving = true;
         navMesh.enabled = true;
         navMesh.SetDestination(target.position);
     }
@@ -77,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         {
             navMesh.ResetPath();
             navMesh.enabled = false;
+            isMoving=false;
         }
     }
 }

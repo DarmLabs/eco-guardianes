@@ -6,6 +6,7 @@ public class ActionPanelManager : MonoBehaviour
 {
     public Button[] actionButtons;
     PlayerMovement playerMovement;
+    [HideInInspector] public bool isOpened;
     void Awake()
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
@@ -20,7 +21,7 @@ public class ActionPanelManager : MonoBehaviour
             {
                 actionButton.onClick.AddListener(delegate { playerMovement.TravelToDestination(target); });
             }
-            actionButton.onClick.AddListener(delegate { target.gameObject.GetComponent<InteractableObject>().panelOpened = false; });
+            actionButton.onClick.AddListener(DisableActionPanel);
         }
     }
     public void ClampToWindow(Vector3 MyMouse, RectTransform panelRectTransform, RectTransform parentRectTransform)
@@ -32,5 +33,9 @@ public class ActionPanelManager : MonoBehaviour
         pos.x = Mathf.Clamp(panelRectTransform.localPosition.x, minPosition.x, maxPosition.x);
         pos.y = Mathf.Clamp(panelRectTransform.localPosition.y, minPosition.y, maxPosition.y);
         panelRectTransform.localPosition = pos;
+    }
+    public void DisableActionPanel(){
+        isOpened = false;
+        gameObject.SetActive(false);
     }
 }

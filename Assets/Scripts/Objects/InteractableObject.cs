@@ -10,7 +10,6 @@ public class InteractableObject : MonoBehaviour
     PlayerMovement playerMovement;
     Outline outline;
     [SerializeField] ActionPanelManager actionPanel;
-    [HideInInspector] public bool panelOpened;
     void Awake()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
@@ -45,7 +44,7 @@ public class InteractableObject : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        if (!panelOpened)
+        if (!actionPanel.isOpened)
         {
             Glow(true);
         }
@@ -60,13 +59,21 @@ public class InteractableObject : MonoBehaviour
     }
     public void EnableActionPanel(bool closeMode)
     {
-        if (!panelOpened)
+        if(playerMovement.isMoving)
+        {
+            return;
+        }
+        if (!actionPanel.isOpened)
         {
             actionPanel.ClampToWindow(Input.mousePosition, actionPanel.GetComponent<RectTransform>(), actionPanel.gameObject.transform.parent.gameObject.GetComponent<RectTransform>());
             actionPanel.gameObject.SetActive(true);
             actionPanel.SetListeners(transform, closeMode);
             Glow(false);
-            panelOpened = true;
+            actionPanel.isOpened = true;
         }
+    }
+    public void DisableActionPanel(){
+        actionPanel.isOpened = false;
+        actionPanel.gameObject.SetActive(false);
     }
 }
