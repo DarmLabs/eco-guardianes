@@ -32,9 +32,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             ClearNavMeshPath();
-            actionPanel.targetObject.GetComponent<InteractableObject>().beingCollected = false;
-            actionPanel.targetObject.GetComponent<InteractableObject>().canInteract = true;
-            actionPanel.DisableActionPanel();
+            if (actionPanel.targetObject != null)
+            {
+                actionPanel.targetObject.GetComponent<InteractableObject>().beingCollected = false;
+                actionPanel.targetObject.GetComponent<InteractableObject>().canInteract = true;
+                actionPanel.DisableInfoPanel();
+                actionPanel.DisableActionPanel();
+            }
             if (!wallAhed)
             {
                 Movement();
@@ -83,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         {
             navMesh.ResetPath();
             navMesh.enabled = false;
-            isMoving=false;
+            isMoving = false;
         }
     }
 }

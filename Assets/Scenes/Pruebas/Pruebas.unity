@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -844,7 +844,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeMode: 0
-  actionPanel: {fileID: 2108542900}
 --- !u!114 &82768976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,7 +2317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeView: {fileID: 145571053}
   viewCamera: {fileID: 1205333073}
-  playerCamera: {fileID: 810008710}
+  playerCamera: {fileID: 810008711}
   brain: {fileID: 832844003}
   offset: {x: 0, y: 3, z: -3}
 --- !u!1001 &687694176
@@ -2627,7 +2626,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 11
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 82768973}
   m_Follow: {fileID: 82768973}
@@ -4102,7 +4101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1205333074
 Transform:
   m_ObjectHideFlags: 0
@@ -6644,7 +6643,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012872498}
+      - m_Target: {fileID: 145571053}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
