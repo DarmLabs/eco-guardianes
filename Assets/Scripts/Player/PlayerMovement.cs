@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 forward, right, heading, rightMovement, upMovement;
     Rigidbody rb;
     Camera mainCamera;
-    bool wallAhed;
+    [HideInInspector] public bool wallAhed;
     NavMeshAgent navMesh;
     [SerializeField] ActionPanelManager actionPanel;
     [HideInInspector] public bool isMoving;
@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             ClearNavMeshPath();
+            actionPanel.targetObject.GetComponent<InteractableObject>().beingCollected = false;
+            actionPanel.targetObject.GetComponent<InteractableObject>().canInteract = true;
             actionPanel.DisableActionPanel();
             if (!wallAhed)
             {

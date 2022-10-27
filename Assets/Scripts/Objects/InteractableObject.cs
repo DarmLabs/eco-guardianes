@@ -10,6 +10,8 @@ public class InteractableObject : MonoBehaviour
     PlayerMovement playerMovement;
     Outline outline;
     [SerializeField] ActionPanelManager actionPanel;
+    [HideInInspector] public bool beingCollected;
+    [HideInInspector] public bool canInteract = true;
     void Awake()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
@@ -18,14 +20,17 @@ public class InteractableObject : MonoBehaviour
 
     public void CloseMode()
     {
-        if (isClose)
+        if (isClose && canInteract)
         {
             EnableActionPanel(true);
         }
     }
     public void SearchMode()
     {
-        EnableActionPanel(false);
+        if(canInteract)
+        {
+            EnableActionPanel(false);
+        }
     }
     void OnTriggerEnter(Collider target)
     {
@@ -33,6 +38,11 @@ public class InteractableObject : MonoBehaviour
         {
             isClose = true;
             playerMovement.ClearNavMeshPath();
+            if(beingCollected)
+            {
+                gameObject.SetActive(false);
+                //Save object
+            }
         }
     }
     void OnTriggerExit(Collider target)
@@ -44,7 +54,7 @@ public class InteractableObject : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        if (!actionPanel.isOpened)
+        if (!actionPanel.isOpened && canInteract)
         {
             Glow(true);
         }
@@ -65,15 +75,10 @@ public class InteractableObject : MonoBehaviour
         }
         if (!actionPanel.isOpened)
         {
-            actionPanel.ClampToWindow(Input.mousePosition, actionPanel.GetComponent<RectTransform>(), actionPanel.gameObject.transform.parent.gameObject.GetComponent<RectTransform>());
             actionPanel.gameObject.SetActive(true);
             actionPanel.SetListeners(transform, closeMode);
             Glow(false);
             actionPanel.isOpened = true;
         }
-    }
-    public void DisableActionPanel(){
-        actionPanel.isOpened = false;
-        actionPanel.gameObject.SetActive(false);
     }
 }
