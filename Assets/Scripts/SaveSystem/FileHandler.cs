@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-
 public static class FileHandler
 {
-
     public static void SaveToJSON<T>(List<T> toSave, string filename)
     {
         string content = JsonHelper.ToJson<T>(toSave.ToArray());

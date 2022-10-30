@@ -6,15 +6,15 @@ public class InteractableObject : MonoBehaviour
 {
     BoxCollider closeColl;
     bool isClose;
-    [SerializeField] GameObject player;
-    PlayerMovement playerMovement;
+    [SerializeField] PlayerMovement playerMovement;
     Outline outline;
     [SerializeField] ActionPanelManager actionPanel;
-    [HideInInspector] public bool beingCollected;
-    [HideInInspector] public bool canInteract = true;
+    [HideInInspector] public bool beingCollected { get; private set; }
+    [HideInInspector] public bool canInteract { get; private set; }
     void Awake()
     {
-        playerMovement = player.GetComponent<PlayerMovement>();
+        canInteract = true;
+        playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         outline = GetComponent<Outline>();
     }
 
@@ -27,18 +27,18 @@ public class InteractableObject : MonoBehaviour
     }
     public void SearchMode()
     {
-        if(canInteract)
+        if (canInteract)
         {
             EnableActionPanel(false);
         }
     }
     void OnTriggerEnter(Collider target)
     {
-        if (target.tag == "Player")
+        if (target.gameObject.TryGetComponent(out PlayerMovement pm))
         {
             isClose = true;
-            playerMovement.ClearNavMeshPath();
-            if(beingCollected)
+            pm.ClearNavMeshPath();
+            if (beingCollected)
             {
                 gameObject.SetActive(false);
                 //Save object
@@ -47,7 +47,7 @@ public class InteractableObject : MonoBehaviour
     }
     void OnTriggerExit(Collider target)
     {
-        if (target.tag == "Player")
+        if (target.gameObject.TryGetComponent(out PlayerMovement pm))
         {
             isClose = false;
         }
@@ -67,9 +67,9 @@ public class InteractableObject : MonoBehaviour
     {
         outline.enabled = state;
     }
-    public void EnableActionPanel(bool closeMode)
+    void EnableActionPanel(bool closeMode)
     {
-        if(playerMovement.isMoving)
+        if (playerMovement.isMoving)
         {
             return;
         }
@@ -78,7 +78,15 @@ public class InteractableObject : MonoBehaviour
             actionPanel.gameObject.SetActive(true);
             actionPanel.SetListeners(transform, closeMode);
             Glow(false);
-            actionPanel.isOpened = true;
         }
+    }
+    //Setters
+    public void BeingCollected(bool state)
+    {
+        beingCollected = state;
+    }
+    public void CanInteract(bool state)
+    {
+        canInteract = state;
     }
 }

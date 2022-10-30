@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransitionsManager : MonoBehaviour
+class TransitionsManager : MonoBehaviour
 {
-    PlayerMovement playerMovement;
+    [Header("Imported Scripts")]
+    [SerializeField] PlayerMovement playerMovement;
+    [Header("Needed GameObjects & Others")]
     [SerializeField] GameObject closeView;
     [SerializeField] GameObject viewCamera;
     [SerializeField] Cinemachine.CinemachineVirtualCamera playerCamera;
     [SerializeField] Cinemachine.CinemachineBrain brain;
+    [Header("Changeable Variables")]
     [SerializeField] Vector3 offset;
     bool viewTransition;
     bool playerTransitions;
     GameObject targetObject;
-    void Awake()
-    {
-        playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
-    }
     void FixedUpdate()
     {
         CheckTransitions();
@@ -42,7 +41,8 @@ public class TransitionsManager : MonoBehaviour
         playerCamera.m_Priority = 9;
         viewTransition = true;
     }
-    public void CloseViewAction()
+    [SerializeField]
+    void CloseViewAction()
     {
         playerCamera.m_Priority = 11;
         playerTransitions = true;
@@ -61,7 +61,7 @@ public class TransitionsManager : MonoBehaviour
         {
             playerMovement.enabled = true;
             playerTransitions = false;
-            targetObject.GetComponent<InteractableObject>().canInteract = true;
+            targetObject.GetComponent<InteractableObject>().CanInteract(true);
         }
     }
 }

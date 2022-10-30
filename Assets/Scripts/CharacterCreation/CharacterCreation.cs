@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-public class CharacterCreation : MonoBehaviour
+class CharacterCreation : MonoBehaviour
 {
     [SerializeField] GameObject[] headPrefabs;
     int headIndex = 0;
@@ -29,7 +29,8 @@ public class CharacterCreation : MonoBehaviour
         clothesSelector(0);
         toneSelector(0);
     }
-    public void headSelector(int value)
+    [SerializeField]
+    void headSelector(int value)
     {
         headPrefabs[headIndex].SetActive(false);
         headIndex += value;
@@ -43,7 +44,8 @@ public class CharacterCreation : MonoBehaviour
         }
         headPrefabs[headIndex].SetActive(true);
     }
-    public void clothesSelector(int value)
+    [SerializeField]
+    void clothesSelector(int value)
     {
         clothesPrefabs[clothesIndex].SetActive(false);
         clothesIndex += value;
@@ -57,7 +59,8 @@ public class CharacterCreation : MonoBehaviour
         }
         clothesPrefabs[clothesIndex].SetActive(true);
     }
-    public void toneSelector(int value)
+    [SerializeField]
+    void toneSelector(int value)
     {
         tonesIndex += value;
         if (tonesIndex > tones.Length - 1)
@@ -70,7 +73,8 @@ public class CharacterCreation : MonoBehaviour
         }
         playerMesh.material = tones[tonesIndex];
     }
-    public void CreateListWithIndexes()
+    [SerializeField]
+    void CreateListWithIndexes()
     {
         List<int> indexes = new List<int>();
         indexes.AddRange(new List<int>{

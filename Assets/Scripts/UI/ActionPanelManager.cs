@@ -5,19 +5,17 @@ using UnityEngine.UI;
 using TMPro;
 public class ActionPanelManager : MonoBehaviour
 {
-    [HideInInspector] public GameObject targetObject;
-    public Button[] actionButtons;
-    PlayerMovement playerMovement;
-    [HideInInspector] public bool isOpened;
+    [Header("Imported Scripts")]
+    [SerializeField] TransitionsManager transitionsManager;
+    [SerializeField] PlayerMovement playerMovement;
+    [Header("Needed GameObjects & Others")]
     [SerializeField] GameObject infoPanel;
-    TransitionsManager transitionsManager;
-    void Awake()
-    {
-        playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
-        transitionsManager = GameObject.FindObjectOfType<TransitionsManager>();
-    }
+    [SerializeField] Button[] actionButtons;
+    [HideInInspector] public GameObject targetObject { get; private set; }
+    [HideInInspector] public bool isOpened { get; private set; }
     public void SetListeners(Transform target, bool mode)
     {
+        isOpened = true;
         infoPanel.SetActive(false);
         targetObject = target.gameObject;
         foreach (var actionButton in actionButtons)
@@ -30,21 +28,26 @@ public class ActionPanelManager : MonoBehaviour
             actionButton.onClick.AddListener(DisableActionPanel);
         }
     }
-    public void View()
+    [SerializeField]
+    void View()
     {
-        targetObject.GetComponent<InteractableObject>().canInteract = false;
+        targetObject.GetComponent<InteractableObject>().CanInteract(false);
         transitionsManager.ViewAction(targetObject);
     }
-    public void Take(){
-        targetObject.GetComponent<InteractableObject>().canInteract = false;
-        targetObject.GetComponent<InteractableObject>().beingCollected = true;
+    [SerializeField]
+    void Take()
+    {
+        targetObject.GetComponent<InteractableObject>().CanInteract(false);
+        targetObject.GetComponent<InteractableObject>().BeingCollected(true);
     }
-    public void EnableInfo()
+    [SerializeField]
+    void EnableInfo()
     {
         infoPanel.SetActive(true);
         infoPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Esto es un texto de ejemplo, se abrio el objeto: " + targetObject.name;
     }
-    public void DisableActionPanel(){
+    public void DisableActionPanel()
+    {
         isOpened = false;
         gameObject.SetActive(false);
     }
