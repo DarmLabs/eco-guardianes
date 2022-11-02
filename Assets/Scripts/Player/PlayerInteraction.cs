@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField] bool closeMode;
+    //[SerializeField] bool closeMode;
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -33,13 +33,14 @@ public class PlayerInteraction : MonoBehaviour
     }
     void CallMode(InteractableObject interactableObject)
     {
-        if (closeMode)
+        interactableObject.SearchMode();
+        /*if (closeMode)
         {
             interactableObject.CloseMode();
         }
         else
         {
-            interactableObject.SearchMode();
-        }
+            
+        }*/
     }
 }

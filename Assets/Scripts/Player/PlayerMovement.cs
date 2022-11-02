@@ -79,9 +79,19 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TravelToDestination(Transform target)
     {
-        isMoving = true;
-        navMesh.enabled = true;
-        navMesh.SetDestination(target.position);
+
+        InteractableObject targetScript = target.GetComponent<InteractableObject>();
+        if (targetScript.isClose)//If it's close to the object, the player will take it
+        {
+            targetScript.InteractWithObject();
+        }
+        else //If not, it will travel to take it
+        {
+            isMoving = true;
+            navMesh.enabled = true;
+            navMesh.SetDestination(target.position);
+        }
+
     }
     public void ClearNavMeshPath()
     {

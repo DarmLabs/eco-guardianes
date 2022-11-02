@@ -13,15 +13,35 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] Button[] actionButtons;
     [HideInInspector] public GameObject targetObject { get; private set; }
     [HideInInspector] public bool isOpened { get; private set; }
-    public void SetListeners(Transform target, bool mode)
+    [SerializeField] GameObject activeActionButton;
+    public string SearchButtonName(string type)
+    {
+        string searchedName = "";
+        if (type == "InteractableObject")
+        {
+            searchedName = "Take";
+        }
+        if (type == "TrashCan")
+        {
+            searchedName = "Throw";
+        }
+        return searchedName;
+    }
+    public void SetListeners(Transform target, string type/*, bool mode*/)
     {
         isOpened = true;
         infoPanel.SetActive(false);
         targetObject = target.gameObject;
+        string targetName = SearchButtonName(type);
         foreach (var actionButton in actionButtons)
         {
+            if (actionButton.name == targetName)
+            {
+                actionButton.gameObject.SetActive(true);
+                activeActionButton = actionButton.gameObject;
+            }
             actionButton.onClick.RemoveAllListeners();
-            if (!mode && actionButton.name == "Take")
+            if (/*!mode && */(actionButton.name == "Take" || actionButton.name == "Throw") && actionButton.gameObject.activeSelf)
             {
                 actionButton.onClick.AddListener(delegate { playerMovement.TravelToDestination(target); });
             }
@@ -49,6 +69,7 @@ public class ActionPanelManager : MonoBehaviour
     public void DisableActionPanel()
     {
         isOpened = false;
+        activeActionButton.SetActive(false);
         gameObject.SetActive(false);
     }
     public void DisableInfoPanel()

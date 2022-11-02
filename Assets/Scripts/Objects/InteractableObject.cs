@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 public class InteractableObject : MonoBehaviour
 {
-    BoxCollider closeColl;
-    bool isClose;
+    [HideInInspector] public bool isClose; //If player is close to this object
     [SerializeField] PlayerMovement playerMovement;
     Outline outline;
     [SerializeField] ActionPanelManager actionPanel;
-    [HideInInspector] public bool beingCollected { get; private set; }
-    [HideInInspector] public bool canInteract { get; private set; }
+    bool beingCollected; //If this item is being collected
+    bool canInteract; //If the player can interact with this object
     void Awake()
     {
         canInteract = true;
@@ -20,19 +19,19 @@ public class InteractableObject : MonoBehaviour
 
     public void CloseMode()
     {
-        if (isClose && canInteract)
+        if (/*isClose &&*/ canInteract)
         {
-            EnableActionPanel(true);
+            EnableActionPanel(/*true*/);
         }
     }
     public void SearchMode()
     {
         if (canInteract)
         {
-            EnableActionPanel(false);
+            EnableActionPanel(/*false*/);
         }
     }
-    void OnTriggerEnter(Collider target)
+    public void OnChildTriggerEnter(Collider target)
     {
         if (target.gameObject.TryGetComponent(out PlayerMovement pm))
         {
@@ -40,12 +39,11 @@ public class InteractableObject : MonoBehaviour
             pm.ClearNavMeshPath();
             if (beingCollected)
             {
-                gameObject.SetActive(false);
-                //Save object
+                InteractWithObject();
             }
         }
     }
-    void OnTriggerExit(Collider target)
+    public void OnChildTriggerExit(Collider target)
     {
         if (target.gameObject.TryGetComponent(out PlayerMovement pm))
         {
@@ -67,7 +65,7 @@ public class InteractableObject : MonoBehaviour
     {
         outline.enabled = state;
     }
-    void EnableActionPanel(bool closeMode)
+    void EnableActionPanel(/*bool closeMode*/)
     {
         if (playerMovement.isMoving)
         {
@@ -76,9 +74,14 @@ public class InteractableObject : MonoBehaviour
         if (!actionPanel.isOpened)
         {
             actionPanel.gameObject.SetActive(true);
-            actionPanel.SetListeners(transform, closeMode);
+            actionPanel.SetListeners(transform, gameObject.tag/*, closeMode*/);
             Glow(false);
         }
+    }
+    public virtual void InteractWithObject()
+    {
+        gameObject.SetActive(false);
+        //Save object
     }
     //Setters
     public void BeingCollected(bool state)
