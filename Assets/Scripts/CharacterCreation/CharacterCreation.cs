@@ -6,8 +6,12 @@ class CharacterCreation : MonoBehaviour
 {
     [SerializeField] GameObject[] headPrefabs;
     int headIndex = 0;
-    [SerializeField] GameObject[] clothesPrefabs;
-    int clothesIndex = 0;
+    [SerializeField] GameObject[] shirtPrefabs;
+    int shirtIndex = 0;
+    [SerializeField] GameObject[] pantsPrefabs;
+    int pantsIndex = 0;
+    [SerializeField] GameObject[] shoesPrefabs;
+    int shoesIndex = 0;
     [SerializeField] Material[] tones;
     int tonesIndex = 0;
     [SerializeField] MeshRenderer playerMesh;
@@ -23,55 +27,93 @@ class CharacterCreation : MonoBehaviour
         List<int> initialIndexes = new List<int>();
         initialIndexes = FileHandler.ReadListFromJSON<int>("playerIndexes");
         headIndex = initialIndexes[0];
-        clothesIndex = initialIndexes[1];
-        tonesIndex = initialIndexes[2];
-        headSelector(0);
-        clothesSelector(0);
+        shirtIndex = initialIndexes[1];
+        pantsIndex = initialIndexes[2];
+        shoesIndex = initialIndexes[3];
+        tonesIndex = initialIndexes[4];
+        InitialCharacterLoad();
         toneSelector(0);
     }
-    [SerializeField]
-    void headSelector(int value)
+    void InitialCharacterLoad()
     {
-        headPrefabs[headIndex].SetActive(false);
-        headIndex += value;
-        if (headIndex > headPrefabs.Length - 1)
+        string[] ids = { "head", "shirt", "pants", "shoes", "tones" };
+        for (int i = 0; i < ids.Length; i++)
         {
-            headIndex = 0;
+            if (ids[i] == "tones")
+            {
+                toneSelector(tonesIndex);
+                break;
+            }
+            Selector(0, ids[i]);
         }
-        if (headIndex == -1)
-        {
-            headIndex = headPrefabs.Length - 1;
-        }
-        headPrefabs[headIndex].SetActive(true);
-    }
-    [SerializeField]
-    void clothesSelector(int value)
-    {
-        clothesPrefabs[clothesIndex].SetActive(false);
-        clothesIndex += value;
-        if (clothesIndex > clothesPrefabs.Length - 1)
-        {
-            clothesIndex = 0;
-        }
-        if (clothesIndex == -1)
-        {
-            clothesIndex = clothesPrefabs.Length - 1;
-        }
-        clothesPrefabs[clothesIndex].SetActive(true);
     }
     [SerializeField]
     void toneSelector(int value)
     {
-        tonesIndex += value;
-        if (tonesIndex > tones.Length - 1)
+        playerMesh.material = tones[value];
+    }
+    void Selector(int value, string id)
+    {
+        int index = IndexIdentifier(id);
+        GameObject[] prefabs = PrefabIdentifier(id);
+        index += value;
+        if (index > prefabs.Length - 1)
         {
-            tonesIndex = 0;
+            AssignResult(0, id);
         }
-        if (tonesIndex == -1)
+        if (index == -1)
         {
-            tonesIndex = tones.Length - 1;
+            AssignResult(prefabs.Length - 1, id);
         }
-        playerMesh.material = tones[tonesIndex];
+        prefabs[index].SetActive(true);
+    }
+    GameObject[] PrefabIdentifier(string id)
+    {
+        switch (id)
+        {
+            case "head":
+                return headPrefabs;
+            case "shirt":
+                return shirtPrefabs;
+            case "pants":
+                return pantsPrefabs;
+            case "shoes":
+                return shoesPrefabs;
+        }
+        return null;
+    }
+    int IndexIdentifier(string id)
+    {
+        switch (id)
+        {
+            case "head":
+                return headIndex;
+            case "shirt":
+                return shirtIndex;
+            case "pants":
+                return pantsIndex;
+            case "shoes":
+                return shoesIndex;
+        }
+        return 0;
+    }
+    void AssignResult(int result, string id)
+    {
+        switch (id)
+        {
+            case "head":
+                headIndex = result;
+                break;
+            case "shirt":
+                shirtIndex = result;
+                break;
+            case "pants":
+                pantsIndex = result;
+                break;
+            case "shoes":
+                shoesIndex = result;
+                break;
+        }
     }
     [SerializeField]
     void CreateListWithIndexes()
@@ -79,7 +121,9 @@ class CharacterCreation : MonoBehaviour
         List<int> indexes = new List<int>();
         indexes.AddRange(new List<int>{
             headIndex,
-            clothesIndex,
+            shirtIndex,
+            pantsIndex,
+            shoesIndex,
             tonesIndex,
         });
         FileHandler.SaveToJSON(indexes, "playerIndexes");
