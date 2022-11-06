@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class ButtonHelper : MonoBehaviour
 {
+    [SerializeField] int value;
+    [SerializeField] string id;
     void Start()
     {
         Button button = GetComponent<Button>();
-        button.onClick.AddListener();
+        button.onClick.AddListener(delegate{CharacterCreation.SharedInstance.Selector(value, id);});
     }
 }

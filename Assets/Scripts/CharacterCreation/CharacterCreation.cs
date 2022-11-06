@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 class CharacterCreation : MonoBehaviour
 {
+    public static CharacterCreation SharedInstance;
     [SerializeField] GameObject[] headPrefabs;
     int headIndex = 0;
     [SerializeField] GameObject[] shirtPrefabs;
@@ -14,7 +15,11 @@ class CharacterCreation : MonoBehaviour
     int shoesIndex = 0;
     [SerializeField] Material[] tones;
     int tonesIndex = 0;
-    [SerializeField] MeshRenderer playerMesh;
+    [SerializeField] SkinnedMeshRenderer[] bodyMesh;
+    void Awake()
+    {
+        SharedInstance = this;
+    }
     void Start()
     {
         if (File.Exists(Application.persistentDataPath + "/playerIndexes"))
@@ -50,22 +55,39 @@ class CharacterCreation : MonoBehaviour
     [SerializeField]
     void toneSelector(int value)
     {
-        playerMesh.material = tones[value];
+        for (int i = 0; i < bodyMesh.Length; i++)
+        {
+            bodyMesh[i].material = tones[tonesIndex];
+        }
     }
-    void Selector(int value, string id)
+    public void Selector(int value, string id)
     {
         int index = IndexIdentifier(id);
         GameObject[] prefabs = PrefabIdentifier(id);
         index += value;
         if (index > prefabs.Length - 1)
         {
+            index = 0;
             AssignResult(0, id);
         }
-        if (index == -1)
+        else if (index == -1)
         {
+            index = prefabs.Length - 1;
             AssignResult(prefabs.Length - 1, id);
         }
+        else
+        {
+            AssignResult(index, id);
+        }
+        SetAllOff(prefabs);
         prefabs[index].SetActive(true);
+    }
+    void SetAllOff(GameObject[] prefabs)
+    {
+        foreach (var item in prefabs)
+        {
+            item.SetActive(false);
+        }
     }
     GameObject[] PrefabIdentifier(string id)
     {
