@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-class CharacterCreation : MonoBehaviour
+public class CharacterCreation : MonoBehaviour
 {
     public static CharacterCreation SharedInstance;
     [SerializeField] GameObject[] headPrefabs;
@@ -37,7 +37,7 @@ class CharacterCreation : MonoBehaviour
         shoesIndex = initialIndexes[3];
         tonesIndex = initialIndexes[4];
         InitialCharacterLoad();
-        toneSelector(0);
+        toneSelector(tonesIndex);
     }
     void InitialCharacterLoad()
     {
@@ -52,12 +52,22 @@ class CharacterCreation : MonoBehaviour
             Selector(0, ids[i]);
         }
     }
-    [SerializeField]
-    void toneSelector(int value)
+    public void toneSelector(int value)
     {
         for (int i = 0; i < bodyMesh.Length; i++)
         {
-            bodyMesh[i].material = tones[tonesIndex];
+            if (bodyMesh[i].materials.Length == 1)
+            {
+                bodyMesh[i].material = tones[value];
+            }
+            else
+            {
+                Material[] mats;
+                mats = bodyMesh[i].materials;
+                mats[1] = tones[value];
+                bodyMesh[i].materials = mats;
+            }
+
         }
     }
     public void Selector(int value, string id)
