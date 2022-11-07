@@ -13,6 +13,7 @@ public class CharacterCreation : MonoBehaviour
     [SerializeField] GameObject[] shoesPrefabs;
     [SerializeField] Material[] tones;
     [SerializeField] SkinnedMeshRenderer[] bodyMesh;
+    [SerializeField] Material[] partsMaterials;
     [SerializeField] TMP_InputField inputName;
     void Awake()
     {
@@ -27,7 +28,7 @@ public class CharacterCreation : MonoBehaviour
         }
         else
         {
-            characterData = new CharacterData(0, 0, 0, 0, 0, "");
+            characterData = new CharacterData(0, 0, 0, 0, 0, "", new string[partsMaterials.Length]);
         }
     }
     void InitialLoad()
@@ -39,6 +40,12 @@ public class CharacterCreation : MonoBehaviour
     void InitialCharacterLoad()
     {
         string[] ids = { "head", "shirt", "pants", "shoes", "tones" };
+        for (int i = 0; i < partsMaterials.Length; i++)
+        {
+            Color colorFromSave;
+            ColorUtility.TryParseHtmlString("#" + characterData.hexPartsColor[i], out colorFromSave);
+            partsMaterials[i].color = colorFromSave;
+        }
         for (int i = 0; i < ids.Length; i++)
         {
             if (ids[i] == "tones")
@@ -53,16 +60,16 @@ public class CharacterCreation : MonoBehaviour
     {
         for (int i = 0; i < bodyMesh.Length; i++)
         {
-            if (bodyMesh[i].materials.Length != 2)
+            if (bodyMesh[i].sharedMaterials.Length != 2)
             {
-                bodyMesh[i].material = tones[value];
+                bodyMesh[i].sharedMaterial = tones[value];
             }
             else
             {
                 Material[] mats;
-                mats = bodyMesh[i].materials;
+                mats = bodyMesh[i].sharedMaterials;
                 mats[1] = tones[value];
-                bodyMesh[i].materials = mats;
+                bodyMesh[i].sharedMaterials = mats;
             }
 
         }
@@ -149,8 +156,16 @@ public class CharacterCreation : MonoBehaviour
         }
         return 0;
     }
+    void RetriveMaterialHex()
+    {
+        for (int i = 0; i < partsMaterials.Length; i++)
+        {
+            characterData.hexPartsColor[i] = ColorUtility.ToHtmlStringRGB(partsMaterials[i].color);
+        }
+    }
     public void SaveCharacterData()
     {
+        RetriveMaterialHex();
         FileHandler.SaveToJSON(characterData, "characterPropieties");
     }
 }

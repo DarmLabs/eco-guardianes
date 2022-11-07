@@ -8,7 +8,8 @@ public class CharacterData
     public int shirtIndex;
     public int headIndex;
     public string characterName;
-    public CharacterData(int tonesIndex, int shoesIndex, int pantsIndex, int shirtIndex, int headIndex, string characterName)
+    public string[] hexPartsColor;
+    public CharacterData(int tonesIndex, int shoesIndex, int pantsIndex, int shirtIndex, int headIndex, string characterName, string[] hexPartsColor)
     {
         this.tonesIndex = tonesIndex;
         this.shoesIndex = shoesIndex;
@@ -16,5 +17,6 @@ public class CharacterData
         this.shirtIndex = shirtIndex;
         this.headIndex = headIndex;
         this.characterName = characterName;
+        this.hexPartsColor = hexPartsColor;
     }
 }

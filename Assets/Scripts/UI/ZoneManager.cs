@@ -16,7 +16,6 @@ public class ZoneManager : MonoBehaviour
     {
         if (selectedMaterial != null)
         {
-            Debug.Log(selectedMaterial);
             selectedMaterial.color = color;
         }
         else

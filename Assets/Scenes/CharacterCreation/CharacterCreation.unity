@@ -662,24 +662,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175718342}
   m_CullTransparentMesh: 1
---- !u!137 &243641495 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -1047710211149155032, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
-    type: 3}
-  m_PrefabInstance: {fileID: 853247914}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &243641496 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -444409339241536486, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
-    type: 3}
-  m_PrefabInstance: {fileID: 853247914}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &243641497 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -4202266029484578436, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
-    type: 3}
-  m_PrefabInstance: {fileID: 853247914}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &243641498 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 500616780596210478, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
@@ -2006,12 +1988,13 @@ MonoBehaviour:
   - {fileID: 853247919}
   - {fileID: 853247918}
   - {fileID: 853247917}
-  - {fileID: 853247916}
   - {fileID: 243641499}
   - {fileID: 243641498}
-  - {fileID: 243641497}
-  - {fileID: 243641496}
-  - {fileID: 243641495}
+  partsMaterials:
+  - {fileID: 2100000, guid: 952eb8487ae19c44ea14dc77d524208d, type: 2}
+  - {fileID: 2100000, guid: b9b75fd6c5dd23848a854419b4a63028, type: 2}
+  - {fileID: 2100000, guid: 8f7f8525ce0e477418f1ca1b09c34722, type: 2}
+  - {fileID: 2100000, guid: f178af4907fc3fd40b9c106a228f987d, type: 2}
   inputName: {fileID: 175718344}
 --- !u!4 &759934866
 Transform:
@@ -2338,6 +2321,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f7f8525ce0e477418f1ca1b09c34722, type: 2}
+    - target: {fileID: -2920864478816749967, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a00f6046e008c6241923d9911453b86a, type: 2}
     - target: {fileID: -1316127942117337439, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2408,6 +2396,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 952eb8487ae19c44ea14dc77d524208d, type: 2}
+    - target: {fileID: 58677002751922341, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 952eb8487ae19c44ea14dc77d524208d, type: 2}
     - target: {fileID: 62251635363873388, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
         type: 3}
       propertyPath: m_IsActive
@@ -2418,6 +2411,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 359850054480558267, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb7557f26dbf56b48ba5538def31fa02, type: 2}
     - target: {fileID: 500616780596210478, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2551,12 +2549,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 853247914}
   m_PrefabAsset: {fileID: 0}
---- !u!137 &853247916 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -1269193219169685390, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
-    type: 3}
-  m_PrefabInstance: {fileID: 853247914}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &853247917 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7706110884207132511, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
@@ -2670,7 +2662,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 853247915}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1036947219
 GameObject:
