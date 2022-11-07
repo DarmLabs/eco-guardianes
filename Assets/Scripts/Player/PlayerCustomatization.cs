@@ -4,17 +4,25 @@ using UnityEngine;
 using System.IO;
 public class PlayerCustomatization : MonoBehaviour
 {
-    [SerializeField] GameObject headContainer;
-    [SerializeField] GameObject clothesContainer;
-    [SerializeField] MeshRenderer playerMesh;
+    [SerializeField] GameObject[] hairStyles;
+    [SerializeField] GameObject[] shirtStyles;
+    [SerializeField] GameObject[] pantStyles;
+    [SerializeField] GameObject[] shoeStyles;
+    [SerializeField] SkinnedMeshRenderer[] bodyMeshes;
     [SerializeField] Material[] tones;
     void Start()
     {
-        if(File.Exists(Application.persistentDataPath+"/playerIndexes")){
+        if (File.Exists(Application.persistentDataPath + "/playerIndexes"))
+        {
             List<int> indexes = FileHandler.ReadListFromJSON<int>("playerIndexes");
-            headContainer.transform.GetChild(indexes[0]).gameObject.SetActive(true);
-            clothesContainer.transform.GetChild(indexes[1]).gameObject.SetActive(true);
-            playerMesh.material = tones[indexes[2]];
+            hairStyles[indexes[0]].SetActive(true);
+            shirtStyles[indexes[1]].SetActive(true);
+            pantStyles[indexes[2]].SetActive(true);
+            shoeStyles[indexes[3]].SetActive(true);
+            for (int i = 0; i < bodyMeshes.Length; i++)
+            {
+                bodyMeshes[i].material = tones[indexes[4]];
+            }
         }
     }
 }
