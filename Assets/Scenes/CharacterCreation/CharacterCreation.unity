@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "EMILIANO\u200B"
+  m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1552e77109287e941936c2433bfdf2e7, type: 2}
   m_sharedMaterial: {fileID: 1655081608589819784, guid: 1552e77109287e941936c2433bfdf2e7,
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.8
+  m_fontSize: 72
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -563,7 +563,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 759934865}
+        m_TargetAssemblyTypeName: CharacterCreation, Assembly-CSharp
+        m_MethodName: InsertName
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -572,7 +584,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnDeselect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 759934865}
+        m_TargetAssemblyTypeName: CharacterCreation, Assembly-CSharp
+        m_MethodName: InsertName
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTextSelection:
     m_PersistentCalls:
       m_Calls: []
@@ -588,7 +612,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: EMILIANO
+  m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -638,6 +662,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175718342}
   m_CullTransparentMesh: 1
+--- !u!137 &243641495 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1047710211149155032, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 853247914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &243641496 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -444409339241536486, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 853247914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &243641497 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4202266029484578436, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 853247914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &243641498 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 500616780596210478, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 853247914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &243641499 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1316127942117337439, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 853247914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &336461501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,8 +1299,8 @@ MonoBehaviour:
   OnColorSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ColorSetter, Assembly-CSharp
+      - m_Target: {fileID: 839846343}
+        m_TargetAssemblyTypeName: ZoneManager, Assembly-CSharp
         m_MethodName: SetColorFromPicker
         m_Mode: 0
         m_Arguments:
@@ -1953,6 +2007,12 @@ MonoBehaviour:
   - {fileID: 853247918}
   - {fileID: 853247917}
   - {fileID: 853247916}
+  - {fileID: 243641499}
+  - {fileID: 243641498}
+  - {fileID: 243641497}
+  - {fileID: 243641496}
+  - {fileID: 243641495}
+  inputName: {fileID: 175718344}
 --- !u!4 &759934866
 Transform:
   m_ObjectHideFlags: 0
@@ -2126,6 +2186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 839846342}
+  - component: {fileID: 839846343}
   m_Layer: 5
   m_Name: PJZones
   m_TagString: Untagged
@@ -2157,6 +2218,24 @@ RectTransform:
   m_AnchoredPosition: {x: 199.42633, y: -74.503006}
   m_SizeDelta: {x: 376.14734, y: 780.996}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &839846343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839846341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b153dc16c57b0e54b8b35a720aa24287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedText: {fileID: 1936135730}
+  partMaterials:
+  - {fileID: 2100000, guid: 952eb8487ae19c44ea14dc77d524208d, type: 2}
+  - {fileID: 2100000, guid: b9b75fd6c5dd23848a854419b4a63028, type: 2}
+  - {fileID: 2100000, guid: 8f7f8525ce0e477418f1ca1b09c34722, type: 2}
+  - {fileID: 2100000, guid: f178af4907fc3fd40b9c106a228f987d, type: 2}
 --- !u!1001 &853247914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2332,7 +2411,7 @@ PrefabInstance:
     - target: {fileID: 62251635363873388, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 113545152613142140, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
         type: 3}
@@ -2462,7 +2541,7 @@ PrefabInstance:
     - target: {fileID: 9195747503674614690, guid: 06b01c69f5f3d4849b24fe4c271ddfc7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06b01c69f5f3d4849b24fe4c271ddfc7, type: 3}
@@ -3105,7 +3184,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 759934865}
         m_TargetAssemblyTypeName: CharacterCreation, Assembly-CSharp
-        m_MethodName: CreateListWithIndexes
+        m_MethodName: SaveCharacterData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3113,18 +3192,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 387345728}
-        m_TargetAssemblyTypeName: ScenesChanger, Assembly-CSharp
-        m_MethodName: SceneChange
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Pruebas
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1164881035
@@ -5059,7 +5126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119442142}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 

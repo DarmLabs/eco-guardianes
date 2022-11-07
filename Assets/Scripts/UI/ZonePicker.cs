@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
 public class ZonePicker : MonoBehaviour, IPointerDownHandler
 {
     Animator anim;
@@ -21,5 +20,7 @@ public class ZonePicker : MonoBehaviour, IPointerDownHandler
             anim.Play("Empty");
         }
         anim.Play("ZoneAnim");
+        ZoneManager.SharedInstance.SelectZone(name);
+        ZoneManager.SharedInstance.ChangeSelectorText(name);
     }
 }

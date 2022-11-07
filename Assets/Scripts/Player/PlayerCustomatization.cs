@@ -12,9 +12,9 @@ public class PlayerCustomatization : MonoBehaviour
     [SerializeField] Material[] tones;
     void Start()
     {
-        if (File.Exists(Application.persistentDataPath + "/playerIndexes"))
+        if (File.Exists(Application.persistentDataPath + "/characterPropieties"))
         {
-            List<int> indexes = FileHandler.ReadListFromJSON<int>("playerIndexes");
+            List<int> indexes = FileHandler.ReadListFromJSON<int>("characterPropieties");
             hairStyles[indexes[0]].SetActive(true);
             shirtStyles[indexes[1]].SetActive(true);
             pantStyles[indexes[2]].SetActive(true);
