@@ -4,16 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class InteractableObject : MonoBehaviour
 {
-    [HideInInspector] public bool isClose; //If player is close to this object
-    [SerializeField] PlayerMovement playerMovement;
+    [HideInInspector] public bool isClose { get; private set; } //If player is close to this object
     Outline outline;
-    [SerializeField] ActionPanelManager actionPanel;
     bool beingCollected; //If this item is being collected
     bool canInteract; //If the player can interact with this object
     void Awake()
     {
         canInteract = true;
-        playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         outline = GetComponent<Outline>();
     }
 
@@ -52,7 +49,7 @@ public class InteractableObject : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        if (!actionPanel.isOpened && canInteract)
+        if (!ActionPanelManager.SharedInstance.isOpened && canInteract)
         {
             Glow(true);
         }
@@ -67,14 +64,14 @@ public class InteractableObject : MonoBehaviour
     }
     void EnableActionPanel(/*bool closeMode*/)
     {
-        if (playerMovement.isMoving)
+        if (PlayerMovement.SharedInstance.isMoving)
         {
             return;
         }
-        if (!actionPanel.isOpened)
+        if (!ActionPanelManager.SharedInstance.isOpened)
         {
-            actionPanel.gameObject.SetActive(true);
-            actionPanel.SetListeners(transform, gameObject.tag/*, closeMode*/);
+            ActionPanelManager.SharedInstance.gameObject.SetActive(true);
+            ActionPanelManager.SharedInstance.SetListeners(transform, gameObject.tag/*, closeMode*/);
             Glow(false);
         }
     }

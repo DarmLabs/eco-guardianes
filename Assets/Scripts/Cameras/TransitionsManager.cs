@@ -4,18 +4,21 @@ using UnityEngine;
 
 class TransitionsManager : MonoBehaviour
 {
-    [Header("Imported Scripts")]
-    [SerializeField] PlayerMovement playerMovement;
     [Header("Needed GameObjects & Others")]
     [SerializeField] GameObject closeView;
     [SerializeField] GameObject viewCamera;
     [SerializeField] Cinemachine.CinemachineVirtualCamera playerCamera;
     [SerializeField] Cinemachine.CinemachineBrain brain;
+    public static TransitionsManager SharedInstance;
     [Header("Changeable Variables")]
     [SerializeField] Vector3 offset;
     bool viewTransition;
     bool playerTransitions;
     GameObject targetObject;
+    void Awake()
+    {
+        SharedInstance = this;
+    }
     void FixedUpdate()
     {
         CheckTransitions();
@@ -34,7 +37,7 @@ class TransitionsManager : MonoBehaviour
     public void ViewAction(GameObject targetObject)
     {
         this.targetObject = targetObject;
-        playerMovement.enabled = false;
+        PlayerMovement.SharedInstance.enabled = false;
         viewCamera.transform.position = targetObject.transform.position + offset;
         Cinemachine.CinemachineVirtualCamera virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
         virtualCamera.LookAt = targetObject.transform;
@@ -59,7 +62,7 @@ class TransitionsManager : MonoBehaviour
     {
         if (!brain.IsBlending)
         {
-            playerMovement.enabled = true;
+            PlayerMovement.SharedInstance.enabled = true;
             playerTransitions = false;
             targetObject.GetComponent<InteractableObject>().CanInteract(true);
         }

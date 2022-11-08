@@ -5,15 +5,18 @@ using UnityEngine.UI;
 using TMPro;
 public class ActionPanelManager : MonoBehaviour
 {
-    [Header("Imported Scripts")]
-    [SerializeField] TransitionsManager transitionsManager;
-    [SerializeField] PlayerMovement playerMovement;
     [Header("Needed GameObjects & Others")]
     [SerializeField] GameObject infoPanel;
     [SerializeField] Button[] actionButtons;
     [HideInInspector] public GameObject targetObject { get; private set; }
     [HideInInspector] public bool isOpened { get; private set; }
     [SerializeField] GameObject activeActionButton;
+    public static ActionPanelManager SharedInstance;
+    void Awake()
+    {
+        SharedInstance = this;
+        gameObject.SetActive(false);
+    }
     public string SearchButtonName(string type)
     {
         string searchedName = "";
@@ -43,7 +46,7 @@ public class ActionPanelManager : MonoBehaviour
             actionButton.onClick.RemoveAllListeners();
             if (/*!mode && */(actionButton.name == "Take" || actionButton.name == "Throw") && actionButton.gameObject.activeSelf)
             {
-                actionButton.onClick.AddListener(delegate { playerMovement.TravelToDestination(target); });
+                actionButton.onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(target); });
             }
             actionButton.onClick.AddListener(DisableActionPanel);
         }
@@ -52,7 +55,7 @@ public class ActionPanelManager : MonoBehaviour
     void View()
     {
         targetObject.GetComponent<InteractableObject>().CanInteract(false);
-        transitionsManager.ViewAction(targetObject);
+        TransitionsManager.SharedInstance.ViewAction(targetObject);
     }
     [SerializeField]
     void Take()

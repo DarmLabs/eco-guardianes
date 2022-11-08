@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] float timeScale;
     Animator anim;
+    public static PlayerMovement SharedInstance;
     void Awake()
     {
+        SharedInstance = this;
         mainCamera = Camera.main;
         rb = GetComponent<Rigidbody>();
         navMesh = GetComponent<NavMeshAgent>();
@@ -28,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Start()
     {
-
         TakeOrientation();
         navMesh.enabled = false;
     }
@@ -103,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
         else //If not, it will travel to take it
         {
             isMoving = true;
+            anim.SetFloat("speed", 0.2f);
             navMesh.enabled = true;
             navMesh.SetDestination(target.position);
         }
@@ -115,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
             navMesh.ResetPath();
             navMesh.enabled = false;
             isMoving = false;
+            anim.SetFloat("speed", 0);
         }
     }
     void ObjectDetector()
