@@ -8,6 +8,7 @@ public class PlayerCustomatization : MonoBehaviour
     [SerializeField] GameObject[] shirtStyles;
     [SerializeField] GameObject[] pantStyles;
     [SerializeField] GameObject[] shoeStyles;
+    [SerializeField] GameObject wheelChair;
     [SerializeField] SkinnedMeshRenderer[] bodyMeshes;
     [SerializeField] Material[] tones;
     CharacterData characterData;
@@ -29,6 +30,11 @@ public class PlayerCustomatization : MonoBehaviour
         shirtStyles[characterData.shirtIndex].SetActive(true);
         pantStyles[characterData.pantsIndex].SetActive(true);
         shoeStyles[characterData.shoesIndex].SetActive(true);
+        if (characterData.isOnWheelChair)
+        {
+            wheelChair.SetActive(true);
+            GetComponent<Animator>().SetBool("isOnWheelChair", true);
+        }
     }
     void ToneAsigner()
     {

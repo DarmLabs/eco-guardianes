@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
-    float speed = 6f;
+    [Range(0, 10)]
+    [SerializeField] float runSpeed;
+    [Range(0, 10)]
+    [SerializeField] float walkSpeed;
+    float speed;
     Vector3 forward, right, heading, rightMovement, upMovement;
     Rigidbody rb;
     Camera mainCamera;
@@ -12,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     NavMeshAgent navMesh;
     [SerializeField] ActionPanelManager actionPanel;
     [HideInInspector] public bool isMoving { get; private set; }
+    [Range(0, 1)]
+    [SerializeField] float timeScale;
     Animator anim;
     void Awake()
     {
@@ -22,11 +28,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void Start()
     {
+
         TakeOrientation();
         navMesh.enabled = false;
     }
     void Update()
     {
+        Time.timeScale = timeScale;
         Controls();
         ObjectDetector();
         Debug.DrawRay(transform.position + new Vector3(0, -0.6f, 0), transform.forward);
@@ -51,23 +59,18 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            float remainSpeed;
-            remainSpeed = anim.GetFloat("speed");
-            if (remainSpeed >= 0)
-            {
-                anim.SetFloat("speed", remainSpeed - 0.5f);
-            }
+            anim.SetFloat("speed", 0);
         }
     }
     void Movement()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 4f;
+            speed = runSpeed;
         }
         else
         {
-            speed = 2.5f;
+            speed = walkSpeed;
         }
         anim.SetFloat("speed", speed);
         rb.position += heading;

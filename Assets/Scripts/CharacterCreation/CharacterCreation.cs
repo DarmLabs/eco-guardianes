@@ -11,10 +11,12 @@ public class CharacterCreation : MonoBehaviour
     [SerializeField] GameObject[] shirtPrefabs;
     [SerializeField] GameObject[] pantsPrefabs;
     [SerializeField] GameObject[] shoesPrefabs;
+    [SerializeField] GameObject wheelChair;
     [SerializeField] Material[] tones;
     [SerializeField] SkinnedMeshRenderer[] bodyMesh;
     [SerializeField] Material[] partsMaterials;
     [SerializeField] TMP_InputField inputName;
+
     void Awake()
     {
         SharedInstance = this;
@@ -161,6 +163,12 @@ public class CharacterCreation : MonoBehaviour
         {
             characterData.hexPartsColor[i] = ColorUtility.ToHtmlStringRGB(partsMaterials[i].color);
         }
+    }
+    public void CanUseLegs(bool state)
+    {
+        characterData.isOnWheelChair = state;
+        wheelChair.SetActive(state);
+        wheelChair.GetComponentInParent<Animator>().SetBool("isOnWheelChair", state);
     }
     public void SaveCharacterData()
     {
