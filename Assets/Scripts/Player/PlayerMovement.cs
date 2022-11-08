@@ -63,11 +63,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 8f;
+            speed = 4f;
         }
         else
         {
-            speed = 5f;
+            speed = 2.5f;
         }
         anim.SetFloat("speed", speed);
         rb.position += heading;
