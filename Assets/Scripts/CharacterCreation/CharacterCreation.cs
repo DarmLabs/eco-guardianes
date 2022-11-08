@@ -71,7 +71,6 @@ public class CharacterCreation : MonoBehaviour
                 mats[1] = tones[value];
                 bodyMesh[i].sharedMaterials = mats;
             }
-
         }
     }
     public void Selector(int value, string id)

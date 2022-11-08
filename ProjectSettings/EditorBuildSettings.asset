@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CharacterCreation/CharacterCreation.unity
     guid: 58629a70e5f107a45b7f089a3519458c
   - enabled: 1
-    path: Assets/Scenes/Pruebas/Pruebas.unity
-    guid: 201f7e7b7384b074d905b84e31863355
+    path: Assets/Scenes/Escenarios/Cocina.unity
+    guid: b72e25b3f2aee604db71b9f8070b0c28
   m_configObjects: {}

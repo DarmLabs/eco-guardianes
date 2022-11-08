@@ -27,7 +27,7 @@ public class ColorPicker : MonoBehaviour
     }
     void ColorPick()
     {
-        if (RectTransformUtility.RectangleContainsScreenPoint(rect, Input.mousePosition))
+        if (RectTransformUtility.RectangleContainsScreenPoint(rect, Input.mousePosition) && ZoneManager.SharedInstance.zoneSelected)
         {
             Vector2 delta;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, Input.mousePosition, null, out delta);

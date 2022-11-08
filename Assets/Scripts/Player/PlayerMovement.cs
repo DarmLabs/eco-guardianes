@@ -12,11 +12,13 @@ public class PlayerMovement : MonoBehaviour
     NavMeshAgent navMesh;
     [SerializeField] ActionPanelManager actionPanel;
     [HideInInspector] public bool isMoving { get; private set; }
+    Animator anim;
     void Awake()
     {
         mainCamera = Camera.main;
         rb = GetComponent<Rigidbody>();
         navMesh = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
     }
     void Start()
     {
@@ -47,17 +49,27 @@ public class PlayerMovement : MonoBehaviour
             }
             Rotation();
         }
+        else
+        {
+            float remainSpeed;
+            remainSpeed = anim.GetFloat("speed");
+            if (remainSpeed >= 0)
+            {
+                anim.SetFloat("speed", remainSpeed - 0.5f);
+            }
+        }
     }
     void Movement()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 10f;
+            speed = 8f;
         }
         else
         {
-            speed = 6f;
+            speed = 5f;
         }
+        anim.SetFloat("speed", speed);
         rb.position += heading;
     }
     void Rotation()

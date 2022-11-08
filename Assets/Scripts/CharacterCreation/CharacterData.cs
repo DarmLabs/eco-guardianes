@@ -9,6 +9,7 @@ public class CharacterData
     public int headIndex;
     public string characterName;
     public string[] hexPartsColor;
+    public bool isOnWheelChair;
     public CharacterData(int tonesIndex, int shoesIndex, int pantsIndex, int shirtIndex, int headIndex, string characterName, string[] hexPartsColor)
     {
         this.tonesIndex = tonesIndex;

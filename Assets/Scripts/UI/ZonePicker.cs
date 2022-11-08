@@ -20,6 +20,7 @@ public class ZonePicker : MonoBehaviour, IPointerDownHandler
             anim.Play("Empty");
         }
         anim.Play("ZoneAnim");
+        ZoneManager.SharedInstance.IsZoneSelected(true);
         ZoneManager.SharedInstance.SelectZone(name);
         ZoneManager.SharedInstance.ChangeSelectorText(name);
     }

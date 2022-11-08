@@ -10,18 +10,40 @@ public class PlayerCustomatization : MonoBehaviour
     [SerializeField] GameObject[] shoeStyles;
     [SerializeField] SkinnedMeshRenderer[] bodyMeshes;
     [SerializeField] Material[] tones;
+    CharacterData characterData;
     void Start()
     {
         if (File.Exists(Application.persistentDataPath + "/characterPropieties"))
         {
-            List<int> indexes = FileHandler.ReadListFromJSON<int>("characterPropieties");
-            hairStyles[indexes[0]].SetActive(true);
-            shirtStyles[indexes[1]].SetActive(true);
-            pantStyles[indexes[2]].SetActive(true);
-            shoeStyles[indexes[3]].SetActive(true);
-            for (int i = 0; i < bodyMeshes.Length; i++)
+            characterData = FileHandler.ReadFromJSON<CharacterData>("characterPropieties");
+            CharacterLoad();
+        }
+        else
+        {
+            Debug.LogError("No hay guardado para cargar el personaje, crea uno primero");
+        }
+    }
+    void CharacterLoad()
+    {
+        hairStyles[characterData.headIndex].SetActive(true);
+        shirtStyles[characterData.shirtIndex].SetActive(true);
+        pantStyles[characterData.pantsIndex].SetActive(true);
+        shoeStyles[characterData.shoesIndex].SetActive(true);
+    }
+    void ToneAsigner()
+    {
+        for (int i = 0; i < bodyMeshes.Length; i++)
+        {
+            if (bodyMeshes[i].sharedMaterials.Length != 2)
             {
-                bodyMeshes[i].material = tones[indexes[4]];
+                bodyMeshes[i].sharedMaterial = tones[characterData.tonesIndex];
+            }
+            else
+            {
+                Material[] mats;
+                mats = bodyMeshes[i].sharedMaterials;
+                mats[1] = tones[characterData.tonesIndex];
+                bodyMeshes[i].sharedMaterials = mats;
             }
         }
     }

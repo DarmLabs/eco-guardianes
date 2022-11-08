@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-class ScenesChanger : MonoBehaviour
+public class ScenesChanger : MonoBehaviour
 {
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
-    [SerializeField]
-    void SceneChange(string sceneName)
+    public void SceneChange(string sceneName)
     {
         StartCoroutine(LoadAsyncScene(sceneName));
     }

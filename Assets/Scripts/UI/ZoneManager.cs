@@ -8,6 +8,7 @@ public class ZoneManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI selectedText;
     [SerializeField] Material[] partMaterials;
     Material selectedMaterial;
+    public bool zoneSelected { get; private set; }
     void Awake()
     {
         SharedInstance = this;
@@ -51,5 +52,9 @@ public class ZoneManager : MonoBehaviour
                 selectedText.text = "Eligiendo color de las zapatillas...";
                 break;
         }
+    }
+    public void IsZoneSelected(bool value)
+    {
+        zoneSelected = value;
     }
 }
