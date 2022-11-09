@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.AI;
 public class PlayerCustomatization : MonoBehaviour
 {
     [SerializeField] GameObject[] hairStyles;
@@ -11,7 +12,12 @@ public class PlayerCustomatization : MonoBehaviour
     [SerializeField] GameObject wheelChair;
     [SerializeField] SkinnedMeshRenderer[] bodyMeshes;
     [SerializeField] Material[] tones;
+    NavMeshAgent navMeshAgent;
     CharacterData characterData;
+    void Awake()
+    {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+    }
     void Start()
     {
         if (File.Exists(Application.persistentDataPath + "/characterPropieties"))
@@ -34,6 +40,7 @@ public class PlayerCustomatization : MonoBehaviour
         {
             wheelChair.SetActive(true);
             GetComponent<Animator>().SetBool("isOnWheelChair", true);
+            navMeshAgent.baseOffset = 0.35f;
         }
     }
     void ToneAsigner()

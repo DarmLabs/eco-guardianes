@@ -57,11 +57,10 @@ public class ActionPanelManager : MonoBehaviour
         targetObject.GetComponent<InteractableObject>().CanInteract(false);
         TransitionsManager.SharedInstance.ViewAction(targetObject);
     }
-    [SerializeField]
-    void Take()
+    public void TakeObjOrHeadTrashCan()
     {
         targetObject.GetComponent<InteractableObject>().CanInteract(false);
-        targetObject.GetComponent<InteractableObject>().BeingCollected(true);
+        targetObject.GetComponent<InteractableObject>().BeingTargeted(true);
     }
     [SerializeField]
     void EnableInfo()

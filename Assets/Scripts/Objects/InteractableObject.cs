@@ -6,14 +6,14 @@ public class InteractableObject : MonoBehaviour
 {
     [HideInInspector] public bool isClose { get; private set; } //If player is close to this object
     Outline outline;
-    bool beingCollected; //If this item is being collected
+    bool beingTargeted; //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
+    public Transform optionalLookAt { get; set; }
     void Awake()
     {
         canInteract = true;
         outline = GetComponent<Outline>();
     }
-
     public void CloseMode()
     {
         if (/*isClose &&*/ canInteract)
@@ -32,9 +32,10 @@ public class InteractableObject : MonoBehaviour
     {
         if (target.gameObject.TryGetComponent(out PlayerMovement pm))
         {
+
             isClose = true;
             pm.ClearNavMeshPath();
-            if (beingCollected)
+            if (beingTargeted)
             {
                 InteractWithObject();
             }
@@ -81,9 +82,9 @@ public class InteractableObject : MonoBehaviour
         //Save object
     }
     //Setters
-    public void BeingCollected(bool state)
+    public void BeingTargeted(bool state)
     {
-        beingCollected = state;
+        beingTargeted = state;
     }
     public void CanInteract(bool state)
     {

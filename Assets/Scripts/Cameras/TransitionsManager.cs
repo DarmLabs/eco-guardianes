@@ -37,10 +37,19 @@ class TransitionsManager : MonoBehaviour
     public void ViewAction(GameObject targetObject)
     {
         this.targetObject = targetObject;
+        InteractableObject targetIO = targetObject.GetComponent<InteractableObject>();
         PlayerMovement.SharedInstance.enabled = false;
-        viewCamera.transform.position = targetObject.transform.position + offset;
         Cinemachine.CinemachineVirtualCamera virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        virtualCamera.LookAt = targetObject.transform;
+        if (targetIO.optionalLookAt != null)
+        {
+            virtualCamera.LookAt = targetIO.optionalLookAt;
+            viewCamera.transform.position = targetIO.optionalLookAt.position + offset;
+        }
+        else
+        {
+            virtualCamera.LookAt = targetObject.transform;
+            viewCamera.transform.position = targetObject.transform.position + offset;
+        }
         playerCamera.m_Priority = 9;
         viewTransition = true;
     }

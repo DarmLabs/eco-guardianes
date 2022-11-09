@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             ClearNavMeshPath();
             if (actionPanel.targetObject != null)
             {
-                actionPanel.targetObject.GetComponent<InteractableObject>().BeingCollected(false);
+                actionPanel.targetObject.GetComponent<InteractableObject>().BeingTargeted(false);
                 actionPanel.targetObject.GetComponent<InteractableObject>().CanInteract(true);
                 actionPanel.DisableInfoPanel();
                 actionPanel.DisableActionPanel();
@@ -106,7 +106,15 @@ public class PlayerMovement : MonoBehaviour
             isMoving = true;
             anim.SetFloat("speed", 0.2f);
             navMesh.enabled = true;
-            navMesh.SetDestination(target.position);
+            if (targetScript.optionalLookAt != null)
+            {
+                navMesh.SetDestination(targetScript.optionalLookAt.position);
+            }
+            else
+            {
+                navMesh.SetDestination(target.position);
+            }
+
         }
 
     }
