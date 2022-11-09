@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.SetFloat("speed", 0);
+            WheelChairMovement.SharedInstance.isMoving = false;
         }
     }
     void Movement()
@@ -68,11 +69,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
+            WheelChairMovement.SharedInstance.isRuning = true;
         }
         else
         {
             speed = walkSpeed;
+            WheelChairMovement.SharedInstance.isRuning = false;
         }
+        WheelChairMovement.SharedInstance.isMoving = true;
         anim.SetFloat("speed", speed);
         rb.position += heading;
     }
