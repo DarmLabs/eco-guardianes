@@ -60,8 +60,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            anim.SetFloat("speed", 0);
-            WheelChairMovement.SharedInstance.isMoving = false;
+            if (!isMoving)
+            {
+                anim.SetFloat("speed", 0);
+            }
+            if (!isMoving && WheelChairMovement.SharedInstance != null)
+            {
+                WheelChairMovement.SharedInstance.isMoving = false;
+            }
         }
     }
     void Movement()
@@ -69,14 +75,23 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
-            WheelChairMovement.SharedInstance.isRuning = true;
+            if (WheelChairMovement.SharedInstance != null)
+            {
+                WheelChairMovement.SharedInstance.isRuning = false;
+            }
         }
         else
         {
             speed = walkSpeed;
-            WheelChairMovement.SharedInstance.isRuning = false;
+            if (WheelChairMovement.SharedInstance != null)
+            {
+                WheelChairMovement.SharedInstance.isRuning = false;
+            }
         }
-        WheelChairMovement.SharedInstance.isMoving = true;
+        if (WheelChairMovement.SharedInstance != null)
+        {
+            WheelChairMovement.SharedInstance.isMoving = true;
+        }
         anim.SetFloat("speed", speed);
         rb.position += heading;
     }
@@ -99,7 +114,6 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TravelToDestination(Transform target)
     {
-
         InteractableObject targetScript = target.GetComponent<InteractableObject>();
         if (targetScript.isClose)//If it's close to the object, the player will take it
         {
@@ -108,6 +122,10 @@ public class PlayerMovement : MonoBehaviour
         else //If not, it will travel to take it
         {
             isMoving = true;
+            if (WheelChairMovement.SharedInstance != null)
+            {
+                WheelChairMovement.SharedInstance.isMoving = true;
+            }
             anim.SetFloat("speed", 0.2f);
             navMesh.enabled = true;
             if (targetScript.optionalLookAt != null)
@@ -129,6 +147,10 @@ public class PlayerMovement : MonoBehaviour
             navMesh.ResetPath();
             navMesh.enabled = false;
             isMoving = false;
+            if (WheelChairMovement.SharedInstance != null)
+            {
+                WheelChairMovement.SharedInstance.isMoving = false;
+            }
             anim.SetFloat("speed", 0);
         }
     }
