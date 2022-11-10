@@ -5,12 +5,13 @@ using UnityEngine.UI;
 public class InteractableObject : MonoBehaviour
 {
     [HideInInspector] public bool isClose { get; private set; } //If player is close to this object
-    [SerializeField] GameObject outlineGO;
+    Outline outline;
     bool beingTargeted; //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
     public Transform optionalLookAt { get; set; }
     void Awake()
     {
+        outline = GetComponent<Outline>();
         canInteract = true;
     }
     public void CloseMode()
@@ -60,7 +61,7 @@ public class InteractableObject : MonoBehaviour
     }
     void Glow(bool state)
     {
-        outlineGO.SetActive(state);
+        outline.enabled = state;
     }
     void EnableActionPanel(/*bool closeMode*/)
     {
