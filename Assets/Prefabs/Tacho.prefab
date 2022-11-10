@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2968795670569580296}
   - component: {fileID: 2968795670569580294}
   - component: {fileID: 2968795670569580295}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,13 +267,13 @@ GameObject:
   - component: {fileID: 257314832576136605}
   - component: {fileID: 7878482794003411380}
   - component: {fileID: 7154693719748029150}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TachoOut
   m_TagString: TrashCan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &257314832576136605
 Transform:
   m_ObjectHideFlags: 0
@@ -352,8 +352,8 @@ GameObject:
   - component: {fileID: 3713227850454239714}
   - component: {fileID: 7055553009458597011}
   - component: {fileID: 7444055745641771282}
-  - component: {fileID: 9118680591222522089}
   - component: {fileID: 9118680591222522090}
+  - component: {fileID: 7307788869283436377}
   m_Layer: 0
   m_Name: Tacho
   m_TagString: TrashCan
@@ -442,24 +442,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0087442, y: 1.0178088, z: 0.9610829}
   m_Center: {x: 4.918052, y: -9.256985, z: 0.43685648}
---- !u!114 &9118680591222522089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9118680591222522091}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &9118680591222522090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,3 +454,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b84ef7b0096264fad4da5c5dacfe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineGO: {fileID: 8854091810289924807}
+--- !u!95 &7307788869283436377
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9118680591222522091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b109203dd4f718479fc118b0d1d1333, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
