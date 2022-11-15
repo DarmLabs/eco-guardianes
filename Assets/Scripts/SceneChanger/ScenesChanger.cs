@@ -12,7 +12,7 @@ public class ScenesChanger : MonoBehaviour
     }
     public void AddScene(string sceneName)
     {
-        LoadAsyncScene(sceneName, LoadSceneMode.Additive);
+        StartCoroutine(LoadAsyncScene(sceneName, LoadSceneMode.Additive));
     }
     public void SceneChange(string sceneName)
     {
