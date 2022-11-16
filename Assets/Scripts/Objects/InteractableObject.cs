@@ -68,7 +68,7 @@ public class InteractableObject : MonoBehaviour
         }
         if (!ActionPanelManager.SharedInstance.isOpened)
         {
-            ActionPanelManager.SharedInstance.gameObject.SetActive(true);
+            ActionPanelManager.SharedInstance.EnableActionPanel();
             ActionPanelManager.SharedInstance.SetListeners(transform, gameObject.tag/*, closeMode*/);
             Glow(false);
         }

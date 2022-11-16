@@ -35,9 +35,13 @@ public class CharacterCreation : MonoBehaviour
     }
     void InitialLoad()
     {
-        inputName.text = characterData.characterName;
+        if (inputName != null)
+        {
+            inputName.text = characterData.characterName;
+        }
         InitialCharacterLoad();
         toneSelector(characterData.tonesIndex);
+        SetWheelChair(characterData.isOnWheelChair);
     }
     void InitialCharacterLoad()
     {
@@ -167,6 +171,10 @@ public class CharacterCreation : MonoBehaviour
     public void CanUseLegs(bool state)
     {
         characterData.isOnWheelChair = state;
+        SetWheelChair(state);
+    }
+    public void SetWheelChair(bool state)
+    {
         wheelChair.SetActive(state);
         wheelChair.GetComponentInParent<Animator>().SetBool("isOnWheelChair", state);
     }

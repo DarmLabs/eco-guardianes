@@ -14,10 +14,8 @@ public class PlayerMovement : MonoBehaviour
     Camera mainCamera;
     bool wallAhed;
     NavMeshAgent navMesh;
-    [SerializeField] ActionPanelManager actionPanel;
     [HideInInspector] public bool isMoving { get; private set; }
     [Range(0, 1)]
-    [SerializeField] float timeScale;
     Animator anim;
     public static PlayerMovement SharedInstance;
     void Awake()
@@ -35,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Time.timeScale = timeScale;
         Controls();
         ObjectDetector();
         Debug.DrawRay(transform.position + new Vector3(0, -0.6f, 0), transform.forward);
@@ -45,12 +42,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             ClearNavMeshPath();
-            if (actionPanel.targetObject != null)
+            if (ActionPanelManager.SharedInstance.targetObject != null)
             {
-                actionPanel.targetObject.GetComponent<InteractableObject>().BeingTargeted(false);
-                actionPanel.targetObject.GetComponent<InteractableObject>().CanInteract(true);
-                actionPanel.DisableInfoPanel();
-                actionPanel.DisableActionPanel();
+                ActionPanelManager.SharedInstance.targetObject.GetComponent<InteractableObject>().BeingTargeted(false);
+                ActionPanelManager.SharedInstance.targetObject.GetComponent<InteractableObject>().CanInteract(true);
+                ActionPanelManager.SharedInstance.DisableInfoPanel();
+                ActionPanelManager.SharedInstance.DisableActionPanel();
             }
             if (!wallAhed)
             {

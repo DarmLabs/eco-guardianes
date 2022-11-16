@@ -6,6 +6,7 @@ using TMPro;
 public class ActionPanelManager : MonoBehaviour
 {
     [Header("Needed GameObjects & Others")]
+    [SerializeField] GameObject actionPanel;
     [SerializeField] GameObject infoPanel;
     [SerializeField] Button[] actionButtons;
     [HideInInspector] public GameObject targetObject { get; private set; }
@@ -15,7 +16,6 @@ public class ActionPanelManager : MonoBehaviour
     void Awake()
     {
         SharedInstance = this;
-        gameObject.SetActive(false);
     }
     public string SearchButtonName(string type)
     {
@@ -62,6 +62,10 @@ public class ActionPanelManager : MonoBehaviour
         targetObject.GetComponent<InteractableObject>().CanInteract(false);
         targetObject.GetComponent<InteractableObject>().BeingTargeted(true);
     }
+    public void EnableActionPanel()
+    {
+        actionPanel.SetActive(true);
+    }
     [SerializeField]
     void EnableInfo()
     {
@@ -72,7 +76,7 @@ public class ActionPanelManager : MonoBehaviour
     {
         isOpened = false;
         activeActionButton.SetActive(false);
-        gameObject.SetActive(false);
+        actionPanel.SetActive(false);
     }
     public void DisableInfoPanel()
     {

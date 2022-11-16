@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,13 +36,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,9 +51,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -76,20 +76,706 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 641
+        width: 1686
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8168200198a311479b03a185ba6a3f7
+      internalID: 1693593064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_1
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 2104
+        width: 335
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf0c0158c19cfd43a7b5dac746d7042
+      internalID: -1973901397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_2
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 2105
+        width: 339
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ccdf1e94daa044fa3680ea080723c0
+      internalID: -928879440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_3
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 1781
+        width: 314
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55f79616602b1b4fbde135e0372d791
+      internalID: -1309179038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_4
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 1780
+        width: 318
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e4f01d6efb7eb48890f4d2852f65b0
+      internalID: -1439445936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_5
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1504
+        width: 334
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e40bef2f721fea448e22b892f606786
+      internalID: 646666526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_6
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 1503
+        width: 334
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0880af31248c28142b5721a571ba8431
+      internalID: -1337675937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_7
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1196
+        width: 316
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea08b6e3929b1549b527ba27d2c6f86
+      internalID: 537177272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_8
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 1196
+        width: 317
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908eec7405097094fb52c8fff5a45de5
+      internalID: -2141800295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_9
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 941
+        width: 323
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f062b34a9f631c9479bcb37c70597b05
+      internalID: -1533298138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_10
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 941
+        width: 323
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5596dc96c5cd0f845940cfc1ebea4df0
+      internalID: 539226546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_11
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 682
+        width: 323
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54c40d9cb2db6d42a6409cd9e335320
+      internalID: 2008773923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_12
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 682
+        width: 323
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1004b6064363594fa898812bbf61b60
+      internalID: 249944665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 380
+        width: 973
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0933dff1383e554aa84ac5b2f372787
+      internalID: -794219282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_14
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 373
+        width: 328
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71a5b9db05315b43ba194f30165b349
+      internalID: 1637129934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_15
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 373
+        width: 329
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e07bdb8f680854ba01902bc46fd579
+      internalID: -1661342392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_16
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 374
+        width: 322
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5801d989e469f741babeef6a9071954
+      internalID: -992357991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_17
+      rect:
+        serializedVersion: 2
+        x: 2097
+        y: 389
+        width: 243
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9e03419877cc5428534d4e1e84e5a2
+      internalID: 371118783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_18
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 242
+        width: 475
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816abb1ff90b21d4cb10699be97635f3
+      internalID: 2003333509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_19
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 101
+        width: 198
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e830c5329d6cd46968747ed6acc6ad
+      internalID: 223266541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_20
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 101
+        width: 198
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9127cefa0904e048b44f84f0242523c
+      internalID: -958845451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_21
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 101
+        width: 198
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad6b7c995098b34e8e9729198a78d3d
+      internalID: -448604814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_22
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 101
+        width: 198
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c30f20f9b92194c9572bcb8f0377f5
+      internalID: -1665724071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_23
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 102
+        width: 197
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d3003039f3baf46a1ac60d60628267
+      internalID: 1259915630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_24
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 112
+        width: 198
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8707718b51d59714292bbb3a5f7360ed
+      internalID: -1855939318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_25
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 116
+        width: 198
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76531e1c066806744bb3636711cb5d5b
+      internalID: 1621948606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_26
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 87
+        width: 198
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4654d9b8abda245a50eab566c16f00
+      internalID: -1201155079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_27
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 134
+        width: 86
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653d88e774f1c8645b392ae5aaace7b1
+      internalID: 1498405146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_atlas_check_tachos_28
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 132
+        width: 87
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e6913b3ee38df4aa558b794124c3a9
+      internalID: -1590152096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6371e82f46c33ed4e9d477f7c372b65a
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_atlas_check_tachos_10: 539226546
+      ui_atlas_check_tachos_12: 249944665
+      ui_atlas_check_tachos_9: -1533298138
+      ui_atlas_check_tachos_1: -1973901397
+      ui_atlas_check_tachos_24: -1855939318
+      ui_atlas_check_tachos_11: 2008773923
+      ui_atlas_check_tachos_14: 1637129934
+      ui_atlas_check_tachos_15: -1661342392
+      ui_atlas_check_tachos_17: 371118783
+      ui_atlas_check_tachos_26: -1201155079
+      ui_atlas_check_tachos_28: -1590152096
+      ui_atlas_check_tachos_8: -2141800295
+      ui_atlas_check_tachos_16: -992357991
+      ui_atlas_check_tachos_0: 1693593064
+      ui_atlas_check_tachos_3: -1309179038
+      ui_atlas_check_tachos_7: 537177272
+      ui_atlas_check_tachos_25: 1621948606
+      ui_atlas_check_tachos_21: -448604814
+      ui_atlas_check_tachos_22: -1665724071
+      ui_atlas_check_tachos_5: 646666526
+      ui_atlas_check_tachos_23: 1259915630
+      ui_atlas_check_tachos_4: -1439445936
+      ui_atlas_check_tachos_13: -794219282
+      ui_atlas_check_tachos_18: 2003333509
+      ui_atlas_check_tachos_2: -928879440
+      ui_atlas_check_tachos_19: 223266541
+      ui_atlas_check_tachos_27: 1498405146
+      ui_atlas_check_tachos_20: -958845451
+      ui_atlas_check_tachos_6: -1337675937
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
