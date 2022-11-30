@@ -10,10 +10,6 @@ public class PauseManager : MonoBehaviour
     [SerializeField] GameObject confirmMainMenu;
     [SerializeField] GameObject tutoPanel;
     [SerializeField] GameObject configPanel;
-    void Update()
-    {
-        Debug.Log(Time.timeScale);
-    }
     public void PausePanelSwitcher(bool state)
     {
         pausePanel.SetActive(state);

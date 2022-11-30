@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 public class InteractableObject : MonoBehaviour
 {
     [HideInInspector] public bool isClose { get; private set; } //If player is close to this object
+    [HideInInspector] public bool isClosedObject { get; private set; } //If closed object is true it refers to an object that cant be taken initially and must be opened example: A fridge // If its false its trash that can be colected at any time
     Outline outline;
     bool beingTargeted; //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
@@ -10,21 +12,38 @@ public class InteractableObject : MonoBehaviour
     {
         outline = GetComponent<Outline>();
         canInteract = true;
-    }
-    public void CloseMode()
-    {
-        if (/*isClose &&*/ canInteract)
+        if (gameObject.tag == "ClosedObject")
         {
-            EnableActionPanel(/*true*/);
+            isClosedObject = true;
         }
     }
     public void SearchMode()
     {
         if (canInteract)
         {
-            EnableActionPanel(/*false*/);
+            EnableActionPanel();
         }
     }
+    void EnableActionPanel()
+    {
+        if (PlayerMovement.SharedInstance.isMoving)
+        {
+            return;
+        }
+        if (!ActionPanelManager.SharedInstance.isOpened)
+        {
+            ActionPanelManager.SharedInstance.EnableActionPanel();
+            ActionPanelManager.SharedInstance.SetTravelListeners(this);
+            beingTargeted = true;
+            Glow(false);
+        }
+    }
+    public virtual void InteractWithObject()
+    {
+        gameObject.SetActive(false);
+        //Save object
+    }
+    //Triggers
     public void OnChildTriggerEnter(Collider target)
     {
         if (target.gameObject.TryGetComponent(out PlayerMovement pm))
@@ -45,6 +64,8 @@ public class InteractableObject : MonoBehaviour
             isClose = false;
         }
     }
+
+    //Mouse Detection
     void OnMouseEnter()
     {
         if (!ActionPanelManager.SharedInstance.isOpened && canInteract)
@@ -59,24 +80,6 @@ public class InteractableObject : MonoBehaviour
     void Glow(bool state)
     {
         outline.enabled = state;
-    }
-    void EnableActionPanel(/*bool closeMode*/)
-    {
-        if (PlayerMovement.SharedInstance.isMoving)
-        {
-            return;
-        }
-        if (!ActionPanelManager.SharedInstance.isOpened)
-        {
-            ActionPanelManager.SharedInstance.EnableActionPanel();
-            ActionPanelManager.SharedInstance.SetListeners(transform, gameObject.tag/*, closeMode*/);
-            Glow(false);
-        }
-    }
-    public virtual void InteractWithObject()
-    {
-        gameObject.SetActive(false);
-        //Save object
     }
     //Setters
     public void BeingTargeted(bool state)

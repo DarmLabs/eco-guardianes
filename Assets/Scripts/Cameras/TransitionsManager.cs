@@ -53,8 +53,7 @@ class TransitionsManager : MonoBehaviour
         playerCamera.m_Priority = 9;
         viewTransition = true;
     }
-    [SerializeField]
-    void CloseViewAction()
+    public void CloseViewAction()
     {
         playerCamera.m_Priority = 11;
         playerTransitions = true;
@@ -63,7 +62,7 @@ class TransitionsManager : MonoBehaviour
     {
         if (!brain.IsBlending)
         {
-            closeView.SetActive(true);
+            ActionPanelManager.SharedInstance.EnableInfo();
             viewTransition = false;
         }
     }
@@ -73,7 +72,7 @@ class TransitionsManager : MonoBehaviour
         {
             PlayerMovement.SharedInstance.enabled = true;
             playerTransitions = false;
-            targetObject.GetComponent<InteractableObject>().CanInteract(true);
+            ActionPanelManager.SharedInstance.EnableActionPanel();
         }
     }
 }
