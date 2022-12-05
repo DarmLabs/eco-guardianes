@@ -9,6 +9,7 @@ public class InteractableCanTrash : InteractableObject
     {
         OptionalLookAt = transform.parent;
         anim = GetComponent<Animator>();
+        IsTrashCan = true;
     }
     public override void InteractWithObject()
     {

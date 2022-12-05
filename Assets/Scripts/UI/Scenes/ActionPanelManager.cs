@@ -11,6 +11,7 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] Button[] travelButtons;
     [SerializeField] GameObject closedObjectsSection;
     [SerializeField] GameObject openObjectsSection;
+    [SerializeField] GameObject trashCanSection;
     [HideInInspector] public InteractableObject targetObject { get; private set; }
     [HideInInspector] public bool isOpened { get; private set; }
     public static ActionPanelManager SharedInstance;
@@ -24,6 +25,17 @@ public class ActionPanelManager : MonoBehaviour
         infoPanel.SetActive(false);
         targetObject = target;
 
+        for (int i = 0; i < travelButtons.Length; i++)
+        {
+            travelButtons[i].onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(target.transform); });
+        }
+
+        if (target.IsTrashCan)
+        {
+            trashCanSection.SetActive(true);
+            return;
+        }
+
         if (target.IsClosedObject)
         {
             closedObjectsSection.SetActive(true);
@@ -31,11 +43,6 @@ public class ActionPanelManager : MonoBehaviour
         else
         {
             openObjectsSection.SetActive(true);
-        }
-
-        foreach (var travelButton in travelButtons)
-        {
-            travelButton.onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(target.transform); });
         }
     }
     public void View()
@@ -60,6 +67,9 @@ public class ActionPanelManager : MonoBehaviour
         isOpened = false;
         actionPanel.SetActive(false);
         targetObject.GetComponent<InteractableObject>().CanInteract(true);
+        closedObjectsSection.SetActive(false);
+        openObjectsSection.SetActive(false);
+        trashCanSection.SetActive(false);
     }
     public void DisableInfoPanel()
     {

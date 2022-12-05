@@ -11,8 +11,18 @@ public class InteractableObject : MonoBehaviour
 {
     bool isClose; //If player is close to this object
     public bool IsClose => isClose;
+    bool isTrashCan;
+    public bool IsTrashCan
+    {
+        get { return isTrashCan; }
+        set { isTrashCan = value; }
+    }
     bool isClosedObject; //If closed object is true it refers to an object that cant be taken initially and must be opened example: A fridge // If its false its trash that can be colected at any time
-    public bool IsClosedObject => isClosedObject;
+    public bool IsClosedObject
+    {
+        get { return isClosedObject; }
+        set { isClosedObject = value; }
+    }
     Outline outline;
     [HideInInspector] public bool BeingTargeted { get; set; } //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
