@@ -11,7 +11,7 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] Button[] travelButtons;
     [SerializeField] GameObject closedObjectsSection;
     [SerializeField] GameObject openObjectsSection;
-    [HideInInspector] public GameObject targetObject { get; private set; }
+    [HideInInspector] public InteractableObject targetObject { get; private set; }
     [HideInInspector] public bool isOpened { get; private set; }
     public static ActionPanelManager SharedInstance;
     void Awake()
@@ -22,9 +22,9 @@ public class ActionPanelManager : MonoBehaviour
     {
         isOpened = true;
         infoPanel.SetActive(false);
-        targetObject = target.gameObject;
+        targetObject = target;
 
-        if (target.isClosedObject)
+        if (target.IsClosedObject)
         {
             closedObjectsSection.SetActive(true);
         }
@@ -41,7 +41,7 @@ public class ActionPanelManager : MonoBehaviour
     public void View()
     {
         targetObject.GetComponent<InteractableObject>().CanInteract(false);
-        TransitionsManager.SharedInstance.ViewAction(targetObject);
+        TransitionsManager.SharedInstance.ViewAction(targetObject.gameObject);
     }
     public void EnableActionPanel()
     {
@@ -51,7 +51,7 @@ public class ActionPanelManager : MonoBehaviour
     public void EnableInfo()
     {
         infoPanel.SetActive(true);
-        Sprite objSprite = Resources.Load<Sprite>($"ObjImages/{targetObject.name}");
+        Sprite objSprite = targetObject.ObjSprite;
         string info = $"Esto es un texto de ejemplo, se abrio el objeto: {targetObject.name}";
         HintsPanelFiller.SharedInstance.FillInfo(objSprite, info);
     }

@@ -40,10 +40,10 @@ class TransitionsManager : MonoBehaviour
         InteractableObject targetIO = targetObject.GetComponent<InteractableObject>();
         PlayerMovement.SharedInstance.enabled = false;
         Cinemachine.CinemachineVirtualCamera virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        if (targetIO.optionalLookAt != null)
+        if (targetIO.OptionalLookAt != null)
         {
-            virtualCamera.LookAt = targetIO.optionalLookAt;
-            viewCamera.transform.position = targetIO.optionalLookAt.position + offset;
+            virtualCamera.LookAt = targetIO.OptionalLookAt;
+            viewCamera.transform.position = targetIO.OptionalLookAt.position + offset;
         }
         else
         {

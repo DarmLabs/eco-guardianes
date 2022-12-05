@@ -1,13 +1,29 @@
 using UnityEngine;
 using UnityEngine.Events;
+public enum TrashCategory
+{
+    Rec,
+    Trash,
+    Organic,
+    None
+}
 public class InteractableObject : MonoBehaviour
 {
-    [HideInInspector] public bool isClose { get; private set; } //If player is close to this object
-    [HideInInspector] public bool isClosedObject { get; private set; } //If closed object is true it refers to an object that cant be taken initially and must be opened example: A fridge // If its false its trash that can be colected at any time
+    bool isClose; //If player is close to this object
+    public bool IsClose => isClose;
+    bool isClosedObject; //If closed object is true it refers to an object that cant be taken initially and must be opened example: A fridge // If its false its trash that can be colected at any time
+    public bool IsClosedObject => isClosedObject;
     Outline outline;
-    bool beingTargeted; //If this item is being collected or is a trash can the player is heading towards
+    [HideInInspector] public bool BeingTargeted { get; set; } //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
-    public Transform optionalLookAt { get; set; }
+    public Transform OptionalLookAt { get; set; }
+    [SerializeField] Sprite objSprite;
+    public Sprite ObjSprite => objSprite;
+    public TrashContainer TrashContainer { get; set; }
+    bool isFound; //true = is in player inventory // Variable being saved
+    [SerializeField] TrashCategory category;
+    public TrashCategory Category => category;
+
     void Awake()
     {
         outline = GetComponent<Outline>();
@@ -15,6 +31,19 @@ public class InteractableObject : MonoBehaviour
         if (gameObject.tag == "ClosedObject")
         {
             isClosedObject = true;
+        }
+    }
+    void Start()
+    {
+        if (!isFound)
+        {
+            //TrashContainer.ObjectUnfound();
+        }
+        else
+        {
+            TrashContainer.ObjectFound();
+            TrashContainer.CorrectCategory = category;
+            gameObject.SetActive(false);
         }
     }
     public void SearchMode()
@@ -34,14 +63,16 @@ public class InteractableObject : MonoBehaviour
         {
             ActionPanelManager.SharedInstance.EnableActionPanel();
             ActionPanelManager.SharedInstance.SetTravelListeners(this);
-            beingTargeted = true;
+            BeingTargeted = true;
             Glow(false);
         }
     }
     public virtual void InteractWithObject()
     {
         gameObject.SetActive(false);
-        //Save object
+        isFound = true;
+        //TrashContainer.ObjectFound();
+        //TrashContainer.CorrectCategory = category;
     }
     //Triggers
     public void OnChildTriggerEnter(Collider target)
@@ -51,7 +82,7 @@ public class InteractableObject : MonoBehaviour
 
             isClose = true;
             pm.ClearNavMeshPath();
-            if (beingTargeted)
+            if (BeingTargeted)
             {
                 InteractWithObject();
             }
@@ -80,11 +111,6 @@ public class InteractableObject : MonoBehaviour
     void Glow(bool state)
     {
         outline.enabled = state;
-    }
-    //Setters
-    public void BeingTargeted(bool state)
-    {
-        beingTargeted = state;
     }
     public void CanInteract(bool state)
     {

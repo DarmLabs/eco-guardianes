@@ -44,8 +44,8 @@ public class PlayerMovement : MonoBehaviour
             ClearNavMeshPath();
             if (ActionPanelManager.SharedInstance.targetObject != null)
             {
-                ActionPanelManager.SharedInstance.targetObject.GetComponent<InteractableObject>().BeingTargeted(false);
-                ActionPanelManager.SharedInstance.targetObject.GetComponent<InteractableObject>().CanInteract(true);
+                ActionPanelManager.SharedInstance.targetObject.BeingTargeted = false;
+                ActionPanelManager.SharedInstance.targetObject.CanInteract(true);
                 ActionPanelManager.SharedInstance.DisableInfoPanel();
                 ActionPanelManager.SharedInstance.DisableActionPanel();
             }
@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
     public void TravelToDestination(Transform target)
     {
         InteractableObject targetScript = target.GetComponent<InteractableObject>();
-        if (targetScript.isClose)//If it's close to the object, the player will take it
+        if (targetScript.IsClose)//If it's close to the object, the player will take it
         {
             targetScript.InteractWithObject();
         }
@@ -125,9 +125,9 @@ public class PlayerMovement : MonoBehaviour
             }
             anim.SetFloat("speed", 0.2f);
             navMesh.enabled = true;
-            if (targetScript.optionalLookAt != null)
+            if (targetScript.OptionalLookAt != null)
             {
-                navMesh.SetDestination(targetScript.optionalLookAt.position);
+                navMesh.SetDestination(targetScript.OptionalLookAt.position);
             }
             else
             {

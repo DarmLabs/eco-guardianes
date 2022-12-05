@@ -5,7 +5,6 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
-    [SerializeField] GameObject pauseButton;
     [SerializeField] GameObject confirmExit;
     [SerializeField] GameObject confirmMainMenu;
     [SerializeField] GameObject tutoPanel;
@@ -13,11 +12,7 @@ public class PauseManager : MonoBehaviour
     public void PausePanelSwitcher(bool state)
     {
         pausePanel.SetActive(state);
-        pauseButton.SetActive(!state);
-    }
-    public void SetTimeScale(float scale)
-    {
-        Time.timeScale = scale;
+        MainButtonsManager.SharedInstance.MainButtonsSwitcher(!state);
     }
     public void ConfirmExitSwitcher(bool state)
     {
