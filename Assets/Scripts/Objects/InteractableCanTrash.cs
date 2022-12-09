@@ -7,13 +7,17 @@ public class InteractableCanTrash : InteractableObject
     Animator anim;
     void Start()
     {
-        OptionalLookAt = transform.parent;
+        OptionalLookAt = transform;
         anim = GetComponent<Animator>();
         IsTrashCan = true;
     }
     public override void InteractWithObject()
     {
-        anim.Play("Open");
+        if (gameObject.transform.childCount > 1)
+        {
+            anim.Play("Open");
+        }
+
     }
     public void TrashPanelDisplay() //Used at the end of OpenTacho animation
     {
