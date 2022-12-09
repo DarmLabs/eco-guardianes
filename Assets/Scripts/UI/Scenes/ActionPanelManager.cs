@@ -12,7 +12,11 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] GameObject closedObjectsSection;
     [SerializeField] GameObject openObjectsSection;
     [SerializeField] GameObject trashCanSection;
+    [SerializeField] GameObject searhIntoPanel;
+    [SerializeField] TextMeshProUGUI searchIntoText;
+    [SerializeField] GameObject searchIntoButtons;
     [HideInInspector] public InteractableObjectBase TargetObjectBase { get; private set; }
+    InteractableObject targetObject;
     [HideInInspector] public bool isOpened { get; private set; }
     public static ActionPanelManager SharedInstance;
     void Awake()
@@ -27,7 +31,6 @@ public class ActionPanelManager : MonoBehaviour
         {
             travelButtons[i].onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(TargetObjectBase.transform); });
         }
-        Debug.Log(TargetObjectBase);
         if (TargetObjectBase.Type == ObjectType.TrashCan)
         {
             trashCanSection.SetActive(true);
@@ -69,14 +72,6 @@ public class ActionPanelManager : MonoBehaviour
         }
 
     }
-    [SerializeField]
-    public void EnableInfo()
-    {
-        infoPanel.SetActive(true);
-        Sprite objSprite = TargetObjectBase.GetComponent<InteractableObject>().ObjSprite;
-        string info = $"Esto es un texto de ejemplo, se abrio el objeto: {TargetObjectBase.name}";
-        HintsPanelFiller.SharedInstance.FillInfo(objSprite, info);
-    }
     public void DisableActionPanel()
     {
         isOpened = false;
@@ -86,8 +81,41 @@ public class ActionPanelManager : MonoBehaviour
         openObjectsSection.SetActive(false);
         trashCanSection.SetActive(false);
     }
+    [SerializeField]
+    public void EnableInfo()
+    {
+        infoPanel.SetActive(true);
+        Sprite objSprite = TargetObjectBase.GetComponent<InteractableObject>().ObjSprite;
+        string info = $"Esto es un texto de ejemplo, se abrio el objeto: {TargetObjectBase.name}";
+        HintsPanelFiller.SharedInstance.FillInfo(objSprite, info);
+    }
     public void DisableInfoPanel()
     {
         infoPanel.SetActive(false);
+    }
+    public void SearchIntoPanelSwitcher(bool state)
+    {
+        searhIntoPanel.SetActive(state);
+    }
+    public void SearchIntoButtonsSwitcher(bool state)
+    {
+        searchIntoButtons.SetActive(state);
+    }
+    public void SetSearchIntoPanelData()
+    {
+        targetObject = TargetObjectBase.GetComponent<InteractableObject>();
+        searchIntoText.text = $"Hay {targetObject.ObjectPhrase} dentro de la {TargetObjectBase.name}";
+    }
+    public void TakeInside()
+    {
+        searchIntoText.text = $"Juntaste {targetObject.ObjectPhrase}";
+        targetObject.InteractWithObject();
+        StartCoroutine(WaitForTakenMessage(1.5f));
+    }
+    public IEnumerator WaitForTakenMessage(float secs)
+    {
+        yield return new WaitForSeconds(secs);
+        SearchIntoPanelSwitcher(false);
+        MainButtonsManager.SharedInstance.SetTimeScale(1);
     }
 }

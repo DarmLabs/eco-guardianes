@@ -22,7 +22,7 @@ public class PlayerInteraction : MonoBehaviour
     void CurrentClickedGameObject(GameObject selectedGameObject)
     {
         InteractableObjectBase interactableObject = selectedGameObject.GetComponent<InteractableObjectBase>();
-        if (interactableObject == null)
+        if (interactableObject == null || !interactableObject.isActiveAndEnabled)
         {
             return;
         }

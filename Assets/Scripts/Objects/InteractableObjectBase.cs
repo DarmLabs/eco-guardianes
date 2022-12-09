@@ -48,15 +48,12 @@ public class InteractableObjectBase : MonoBehaviour
     //Triggers
     public void OnChildTriggerEnter(Collider target)
     {
-        if (target.gameObject.TryGetComponent(out PlayerMovement pm))
+        if (target.gameObject.TryGetComponent(out PlayerMovement pm) && BeingTargeted)
         {
-
             isClose = true;
             pm.ClearNavMeshPath();
-            if (BeingTargeted)
-            {
-                InteractWithObject();
-            }
+            InteractWithObject();
+            BeingTargeted = false;
         }
     }
     public void OnChildTriggerExit(Collider target)
@@ -70,7 +67,7 @@ public class InteractableObjectBase : MonoBehaviour
     //Mouse Detection
     void OnMouseEnter()
     {
-        if (!ActionPanelManager.SharedInstance.isOpened && canInteract)
+        if (!ActionPanelManager.SharedInstance.isOpened && canInteract && isActiveAndEnabled)
         {
             Glow(true);
         }
