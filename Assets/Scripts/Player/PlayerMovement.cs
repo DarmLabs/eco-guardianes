@@ -42,10 +42,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             ClearNavMeshPath();
-            if (ActionPanelManager.SharedInstance.targetObject != null)
+            if (ActionPanelManager.SharedInstance.TargetObjectBase != null)
             {
-                ActionPanelManager.SharedInstance.targetObject.BeingTargeted = false;
-                ActionPanelManager.SharedInstance.targetObject.CanInteract(true);
+                ActionPanelManager.SharedInstance.TargetObjectBase.BeingTargeted = false;
+                ActionPanelManager.SharedInstance.TargetObjectBase.CanInteract(true);
                 ActionPanelManager.SharedInstance.DisableInfoPanel();
                 ActionPanelManager.SharedInstance.DisableActionPanel();
             }
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TravelToDestination(Transform target)
     {
-        InteractableObject targetScript = target.GetComponent<InteractableObject>();
+        InteractableObjectBase targetScript = target.GetComponent<InteractableObjectBase>();
         if (targetScript.IsClose)//If it's close to the object, the player will take it
         {
             targetScript.InteractWithObject();

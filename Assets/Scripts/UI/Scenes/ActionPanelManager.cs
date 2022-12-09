@@ -12,61 +12,76 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] GameObject closedObjectsSection;
     [SerializeField] GameObject openObjectsSection;
     [SerializeField] GameObject trashCanSection;
-    [HideInInspector] public InteractableObject targetObject { get; private set; }
+    [HideInInspector] public InteractableObjectBase TargetObjectBase { get; private set; }
     [HideInInspector] public bool isOpened { get; private set; }
     public static ActionPanelManager SharedInstance;
     void Awake()
     {
         SharedInstance = this;
     }
-    public void SetTravelListeners(InteractableObject target)
+    public void SetTravelListeners()
     {
         isOpened = true;
         infoPanel.SetActive(false);
-        targetObject = target;
-
         for (int i = 0; i < travelButtons.Length; i++)
         {
-            travelButtons[i].onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(target.transform); });
+            travelButtons[i].onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(TargetObjectBase.transform); });
         }
-
-        if (target.IsTrashCan)
+        Debug.Log(TargetObjectBase);
+        if (TargetObjectBase.Type == ObjectType.TrashCan)
         {
             trashCanSection.SetActive(true);
             return;
         }
 
-        if (target.IsClosedObject)
+        if (TargetObjectBase.Type == ObjectType.Closed)
         {
             closedObjectsSection.SetActive(true);
         }
-        else
+        else if (TargetObjectBase.Type == ObjectType.Open)
         {
             openObjectsSection.SetActive(true);
         }
     }
     public void View()
     {
-        targetObject.GetComponent<InteractableObject>().CanInteract(false);
-        TransitionsManager.SharedInstance.ViewAction(targetObject.gameObject);
+        TargetObjectBase.CanInteract(false);
+        TransitionsManager.SharedInstance.ViewAction(TargetObjectBase.gameObject);
     }
-    public void EnableActionPanel()
+    public void EnableActionPanel(InteractableObjectBase interactableObjectBase)
     {
-        actionPanel.SetActive(true);
+        if (PlayerMovement.SharedInstance.isMoving)
+        {
+            return;
+        }
+        if (!isOpened && interactableObjectBase == null)
+        {
+            actionPanel.SetActive(true);
+            return;
+        }
+        else if (!isOpened && interactableObjectBase != null)
+        {
+            actionPanel.SetActive(true);
+            TargetObjectBase = interactableObjectBase;
+            SetTravelListeners();
+            TargetObjectBase.BeingTargeted = true;
+            TargetObjectBase.Glow(false);
+        }
+
     }
     [SerializeField]
     public void EnableInfo()
     {
         infoPanel.SetActive(true);
-        Sprite objSprite = targetObject.ObjSprite;
-        string info = $"Esto es un texto de ejemplo, se abrio el objeto: {targetObject.name}";
+        Sprite objSprite = TargetObjectBase.GetComponent<InteractableObject>().ObjSprite;
+        string info = $"Esto es un texto de ejemplo, se abrio el objeto: {TargetObjectBase.name}";
         HintsPanelFiller.SharedInstance.FillInfo(objSprite, info);
     }
     public void DisableActionPanel()
     {
         isOpened = false;
         actionPanel.SetActive(false);
-        targetObject.GetComponent<InteractableObject>().CanInteract(true);
+        TargetObjectBase.CanInteract(true);
         closedObjectsSection.SetActive(false);
         openObjectsSection.SetActive(false);
         trashCanSection.SetActive(false);

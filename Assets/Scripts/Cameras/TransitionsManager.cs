@@ -72,7 +72,7 @@ class TransitionsManager : MonoBehaviour
         {
             PlayerMovement.SharedInstance.enabled = true;
             playerTransitions = false;
-            ActionPanelManager.SharedInstance.EnableActionPanel();
+            ActionPanelManager.SharedInstance.EnableActionPanel(null);
         }
     }
 }

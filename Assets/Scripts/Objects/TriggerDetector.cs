@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TriggerDetector : MonoBehaviour
 {
-    InteractableObject parentScript;
+    InteractableObjectBase parentScript;
     void Start()
     {
-        parentScript = transform.GetComponentInParent<InteractableObject>();
+        parentScript = transform.GetComponentInParent<InteractableObjectBase>();
     }
     void OnTriggerEnter(Collider target)
     {

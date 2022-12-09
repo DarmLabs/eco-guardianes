@@ -21,7 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     }
     void CurrentClickedGameObject(GameObject selectedGameObject)
     {
-        InteractableObject interactableObject = selectedGameObject.GetComponent<InteractableObject>();
+        InteractableObjectBase interactableObject = selectedGameObject.GetComponent<InteractableObjectBase>();
         if (interactableObject == null)
         {
             return;
@@ -31,7 +31,7 @@ public class PlayerInteraction : MonoBehaviour
             CallMode(interactableObject);
         }
     }
-    void CallMode(InteractableObject interactableObject)
+    void CallMode(InteractableObjectBase interactableObject)
     {
         interactableObject.SearchMode();
         /*if (closeMode)

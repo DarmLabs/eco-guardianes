@@ -123,7 +123,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ed67a369fbe68694a81e9e609cd35aa6,
         type: 3}
       propertyPath: m_Name
-      value: Tacho-Recuperables
+      value: cesto_recu Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed67a369fbe68694a81e9e609cd35aa6,
         type: 3}
@@ -6054,8 +6054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b84ef7b0096264fad4da5c5dacfe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 0}
   category: 0
+  type: 2
 --- !u!4 &1996638240768890355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed67a369fbe68694a81e9e609cd35aa6,

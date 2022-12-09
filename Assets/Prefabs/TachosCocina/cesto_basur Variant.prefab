@@ -128,7 +128,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c54aa86db13d230478b182299ff746d6,
         type: 3}
       propertyPath: m_Name
-      value: Tacho-Basura
+      value: cesto_basur Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c54aa86db13d230478b182299ff746d6,
         type: 3}
@@ -6054,8 +6054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b84ef7b0096264fad4da5c5dacfe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 0}
   category: 1
+  type: 2
 --- !u!4 &972098047533277550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c54aa86db13d230478b182299ff746d6,

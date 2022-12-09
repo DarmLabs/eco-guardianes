@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableCanTrash : InteractableObject
+public class InteractableCanTrash : InteractableObjectBase
 {
     Animator anim;
     void Start()
     {
         OptionalLookAt = transform;
         anim = GetComponent<Animator>();
-        IsTrashCan = true;
     }
     public override void InteractWithObject()
     {

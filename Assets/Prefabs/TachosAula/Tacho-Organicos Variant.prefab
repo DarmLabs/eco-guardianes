@@ -71,7 +71,12 @@ PrefabInstance:
     - target: {fileID: 4055171965748937343, guid: 30bc6352262816844805868badf82fba,
         type: 3}
       propertyPath: m_Name
-      value: Tacho-Organicos
+      value: Tacho-Organicos Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104202328928409223, guid: 30bc6352262816844805868badf82fba,
+        type: 3}
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7104202328928409223, guid: 30bc6352262816844805868badf82fba,
         type: 3}
