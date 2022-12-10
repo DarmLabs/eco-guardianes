@@ -7,7 +7,6 @@ public class InteractableCanTrash : InteractableObjectBase
     Animator anim;
     void Start()
     {
-        OptionalLookAt = transform;
         anim = GetComponent<Animator>();
     }
     public override void InteractWithObject()

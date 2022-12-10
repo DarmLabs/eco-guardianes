@@ -72,7 +72,6 @@ public class ActionPanelManager : MonoBehaviour
             TargetObjectBase.BeingTargeted = true;
             TargetObjectBase.Glow(false);
         }
-
     }
     public void DisableActionPanel()
     {

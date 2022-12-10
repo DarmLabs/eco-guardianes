@@ -5,18 +5,16 @@ using UnityEngine;
 class TransitionsManager : MonoBehaviour
 {
     [Header("Needed GameObjects & Others")]
-    [SerializeField] GameObject closeView;
     [SerializeField] GameObject viewCamera;
     [SerializeField] Cinemachine.CinemachineVirtualCamera playerCamera;
     [SerializeField] Cinemachine.CinemachineBrain brain;
     Camera mainCamera;
     LayerMask playerLayer = 7;
     int oldMask;
+    bool isFromInsideObject;
     public static TransitionsManager SharedInstance;
     [Header("Changeable Variables")]
     [SerializeField] Vector3 offset;
-    bool viewTransition;
-    bool playerTransitions;
     void Awake()
     {
         SharedInstance = this;
@@ -25,61 +23,64 @@ class TransitionsManager : MonoBehaviour
     {
         mainCamera = brain.GetComponent<Camera>();
     }
-    void FixedUpdate()
-    {
-        CheckTransitions();
-    }
-    void CheckTransitions()
-    {
-        if (viewTransition && !closeView.activeSelf)
-        {
-            WaitForViewTransition();
-        }
-        if (playerTransitions)
-        {
-            WaitForPlayerTransition();
-        }
-    }
     public void ViewAction(InteractableObjectBase targetObject)
     {
+        InteractableContainer targetContainer = null;
+        if (targetObject.GetComponent<InteractableContainer>() != null)
+        {
+            targetContainer = targetObject.GetComponent<InteractableContainer>();
+        }
         PlayerMovement.SharedInstance.enabled = false;
         Cinemachine.CinemachineVirtualCamera virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        if (targetObject.OptionalLookAt != null)
+        if (targetObject.OptionalLookAt != null && targetContainer != null) //Used for open objects inside closed ones
         {
             virtualCamera.LookAt = targetObject.OptionalLookAt;
-            viewCamera.transform.position = targetObject.OptionalLookAt.position + offset;
+            viewCamera.transform.position = targetContainer.ViewPoint.position;
+            isFromInsideObject = true;
         }
-        else
+        else //Used for open objects outside of closed ones
         {
             virtualCamera.LookAt = targetObject.transform;
             viewCamera.transform.position = targetObject.transform.position + offset;
+            isFromInsideObject = false;
         }
         playerCamera.m_Priority = 9;
-        viewTransition = true;
+        StartCoroutine(WaitForViewTransition());
     }
     public void CloseViewAction()
     {
         playerCamera.m_Priority = 11;
         mainCamera.cullingMask = oldMask;
-        playerTransitions = true;
-    }
-    void WaitForViewTransition()
-    {
-        if (!brain.IsBlending)
+        if (isFromInsideObject)
         {
-            ActionPanelManager.SharedInstance.EnableInfo();
-            oldMask = mainCamera.cullingMask;
-            mainCamera.cullingMask &= ~(1 << playerLayer);
-            viewTransition = false;
+            StartCoroutine(WaitForPlayerTransitionFromInsideObject());
+            isFromInsideObject = false;
+        }
+        else
+        {
+            StartCoroutine(WaitForPlayerTransitionFromActionPanel());
         }
     }
-    void WaitForPlayerTransition()
+    IEnumerator WaitForViewTransition()
     {
-        if (!brain.IsBlending)
-        {
-            PlayerMovement.SharedInstance.enabled = true;
-            playerTransitions = false;
-            ActionPanelManager.SharedInstance.EnableActionPanel(null);
-        }
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() => brain.IsBlending == false);
+        ActionPanelManager.SharedInstance.EnableInfo();
+        oldMask = mainCamera.cullingMask;
+        mainCamera.cullingMask &= ~(1 << playerLayer);
+    }
+    IEnumerator WaitForPlayerTransitionFromActionPanel()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() => brain.IsBlending == false);
+        PlayerMovement.SharedInstance.enabled = true;
+        ActionPanelManager.SharedInstance.EnableActionPanel(null);
+    }
+    IEnumerator WaitForPlayerTransitionFromInsideObject()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() => brain.IsBlending == false);
+        PlayerMovement.SharedInstance.enabled = true;
+        ActionPanelManager.SharedInstance.SearchIntoPanelSwitcher(true);
     }
 }
