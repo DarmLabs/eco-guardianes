@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Controls();
         ObjectDetector();
-        Debug.DrawRay(transform.position + new Vector3(0, -0.6f, 0), transform.forward);
+        //Debug.DrawRay(transform.position + new Vector3(0, -0.6f, 0), transform.forward);
     }
     void Controls()
     {

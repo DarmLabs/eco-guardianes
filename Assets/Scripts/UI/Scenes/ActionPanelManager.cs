@@ -17,7 +17,8 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] GameObject searchIntoButtons;
     [HideInInspector] public InteractableObjectBase TargetObjectBase { get; private set; }
     InteractableObject targetObject;
-    [HideInInspector] public bool isOpened { get; private set; }
+    bool isOpened;
+    public bool IsOpened => isOpened;
     public static ActionPanelManager SharedInstance;
     void Awake()
     {
@@ -25,7 +26,6 @@ public class ActionPanelManager : MonoBehaviour
     }
     public void SetTravelListeners()
     {
-        isOpened = true;
         infoPanel.SetActive(false);
         for (int i = 0; i < travelButtons.Length; i++)
         {
@@ -49,7 +49,7 @@ public class ActionPanelManager : MonoBehaviour
     public void View()
     {
         TargetObjectBase.CanInteract(false);
-        TransitionsManager.SharedInstance.ViewAction(TargetObjectBase.gameObject);
+        TransitionsManager.SharedInstance.ViewAction(TargetObjectBase);
     }
     public void EnableActionPanel(InteractableObjectBase interactableObjectBase)
     {
@@ -57,14 +57,16 @@ public class ActionPanelManager : MonoBehaviour
         {
             return;
         }
-        if (!isOpened && interactableObjectBase == null)
+        if (interactableObjectBase == null)
         {
             actionPanel.SetActive(true);
+            isOpened = true;
             return;
         }
-        else if (!isOpened && interactableObjectBase != null)
+        else if (interactableObjectBase != null)
         {
             actionPanel.SetActive(true);
+            isOpened = true;
             TargetObjectBase = interactableObjectBase;
             SetTravelListeners();
             TargetObjectBase.BeingTargeted = true;
@@ -85,7 +87,11 @@ public class ActionPanelManager : MonoBehaviour
     public void EnableInfo()
     {
         infoPanel.SetActive(true);
-        Sprite objSprite = TargetObjectBase.GetComponent<InteractableObject>().ObjSprite;
+        Sprite objSprite = null;
+        if (TargetObjectBase.ObjSprite != null)
+        {
+            objSprite = TargetObjectBase.ObjSprite;
+        }
         string info = $"Esto es un texto de ejemplo, se abrio el objeto: {TargetObjectBase.name}";
         HintsPanelFiller.SharedInstance.FillInfo(objSprite, info);
     }
@@ -106,7 +112,7 @@ public class ActionPanelManager : MonoBehaviour
         targetObject = TargetObjectBase.GetComponent<InteractableObject>();
         searchIntoText.text = $"Hay {targetObject.ObjectPhrase} dentro de la {TargetObjectBase.name}";
     }
-    public void TakeInside()
+    public void TakeInside() //Used on take button inside search into panel
     {
         searchIntoText.text = $"Juntaste {targetObject.ObjectPhrase}";
         targetObject.InteractWithObject();

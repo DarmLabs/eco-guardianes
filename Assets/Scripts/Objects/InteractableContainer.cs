@@ -5,6 +5,8 @@ using UnityEngine;
 public class InteractableContainer : InteractableObjectBase
 {
     [SerializeField] InteractableObject insideObject;
+    [SerializeField] Transform viewPoint;
+    public Transform ViewPoint => viewPoint;
     Animator anim;
     void Start()
     {
@@ -12,7 +14,9 @@ public class InteractableContainer : InteractableObjectBase
         if (insideObject == null)
         {
             this.enabled = false;
+            return;
         }
+        OptionalLookAt = insideObject.transform;
     }
     public override void InteractWithObject()
     {

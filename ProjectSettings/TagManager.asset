@@ -6,8 +6,6 @@ TagManager:
   tags:
   - TrashCan
   - NoCameraCollide
-  - OpenedObject
-  - ClosedObject
   layers:
   - Default
   - TransparentFX
@@ -16,7 +14,7 @@ TagManager:
   - Water
   - UI
   - 3DUI
-  - 
+  - Player
   - 
   - 
   - 

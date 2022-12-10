@@ -9,15 +9,21 @@ class TransitionsManager : MonoBehaviour
     [SerializeField] GameObject viewCamera;
     [SerializeField] Cinemachine.CinemachineVirtualCamera playerCamera;
     [SerializeField] Cinemachine.CinemachineBrain brain;
+    Camera mainCamera;
+    LayerMask playerLayer = 7;
+    int oldMask;
     public static TransitionsManager SharedInstance;
     [Header("Changeable Variables")]
     [SerializeField] Vector3 offset;
     bool viewTransition;
     bool playerTransitions;
-    GameObject targetObject;
     void Awake()
     {
         SharedInstance = this;
+    }
+    void Start()
+    {
+        mainCamera = brain.GetComponent<Camera>();
     }
     void FixedUpdate()
     {
@@ -34,16 +40,14 @@ class TransitionsManager : MonoBehaviour
             WaitForPlayerTransition();
         }
     }
-    public void ViewAction(GameObject targetObject)
+    public void ViewAction(InteractableObjectBase targetObject)
     {
-        this.targetObject = targetObject;
-        InteractableObject targetIO = targetObject.GetComponent<InteractableObject>();
         PlayerMovement.SharedInstance.enabled = false;
         Cinemachine.CinemachineVirtualCamera virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        if (targetIO.OptionalLookAt != null)
+        if (targetObject.OptionalLookAt != null)
         {
-            virtualCamera.LookAt = targetIO.OptionalLookAt;
-            viewCamera.transform.position = targetIO.OptionalLookAt.position + offset;
+            virtualCamera.LookAt = targetObject.OptionalLookAt;
+            viewCamera.transform.position = targetObject.OptionalLookAt.position + offset;
         }
         else
         {
@@ -56,6 +60,7 @@ class TransitionsManager : MonoBehaviour
     public void CloseViewAction()
     {
         playerCamera.m_Priority = 11;
+        mainCamera.cullingMask = oldMask;
         playerTransitions = true;
     }
     void WaitForViewTransition()
@@ -63,6 +68,8 @@ class TransitionsManager : MonoBehaviour
         if (!brain.IsBlending)
         {
             ActionPanelManager.SharedInstance.EnableInfo();
+            oldMask = mainCamera.cullingMask;
+            mainCamera.cullingMask &= ~(1 << playerLayer);
             viewTransition = false;
         }
     }

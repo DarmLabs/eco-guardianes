@@ -27,6 +27,8 @@ public class InteractableObjectBase : MonoBehaviour
     public TrashCategory Category => category;
     [SerializeField] ObjectType type;
     public ObjectType Type => type;
+    [SerializeField] Sprite objSprite;
+    public Sprite ObjSprite => objSprite;
 
     void Awake()
     {
@@ -67,7 +69,7 @@ public class InteractableObjectBase : MonoBehaviour
     //Mouse Detection
     void OnMouseEnter()
     {
-        if (!ActionPanelManager.SharedInstance.isOpened && canInteract && isActiveAndEnabled)
+        if (!ActionPanelManager.SharedInstance.IsOpened && canInteract && isActiveAndEnabled)
         {
             Glow(true);
         }
