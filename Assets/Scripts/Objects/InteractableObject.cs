@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class InteractableObject : InteractableObjectBase
 {
+    ObjectData objectData;
     bool isFound; //true = is in player inventory // Variable being saved
     [SerializeField] string objectPhrase;
     public string ObjectPhrase => objectPhrase;
