@@ -1009,6 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardScene: MapScene
+  wheelChairToggle: {fileID: 1235625702}
 --- !u!4 &384110056
 Transform:
   m_ObjectHideFlags: 0
