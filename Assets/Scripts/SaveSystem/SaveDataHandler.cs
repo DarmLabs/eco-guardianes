@@ -22,6 +22,10 @@ public class SaveDataHandler : MonoBehaviour
     }
     void LoadObjectsData()
     {
+        if (interactableObjects.Length != 6)
+        {
+            return;
+        }
         if (File.Exists($"ObjectsData_{SceneCache.SharedInstance.currentScene}"))
         {
             objectDatas = FileHandler.ReadListFromJSON<ObjectData>($"ObjectsData_{SceneCache.SharedInstance.currentScene}");
@@ -37,6 +41,10 @@ public class SaveDataHandler : MonoBehaviour
     }
     void SaveObjectsData()
     {
+        if (interactableObjects.Length != 6)
+        {
+            return;
+        }
         for (int i = 0; i < interactableObjects.Length; i++)
         {
             objectDatas[i] = interactableObjects[i].ObjectData;
