@@ -175,6 +175,7 @@ public class CharacterCreation : MonoBehaviour
     }
     public void SetWheelChair(bool state)
     {
+        CharacterCreatorSceneManager.SharedInstance.SetWheelChairToggle(state);
         wheelChair.SetActive(state);
         wheelChair.GetComponentInParent<Animator>().SetBool("isOnWheelChair", state);
     }

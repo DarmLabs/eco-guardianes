@@ -979,7 +979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: -1
   id: shirt
---- !u!1 &387345727
+--- !u!1 &384110054
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -987,55 +987,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 387345729}
-  - component: {fileID: 387345728}
-  - component: {fileID: 387345730}
+  - component: {fileID: 384110056}
+  - component: {fileID: 384110055}
   m_Layer: 0
-  m_Name: SceneController
+  m_Name: CharacterCreation_Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &387345728
+--- !u!114 &384110055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387345727}
+  m_GameObject: {fileID: 384110054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c0f9108375bba47b98774746be4aa4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7aa1d484c08f2634084c011371089e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &387345729
+  forwardScene: MapScene
+--- !u!4 &384110056
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387345727}
+  m_GameObject: {fileID: 384110054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalPosition: {x: 0.22780609, y: 0.17491531, z: -5.0873046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &387345730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387345727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5672f70095373439b68db18918d030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &418523535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1036,6 @@ GameObject:
   - component: {fileID: 418523538}
   - component: {fileID: 418523537}
   - component: {fileID: 418523540}
-  - component: {fileID: 418523539}
   m_Layer: 5
   m_Name: PJ
   m_TagString: Untagged
@@ -1111,20 +1098,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418523535}
   m_CullTransparentMesh: 1
---- !u!114 &418523539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418523535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e1fa849ae8bca5419c309f0e154710a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creator: {fileID: 1290293993}
-  pjPreview: {fileID: 853247915}
 --- !u!95 &418523540
 Animator:
   serializedVersion: 4
@@ -3923,16 +3896,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 418523539}
-        m_TargetAssemblyTypeName: PJ_PreviewAnimEvent, Assembly-CSharp
-        m_MethodName: StartAnim
+      - m_Target: {fileID: 384110055}
+        m_TargetAssemblyTypeName: CharacterCreatorSceneManager, Assembly-CSharp
+        m_MethodName: OnSaveButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1164881035
