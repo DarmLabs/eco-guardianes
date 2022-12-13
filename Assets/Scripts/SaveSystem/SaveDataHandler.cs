@@ -51,4 +51,16 @@ public class SaveDataHandler : MonoBehaviour
         }
         FileHandler.SaveToJSON<List<ObjectData>>(objectDatas, $"ObjectsData_{SceneCache.SharedInstance.currentScene}");
     }
+    public void SaveStarsData(StarsData starsData, string filename)
+    {
+        FileHandler.SaveToJSON<StarsData>(starsData, filename);
+    }
+    public StarsData LoadStarsData()
+    {
+        if (File.Exists($"{Application.persistentDataPath}/starsData"))
+        {
+            FileHandler.ReadFromJSON<StarsData>("starsData");
+        }
+        return new StarsData(0);
+    }
 }
