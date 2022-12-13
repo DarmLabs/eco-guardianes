@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.IO;
 public class MapManager : MonoBehaviour
 {
     StarsData starsData;
     [SerializeField] TextMeshProUGUI currentStarsText;
+    [SerializeField] GameObject confirmationPanel;
+    [SerializeField] GameObject starsHUD;
+    [SerializeField] TextMeshProUGUI sceneText;
+    string sceneForward;
     [SerializeField] RequieredStars[] sceneStars;
     void Awake()
     {
@@ -35,11 +38,23 @@ public class MapManager : MonoBehaviour
             }
         }
     }
-    public void ChangeScene(string scene) //Used on map buttons
+    public void OnYesButton()
     {
-        if (ScenesChanger.SharedInstance != null)
-        {
-            ScenesChanger.SharedInstance.SceneChange(scene);
-        }
+        ScenesChanger.SharedInstance.SceneChange(sceneForward);
+    }
+    public void OnNoButton()
+    {
+        ConfirmScene(false);
+    }
+    public void OnSceneButtonClicked(string sceneForward)
+    {
+        this.sceneForward = sceneForward;
+        sceneText.text = $"¿Quieres ir a la {sceneForward}?";
+        ConfirmScene(true);
+    }
+    void ConfirmScene(bool state)
+    {
+        starsHUD.SetActive(!state);
+        confirmationPanel.SetActive(state);
     }
 }

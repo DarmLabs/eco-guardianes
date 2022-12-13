@@ -696,6 +696,75 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 480521744}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1071007000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207074, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040674711683207132, guid: 4b652cbeb76263645a3ac4725bb6223f,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b652cbeb76263645a3ac4725bb6223f, type: 3}
 --- !u!1 &1117082212
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,12 +1051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d524ade292ee97643b1dd343c5477eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previewPj:
-  - {fileID: 0}
-  - {fileID: 1573381845}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   mainMenuPanel: {fileID: 1117082212}
   confirmationPanel: {fileID: 480521746}
   creditsPanel: {fileID: 0}
@@ -2064,7 +2127,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Cocina
+          m_StringArgument: CharacterCreation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &8745701022065540142
