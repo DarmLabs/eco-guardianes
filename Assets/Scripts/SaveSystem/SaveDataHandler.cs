@@ -5,17 +5,22 @@ using System.IO;
 public class SaveDataHandler : MonoBehaviour
 {
     public static SaveDataHandler SharedInstance;
+    //int saveSlot; // Implementar
     [SerializeField] InteractableObject[] interactableObjects;
     List<ObjectData> objectDatas;
-    void Start()
-    {
-        AssignObjectsData();
-    }
     void OnApplicationQuit()
     {
         SaveObjectsData();
     }
-    void AssignObjectsData()
+    public void Save()
+    {
+        SaveObjectsData();
+    }
+    public void Load()
+    {
+        LoadObjectsData();
+    }
+    void LoadObjectsData()
     {
         if (File.Exists($"ObjectsData_{SceneCache.SharedInstance.currentScene}"))
         {
