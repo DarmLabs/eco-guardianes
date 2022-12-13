@@ -5,24 +5,37 @@ using System.IO;
 public class SaveDataHandler : MonoBehaviour
 {
     public static SaveDataHandler SharedInstance;
+    [SerializeField] InteractableObject[] interactableObjects;
     List<ObjectData> objectDatas;
     void Start()
     {
-        ReadData();
+        AssignObjectsData();
     }
     void OnApplicationQuit()
     {
-        SaveData();
+        SaveObjectsData();
     }
-    void SaveData()
+    void AssignObjectsData()
     {
-        FileHandler.SaveToJSON<List<ObjectData>>(objectDatas, $"ObjectsData_{SceneCache.SharedInstance.currentScene}");
-    }
-    void ReadData()
-    {
-        if (File.Exists(Application.persistentDataPath + $"/ObjectsData_{SceneCache.SharedInstance.currentScene}"))
+        if (File.Exists($"ObjectsData_{SceneCache.SharedInstance.currentScene}"))
         {
             objectDatas = FileHandler.ReadListFromJSON<ObjectData>($"ObjectsData_{SceneCache.SharedInstance.currentScene}");
         }
+        else
+        {
+            return;
+        }
+        for (int i = 0; i < interactableObjects.Length; i++)
+        {
+            interactableObjects[i].ObjectData = objectDatas[i];
+        }
+    }
+    void SaveObjectsData()
+    {
+        for (int i = 0; i < interactableObjects.Length; i++)
+        {
+            objectDatas[i] = interactableObjects[i].ObjectData;
+        }
+        FileHandler.SaveToJSON<List<ObjectData>>(objectDatas, $"ObjectsData_{SceneCache.SharedInstance.currentScene}");
     }
 }

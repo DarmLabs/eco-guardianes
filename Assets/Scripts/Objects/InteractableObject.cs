@@ -4,12 +4,16 @@ using UnityEngine.Events;
 public class InteractableObject : InteractableObjectBase
 {
     ObjectData objectData;
-    bool isFound; //true = is in player inventory // Variable being saved
+    public ObjectData ObjectData
+    {
+        get => objectData;
+        set => objectData = value;
+    }
     [SerializeField] string objectPhrase;
     public string ObjectPhrase => objectPhrase;
     void Start()
     {
-        if (!isFound)
+        if (!objectData.isFound)
         {
             //TrashContainer.ObjectUnfound();
         }
@@ -23,7 +27,7 @@ public class InteractableObject : InteractableObjectBase
     public override void InteractWithObject()
     {
         base.InteractWithObject();
-        isFound = true;
+        objectData.isFound = true;
         //TrashContainer.ObjectFound();
         //TrashContainer.CorrectCategory = category;
     }
