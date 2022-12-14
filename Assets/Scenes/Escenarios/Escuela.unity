@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.4
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.13333334
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 3249c79e67608374aaad408ed683bf0d, type: 2}
 --- !u!1001 &71533481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &71533482 stripped
@@ -246,7 +251,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &141634948
 Transform:
@@ -351,7 +356,7 @@ PrefabInstance:
     - target: {fileID: -5095993458634988483, guid: 58ce0e4aee446aa4e9e1daf78b1b3fc6,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: -3318872589572257280, guid: 58ce0e4aee446aa4e9e1daf78b1b3fc6,
         type: 3}
@@ -426,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 5268646805545546244, guid: 58ce0e4aee446aa4e9e1daf78b1b3fc6,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5771305557293800986, guid: 58ce0e4aee446aa4e9e1daf78b1b3fc6,
         type: 3}
@@ -702,6 +707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &188718268 stripped
@@ -819,10 +829,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -1034,7 +1054,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &335087807
 Transform:
@@ -1043,8 +1063,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335087806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.608086, y: 6.128421, z: -8.572827}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 8.572828, y: 6.128418, z: 10.608088}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1052,8 +1072,8 @@ Transform:
   - {fileID: 812239132}
   - {fileID: 1195659021}
   - {fileID: 1858010426}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 169243061}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &349430698
 PrefabInstance:
@@ -1066,6 +1086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tacho-Recuperables Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558640725475746240, guid: f36f8326e31070d4e9256fd791f7d40b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2939107291311651706, guid: f36f8326e31070d4e9256fd791f7d40b,
         type: 3}
@@ -1212,6 +1237,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &364350623 stripped
@@ -1334,6 +1364,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &462554798 stripped
@@ -1443,6 +1478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &481863709 stripped
@@ -1551,6 +1591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: silla (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
@@ -1784,10 +1829,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -1945,10 +2000,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -2078,6 +2143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &759789045 stripped
@@ -2119,7 +2189,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &812239132
 Transform:
@@ -2221,10 +2291,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -2375,10 +2455,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -2508,6 +2598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &1087780118 stripped
@@ -2602,6 +2697,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tacho-Organicos Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8867956042936945258, guid: a150aea4496483a41b87fbfb8c2f10a4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a150aea4496483a41b87fbfb8c2f10a4, type: 3}
 --- !u!4 &1088854986 stripped
@@ -2691,6 +2791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: silla (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
@@ -2801,6 +2906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &1157350836 stripped
@@ -2842,7 +2952,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1195659021
 Transform:
@@ -2934,6 +3044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tacho-Basura Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4055171965748937343, guid: 30bc6352262816844805868badf82fba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30bc6352262816844805868badf82fba, type: 3}
 --- !u!4 &1232763909 stripped
@@ -3019,10 +3134,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -3160,10 +3285,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -3293,6 +3428,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &1401436273 stripped
@@ -3402,6 +3542,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &1456653438 stripped
@@ -3506,10 +3651,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -3632,12 +3787,12 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000022481217
+      value: 0.00000002248122
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000009312026
+      value: -0.000000009312027
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -3662,12 +3817,12 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000022481217
+      value: 0.00000002248122
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000009312026
+      value: -0.000000009312027
       objectReference: {fileID: 0}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -3757,6 +3912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: silla (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
@@ -3862,10 +4022,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -3990,10 +4160,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -4136,6 +4316,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &1653863718 stripped
@@ -4240,10 +4425,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -4480,6 +4675,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: silla (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
 --- !u!4 &1748934851 stripped
@@ -4584,10 +4784,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -4712,10 +4922,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -4777,7 +4997,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1804503889
 Transform:
@@ -4973,10 +5193,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -5038,7 +5268,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1858010426
 Transform:
@@ -5140,10 +5370,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -5268,10 +5508,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117501564378976951, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
         type: 3}
       propertyPath: m_Name
       value: banco (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2b72458ba4f26743a5c04840d58e1df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b72458ba4f26743a5c04840d58e1df, type: 3}
@@ -5515,6 +5765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: silla (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ca88ea5f7186f43abbb157d431dae4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca88ea5f7186f43abbb157d431dae4, type: 3}
