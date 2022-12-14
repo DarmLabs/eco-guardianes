@@ -22,7 +22,12 @@ public class InteractableObjectBase : MonoBehaviour
     [HideInInspector] public bool BeingTargeted { get; set; } //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
     public Transform OptionalLookAt { get; set; }
-    public TrashContainer TrashContainer { get; set; }
+    [SerializeField] TrashContainer trashContainer;
+    public TrashContainer TrashContainer
+    {
+        get => trashContainer;
+        set => trashContainer = value;
+    }
     [SerializeField] TrashCategory category;
     public TrashCategory Category => category;
     [SerializeField] ObjectType type;

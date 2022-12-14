@@ -13,6 +13,7 @@ public class InteractableObject : InteractableObjectBase
     public string ObjectPhrase => objectPhrase;
     void Start()
     {
+        objectData = new ObjectData(false);
         if (!objectData.isFound)
         {
             //TrashContainer.ObjectUnfound();
@@ -28,7 +29,7 @@ public class InteractableObject : InteractableObjectBase
     {
         base.InteractWithObject();
         objectData.isFound = true;
-        //TrashContainer.ObjectFound();
-        //TrashContainer.CorrectCategory = category;
+        /*TrashContainer.ObjectFound();
+        TrashContainer.CorrectCategory = Category;*/
     }
 }

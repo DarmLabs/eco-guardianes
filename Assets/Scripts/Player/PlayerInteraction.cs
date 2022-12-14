@@ -21,6 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     }
     void CurrentClickedGameObject(GameObject selectedGameObject)
     {
+        Debug.Log(selectedGameObject);
         InteractableObjectBase interactableObject = selectedGameObject.GetComponent<InteractableObjectBase>();
         if (interactableObject == null || !interactableObject.isActiveAndEnabled)
         {

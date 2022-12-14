@@ -32,7 +32,7 @@ public class SaveDataHandler : MonoBehaviour
         }
         else
         {
-            return;
+            objectDatas = new List<ObjectData>(6);
         }
         for (int i = 0; i < interactableObjects.Length; i++)
         {

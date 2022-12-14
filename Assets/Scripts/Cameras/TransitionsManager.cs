@@ -14,7 +14,8 @@ class TransitionsManager : MonoBehaviour
     bool isFromInsideObject;
     public static TransitionsManager SharedInstance;
     [Header("Changeable Variables")]
-    [SerializeField] Vector3 offset;
+    [SerializeField] Vector3 objOffset;
+    [SerializeField] Vector3 trashCanOffset;
     void Awake()
     {
         SharedInstance = this;
@@ -41,7 +42,14 @@ class TransitionsManager : MonoBehaviour
         else //Used for open objects outside of closed ones
         {
             virtualCamera.LookAt = targetObject.transform;
-            viewCamera.transform.position = targetObject.transform.position + offset;
+            if (targetObject.Type == ObjectType.TrashCan)
+            {
+                viewCamera.transform.position = targetObject.transform.position + trashCanOffset;
+            }
+            else
+            {
+                viewCamera.transform.position = targetObject.transform.position + objOffset;
+            }
             isFromInsideObject = false;
         }
         playerCamera.m_Priority = 9;
