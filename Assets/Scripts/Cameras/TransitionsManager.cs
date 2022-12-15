@@ -26,32 +26,35 @@ class TransitionsManager : MonoBehaviour
     }
     public void ViewAction(InteractableObjectBase targetObject)
     {
-        InteractableContainer targetContainer = null;
-        if (targetObject.GetComponent<InteractableContainer>() != null)
-        {
-            targetContainer = targetObject.GetComponent<InteractableContainer>();
-        }
         PlayerMovement.SharedInstance.enabled = false;
         Cinemachine.CinemachineVirtualCamera virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        if (targetObject.OptionalLookAt != null && targetContainer != null) //Used for open objects inside closed ones
+
+        Vector3 cameraPosition = new Vector3();
+        Transform lookAt = null;
+
+        ObjectType targetType = targetObject.Type;
+        switch (targetType)
         {
-            virtualCamera.LookAt = targetObject.OptionalLookAt;
-            viewCamera.transform.position = targetContainer.ViewPoint.position;
-            isFromInsideObject = true;
+            case ObjectType.Closed:
+                InteractableContainer targetContainer = null;
+                targetContainer = targetObject.GetComponent<InteractableContainer>();
+                cameraPosition = targetContainer.ViewPoint.position;
+                lookAt = targetContainer.LookAt;
+                isFromInsideObject = true;
+                break;
+            case ObjectType.Open:
+                lookAt = targetObject.LookAt;
+                cameraPosition = targetObject.transform.position + objOffset;
+                break;
+            case ObjectType.TrashCan:
+                lookAt = targetObject.transform;
+                cameraPosition = targetObject.transform.position + trashCanOffset;
+                break;
         }
-        else //Used for open objects outside of closed ones
-        {
-            virtualCamera.LookAt = targetObject.transform;
-            if (targetObject.Type == ObjectType.TrashCan)
-            {
-                viewCamera.transform.position = targetObject.transform.position + trashCanOffset;
-            }
-            else
-            {
-                viewCamera.transform.position = targetObject.transform.position + objOffset;
-            }
-            isFromInsideObject = false;
-        }
+
+        viewCamera.transform.position = cameraPosition;
+        virtualCamera.LookAt = lookAt;
+
         playerCamera.m_Priority = 9;
         StartCoroutine(WaitForViewTransition());
     }

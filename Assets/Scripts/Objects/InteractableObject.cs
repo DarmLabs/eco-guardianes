@@ -13,6 +13,14 @@ public class InteractableObject : InteractableObjectBase
     public string ObjectPhrase => objectPhrase;
     void Start()
     {
+        if (transform.GetChild(1) != null)
+        {
+            LookAt = transform.GetChild(1);
+        }
+        else
+        {
+            LookAt = transform;
+        }
         objectData = new ObjectData(false);
         if (!objectData.isFound)
         {

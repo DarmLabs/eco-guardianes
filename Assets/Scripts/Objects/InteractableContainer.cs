@@ -16,7 +16,7 @@ public class InteractableContainer : InteractableObjectBase
             this.enabled = false;
             return;
         }
-        OptionalLookAt = insideObject.transform;
+        LookAt = insideObject.transform;
     }
     public override void InteractWithObject()
     {

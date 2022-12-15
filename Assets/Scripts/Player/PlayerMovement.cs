@@ -125,9 +125,9 @@ public class PlayerMovement : MonoBehaviour
             }
             anim.SetFloat("speed", 0.2f);
             navMesh.enabled = true;
-            if (targetScript.OptionalLookAt != null)
+            if (targetScript.LookAt != null)
             {
-                navMesh.SetDestination(targetScript.OptionalLookAt.position);
+                navMesh.SetDestination(targetScript.LookAt.position);
             }
             else
             {
