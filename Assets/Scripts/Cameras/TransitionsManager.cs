@@ -6,6 +6,7 @@ class TransitionsManager : MonoBehaviour
 {
     [Header("Needed GameObjects & Others")]
     [SerializeField] GameObject viewCamera;
+    Cinemachine.CinemachineVirtualCamera virtualCamera;
     [SerializeField] Cinemachine.CinemachineVirtualCamera playerCamera;
     [SerializeField] Cinemachine.CinemachineBrain brain;
     Camera mainCamera;
@@ -23,40 +24,36 @@ class TransitionsManager : MonoBehaviour
     void Start()
     {
         mainCamera = brain.GetComponent<Camera>();
+        virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
     }
     public void ViewAction(InteractableObjectBase targetObject)
     {
         PlayerMovement.SharedInstance.enabled = false;
-        Cinemachine.CinemachineVirtualCamera virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
-
-        Vector3 cameraPosition = new Vector3();
-        Transform lookAt = null;
 
         ObjectType targetType = targetObject.Type;
         switch (targetType)
         {
             case ObjectType.Closed:
-                InteractableContainer targetContainer = null;
-                targetContainer = targetObject.GetComponent<InteractableContainer>();
-                cameraPosition = targetContainer.ViewPoint.position;
-                lookAt = targetContainer.LookAt;
+                InteractableContainer targetContainer = targetObject.GetComponent<InteractableContainer>();
+                SetCamera(targetContainer.LookAt, targetObject.transform.position);
                 isFromInsideObject = true;
                 break;
             case ObjectType.Open:
-                lookAt = targetObject.LookAt;
-                cameraPosition = targetObject.transform.position + objOffset;
+                InteractableObject targetOpenObj = targetObject.GetComponent<InteractableObject>();
+                SetCamera(targetObject.LookAt, targetObject.transform.position + targetOpenObj.ViewOffset);
                 break;
             case ObjectType.TrashCan:
-                lookAt = targetObject.transform;
-                cameraPosition = targetObject.transform.position + trashCanOffset;
+                SetCamera(targetObject.LookAt, targetObject.transform.position + trashCanOffset);
                 break;
         }
 
-        viewCamera.transform.position = cameraPosition;
-        virtualCamera.LookAt = lookAt;
-
         playerCamera.m_Priority = 9;
         StartCoroutine(WaitForViewTransition());
+    }
+    void SetCamera(Transform lookAt, Vector3 position)
+    {
+        viewCamera.transform.position = position;
+        virtualCamera.LookAt = lookAt;
     }
     public void CloseViewAction()
     {

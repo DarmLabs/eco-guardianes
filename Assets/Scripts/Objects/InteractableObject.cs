@@ -10,6 +10,8 @@ public class InteractableObject : InteractableObjectBase
         set => objectData = value;
     }
     [SerializeField] string objectPhrase;
+    [SerializeField] Vector3 viewOffset;
+    public Vector3 ViewOffset => viewOffset;
     public string ObjectPhrase => objectPhrase;
     void Start()
     {
