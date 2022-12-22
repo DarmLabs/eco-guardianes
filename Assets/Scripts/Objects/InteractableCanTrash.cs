@@ -5,8 +5,9 @@ using UnityEngine;
 public class InteractableCanTrash : InteractableObjectBase
 {
     Animator anim;
-    void Start()
+    public override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
     }
     public override void InteractWithObject()

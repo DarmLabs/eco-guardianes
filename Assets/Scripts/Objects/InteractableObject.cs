@@ -19,8 +19,9 @@ public class InteractableObject : InteractableObjectBase
         get => trashContainer;
         set => trashContainer = value;
     }
-    void Start()
+    public override void Start()
     {
+        base.Start();
         if (transform.childCount == 2)
         {
             LookAt = transform.GetChild(1);

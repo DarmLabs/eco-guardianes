@@ -5,18 +5,20 @@ using UnityEngine;
 public class InteractableContainer : InteractableObjectBase
 {
     [SerializeField] InteractableObject insideObject;
+    public InteractableObject InsideObject => insideObject;
     [SerializeField] Transform viewPoint;
     public Transform ViewPoint => viewPoint;
     Animator anim;
-    void Start()
+    public override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
         if (insideObject == null)
         {
             this.enabled = false;
             return;
         }
-        LookAt = insideObject.transform;
+        LookAt = transform.GetChild(transform.childCount - 1);
     }
     public override void InteractWithObject()
     {
@@ -27,9 +29,16 @@ public class InteractableContainer : InteractableObjectBase
     }
     public void Opened()
     {
-        MainButtonsManager.SharedInstance.SetTimeScale(0);
         ActionPanelManager.SharedInstance.SetSearchIntoPanelData();
         ActionPanelManager.SharedInstance.SearchIntoPanelSwitcher(true);
+        ActionPanelManager.SharedInstance.panelOpened.Invoke();
         ActionPanelManager.SharedInstance.SearchIntoButtonsSwitcher(true);
+    }
+    public void Close()
+    {
+        if (gameObject.transform.childCount > 1)
+        {
+            anim.Play("Close");
+        }
     }
 }

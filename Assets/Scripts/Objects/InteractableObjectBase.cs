@@ -21,6 +21,11 @@ public class InteractableObjectBase : MonoBehaviour
     [SerializeField] Outline outline;
     [HideInInspector] public bool BeingTargeted { get; set; } //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
+    public bool CanInteract
+    {
+        get => canInteract;
+        set => canInteract = value;
+    }
     bool overMainButtons;
     public Transform LookAt { get; set; }
     [SerializeField] TrashCategory category;
@@ -33,6 +38,11 @@ public class InteractableObjectBase : MonoBehaviour
     {
         outline = GetComponent<Outline>();
         canInteract = true;
+    }
+    public virtual void Start()
+    {
+        ActionPanelManager.SharedInstance.panelOpened.AddListener(RemoveInteraction);
+        ActionPanelManager.SharedInstance.panelClosed.AddListener(EnableInteraction);
     }
     public void SearchMode()
     {
@@ -81,10 +91,6 @@ public class InteractableObjectBase : MonoBehaviour
     {
         outline.enabled = state;
     }
-    public void CanInteract(bool state)
-    {
-        canInteract = state;
-    }
     void OnMainMaskEnter()
     {
         MainButtonsManager.SharedInstance.enterAnyMask.RemoveListener(OnMainMaskEnter);
@@ -114,5 +120,26 @@ public class InteractableObjectBase : MonoBehaviour
         overMainButtons = false;
         MainButtonsManager.SharedInstance.leaveAnyMask.RemoveListener(OnMainMaskExit);
         MainButtonsManager.SharedInstance.onMainButtonClicked.RemoveListener(OnMainButtonClicked);
+    }
+    void RemoveInteraction()
+    {
+        canInteract = false;
+        if (outline == null)
+        {
+            return;
+        }
+        if (outline.enabled)
+        {
+            Glow(false);
+        }
+    }
+    void EnableInteraction()
+    {
+        canInteract = true;
+    }
+    public void RemoveListeners()
+    {
+        ActionPanelManager.SharedInstance.panelOpened.RemoveListener(RemoveInteraction);
+        ActionPanelManager.SharedInstance.panelClosed.RemoveListener(EnableInteraction);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 public class ActionPanelManager : MonoBehaviour
 {
     [Header("Needed GameObjects & Others")]
@@ -17,8 +18,11 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] GameObject searchIntoButtons;
     [HideInInspector] public InteractableObjectBase TargetObjectBase { get; private set; }
     InteractableObject targetObject;
+    InteractableContainer targetConatiner;
     bool isOpened;
     public bool IsOpened => isOpened;
+    public UnityEvent panelOpened;
+    public UnityEvent panelClosed;
     public static ActionPanelManager SharedInstance;
     void Awake()
     {
@@ -27,6 +31,7 @@ public class ActionPanelManager : MonoBehaviour
     public void SetTravelListeners()
     {
         infoPanel.SetActive(false);
+
         for (int i = 0; i < travelButtons.Length; i++)
         {
             travelButtons[i].onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(TargetObjectBase.transform); });
@@ -48,8 +53,14 @@ public class ActionPanelManager : MonoBehaviour
     }
     public void View()
     {
-        TargetObjectBase.CanInteract(false);
+        panelOpened.Invoke();
         TransitionsManager.SharedInstance.ViewAction(TargetObjectBase);
+    }
+    public void ViewInsideObject()
+    {
+        InteractableContainer container = TargetObjectBase.GetComponent<InteractableContainer>();
+        panelOpened.Invoke();
+        TransitionsManager.SharedInstance.ViewAction(container.InsideObject, true);
     }
     public void EnableActionPanel(InteractableObjectBase interactableObjectBase)
     {
@@ -61,23 +72,23 @@ public class ActionPanelManager : MonoBehaviour
         {
             actionPanel.SetActive(true);
             isOpened = true;
+            panelOpened.Invoke();
             return;
         }
-        else if (interactableObjectBase != null)
-        {
-            actionPanel.SetActive(true);
-            isOpened = true;
-            TargetObjectBase = interactableObjectBase;
-            SetTravelListeners();
-            TargetObjectBase.BeingTargeted = true;
-            TargetObjectBase.Glow(false);
-        }
+        actionPanel.SetActive(true);
+        isOpened = true;
+        TargetObjectBase = interactableObjectBase;
+        CheckObjectType(interactableObjectBase);
+        SetTravelListeners();
+        TargetObjectBase.BeingTargeted = true;
+        panelOpened.Invoke();
+        TargetObjectBase.Glow(false);
     }
     public void DisableActionPanel()
     {
         isOpened = false;
         actionPanel.SetActive(false);
-        TargetObjectBase.CanInteract(true);
+        panelClosed.Invoke();
         closedObjectsSection.SetActive(false);
         openObjectsSection.SetActive(false);
         trashCanSection.SetActive(false);
@@ -98,9 +109,22 @@ public class ActionPanelManager : MonoBehaviour
     {
         infoPanel.SetActive(false);
     }
+    void CheckObjectType(InteractableObjectBase interactableObjectBase)
+    {
+        switch (interactableObjectBase.Type)
+        {
+            case ObjectType.Closed:
+                targetConatiner = interactableObjectBase.GetComponent<InteractableContainer>();
+                break;
+            case ObjectType.Open:
+                targetObject = interactableObjectBase.GetComponent<InteractableObject>();
+                break;
+        }
+    }
     public void SearchIntoPanelSwitcher(bool state)
     {
         searhIntoPanel.SetActive(state);
+        isOpened = state;
     }
     public void SearchIntoButtonsSwitcher(bool state)
     {
@@ -108,8 +132,17 @@ public class ActionPanelManager : MonoBehaviour
     }
     public void SetSearchIntoPanelData()
     {
-        targetObject = TargetObjectBase.GetComponent<InteractableObject>();
+        InteractableContainer container = TargetObjectBase.GetComponent<InteractableContainer>();
+        targetObject = container.InsideObject;
         searchIntoText.text = $"Hay {targetObject.ObjectPhrase} dentro de la {TargetObjectBase.name}";
+    }
+    public void SearchIntoLeaveButton()
+    {
+        targetConatiner.BeingTargeted = false;
+        SearchIntoButtonsSwitcher(false);
+        SearchIntoPanelSwitcher(false);
+        targetConatiner.Close();
+        panelClosed.Invoke();
     }
     public void TakeInside() //Used on take button inside search into panel
     {
@@ -119,8 +152,12 @@ public class ActionPanelManager : MonoBehaviour
     }
     public IEnumerator WaitForTakenMessage(float secs)
     {
-        yield return new WaitForSeconds(secs);
+        yield return new WaitForSecondsRealtime(secs);
+        InteractableContainer container = TargetObjectBase.GetComponent<InteractableContainer>();
+        container.Close();
+        TargetObjectBase.RemoveListeners();
+        TargetObjectBase = null;
         SearchIntoPanelSwitcher(false);
-        MainButtonsManager.SharedInstance.SetTimeScale(1);
+        panelClosed.Invoke();
     }
 }

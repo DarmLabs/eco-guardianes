@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8168200198a311479b03a185ba6a3f7
-      internalID: 1693593064
+      spriteID: b3e888ab9b6837b4787ae12d96fc2de8
+      internalID: -1817463268
       vertices: []
       indices: 
       edges: []
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbf0c0158c19cfd43a7b5dac746d7042
-      internalID: -1973901397
+      spriteID: 513c0762f0c14bd4586f6466443fa34d
+      internalID: -1581779357
       vertices: []
       indices: 
       edges: []
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9ccdf1e94daa044fa3680ea080723c0
-      internalID: -928879440
+      spriteID: c11d70f57eedf2548bee04d7083befe0
+      internalID: -1991571509
       vertices: []
       indices: 
       edges: []
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b55f79616602b1b4fbde135e0372d791
-      internalID: -1309179038
+      spriteID: d1360da655fcf7647bd58b4e7788f613
+      internalID: -379344776
       vertices: []
       indices: 
       edges: []
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e4f01d6efb7eb48890f4d2852f65b0
-      internalID: -1439445936
+      spriteID: d31001c76321fc847953c763403d4015
+      internalID: 376493152
       vertices: []
       indices: 
       edges: []
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e40bef2f721fea448e22b892f606786
-      internalID: 646666526
+      spriteID: 2eeb19690df10f243b30143c2b7176fa
+      internalID: 848440559
       vertices: []
       indices: 
       edges: []
@@ -268,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0880af31248c28142b5721a571ba8431
-      internalID: -1337675937
+      spriteID: a28d73092cd258048a70f4fb60afac29
+      internalID: -1088465874
       vertices: []
       indices: 
       edges: []
@@ -289,8 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dea08b6e3929b1549b527ba27d2c6f86
-      internalID: 537177272
+      spriteID: d5ce9119eb922824ba04557c6fea355a
+      internalID: 835915974
       vertices: []
       indices: 
       edges: []
@@ -310,8 +310,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 908eec7405097094fb52c8fff5a45de5
-      internalID: -2141800295
+      spriteID: 81e1eda953d567549aac94d6341500c2
+      internalID: 919564227
       vertices: []
       indices: 
       edges: []
@@ -331,8 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f062b34a9f631c9479bcb37c70597b05
-      internalID: -1533298138
+      spriteID: 14987c2538710294eb36d263e6770f48
+      internalID: 1385066438
       vertices: []
       indices: 
       edges: []
@@ -352,8 +352,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5596dc96c5cd0f845940cfc1ebea4df0
-      internalID: 539226546
+      spriteID: b2bd44042647a7543baf8dcee3a28793
+      internalID: -1947957844
       vertices: []
       indices: 
       edges: []
@@ -373,8 +373,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c54c40d9cb2db6d42a6409cd9e335320
-      internalID: 2008773923
+      spriteID: 942bff4b6c6e1994aa67ffa01ade896c
+      internalID: 214167928
       vertices: []
       indices: 
       edges: []
@@ -394,8 +394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1004b6064363594fa898812bbf61b60
-      internalID: 249944665
+      spriteID: 00380e283ee899c4b8a56ee0f13fb4d7
+      internalID: -1994436861
       vertices: []
       indices: 
       edges: []
@@ -415,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0933dff1383e554aa84ac5b2f372787
-      internalID: -794219282
+      spriteID: 2a89cb5e29d7f3046a24bd88832db515
+      internalID: 1334627694
       vertices: []
       indices: 
       edges: []
@@ -436,8 +436,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a71a5b9db05315b43ba194f30165b349
-      internalID: 1637129934
+      spriteID: 8134eef5a0a77d8408d0942fb78f5054
+      internalID: 464020985
       vertices: []
       indices: 
       edges: []
@@ -457,8 +457,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4e07bdb8f680854ba01902bc46fd579
-      internalID: -1661342392
+      spriteID: 2ffde56de6fc9e54ab208b675fd2afba
+      internalID: -1639321245
       vertices: []
       indices: 
       edges: []
@@ -478,8 +478,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5801d989e469f741babeef6a9071954
-      internalID: -992357991
+      spriteID: 43e54d03959ade84d8dfb248ab1d3eee
+      internalID: -134805634
       vertices: []
       indices: 
       edges: []
@@ -488,9 +488,9 @@ TextureImporter:
       name: ui_atlas_check_tachos_17
       rect:
         serializedVersion: 2
-        x: 2097
-        y: 389
-        width: 243
+        x: 2099
+        y: 416
+        width: 244
         height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -499,8 +499,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a9e03419877cc5428534d4e1e84e5a2
-      internalID: 371118783
+      spriteID: 0da09cba22f650e4189d0bb32648a1be
+      internalID: 1480273389
       vertices: []
       indices: 
       edges: []
@@ -520,8 +520,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 816abb1ff90b21d4cb10699be97635f3
-      internalID: 2003333509
+      spriteID: 2e5f030411b61bd4895aea67ad8cd67f
+      internalID: -1585828783
       vertices: []
       indices: 
       edges: []
@@ -541,8 +541,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14e830c5329d6cd46968747ed6acc6ad
-      internalID: 223266541
+      spriteID: f0ffb704fb466354baa6e05561351817
+      internalID: 1290751661
       vertices: []
       indices: 
       edges: []
@@ -562,8 +562,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9127cefa0904e048b44f84f0242523c
-      internalID: -958845451
+      spriteID: 14a4fdb1b8b0aa54bb4719923e5c76bf
+      internalID: -973350190
       vertices: []
       indices: 
       edges: []
@@ -583,8 +583,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ad6b7c995098b34e8e9729198a78d3d
-      internalID: -448604814
+      spriteID: 7f98552fe43e4be478efbd163c1188db
+      internalID: 422675981
       vertices: []
       indices: 
       edges: []
@@ -604,8 +604,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0c30f20f9b92194c9572bcb8f0377f5
-      internalID: -1665724071
+      spriteID: 46a270e21cb47b24f818a04ca100dd7b
+      internalID: -1548710564
       vertices: []
       indices: 
       edges: []
@@ -625,8 +625,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98d3003039f3baf46a1ac60d60628267
-      internalID: 1259915630
+      spriteID: 1b8b7547a74c16b43a6ef31e2fde6471
+      internalID: 1730864618
       vertices: []
       indices: 
       edges: []
@@ -646,8 +646,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8707718b51d59714292bbb3a5f7360ed
-      internalID: -1855939318
+      spriteID: 62060b9bfb5e5fd479f5d223c6ae4195
+      internalID: 1446615278
       vertices: []
       indices: 
       edges: []
@@ -667,8 +667,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76531e1c066806744bb3636711cb5d5b
-      internalID: 1621948606
+      spriteID: b4f589724e6f4ee47bb556b44cc9dcb6
+      internalID: -2043692932
       vertices: []
       indices: 
       edges: []
@@ -688,8 +688,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b4654d9b8abda245a50eab566c16f00
-      internalID: -1201155079
+      spriteID: e4e20a0f872320c4d817ee0db31c715e
+      internalID: -884447292
       vertices: []
       indices: 
       edges: []
@@ -709,8 +709,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 653d88e774f1c8645b392ae5aaace7b1
-      internalID: 1498405146
+      spriteID: fee54e16846a3c0449ead398e2562e9d
+      internalID: 12833809
       vertices: []
       indices: 
       edges: []
@@ -730,8 +730,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e6913b3ee38df4aa558b794124c3a9
-      internalID: -1590152096
+      spriteID: 1ad4618761a6927409f82458c912f907
+      internalID: -943924289
       vertices: []
       indices: 
       edges: []
@@ -739,7 +739,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6371e82f46c33ed4e9d477f7c372b65a
+    spriteID: 1ad6e7400ad0fa949a33ba65ff96adf9
     internalID: 0
     vertices: []
     indices: 
@@ -747,35 +747,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ui_atlas_check_tachos_10: 539226546
-      ui_atlas_check_tachos_12: 249944665
-      ui_atlas_check_tachos_9: -1533298138
-      ui_atlas_check_tachos_1: -1973901397
-      ui_atlas_check_tachos_24: -1855939318
-      ui_atlas_check_tachos_11: 2008773923
-      ui_atlas_check_tachos_14: 1637129934
-      ui_atlas_check_tachos_15: -1661342392
-      ui_atlas_check_tachos_17: 371118783
-      ui_atlas_check_tachos_26: -1201155079
-      ui_atlas_check_tachos_28: -1590152096
-      ui_atlas_check_tachos_8: -2141800295
-      ui_atlas_check_tachos_16: -992357991
-      ui_atlas_check_tachos_0: 1693593064
-      ui_atlas_check_tachos_3: -1309179038
-      ui_atlas_check_tachos_7: 537177272
-      ui_atlas_check_tachos_25: 1621948606
-      ui_atlas_check_tachos_21: -448604814
-      ui_atlas_check_tachos_22: -1665724071
-      ui_atlas_check_tachos_5: 646666526
-      ui_atlas_check_tachos_23: 1259915630
-      ui_atlas_check_tachos_4: -1439445936
-      ui_atlas_check_tachos_13: -794219282
-      ui_atlas_check_tachos_18: 2003333509
-      ui_atlas_check_tachos_2: -928879440
-      ui_atlas_check_tachos_19: 223266541
-      ui_atlas_check_tachos_27: 1498405146
-      ui_atlas_check_tachos_20: -958845451
-      ui_atlas_check_tachos_6: -1337675937
+      ui_atlas_check_tachos_10: -1947957844
+      ui_atlas_check_tachos_12: -1994436861
+      ui_atlas_check_tachos_9: 1385066438
+      ui_atlas_check_tachos_1: -1581779357
+      ui_atlas_check_tachos_24: 1446615278
+      ui_atlas_check_tachos_11: 214167928
+      ui_atlas_check_tachos_14: 464020985
+      ui_atlas_check_tachos_15: -1639321245
+      ui_atlas_check_tachos_17: 1480273389
+      ui_atlas_check_tachos_26: -884447292
+      ui_atlas_check_tachos_28: -943924289
+      ui_atlas_check_tachos_8: 919564227
+      ui_atlas_check_tachos_16: -134805634
+      ui_atlas_check_tachos_0: -1817463268
+      ui_atlas_check_tachos_3: -379344776
+      ui_atlas_check_tachos_7: 835915974
+      ui_atlas_check_tachos_25: -2043692932
+      ui_atlas_check_tachos_21: 422675981
+      ui_atlas_check_tachos_22: -1548710564
+      ui_atlas_check_tachos_5: 848440559
+      ui_atlas_check_tachos_23: 1730864618
+      ui_atlas_check_tachos_4: 376493152
+      ui_atlas_check_tachos_13: 1334627694
+      ui_atlas_check_tachos_18: -1585828783
+      ui_atlas_check_tachos_2: -1991571509
+      ui_atlas_check_tachos_19: 1290751661
+      ui_atlas_check_tachos_27: 12833809
+      ui_atlas_check_tachos_20: -973350190
+      ui_atlas_check_tachos_6: -1088465874
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

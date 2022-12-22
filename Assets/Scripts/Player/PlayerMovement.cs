@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             if (ActionPanelManager.SharedInstance.TargetObjectBase != null)
             {
                 ActionPanelManager.SharedInstance.TargetObjectBase.BeingTargeted = false;
-                ActionPanelManager.SharedInstance.TargetObjectBase.CanInteract(true);
+                ActionPanelManager.SharedInstance.TargetObjectBase.CanInteract = true;
                 ActionPanelManager.SharedInstance.DisableInfoPanel();
                 ActionPanelManager.SharedInstance.DisableActionPanel();
             }

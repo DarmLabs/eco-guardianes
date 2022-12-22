@@ -19,7 +19,7 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            starsData = new StarsData(1);
+            starsData = new StarsData(0);
         }
     }
     void Start()

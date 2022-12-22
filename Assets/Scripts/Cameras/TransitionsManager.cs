@@ -26,7 +26,7 @@ class TransitionsManager : MonoBehaviour
         mainCamera = brain.GetComponent<Camera>();
         virtualCamera = viewCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
     }
-    public void ViewAction(InteractableObjectBase targetObject)
+    public void ViewAction(InteractableObjectBase targetObject, bool isFromInsideObject = false)
     {
         PlayerMovement.SharedInstance.enabled = false;
 
@@ -35,12 +35,12 @@ class TransitionsManager : MonoBehaviour
         {
             case ObjectType.Closed:
                 InteractableContainer targetContainer = targetObject.GetComponent<InteractableContainer>();
-                SetCamera(targetContainer.LookAt, targetObject.transform.position);
-                isFromInsideObject = true;
+                SetCamera(targetContainer.LookAt, targetContainer.ViewPoint.position);
                 break;
             case ObjectType.Open:
                 InteractableObject targetOpenObj = targetObject.GetComponent<InteractableObject>();
                 SetCamera(targetObject.LookAt, targetObject.transform.position + targetOpenObj.ViewOffset);
+                this.isFromInsideObject = isFromInsideObject;
                 break;
             case ObjectType.TrashCan:
                 SetCamera(targetObject.LookAt, targetObject.transform.position + trashCanOffset);

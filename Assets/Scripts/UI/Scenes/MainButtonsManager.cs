@@ -26,6 +26,9 @@ public class MainButtonsManager : MonoBehaviour
         trashButtonMask.enterMask.AddListener(EmitEnterMask);
         pauseButtonMask.leaveMask.AddListener(EmitExitMask);
         trashButtonMask.leaveMask.AddListener(EmitExitMask);
+
+        ActionPanelManager.SharedInstance.panelOpened.AddListener(DisableButtons);
+        ActionPanelManager.SharedInstance.panelClosed.AddListener(EnableButtons);
     }
     public void SetTimeScale(float value)
     {
@@ -43,5 +46,13 @@ public class MainButtonsManager : MonoBehaviour
     public void EmitExitMask()
     {
         leaveAnyMask.Invoke();
+    }
+    void EnableButtons()
+    {
+        MainButtonsSwitcher(true);
+    }
+    void DisableButtons()
+    {
+        MainButtonsSwitcher(false);
     }
 }
