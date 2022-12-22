@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 public class PlayerInteraction : MonoBehaviour
 {
     //[SerializeField] bool closeMode;
@@ -12,6 +14,10 @@ public class PlayerInteraction : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out raycastHit, 100f))
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    return;
+                }
                 if (raycastHit.transform != null)
                 {
                     CurrentClickedGameObject(raycastHit.transform.gameObject);
@@ -21,7 +27,6 @@ public class PlayerInteraction : MonoBehaviour
     }
     void CurrentClickedGameObject(GameObject selectedGameObject)
     {
-        Debug.Log(selectedGameObject);
         InteractableObjectBase interactableObject = selectedGameObject.GetComponent<InteractableObjectBase>();
         if (interactableObject == null || !interactableObject.isActiveAndEnabled)
         {

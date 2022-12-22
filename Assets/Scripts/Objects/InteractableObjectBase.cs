@@ -18,29 +18,22 @@ public class InteractableObjectBase : MonoBehaviour
 {
     bool isClose; //If player is close to this object
     public bool IsClose => isClose;
-    Outline outline;
+    [SerializeField] Outline outline;
     [HideInInspector] public bool BeingTargeted { get; set; } //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
+    bool overMainButtons;
     public Transform LookAt { get; set; }
-    [SerializeField] TrashContainer trashContainer;
-    public TrashContainer TrashContainer
-    {
-        get => trashContainer;
-        set => trashContainer = value;
-    }
     [SerializeField] TrashCategory category;
     public TrashCategory Category => category;
     [SerializeField] ObjectType type;
     public ObjectType Type => type;
     [SerializeField] Sprite objSprite;
     public Sprite ObjSprite => objSprite;
-
     void Awake()
     {
         outline = GetComponent<Outline>();
         canInteract = true;
     }
-
     public void SearchMode()
     {
         if (canInteract)
@@ -74,9 +67,10 @@ public class InteractableObjectBase : MonoBehaviour
     //Mouse Detection
     void OnMouseEnter()
     {
-        if (!ActionPanelManager.SharedInstance.IsOpened && canInteract && isActiveAndEnabled)
+        if (!ActionPanelManager.SharedInstance.IsOpened && !TrashPanelManager.SharedInstance.IsOpened && !PauseManager.SharedInstance.IsOpened && canInteract && isActiveAndEnabled && !overMainButtons)
         {
             Glow(true);
+            MainButtonsManager.SharedInstance.enterAnyMask.AddListener(OnMainMaskEnter);
         }
     }
     void OnMouseExit()
@@ -90,5 +84,35 @@ public class InteractableObjectBase : MonoBehaviour
     public void CanInteract(bool state)
     {
         canInteract = state;
+    }
+    void OnMainMaskEnter()
+    {
+        MainButtonsManager.SharedInstance.enterAnyMask.RemoveListener(OnMainMaskEnter);
+        MainButtonsManager.SharedInstance.leaveAnyMask.AddListener(OnMainMaskExit);
+        MainButtonsManager.SharedInstance.onMainButtonClicked.AddListener(OnMainButtonClicked);
+        overMainButtons = true;
+        Glow(false);
+    }
+    void OnMainMaskExit()
+    {
+        overMainButtons = false;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.name == gameObject.name && !TrashPanelManager.SharedInstance.IsOpened && !PauseManager.SharedInstance.IsOpened)
+            {
+                Glow(true);
+                MainButtonsManager.SharedInstance.enterAnyMask.AddListener(OnMainMaskEnter);
+            }
+        }
+        MainButtonsManager.SharedInstance.leaveAnyMask.RemoveListener(OnMainMaskExit);
+        MainButtonsManager.SharedInstance.onMainButtonClicked.RemoveListener(OnMainMaskExit);
+    }
+    void OnMainButtonClicked()
+    {
+        overMainButtons = false;
+        MainButtonsManager.SharedInstance.leaveAnyMask.RemoveListener(OnMainMaskExit);
+        MainButtonsManager.SharedInstance.onMainButtonClicked.RemoveListener(OnMainButtonClicked);
     }
 }

@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
+    public static PauseManager SharedInstance;
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject confirmExit;
     [SerializeField] GameObject confirmMainMenu;
     [SerializeField] GameObject tutoPanel;
     [SerializeField] GameObject configPanel;
+    bool isOpened;
+    public bool IsOpened => isOpened;
+    void Awake()
+    {
+        SharedInstance = this;
+    }
     public void PausePanelSwitcher(bool state)
     {
         pausePanel.SetActive(state);
+        isOpened = state;
         MainButtonsManager.SharedInstance.MainButtonsSwitcher(!state);
+        MainButtonsManager.SharedInstance.onMainButtonClicked.Invoke();
     }
     public void ConfirmExitSwitcher(bool state)
     {

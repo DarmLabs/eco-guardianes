@@ -19,6 +19,8 @@ public class TrashContainer : MonoBehaviour
         get { return correctCategory; }
         set { correctCategory = value; }
     }
+    bool settled;
+    public bool Settled => settled;
     void Awake()
     {
         container = GetComponent<Image>();
@@ -27,11 +29,13 @@ public class TrashContainer : MonoBehaviour
     {
         container.sprite = TrashPanelManager.SharedInstance.Found;
         objSprite.color = TrashPanelManager.SharedInstance.FoundColor;
+        settled = true;
     }
     public void ObjectUnfound()
     {
         container.sprite = TrashPanelManager.SharedInstance.Unfound;
         objSprite.color = TrashPanelManager.SharedInstance.UnfoundColor;
+        settled = true;
     }
     public void TrashCanColor(TrashCategory category)
     {

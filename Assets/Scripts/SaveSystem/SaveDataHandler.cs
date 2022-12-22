@@ -6,7 +6,6 @@ public class SaveDataHandler : MonoBehaviour
 {
     public static SaveDataHandler SharedInstance;
     //int saveSlot; // Implementar
-    [SerializeField] InteractableObject[] interactableObjects;
     List<ObjectData> objectDatas;
     void OnApplicationQuit()
     {
@@ -22,7 +21,7 @@ public class SaveDataHandler : MonoBehaviour
     }
     void LoadObjectsData()
     {
-        if (interactableObjects.Length != 6)
+        if (OpenObjectsManager.SharedInstance.InteractableObjects.Length != 9)
         {
             return;
         }
@@ -32,22 +31,22 @@ public class SaveDataHandler : MonoBehaviour
         }
         else
         {
-            objectDatas = new List<ObjectData>(6);
+            objectDatas = new List<ObjectData>(9);
         }
-        for (int i = 0; i < interactableObjects.Length; i++)
+        for (int i = 0; i < OpenObjectsManager.SharedInstance.InteractableObjects.Length; i++)
         {
-            interactableObjects[i].ObjectData = objectDatas[i];
+            OpenObjectsManager.SharedInstance.InteractableObjects[i].ObjectData = objectDatas[i];
         }
     }
     void SaveObjectsData()
     {
-        if (interactableObjects.Length != 6)
+        if (OpenObjectsManager.SharedInstance.InteractableObjects.Length != 9)
         {
             return;
         }
-        for (int i = 0; i < interactableObjects.Length; i++)
+        for (int i = 0; i < OpenObjectsManager.SharedInstance.InteractableObjects.Length; i++)
         {
-            objectDatas[i] = interactableObjects[i].ObjectData;
+            objectDatas[i] = OpenObjectsManager.SharedInstance.InteractableObjects[i].ObjectData;
         }
         FileHandler.SaveToJSON<List<ObjectData>>(objectDatas, $"ObjectsData_{SceneCache.SharedInstance.currentScene}");
     }

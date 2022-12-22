@@ -13,9 +13,15 @@ public class InteractableObject : InteractableObjectBase
     [SerializeField] Vector3 viewOffset;
     public Vector3 ViewOffset => viewOffset;
     public string ObjectPhrase => objectPhrase;
+    TrashContainer trashContainer;
+    public TrashContainer TrashContainer
+    {
+        get => trashContainer;
+        set => trashContainer = value;
+    }
     void Start()
     {
-        if (transform.GetChild(1) != null)
+        if (transform.childCount == 2)
         {
             LookAt = transform.GetChild(1);
         }
@@ -26,7 +32,7 @@ public class InteractableObject : InteractableObjectBase
         objectData = new ObjectData(false);
         if (!objectData.isFound)
         {
-            //TrashContainer.ObjectUnfound();
+            TrashContainer.ObjectUnfound();
         }
         else
         {
@@ -39,7 +45,7 @@ public class InteractableObject : InteractableObjectBase
     {
         base.InteractWithObject();
         objectData.isFound = true;
-        /*TrashContainer.ObjectFound();
-        TrashContainer.CorrectCategory = Category;*/
+        TrashContainer.ObjectFound();
+        TrashContainer.CorrectCategory = Category;
     }
 }

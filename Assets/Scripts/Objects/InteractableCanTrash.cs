@@ -19,10 +19,10 @@ public class InteractableCanTrash : InteractableObjectBase
     }
     public void TrashPanelDisplay() //Used at the end of OpenTacho animation
     {
-        /*TrashPanelManager.SharedInstance.TrashPanelSwitcher(true);
+        TrashPanelManager.SharedInstance.TrashPanelSwitcher(true);
         TrashPanelManager.SharedInstance.ContainerButtonsSwitcher(true);
         TrashPanelManager.SharedInstance.CurrentCanCategory = Category;
         MainButtonsManager.SharedInstance.MainButtonsSwitcher(false);
-        MainButtonsManager.SharedInstance.SetTimeScale(0);*/
+        MainButtonsManager.SharedInstance.SetTimeScale(0);
     }
 }

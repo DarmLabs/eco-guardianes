@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class TrashPanelManager : MonoBehaviour
 {
     public static TrashPanelManager SharedInstance;
-    [SerializeField] InteractableObject[] interactableObjects;
     [SerializeField] TrashContainer[] containers;
     [SerializeField] GameObject trashPanel;
     TrashCategory currentCanCategory;
@@ -15,7 +14,8 @@ public class TrashPanelManager : MonoBehaviour
         get { return currentCanCategory; }
         set { currentCanCategory = value; }
     }
-
+    bool isOpened;
+    public bool IsOpened => isOpened;
     //For sprite changes
     [SerializeField] Sprite unfound;
     public Sprite Unfound => unfound;
@@ -29,20 +29,34 @@ public class TrashPanelManager : MonoBehaviour
     public Sprite RecSprite => recSprite;
     public Sprite TrashSprite => trashSprite;
     public Sprite OrganicSprite => organicSprite;
+    void Awake()
+    {
+        SharedInstance = this;
+        trashPanel.SetActive(true);
+    }
     void Start()
     {
-        if (interactableObjects.Length == containers.Length && interactableObjects.Length != 0)
+        if (OpenObjectsManager.SharedInstance.InteractableObjects.Length == containers.Length && OpenObjectsManager.SharedInstance.InteractableObjects.Length != 0)
         {
-            for (int i = 0; i < interactableObjects.Length; i++)
+            for (int i = 0; i < OpenObjectsManager.SharedInstance.InteractableObjects.Length; i++)
             {
-                interactableObjects[i].TrashContainer = containers[i];
-                containers[i].ObjSprite.sprite = interactableObjects[i].ObjSprite;
+                OpenObjectsManager.SharedInstance.InteractableObjects[i].TrashContainer = containers[i];
+                containers[i].ObjSprite.sprite = OpenObjectsManager.SharedInstance.InteractableObjects[i].ObjSprite;
             }
         }
+        StartCoroutine(WaitForFrame());
+    }
+    IEnumerator WaitForFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        trashPanel.SetActive(false);
     }
     public void TrashPanelSwitcher(bool state)
     {
         trashPanel.SetActive(state);
+        MainButtonsManager.SharedInstance.MainButtonsSwitcher(!state);
+        MainButtonsManager.SharedInstance.onMainButtonClicked.Invoke();
+        isOpened = state;
     }
     public void ContainerButtonsSwitcher(bool state)
     {
