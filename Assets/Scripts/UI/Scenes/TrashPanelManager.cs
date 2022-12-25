@@ -32,6 +32,13 @@ public class TrashPanelManager : MonoBehaviour
     [SerializeField] Sprite good, bad;
     public Sprite Good => good;
     public Sprite Bad => bad;
+    int succeses;
+    public int Succeses
+    {
+        get => succeses;
+        set => succeses = value;
+    }
+    int remainingObjects;
     void Awake()
     {
         SharedInstance = this;
@@ -48,6 +55,7 @@ public class TrashPanelManager : MonoBehaviour
                 containers[i].CorrectCategory = OpenObjectsManager.SharedInstance.InteractableObjects[i].Category;
             }
         }
+        remainingObjects = OpenObjectsManager.SharedInstance.InteractableObjects.Length;
         StartCoroutine(WaitForFrame());
     }
     IEnumerator WaitForFrame()
@@ -73,6 +81,15 @@ public class TrashPanelManager : MonoBehaviour
     {
         TrashContainer container = EventSystem.current.currentSelectedGameObject.GetComponent<TrashContainer>();
         container.TrashCanColor(currentCanCategory);
+    }
+    public void CheckRemainingObjects()
+    {
+        remainingObjects--;
+        if (remainingObjects == 0)
+        {
+            trashPanel.SetActive(false);
+            StarsManager.SharedInstance.TriggerWinCondition();
+        }
     }
     //For button setters
     public void SetCanCateogry()

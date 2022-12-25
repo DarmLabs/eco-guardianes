@@ -16,10 +16,6 @@ public class ScenesChanger : MonoBehaviour
     }
     public void SceneChange(string sceneName)
     {
-        if (SaveDataHandler.SharedInstance != null)
-        {
-            SaveDataHandler.SharedInstance.Save();
-        }
         StartCoroutine(LoadAsyncScene(sceneName, LoadSceneMode.Single));
     }
     IEnumerator LoadAsyncScene(string scene, LoadSceneMode loadSceneMode)

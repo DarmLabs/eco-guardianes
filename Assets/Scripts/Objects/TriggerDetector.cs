@@ -11,10 +11,16 @@ public class TriggerDetector : MonoBehaviour
     }
     void OnTriggerEnter(Collider target)
     {
-        parentScript.OnChildTriggerEnter(target);
+        if (parentScript != null)
+        {
+            parentScript.OnChildTriggerEnter(target);
+        }
     }
     void OnTriggerExit(Collider target)
     {
-        parentScript.OnChildTriggerExit(target);
+        if (parentScript != null)
+        {
+            parentScript.OnChildTriggerExit(target);
+        }
     }
 }

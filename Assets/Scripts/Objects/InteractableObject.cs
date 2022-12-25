@@ -3,12 +3,6 @@ using UnityEngine.Events;
 
 public class InteractableObject : InteractableObjectBase
 {
-    ObjectData objectData;
-    public ObjectData ObjectData
-    {
-        get => objectData;
-        set => objectData = value;
-    }
     [SerializeField] string objectPhrase;
     [SerializeField] Vector3 viewOffset;
     public Vector3 ViewOffset => viewOffset;
@@ -30,22 +24,11 @@ public class InteractableObject : InteractableObjectBase
         {
             LookAt = transform;
         }
-        objectData = new ObjectData(false);
-        if (!objectData.isFound)
-        {
-            TrashContainer.ObjectUnfound();
-        }
-        else
-        {
-            TrashContainer.ObjectFound();
-            TrashContainer.CorrectCategory = Category;
-            gameObject.SetActive(false);
-        }
+        TrashContainer.ObjectUnfound();
     }
     public override void InteractWithObject()
     {
         base.InteractWithObject();
-        objectData.isFound = true;
         TrashContainer.ObjectFound();
         TrashContainer.CorrectCategory = Category;
     }
