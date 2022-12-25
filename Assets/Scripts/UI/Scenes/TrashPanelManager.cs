@@ -29,6 +29,9 @@ public class TrashPanelManager : MonoBehaviour
     public Sprite RecSprite => recSprite;
     public Sprite TrashSprite => trashSprite;
     public Sprite OrganicSprite => organicSprite;
+    [SerializeField] Sprite good, bad;
+    public Sprite Good => good;
+    public Sprite Bad => bad;
     void Awake()
     {
         SharedInstance = this;
@@ -42,6 +45,7 @@ public class TrashPanelManager : MonoBehaviour
             {
                 OpenObjectsManager.SharedInstance.InteractableObjects[i].TrashContainer = containers[i];
                 containers[i].ObjSprite.sprite = OpenObjectsManager.SharedInstance.InteractableObjects[i].ObjSprite;
+                containers[i].CorrectCategory = OpenObjectsManager.SharedInstance.InteractableObjects[i].Category;
             }
         }
         StartCoroutine(WaitForFrame());

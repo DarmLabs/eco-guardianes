@@ -12,7 +12,7 @@ public class TrashContainer : MonoBehaviour
     }
     Image container; //Container picture
     [SerializeField] Image colorIndicator;
-    [SerializeField] GameObject good, bad;
+    [SerializeField] Image correctMarker;
     TrashCategory correctCategory;
     public TrashCategory CorrectCategory
     {
@@ -59,16 +59,18 @@ public class TrashContainer : MonoBehaviour
         {
             GoodOrBad(false);
         }
+        colorIndicator.gameObject.SetActive(true);
+        correctMarker.gameObject.SetActive(true);
     }
     void GoodOrBad(bool correct)
     {
         if (correct)
         {
-            good.SetActive(true);
+            correctMarker.sprite = TrashPanelManager.SharedInstance.Good;
         }
         else
         {
-            bad.SetActive(false);
+            correctMarker.sprite = TrashPanelManager.SharedInstance.Bad;
         }
     }
 }

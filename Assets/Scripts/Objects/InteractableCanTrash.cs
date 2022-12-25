@@ -16,7 +16,6 @@ public class InteractableCanTrash : InteractableObjectBase
         {
             anim.Play("Open");
         }
-
     }
     public void TrashPanelDisplay() //Used at the end of OpenTacho animation
     {
