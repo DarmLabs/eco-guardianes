@@ -108,7 +108,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.3
+    agentRadius: 0.5
     agentHeight: 2
     agentSlope: 15
     agentClimb: 0.1
@@ -116,7 +116,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.1
+    cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -265,7 +265,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &213073314
 Transform:
@@ -6323,7 +6323,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &341176967
 Transform:
@@ -30856,7 +30856,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1104858611
 Transform:
@@ -37137,7 +37137,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1292820142
 Transform:
@@ -37596,7 +37596,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1627631092
 Transform:
@@ -43760,7 +43760,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2014723973
 Transform:
@@ -44190,6 +44190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horno
       objectReference: {fileID: 0}
+    - target: {fileID: 199863250494381028, guid: b6bc3aef8d937f04f90cdabd3675ab34,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 688450675321799006, guid: b6bc3aef8d937f04f90cdabd3675ab34,
         type: 3}
       propertyPath: m_RootOrder
@@ -44244,6 +44249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655415397406190918, guid: b6bc3aef8d937f04f90cdabd3675ab34,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 742977763, guid: b6bc3aef8d937f04f90cdabd3675ab34, type: 3}
@@ -44432,7 +44442,7 @@ GameObject:
   m_Name: mesa.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1674720332714003018
@@ -44466,7 +44476,7 @@ GameObject:
   m_Name: mesada.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1852172832741807992
@@ -44583,15 +44593,30 @@ PrefabInstance:
       propertyPath: insideObject
       value: 
       objectReference: {fileID: 714393176}
+    - target: {fileID: 267902498250920291, guid: a7e6d9b6e96c60449aa81e253013f2b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 761947655836806512, guid: a7e6d9b6e96c60449aa81e253013f2b8,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 761947655836806512, guid: a7e6d9b6e96c60449aa81e253013f2b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1415496511945113667, guid: a7e6d9b6e96c60449aa81e253013f2b8,
         type: 3}
       propertyPath: m_Name
       value: Heladera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415496511945113667, guid: a7e6d9b6e96c60449aa81e253013f2b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1796666043888524025, guid: a7e6d9b6e96c60449aa81e253013f2b8,
         type: 3}
@@ -44667,6 +44692,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757777526580378871, guid: a7e6d9b6e96c60449aa81e253013f2b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7e6d9b6e96c60449aa81e253013f2b8, type: 3}
@@ -45079,7 +45109,7 @@ GameObject:
   m_Name: alacena_00.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!33 &3109994845155989609
@@ -45298,6 +45328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vitrina
       objectReference: {fileID: 0}
+    - target: {fileID: 2398484453986317531, guid: 99497dbd44bcfd241bb1b4cd9eaadd31,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3027246107371957857, guid: 99497dbd44bcfd241bb1b4cd9eaadd31,
         type: 3}
       propertyPath: m_RootOrder
@@ -45428,10 +45463,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7080739675129099763, guid: 99497dbd44bcfd241bb1b4cd9eaadd31,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8531870347161335249, guid: 99497dbd44bcfd241bb1b4cd9eaadd31,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531870347161335249, guid: 99497dbd44bcfd241bb1b4cd9eaadd31,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99497dbd44bcfd241bb1b4cd9eaadd31, type: 3}
