@@ -22,7 +22,7 @@ public class InteractableContainer : InteractableObjectBase
     }
     public override void InteractWithObject()
     {
-        if (gameObject.transform.childCount > 1)
+        if (anim != null)
         {
             anim.Play("Open");
         }
@@ -36,7 +36,7 @@ public class InteractableContainer : InteractableObjectBase
     }
     public void Close()
     {
-        if (gameObject.transform.childCount > 1)
+        if (anim != null)
         {
             anim.Play("Close");
         }
