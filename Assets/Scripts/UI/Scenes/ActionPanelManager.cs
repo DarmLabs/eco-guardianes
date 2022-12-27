@@ -34,7 +34,7 @@ public class ActionPanelManager : MonoBehaviour
 
         for (int i = 0; i < travelButtons.Length; i++)
         {
-            travelButtons[i].onClick.AddListener(delegate { PlayerMovement.SharedInstance.TravelToDestination(TargetObjectBase.transform); });
+            travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTrash(TargetObjectBase.transform); });
         }
         if (TargetObjectBase.Type == ObjectType.TrashCan)
         {
@@ -64,9 +64,9 @@ public class ActionPanelManager : MonoBehaviour
     }
     public void EnableActionPanel(InteractableObjectBase interactableObjectBase)
     {
-        if (PlayerMovement.SharedInstance.isMoving)
+        if (PointAndClickMovement.SharedInstance.isMoving)
         {
-            return;
+            PointAndClickMovement.SharedInstance.DestinationReached();
         }
         if (interactableObjectBase == null)
         {

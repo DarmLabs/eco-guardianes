@@ -20,7 +20,14 @@ public class PlayerInteraction : MonoBehaviour
                 }
                 if (raycastHit.transform != null)
                 {
-                    CurrentClickedGameObject(raycastHit.transform.gameObject);
+                    if (raycastHit.transform.gameObject.tag != "Map")
+                    {
+                        CurrentClickedGameObject(raycastHit.transform.gameObject);
+                    }
+                    else
+                    {
+                        CurrentClickedPosition(raycastHit.point);
+                    }
                 }
             }
         }
@@ -34,19 +41,11 @@ public class PlayerInteraction : MonoBehaviour
         }
         else
         {
-            CallMode(interactableObject);
+            interactableObject.SearchMode();
         }
     }
-    void CallMode(InteractableObjectBase interactableObject)
+    void CurrentClickedPosition(Vector3 position)
     {
-        interactableObject.SearchMode();
-        /*if (closeMode)
-        {
-            interactableObject.CloseMode();
-        }
-        else
-        {
-            
-        }*/
+        PointAndClickMovement.SharedInstance.TravelToPoint(position);
     }
 }

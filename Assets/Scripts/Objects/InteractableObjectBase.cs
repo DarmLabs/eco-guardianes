@@ -58,17 +58,17 @@ public class InteractableObjectBase : MonoBehaviour
     //Triggers
     public void OnChildTriggerEnter(Collider target)
     {
-        if (target.gameObject.TryGetComponent(out PlayerMovement pm) && BeingTargeted)
+        if (target.gameObject.TryGetComponent(out PointAndClickMovement pm) && BeingTargeted)
         {
             isClose = true;
-            pm.ClearNavMeshPath();
+            pm.DestinationReached();
             InteractWithObject();
             BeingTargeted = false;
         }
     }
     public void OnChildTriggerExit(Collider target)
     {
-        if (target.gameObject.TryGetComponent(out PlayerMovement pm))
+        if (target.gameObject.TryGetComponent(out PointAndClickMovement pm))
         {
             isClose = false;
         }

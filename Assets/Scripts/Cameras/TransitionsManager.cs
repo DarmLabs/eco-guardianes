@@ -28,7 +28,7 @@ class TransitionsManager : MonoBehaviour
     }
     public void ViewAction(InteractableObjectBase targetObject, bool isFromInsideObject = false)
     {
-        PlayerMovement.SharedInstance.enabled = false;
+        PointAndClickMovement.SharedInstance.enabled = false;
 
         ObjectType targetType = targetObject.Type;
         switch (targetType)
@@ -81,14 +81,14 @@ class TransitionsManager : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => brain.IsBlending == false);
-        PlayerMovement.SharedInstance.enabled = true;
+        PointAndClickMovement.SharedInstance.enabled = true;
         ActionPanelManager.SharedInstance.EnableActionPanel(null);
     }
     IEnumerator WaitForPlayerTransitionFromInsideObject()
     {
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => brain.IsBlending == false);
-        PlayerMovement.SharedInstance.enabled = true;
+        PointAndClickMovement.SharedInstance.enabled = true;
         ActionPanelManager.SharedInstance.SearchIntoPanelSwitcher(true);
     }
 }
