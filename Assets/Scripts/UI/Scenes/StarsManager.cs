@@ -11,6 +11,7 @@ public class StarsManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI succesesText;
     [SerializeField] GameObject[] stars;
     int maxObjects;
+    [SerializeField] GameObject starExplosionPrefab;
     void Awake()
     {
         SharedInstance = this;
@@ -56,9 +57,15 @@ public class StarsManager : MonoBehaviour
         {
             placedIndex = 1;
         }
-        for (int i = 0; i < placedIndex; i++)
+        StartCoroutine(AnimateStars(placedIndex));
+    }
+    IEnumerator AnimateStars(int index)
+    {
+        for (int i = 0; i < index; i++)
         {
             stars[i].GetComponent<Animator>().Play("StarSet");
+            Instantiate(starExplosionPrefab, stars[i].transform);
+            yield return new WaitForSecondsRealtime(0.5f);
         }
     }
 }

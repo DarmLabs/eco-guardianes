@@ -6,9 +6,15 @@ using UnityEngine.EventSystems;
 public class PlayerInteraction : MonoBehaviour
 {
     //[SerializeField] bool closeMode;
+    bool canInteract = true;
+    void Start()
+    {
+        ActionPanelManager.SharedInstance.panelOpened.AddListener(OnPanelOpened);
+        ActionPanelManager.SharedInstance.panelClosed.AddListener(OnPanelClosed);
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canInteract)
         {
             RaycastHit raycastHit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -47,5 +53,13 @@ public class PlayerInteraction : MonoBehaviour
     void CurrentClickedPosition(Vector3 position)
     {
         PointAndClickMovement.SharedInstance.TravelToPoint(position);
+    }
+    void OnPanelOpened()
+    {
+        canInteract = false;
+    }
+    void OnPanelClosed()
+    {
+        canInteract = true;
     }
 }

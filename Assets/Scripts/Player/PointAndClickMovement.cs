@@ -18,9 +18,17 @@ public class PointAndClickMovement : MonoBehaviour
     }
     public void TravelToPoint(Vector3 destination)
     {
-        destinationObj.transform.position = destination + Vector3.up * 2;
-        navMesh.SetDestination(destination);
-        MovingSwithcer(true);
+        NavMeshPath navMeshPath = new NavMeshPath();
+        if (navMesh.CalculatePath(destination, navMeshPath) && navMeshPath.status == NavMeshPathStatus.PathComplete)
+        {
+            destinationObj.transform.position = destination + Vector3.up;
+            navMesh.SetDestination(destination);
+            MovingSwithcer(true);
+        }
+        else
+        {
+            DialogManager.SharedInstance.SetDialog("No puedo llegar ahí");
+        }
     }
     public void TravelToTrash(Transform target)
     {

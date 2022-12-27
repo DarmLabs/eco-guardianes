@@ -5,6 +5,9 @@ using System.IO;
 using UnityEngine.AI;
 public class PlayerCustomatization : MonoBehaviour
 {
+    public static PlayerCustomatization SharedInstance;
+    string characterName;
+    public string CharacterName => characterName;
     [SerializeField] GameObject[] hairStyles;
     [SerializeField] GameObject[] shirtStyles;
     [SerializeField] GameObject[] pantStyles;
@@ -16,6 +19,7 @@ public class PlayerCustomatization : MonoBehaviour
     CharacterData characterData;
     void Awake()
     {
+        SharedInstance = this;
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
     void Start()
@@ -32,6 +36,7 @@ public class PlayerCustomatization : MonoBehaviour
     }
     void CharacterLoad()
     {
+        characterName = characterData.characterName;
         hairStyles[characterData.headIndex].SetActive(true);
         shirtStyles[characterData.shirtIndex].SetActive(true);
         pantStyles[characterData.pantsIndex].SetActive(true);

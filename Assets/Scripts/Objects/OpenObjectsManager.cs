@@ -12,4 +12,14 @@ public class OpenObjectsManager : MonoBehaviour
         SharedInstance = this;
         interactableObjects = GetComponentsInChildren<InteractableObject>();
     }
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.C) && Application.isEditor)
+        {
+            for (int i = 0; i < interactableObjects.Length; i++)
+            {
+                interactableObjects[i].InteractWithObject();
+            }
+        }
+    }
 }
