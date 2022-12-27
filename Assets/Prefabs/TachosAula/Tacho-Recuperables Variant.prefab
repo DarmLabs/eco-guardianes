@@ -26,17 +26,17 @@ PrefabInstance:
     - target: {fileID: 8095958814487564496, guid: a150aea4496483a41b87fbfb8c2f10a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.67
+      value: 40.02
       objectReference: {fileID: 0}
     - target: {fileID: 8095958814487564496, guid: a150aea4496483a41b87fbfb8c2f10a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 86.35
       objectReference: {fileID: 0}
     - target: {fileID: 8095958814487564496, guid: a150aea4496483a41b87fbfb8c2f10a4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.5599995
       objectReference: {fileID: 0}
     - target: {fileID: 8095958814487564496, guid: a150aea4496483a41b87fbfb8c2f10a4,
         type: 3}
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 8867956042936945258, guid: a150aea4496483a41b87fbfb8c2f10a4,
         type: 3}
       propertyPath: m_Name
-      value: Tacho-Recuperables
+      value: Tacho-Recuperables Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a150aea4496483a41b87fbfb8c2f10a4, type: 3}

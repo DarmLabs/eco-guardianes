@@ -870,7 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4828af0f40e2f2949ab3304d45eec582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requieredStars: 1
+  requieredStars: 2
   requieredStarsText: {fileID: 1904719275}
 --- !u!1 &847961923
 GameObject:
@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4828af0f40e2f2949ab3304d45eec582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requieredStars: 2
+  requieredStars: 4
   requieredStarsText: {fileID: 26013573}
 --- !u!1 &917820137
 GameObject:

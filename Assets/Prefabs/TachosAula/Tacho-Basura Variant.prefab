@@ -44,7 +44,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.023149341, y: 0.017878907, z: 0.028564682}
+  m_Size: {x: 0.023149341, y: 0.02, z: 0.028564682}
   m_Center: {x: 0, y: 0, z: 0.009282357}
 --- !u!114 &5390522240942764606
 MonoBehaviour:
@@ -73,17 +73,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fc6f8971c19ad114093c59955eb81872,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7994852
+      value: 36.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc6f8971c19ad114093c59955eb81872,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000047683716
+      value: 86.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc6f8971c19ad114093c59955eb81872,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.7812889
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc6f8971c19ad114093c59955eb81872,
         type: 3}
@@ -130,6 +130,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TrashCan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc6f8971c19ad114093c59955eb81872,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6f8971c19ad114093c59955eb81872, type: 3}
 --- !u!4 &3678611616618174661 stripped
@@ -169,8 +174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b84ef7b0096264fad4da5c5dacfe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 0}
+  outline: {fileID: 0}
   category: 1
+  type: 2
+  objSprite: {fileID: 0}
 --- !u!114 &7350162102283666644
 MonoBehaviour:
   m_ObjectHideFlags: 0
