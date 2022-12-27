@@ -16,6 +16,7 @@ public class MainButtonsManager : MonoBehaviour
     void Awake()
     {
         SharedInstance = this;
+        SetTimeScale(1);
     }
     void Start()
     {

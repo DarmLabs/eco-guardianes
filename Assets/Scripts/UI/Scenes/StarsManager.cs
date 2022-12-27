@@ -12,6 +12,7 @@ public class StarsManager : MonoBehaviour
     [SerializeField] GameObject[] stars;
     int maxObjects;
     [SerializeField] GameObject starExplosionPrefab;
+    int starsAchived;
     void Awake()
     {
         SharedInstance = this;
@@ -57,6 +58,7 @@ public class StarsManager : MonoBehaviour
         {
             placedIndex = 1;
         }
+        starsAchived = placedIndex;
         StartCoroutine(AnimateStars(placedIndex));
     }
     IEnumerator AnimateStars(int index)
@@ -66,6 +68,31 @@ public class StarsManager : MonoBehaviour
             stars[i].GetComponent<Animator>().Play("StarSet");
             Instantiate(starExplosionPrefab, stars[i].transform);
             yield return new WaitForSecondsRealtime(0.5f);
+        }
+    }
+    public void ResetScene()
+    {
+        SaveStars();
+        if (ScenesChanger.SharedInstance != null)
+        {
+            ScenesChanger.SharedInstance.ReloadScene();
+        }
+    }
+    public void GoToMap(string scene)
+    {
+        SaveStars();
+        if (ScenesChanger.SharedInstance != null)
+        {
+            ScenesChanger.SharedInstance.SceneChange(scene);
+        }
+    }
+    void SaveStars()
+    {
+        StarsData starsData = SaveDataHandler.SharedInstance.LoadStarsData();
+        if (starsData.starsCount <= starsAchived)
+        {
+            starsData.starsCount = starsAchived;
+            SaveDataHandler.SharedInstance.SaveStarsData(starsData, "starsData");
         }
     }
 }

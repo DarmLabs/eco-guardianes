@@ -18,6 +18,10 @@ public class ScenesChanger : MonoBehaviour
     {
         StartCoroutine(LoadAsyncScene(sceneName, LoadSceneMode.Single));
     }
+    public void ReloadScene()
+    {
+        StartCoroutine(LoadAsyncScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single));
+    }
     IEnumerator LoadAsyncScene(string scene, LoadSceneMode loadSceneMode)
     {
         SceneCache.SharedInstance.SetCurrentScene(scene);

@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class MapManager : MonoBehaviour
 {
-    StarsData starsData;
+    int globalStars;
     [SerializeField] TextMeshProUGUI currentStarsText;
     [SerializeField] GameObject confirmationPanel;
     [SerializeField] GameObject starsHUD;
@@ -15,22 +15,20 @@ public class MapManager : MonoBehaviour
     {
         if (SaveDataHandler.SharedInstance != null)
         {
-            starsData = SaveDataHandler.SharedInstance.LoadStarsData();
+            globalStars = SaveDataHandler.SharedInstance.LoadGlobalStars();
         }
         else
         {
-            starsData = new StarsData(0);
+            globalStars = 0;
         }
     }
     void Start()
     {
-        if (starsData != null)
-        {
-            currentStarsText.text = $"¡Tienes {starsData.starsCount} estrellas!";
-        }
+        currentStarsText.text = $"¡Tienes {globalStars} estrellas!";
+
         for (int i = 0; i < sceneStars.Length; i++)
         {
-            if (sceneStars[i].GetRequieredStars <= starsData.starsCount)
+            if (sceneStars[i].GetRequieredStars <= globalStars)
             {
                 sceneStars[i]._Button.interactable = true;
                 sceneStars[i]._Image.color = Color.white;
