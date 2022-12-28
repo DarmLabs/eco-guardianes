@@ -18,7 +18,7 @@ public class InteractableObjectBase : MonoBehaviour
 {
     bool isClose; //If player is close to this object
     public bool IsClose => isClose;
-    [SerializeField] Outline outline;
+    Outline outline;
     [HideInInspector] public bool BeingTargeted { get; set; } //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
     public bool CanInteract
@@ -34,6 +34,8 @@ public class InteractableObjectBase : MonoBehaviour
     public ObjectType Type => type;
     [SerializeField] Sprite objSprite;
     public Sprite ObjSprite => objSprite;
+    [TextArea][SerializeField] string objectInfo;
+    public string ObjectInfo => objectInfo;
     void Awake()
     {
         outline = GetComponent<Outline>();

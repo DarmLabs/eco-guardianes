@@ -6269,10 +6269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -2139482083, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
+  objectInfo: 
   objectPhrase: un frasco de dulce
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!1 &324733421
@@ -12327,10 +12327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: 961004560, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: un paquete de hamburgesa
   viewOffset: {x: -1, y: 1, z: 0}
 --- !u!1001 &381426286
@@ -18320,10 +18320,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -577250224, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
+  objectInfo: 
   objectPhrase: unas tapas de frascos
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!1 &428376722
@@ -24539,10 +24539,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 2
   type: 1
   objSprite: {fileID: -618091208, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: cascaras de papa y cebolla
   viewOffset: {x: -1, y: 1, z: -1}
 --- !u!4 &613038514 stripped
@@ -30548,10 +30548,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 1
   type: 1
   objSprite: {fileID: -844586616, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: una hamburgesa sin terminar
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!1001 &714393173
@@ -30662,10 +30662,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -1849160518, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
+  objectInfo: 
   objectPhrase: una caja de huevos vacia
   viewOffset: {x: -1, y: 0.5, z: 0}
 --- !u!4 &742977761 stripped
@@ -37000,10 +37000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 1
   type: 1
   objSprite: {fileID: 440965520, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: un papel con aceite
   viewOffset: {x: -1, y: 1, z: 0}
 --- !u!1 &1273564066
@@ -43605,10 +43605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 2
   type: 1
   objSprite: {fileID: 711217848, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: lechuga y tomate seca
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!1001 &1846036677
@@ -43925,10 +43925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -2103667886, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
+  objectInfo: 
   objectPhrase: una caja vieja
   viewOffset: {x: 0, y: 1, z: -2}
 --- !u!23 &50036425021027607
@@ -44258,6 +44258,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 742977763, guid: b6bc3aef8d937f04f90cdabd3675ab34, type: 3}
     - {fileID: 742977764, guid: b6bc3aef8d937f04f90cdabd3675ab34, type: 3}
+    - {fileID: 742977762, guid: b6bc3aef8d937f04f90cdabd3675ab34, type: 3}
+    - {fileID: 742977760, guid: b6bc3aef8d937f04f90cdabd3675ab34, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b6bc3aef8d937f04f90cdabd3675ab34, type: 3}
 --- !u!4 &1038081861334540347
 Transform:
@@ -44586,6 +44588,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 213073314}
     - target: {fileID: 613038520, guid: a7e6d9b6e96c60449aa81e253013f2b8, type: 3}
+      propertyPath: objectInfo
+      value: Quizas haya algo dentro de la heladera, deberia mirar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 613038520, guid: a7e6d9b6e96c60449aa81e253013f2b8, type: 3}
       propertyPath: insideObject
       value: 
       objectReference: {fileID: 714393176}
@@ -44781,6 +44787,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7961674274246362642, guid: 74a3f1b8356ac5a45af701c6ef700b48, type: 3}
     - {fileID: 8069974564192316512, guid: 74a3f1b8356ac5a45af701c6ef700b48, type: 3}
+    - {fileID: 5835905841347646639, guid: 74a3f1b8356ac5a45af701c6ef700b48, type: 3}
+    - {fileID: 1118564338020554018, guid: 74a3f1b8356ac5a45af701c6ef700b48, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74a3f1b8356ac5a45af701c6ef700b48, type: 3}
 --- !u!4 &2489110815246413538 stripped
 Transform:
@@ -44942,23 +44950,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.87464017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4847727
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000085290255
+      value: 0.000000021569763
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004727244
+      value: -0.000000011955125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.987306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68.43736
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.87464017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4847727
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000085290255
+      value: 0.000000021569763
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004727244
+      value: -0.000000011955125
       objectReference: {fileID: 0}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -45458,6 +45496,11 @@ PrefabInstance:
       propertyPath: viewPoint
       value: 
       objectReference: {fileID: 341176967}
+    - target: {fileID: 4013789816836377027, guid: 99497dbd44bcfd241bb1b4cd9eaadd31,
+        type: 3}
+      propertyPath: objectInfo
+      value: Recuerdo haber visto una caja vieja dentro de la vitrina.
+      objectReference: {fileID: 0}
     - target: {fileID: 4013789816836377027, guid: 99497dbd44bcfd241bb1b4cd9eaadd31,
         type: 3}
       propertyPath: insideObject

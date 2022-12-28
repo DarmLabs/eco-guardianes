@@ -86,23 +86,31 @@ public class ActionPanelManager : MonoBehaviour
     }
     public void DisableActionPanel()
     {
-        isOpened = false;
         actionPanel.SetActive(false);
-        panelClosed.Invoke();
         closedObjectsSection.SetActive(false);
         openObjectsSection.SetActive(false);
         trashCanSection.SetActive(false);
+
+        targetConatiner = null;
+        targetObject = null;
+        isOpened = false;
+
+        panelClosed.Invoke();
     }
-    [SerializeField]
     public void EnableInfo()
     {
         infoPanel.SetActive(true);
         Sprite objSprite = null;
-        if (TargetObjectBase.ObjSprite != null)
+        string info = "";
+        objSprite = TargetObjectBase.ObjSprite;
+        if (TargetObjectBase.ObjectInfo == "")
         {
-            objSprite = TargetObjectBase.ObjSprite;
+            info = $"Esto es un texto de ejemplo, se abrio el objeto: {TargetObjectBase.name}";
         }
-        string info = $"Esto es un texto de ejemplo, se abrio el objeto: {TargetObjectBase.name}";
+        else
+        {
+            info = TargetObjectBase.ObjectInfo;
+        }
         HintsPanelFiller.SharedInstance.FillInfo(objSprite, info);
     }
     public void DisableInfoPanel()

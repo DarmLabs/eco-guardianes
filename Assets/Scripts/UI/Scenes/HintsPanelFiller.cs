@@ -14,8 +14,13 @@ public class HintsPanelFiller : MonoBehaviour
     }
     public void FillInfo(Sprite sprite, string info)
     {
-        if (sprite != null)
+        if (sprite == null)
         {
+            objImage.enabled = false;
+        }
+        else
+        {
+            objImage.enabled = true;
             objImage.sprite = sprite;
         }
         infoText.text = info;
