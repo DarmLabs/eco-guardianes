@@ -5,8 +5,8 @@ using UnityEngine;
 public class Base_AnimController : MonoBehaviour
 {
     Animator anim;
-    public const string idleId = "Idle_";
-    public const string sitId = "Down_";
+    public const string idleId = "Idle_0";
+    public const string sitId = "Down_0";
     [Header("Numero maximo de animacion por tipo")]
     [Range(5, 7)] public int idleMaxIndex;
     [Range(3, 4)] public int sitMaxIndex;

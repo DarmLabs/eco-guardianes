@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Recycler_AnimController : Base_AnimController
 {
-    const string poseId = "Pose_";
+    const string poseId = "Pose_0";
     [Range(1, 3)][SerializeField] int poseAnimStyle;
     [SerializeField] bool isPerformingAction;
     public override void Awake()
