@@ -5,8 +5,8 @@ using UnityEngine;
 public class Base_AnimController : MonoBehaviour
 {
     Animator anim;
-    public const string idleId = "Idle_0";
-    public const string sitId = "Down_0";
+    public const string idleId = "Idle_";
+    public const string sitId = "Down_";
     [Header("Numero maximo de animacion por tipo")]
     [Range(5, 7)] public int idleMaxIndex;
     [Range(3, 4)] public int sitMaxIndex;
@@ -36,6 +36,7 @@ public class Base_AnimController : MonoBehaviour
                 Debug.LogError($"El valor de indice ingresado en el tipo de animacion 'sit' es mayor al indice maximo de animaciones existentes: {sitMaxIndex}. Revise el numero ingresado en Sit Anim Style");
                 return;
             }
+
             PlayAnimation($"{sitId}{SitAnimStyle}");
             return;
         }
