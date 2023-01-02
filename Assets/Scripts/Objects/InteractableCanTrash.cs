@@ -12,7 +12,7 @@ public class InteractableCanTrash : InteractableObjectBase
     }
     public override void InteractWithObject()
     {
-        if (gameObject.transform.childCount > 1)
+        if (anim != null)
         {
             anim.Play("Open");
         }

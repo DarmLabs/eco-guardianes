@@ -73,18 +73,12 @@ public class StarsManager : MonoBehaviour
     public void ResetScene()
     {
         SaveStars();
-        if (ScenesChanger.SharedInstance != null)
-        {
-            ScenesChanger.SharedInstance.ReloadScene();
-        }
+        ScenesChanger.SharedInstance?.ReloadScene();
     }
     public void GoToMap(string scene)
     {
         SaveStars();
-        if (ScenesChanger.SharedInstance != null)
-        {
-            ScenesChanger.SharedInstance.SceneChange(scene);
-        }
+        ScenesChanger.SharedInstance?.SceneChange(scene);
     }
     void SaveStars()
     {
