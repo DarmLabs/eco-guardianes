@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.26666668
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -449,10 +449,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -1011799312, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: una botella de gaseosa de vidirio
   viewOffset: {x: -1, y: 1, z: 0}
 --- !u!114 &156953587
@@ -6920,10 +6920,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -1518393298, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: muchos papeles de caramelo
   viewOffset: {x: 0, y: 1, z: -0.5}
 --- !u!1001 &364350622
@@ -7481,10 +7481,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: 1536748160, guid: ca96931e215262d45b21a21578f17f93, type: 3}
+  objectInfo: 
   objectPhrase: un afiche roto
   viewOffset: {x: -1, y: 1, z: 0}
 --- !u!114 &485365334
@@ -13459,10 +13459,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 2
   type: 0
   objSprite: {fileID: -1045766473, guid: fface330d244ec042b00d7185c423d8a, type: 3}
+  objectInfo: 
   objectPhrase: los restos de una manzana
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!114 &491698070
@@ -19883,10 +19883,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3994414001ef4e641b09bdde5af85a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 3
   type: 0
   objSprite: {fileID: 0}
+  objectInfo: 
   insideObject: {fileID: 352292835}
   viewPoint: {fileID: 415867045}
 --- !u!114 &701884077
@@ -31678,10 +31678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3994414001ef4e641b09bdde5af85a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 3
   type: 0
   objSprite: {fileID: 0}
+  objectInfo: 
   insideObject: {fileID: 1223234855}
   viewPoint: {fileID: 2111546377}
 --- !u!95 &725095081
@@ -32615,10 +32615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -1800214470, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: unos fibrones rotos
   viewOffset: {x: -1, y: 1, z: 0}
 --- !u!114 &1125464464
@@ -38836,10 +38836,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 2
   type: 1
   objSprite: {fileID: -915968248, guid: ca96931e215262d45b21a21578f17f93, type: 3}
+  objectInfo: 
   objectPhrase: cascaras de naranja
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!1001 &1232763908
@@ -39560,10 +39560,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: 539076767, guid: ca96931e215262d45b21a21578f17f93, type: 3}
+  objectInfo: 
   objectPhrase: una tapita de gaseosa
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!114 &1402324629
@@ -45749,17 +45749,17 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38268343
+      value: 0.3826834
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896617
+      value: -0.00000001589663
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584594
+      value: 0.000000006584598
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -45779,17 +45779,17 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38268343
+      value: 0.3826834
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896617
+      value: -0.00000001589663
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584594
+      value: 0.000000006584598
       objectReference: {fileID: 0}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -46388,10 +46388,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 0
   type: 1
   objSprite: {fileID: -1694400395, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: muchos papelitos cortados
   viewOffset: {x: 1, y: 1, z: 0}
 --- !u!114 &1630729647
@@ -53051,10 +53051,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7bb1717efe1274c8fc906fbc05b0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 0}
   category: 1
   type: 1
   objSprite: {fileID: 1710747275, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
+  objectInfo: 
   objectPhrase: "unos pa\xF1uelos sucios"
   viewOffset: {x: 0, y: 1, z: -1}
 --- !u!114 &1839616079
