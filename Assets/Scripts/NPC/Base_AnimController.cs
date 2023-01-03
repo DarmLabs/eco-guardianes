@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class Base_AnimController : MonoBehaviour
 {
     Animator anim;
+    NavMeshObstacle obstacle;
+    Vector3 originalObstacleCenter;
+    Vector3 originalObstacleSize;
     public const string idleId = "Idle_";
     public const string sitId = "Down_";
     [Header("Numero maximo de animacion por tipo")]
@@ -22,6 +25,9 @@ public class Base_AnimController : MonoBehaviour
     public virtual void Awake()
     {
         anim = GetComponent<Animator>();
+        obstacle = GetComponent<NavMeshObstacle>();
+        originalObstacleCenter = obstacle.center;
+        originalObstacleSize = obstacle.size;
     }
     public void PlayAnimation(string animName)
     {
@@ -29,6 +35,7 @@ public class Base_AnimController : MonoBehaviour
     }
     public virtual void ChooseStartAnimation()
     {
+        ApplyObstacleChange();
         if (isSitting)
         {
             if (sitMaxIndex < sitAnimStyle)
@@ -36,7 +43,10 @@ public class Base_AnimController : MonoBehaviour
                 Debug.LogError($"El valor de indice ingresado en el tipo de animacion 'sit' es mayor al indice maximo de animaciones existentes: {sitMaxIndex}. Revise el numero ingresado en Sit Anim Style");
                 return;
             }
-
+            if (SitAnimStyle == 2)
+            {
+                ApplyObstacleChange(true);
+            }
             PlayAnimation($"{sitId}{SitAnimStyle}");
             return;
         }
@@ -46,5 +56,10 @@ public class Base_AnimController : MonoBehaviour
             return;
         }
         PlayAnimation($"{idleId}{IdleAnimStyle}");
+    }
+    void ApplyObstacleChange(bool must = false)
+    {
+        obstacle.center = must ? new Vector3(obstacle.center.x, obstacle.center.y, obstacle.center.z - 0.8f) : originalObstacleCenter;
+        obstacle.size = must ? new Vector3(obstacle.size.x, obstacle.size.y, obstacle.size.z + 0.5f) : originalObstacleSize;
     }
 }
