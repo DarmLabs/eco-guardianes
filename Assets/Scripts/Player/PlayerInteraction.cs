@@ -40,14 +40,14 @@ public class PlayerInteraction : MonoBehaviour
     }
     void CurrentClickedGameObject(GameObject selectedGameObject)
     {
-        InteractableObjectBase interactableObject = selectedGameObject.GetComponent<InteractableObjectBase>();
-        if (interactableObject == null || !interactableObject.isActiveAndEnabled)
+        InteractableBase interactable = selectedGameObject.GetComponent<InteractableBase>();
+        if (interactable == null || !interactable.isActiveAndEnabled)
         {
             return;
         }
         else
         {
-            interactableObject.SearchMode();
+            interactable.SearchMode();
         }
     }
     void CurrentClickedPosition(Vector3 position)

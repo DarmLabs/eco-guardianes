@@ -74,7 +74,11 @@ public class TrashPanelManager : MonoBehaviour
     {
         for (int i = 0; i < containers.Length; i++)
         {
-            containers[i].GetComponent<Button>().interactable = state;
+            if (containers[i].IsFound && !containers[i].IsThrow)
+            {
+                containers[i].GetComponent<Button>().interactable = state;
+            }
+
         }
     }
     public void ThrowTrash()

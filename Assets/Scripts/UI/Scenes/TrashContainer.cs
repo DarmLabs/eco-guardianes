@@ -19,12 +19,17 @@ public class TrashContainer : MonoBehaviour
         get { return correctCategory; }
         set { correctCategory = value; }
     }
+    bool isFound;
+    public bool IsFound => isFound;
+    bool isThrow;
+    public bool IsThrow => isThrow;
     void Awake()
     {
         container = GetComponent<Image>();
     }
     public void ObjectFound()
     {
+        isFound = true;
         container.sprite = TrashPanelManager.SharedInstance.Found;
         objSprite.color = TrashPanelManager.SharedInstance.FoundColor;
     }
@@ -55,6 +60,8 @@ public class TrashContainer : MonoBehaviour
         {
             GoodOrBad(false);
         }
+        isThrow = true;
+        GetComponent<Button>().interactable = false;
         TrashPanelManager.SharedInstance.CheckRemainingObjects();
         colorIndicator.gameObject.SetActive(true);
         correctMarker.gameObject.SetActive(true);

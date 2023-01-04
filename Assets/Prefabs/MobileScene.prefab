@@ -514,9 +514,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 6589971027362610564}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: PausePanelSwitcher
+      - m_Target: {fileID: 5495313532436764652}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4696,7 +4696,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.4847727, y: -0.000000008529023, z: 0.000000004727245, w: 0.87464017}
+  m_LocalRotation: {x: 0.4847727, y: 0.00000002156976, z: -0.000000011955123, w: 0.87464017}
   m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5126,7 +5126,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955901183631824}
-  m_LocalRotation: {x: 0.4847727, y: -0.000000008529019, z: 0.000000004727243, w: 0.87464017}
+  m_LocalRotation: {x: 0.4847727, y: -0.0000000085290255, z: 0.000000004727244, w: 0.87464017}
   m_LocalPosition: {x: 243.36946, y: 2.987306, z: 68.43736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7689,9 +7689,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: PausePanelSwitcher
+      - m_Target: {fileID: 5495313532436764652}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12778,9 +12778,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6589971027362610564}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: PausePanelSwitcher
+      - m_Target: {fileID: 5495313532436764652}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18065,6 +18065,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8224040790380331436}
     m_Modifications:
+    - target: {fileID: 1550712217455742922, guid: f582fd62f548eed49a648b360b843415,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3124553780890261704, guid: f582fd62f548eed49a648b360b843415,
         type: 3}
       propertyPath: m_Name
@@ -18134,7 +18139,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 6589971027362610564}
+      objectReference: {fileID: 5495313532436764652}
     - target: {fileID: 3844429106173060920, guid: f582fd62f548eed49a648b360b843415,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -18153,7 +18158,7 @@ PrefabInstance:
     - target: {fileID: 3844429106173060920, guid: f582fd62f548eed49a648b360b843415,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PausePanelSwitcher
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 3844429106173060920, guid: f582fd62f548eed49a648b360b843415,
         type: 3}
@@ -18163,7 +18168,7 @@ PrefabInstance:
     - target: {fileID: 3844429106173060920, guid: f582fd62f548eed49a648b360b843415,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PauseManager, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3844429106173060920, guid: f582fd62f548eed49a648b360b843415,
         type: 3}
