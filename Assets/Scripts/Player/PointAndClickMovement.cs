@@ -30,25 +30,19 @@ public class PointAndClickMovement : MonoBehaviour
             DialogManager.SharedInstance.SetDialog("No puedo llegar ahí");
         }
     }
-    public void TravelToTrash(Transform target)
+    public void TravelToTarget(Transform target)
     {
-        InteractableObjectBase targetScript = target.GetComponent<InteractableObjectBase>();
+        InteractableBase targetScript = target.GetComponent<InteractableBase>();
         if (targetScript.IsClose)//If it's close to the object, the player will take it
         {
+            LookAt(targetScript);
             targetScript.InteractWithObject();
         }
         else //If not, it will travel to take it
         {
             MovingSwithcer(true);
             navMesh.enabled = true;
-            if (targetScript.LookAt != null)
-            {
-                navMesh.SetDestination(targetScript.LookAt.position);
-            }
-            else
-            {
-                navMesh.SetDestination(target.position);
-            }
+            navMesh.SetDestination(target.position);
         }
     }
     void MovingSwithcer(bool state)
@@ -76,5 +70,21 @@ public class PointAndClickMovement : MonoBehaviour
             DestinationReached();
             destinationObj.transform.position = startingDestPos;
         }
+    }
+    public IEnumerator LookAt(InteractableBase interactable)
+    {
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(interactable.transform.position.x - transform.position.x, 0, interactable.transform.position.z - transform.position.z));
+
+        float time = 0;
+
+        while (time < 1)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, time);
+
+            time += Time.deltaTime * 2f;
+
+            yield return null;
+        }
+        interactable.InteractWithObject();
     }
 }

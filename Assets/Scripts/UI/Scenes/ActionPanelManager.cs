@@ -13,6 +13,7 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] GameObject closedObjectsSection;
     [SerializeField] GameObject openObjectsSection;
     [SerializeField] GameObject trashCanSection;
+    [SerializeField] GameObject hintButton;
     [SerializeField] GameObject searhIntoPanel;
     [SerializeField] TextMeshProUGUI searchIntoText;
     [SerializeField] GameObject searchIntoButtons;
@@ -35,24 +36,32 @@ public class ActionPanelManager : MonoBehaviour
         for (int i = 0; i < travelButtons.Length; i++)
         {
             travelButtons[i].onClick.RemoveAllListeners();
-            travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTrash(interactable.transform); });
+            travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable.transform); });
         }
-        if (TargetObjectBase.Type == ObjectType.TrashCan)
+        if (TargetObjectBase != null)
         {
-            trashCanSection.SetActive(true);
-            return;
+            hintButton.SetActive(true);
+            if (TargetObjectBase.Type == ObjectType.TrashCan)
+            {
+                trashCanSection.SetActive(true);
+                return;
+            }
+            if (TargetObjectBase.Type == ObjectType.Closed)
+            {
+                closedObjectsSection.SetActive(true);
+                return;
+            }
+            if (TargetObjectBase.Type == ObjectType.Open)
+            {
+                openObjectsSection.SetActive(true);
+                return;
+            }
         }
-        if (TargetObjectBase.Type == ObjectType.Closed)
+        else
         {
             closedObjectsSection.SetActive(true);
-            return;
+            hintButton.SetActive(false);
         }
-        if (TargetObjectBase.Type == ObjectType.Open)
-        {
-            openObjectsSection.SetActive(true);
-            return;
-        }
-
     }
     public void View()
     {

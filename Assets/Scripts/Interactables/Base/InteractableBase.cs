@@ -34,8 +34,8 @@ public class InteractableBase : MonoBehaviour
         {
             isClose = true;
             pm.DestinationReached();
-            InteractWithObject();
             BeingTargeted = false;
+            StartCoroutine(pm.LookAt(this));
         }
     }
     public void OnChildTriggerExit(Collider target)

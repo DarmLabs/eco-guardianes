@@ -768,6 +768,7 @@ MonoBehaviour:
   closedObjectsSection: {fileID: 1763212361704376819}
   openObjectsSection: {fileID: 4419541240840413385}
   trashCanSection: {fileID: 565856220393458714}
+  hintButton: {fileID: 2841955901752344049}
   searhIntoPanel: {fileID: 7280914117246295075}
   searchIntoText: {fileID: 860421710830449514}
   searchIntoButtons: {fileID: 9209498351378949127}
@@ -4696,7 +4697,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.4847727, y: 0.00000002156976, z: -0.000000011955123, w: 0.87464017}
+  m_LocalRotation: {x: 0.4847727, y: -0.0000000085290255, z: 0.000000004727244, w: 0.87464017}
   m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
