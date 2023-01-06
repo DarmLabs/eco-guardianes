@@ -46,7 +46,7 @@ public class TrashPanelManager : MonoBehaviour
     }
     void Start()
     {
-        if (OpenObjectsManager.SharedInstance.InteractableObjects.Length == containers.Length && OpenObjectsManager.SharedInstance.InteractableObjects.Length != 0)
+        if (OpenObjectsManager.SharedInstance?.InteractableObjects.Length == containers.Length && OpenObjectsManager.SharedInstance?.InteractableObjects.Length != 0)
         {
             for (int i = 0; i < OpenObjectsManager.SharedInstance.InteractableObjects.Length; i++)
             {
@@ -54,8 +54,8 @@ public class TrashPanelManager : MonoBehaviour
                 containers[i].ObjSprite.sprite = OpenObjectsManager.SharedInstance.InteractableObjects[i].ObjSprite;
                 containers[i].CorrectCategory = OpenObjectsManager.SharedInstance.InteractableObjects[i].Category;
             }
+            remainingObjects = OpenObjectsManager.SharedInstance.InteractableObjects.Length;
         }
-        remainingObjects = OpenObjectsManager.SharedInstance.InteractableObjects.Length;
         StartCoroutine(WaitForFrame());
     }
     IEnumerator WaitForFrame()
