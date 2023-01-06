@@ -81,7 +81,7 @@ public class PointAndClickMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, time);
 
-            time += Time.deltaTime * 2f;
+            time += Time.deltaTime * 3f;
 
             yield return null;
         }
