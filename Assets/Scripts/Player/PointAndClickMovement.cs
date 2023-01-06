@@ -21,8 +21,8 @@ public class PointAndClickMovement : MonoBehaviour
         NavMeshPath navMeshPath = new NavMeshPath();
         if (navMesh.CalculatePath(destination, navMeshPath) && navMeshPath.status == NavMeshPathStatus.PathComplete)
         {
-            destinationObj.transform.position = destination;
             navMesh.SetDestination(destination);
+            destinationObj.transform.position = navMesh.destination;
             MovingSwithcer(true);
         }
         else
