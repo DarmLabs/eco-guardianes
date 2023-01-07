@@ -7,7 +7,7 @@ public class DialogManager : MonoBehaviour
     public static DialogManager SharedInstance;
     [SerializeField] GameObject dialogPanel;
     [SerializeField] GameObject nextDialogArrow;
-    [SerializeField] float characterPerSecond = 20f;
+    [SerializeField] float characterPerSecond = 30f;
     [SerializeField] TextMeshProUGUI characterNameText;
     string characterCurrentText;
     [SerializeField] TextMeshProUGUI dialogBoxText;
@@ -69,7 +69,12 @@ public class DialogManager : MonoBehaviour
         currentLine++;
         if (!CheckForMoreLines())
         {
+            yield return new WaitForSeconds(0.5f);
             DialogPanelSwitcher(false);
+        }
+        else
+        {
+            nextDialogArrow.SetActive(true);
         }
     }
     IEnumerator PrintCharacterName(string characterText)

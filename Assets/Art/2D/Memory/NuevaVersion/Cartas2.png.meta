@@ -71,7 +71,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -654,7 +654,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cartas2_22: -1983535183
+      Cartas2_1: 455945761
       Cartas2_21: -1066781146
       Cartas2_7: 1817989849
       Cartas2_2: 759000382
@@ -675,8 +675,8 @@ TextureImporter:
       Cartas2_13: -1551482054
       Cartas2_23: -1745815984
       Cartas2_4: 191051967
+      Cartas2_22: -1983535183
       Cartas2_5: 858121833
-      Cartas2_1: 455945761
       Cartas2_6: 1902562556
   spritePackingTag: 
   pSDRemoveMatte: 0
