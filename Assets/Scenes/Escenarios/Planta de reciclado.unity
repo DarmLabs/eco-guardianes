@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15301013, g: 0.24175328, b: 0.26180512, a: 1}
+  m_IndirectSpecularColor: {r: 0.15301032, g: 0.24175406, b: 0.26180637, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -749,6 +749,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8564319606031490841, guid: 3caff3027b6dcfe40b99f2941cd7e5b0,
         type: 3}
+      propertyPath: m_TagString
+      value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: -8564319606031490841, guid: 3caff3027b6dcfe40b99f2941cd7e5b0,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1194,6 +1199,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 92d81691c5fb820499ef3860646d3064, type: 2}
     - target: {fileID: 5015269619159377297, guid: 3caff3027b6dcfe40b99f2941cd7e5b0,
         type: 3}
+      propertyPath: m_TagString
+      value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015269619159377297, guid: 3caff3027b6dcfe40b99f2941cd7e5b0,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1296,6 +1306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227632323520853289, guid: 3caff3027b6dcfe40b99f2941cd7e5b0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
       objectReference: {fileID: 0}
     - target: {fileID: 8227632323520853289, guid: 3caff3027b6dcfe40b99f2941cd7e5b0,
         type: 3}
