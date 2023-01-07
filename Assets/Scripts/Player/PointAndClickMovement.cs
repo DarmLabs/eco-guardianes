@@ -27,7 +27,7 @@ public class PointAndClickMovement : MonoBehaviour
         }
         else
         {
-            DialogManager.SharedInstance.SetDialog("No puedo llegar ahí");
+            StartCoroutine(DialogManager.SharedInstance.SetDialog(messege: "No puedo llegar ahí"));
         }
     }
     public void TravelToTarget(Transform target)
