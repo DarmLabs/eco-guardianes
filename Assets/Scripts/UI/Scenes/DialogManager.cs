@@ -23,13 +23,13 @@ public class DialogManager : MonoBehaviour
         yesNoContainer = yesButton.transform.parent.gameObject;
     }
 
-    public IEnumerator SetDialog(string characterName = "", string messege = "", Dialog dialog = null, bool hasMinigames = false)
+    public IEnumerator SetDialog(string characterName, string messege = "", Dialog dialog = null, bool hasMinigames = false)
     {
         characterNameText.text = "";
         dialogBoxText.text = "";
         DialogPanelSwitcher(true);
 
-        yield return PrintCharacterName(characterName == "" ? $"{PlayerCustomatization.SharedInstance.CharacterName} dice:" : $"{characterName} dice:");
+        yield return PrintCharacterName(characterName);
         if (dialog != null && !hasMinigames)
         {
             currentLine = 0;
@@ -52,10 +52,6 @@ public class DialogManager : MonoBehaviour
             if (hasMinigames)
             {
                 yesNoContainer.SetActive(true);
-            }
-            else
-            {
-                DialogPanelSwitcher(false);
             }
         }
     }
