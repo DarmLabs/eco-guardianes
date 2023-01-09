@@ -11,11 +11,11 @@ public class Base_AnimController : MonoBehaviour
     public const string idleId = "Idle_";
     public const string sitId = "Down_";
     [Header("Numero maximo de animacion por tipo")]
-    [Range(5, 7)] public int idleMaxIndex;
+    [Range(5, 13)] public int idleMaxIndex;
     [Range(3, 4)] public int sitMaxIndex;
 
     [Header("Indicar que animacion y como debe estar el NPC")]
-    [Range(1, 7)][SerializeField] int idleAnimStyle;
+    [Range(1, 13)][SerializeField] int idleAnimStyle;
     [Range(1, 4)][SerializeField] int sitAnimStyle;
     [SerializeField] bool isSitting;
     bool isMoving;
