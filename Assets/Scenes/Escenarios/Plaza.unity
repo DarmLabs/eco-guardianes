@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.0145491, g: 1.3012059, b: 1.1814568, a: 1}
+  m_IndirectSpecularColor: {r: 1.0145491, g: 1.3012104, b: 1.1814518, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -383,6 +383,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Rodrigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Necesitamos que las personas aprendan m\xE1s sobre reciclar"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &64777822
@@ -454,6 +469,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Lily
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Deber\xEDamos ayudarte pero pienso que no har\xE1 nada un poco de basura"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -689,6 +719,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Carla
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Pienso lo mismo, se deber\xEDa ense\xF1ar m\xE1s sobre reciclaje"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -7314,6 +7359,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Jorge
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Creo que est\xE1 sucia la fuente..."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1 &315359484
@@ -7447,6 +7507,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Maria
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Yo tengo una compostera en mi casa tambi\xE9n!"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -13856,6 +13931,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Ramiro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Si seguimos as\xED vamos a estar rodeado de basura!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &496186109
@@ -14111,6 +14201,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Mario
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Hace mucho calor \xBFSer\xE1 el calentamiento global?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -14398,6 +14503,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: 'Mati '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Vamos a otro lado, est\xE1 muy sucia esta plaza"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -20552,6 +20672,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Pamela
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Yo pienso que hay demasiada basura en esta plaza
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -27170,6 +27305,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Lorena
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Adem\xE1s que separen de la manera correcta!"
+      objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: m_IsActive
@@ -27601,6 +27751,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Pablo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Un poco de basura no da\xF1a a nadie"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &861732198
@@ -27683,12 +27848,12 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000022481217
+      value: -0.00000002248122
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000009312026
+      value: 0.000000009312027
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631828, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -27723,12 +27888,12 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000022481217
+      value: -0.00000002248122
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000009312026
+      value: 0.000000009312027
       objectReference: {fileID: 0}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -28023,6 +28188,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Pedro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Dejar\xE9 esta botella aqu\xED, no creo que haga nada malo"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &960301412
@@ -28303,6 +28483,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Miguel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Tener una compostera en casa es lo mejor para ayudar al medio ambiente!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -28924,6 +29119,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Leo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Pienso que los recuperadores deber\xEDan limpiar m\xE1s"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1 &1380706986
@@ -29256,6 +29466,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Camila
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Pienso que ser\xEDa lo mejor Rodri"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -35467,6 +35692,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Julieta
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Se comieron toda la torta!
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -54858,6 +55098,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Valentina
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Pienso lo mismo Leo.
+      objectReference: {fileID: 0}
     - target: {fileID: 4977424616637435725, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: m_IsActive
@@ -55065,6 +55320,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Daniela
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Creo que la yerba le har\xE1 bien a la tierra"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -55357,6 +55627,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: "Sof\xEDa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Creo que reciclar es lo mejor para poder ayudar al mundo
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -56034,6 +56319,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Ricardo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Que bien! Har\xE9 lo mismo"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -62310,6 +62610,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Joel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Hay un 20% m\xE1s de basura que el a\xF1o pasado!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
