@@ -14,7 +14,7 @@ public class InteractablePerson : InteractableBase
     {
         if (CanInteract)
         {
-            PointAndClickMovement.SharedInstance.TravelToTarget(this.transform);
+            PointAndClickMovement.SharedInstance.TravelToTarget(this);
             BeingTargeted = true;
             Glow(false);
         }

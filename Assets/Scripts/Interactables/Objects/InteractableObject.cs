@@ -28,7 +28,7 @@ public class InteractableObject : InteractableObjectBase
     }
     public override void InteractWithObject()
     {
-        base.InteractWithObject();
+        gameObject.SetActive(false);
         TrashContainer.ObjectFound();
         TrashContainer.CorrectCategory = Category;
     }

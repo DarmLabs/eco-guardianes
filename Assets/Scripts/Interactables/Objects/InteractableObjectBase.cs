@@ -31,8 +31,4 @@ public class InteractableObjectBase : InteractableBase
         ActionPanelManager.SharedInstance.panelOpened.AddListener(RemoveInteraction);
         ActionPanelManager.SharedInstance.panelClosed.AddListener(EnableInteraction);
     }
-    public override void InteractWithObject()
-    {
-        gameObject.SetActive(false);
-    }
 }

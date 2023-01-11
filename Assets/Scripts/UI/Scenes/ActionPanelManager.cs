@@ -36,7 +36,8 @@ public class ActionPanelManager : MonoBehaviour
         for (int i = 0; i < travelButtons.Length; i++)
         {
             travelButtons[i].onClick.RemoveAllListeners();
-            travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable.transform); });
+            travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable); });
+            travelButtons[i].onClick.AddListener(delegate { interactable.BeingTargeted = true; });
         }
         if (TargetObjectBase != null)
         {

@@ -25,19 +25,20 @@ public class InteractableBase : MonoBehaviour
         if (canInteract)
         {
             ActionPanelManager.SharedInstance.EnableActionPanel(this);
-            BeingTargeted = true;
             Glow(false);
         }
     }
     //Triggers
     public void OnChildTriggerEnter(Collider target)
     {
-        if (target.gameObject.TryGetComponent(out PointAndClickMovement pm) && BeingTargeted)
+        if (target.gameObject.TryGetComponent(out PointAndClickMovement pm))
         {
             isClose = true;
-            pm.DestinationReached();
-            BeingTargeted = false;
-            StartCoroutine(pm.LookAt(this));
+            if (BeingTargeted)
+            {
+                pm.DestinationReached();
+                StartCoroutine(pm.LookAt(this));
+            }
         }
     }
     public void OnChildTriggerExit(Collider target)

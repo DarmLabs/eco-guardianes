@@ -26,19 +26,19 @@ public class PointAndClickMovement : MonoBehaviour
             MovingSwitcher(true);
         }
     }
-    public void TravelToTarget(Transform target)
+    public void TravelToTarget(InteractableBase interactable)
     {
-        InteractableBase targetScript = target.GetComponent<InteractableBase>();
-        if (targetScript.IsClose)//If it's close to the object, the player will take it
+        if (interactable.IsClose)//If it's close to the object, the player will take it
         {
-            LookAt(targetScript);
-            targetScript.InteractWithObject();
+            StartCoroutine(LookAt(interactable));
+            interactable.InteractWithObject();
+            DestinationReached();
         }
         else //If not, it will travel to take it
         {
             MovingSwitcher(true);
             navMesh.enabled = true;
-            navMesh.SetDestination(target.position);
+            navMesh.SetDestination(interactable.transform.position);
         }
     }
     void MovingSwitcher(bool state)

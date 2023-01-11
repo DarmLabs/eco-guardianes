@@ -4691,7 +4691,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.4847727, y: 0.000000021569758, z: -0.000000011955122, w: 0.87464017}
+  m_LocalRotation: {x: 0.4847727, y: -0.0000000087262535, z: 0.000000004836561, w: 0.87464017}
   m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5121,7 +5121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955901183631824}
-  m_LocalRotation: {x: 0.4847727, y: 0.000000021569758, z: -0.000000011955122, w: 0.87464017}
+  m_LocalRotation: {x: 0.4847727, y: -0.000000008529019, z: 0.000000004727243, w: 0.8746402}
   m_LocalPosition: {x: 243.36946, y: 2.987306, z: 68.43736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10446,7 +10446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 2072690689577291224}
   nextDialogArrow: {fileID: 6469796581554107315}
-  yesButton: {fileID: 0}
+  yesButton: {fileID: 5487866018627941402}
   characterPerSecond: 30
   characterNameText: {fileID: 2052776180815273124}
   dialogBoxText: {fileID: 8996032693205053944}
