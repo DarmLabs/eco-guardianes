@@ -10,4 +10,13 @@ public class InteractablePerson : InteractableBase
     {
         StartCoroutine(DialogManager.SharedInstance.SetDialog(personName, dialog: dialog));
     }
+    public override void SearchMode()
+    {
+        if (CanInteract)
+        {
+            PointAndClickMovement.SharedInstance.TravelToTarget(this.transform);
+            BeingTargeted = true;
+            Glow(false);
+        }
+    }
 }

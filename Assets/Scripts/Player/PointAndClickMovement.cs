@@ -23,7 +23,7 @@ public class PointAndClickMovement : MonoBehaviour
         {
             navMesh.SetDestination(destination);
             destinationObj.transform.position = navMesh.destination;
-            MovingSwithcer(true);
+            MovingSwitcher(true);
         }
         else
         {
@@ -40,12 +40,12 @@ public class PointAndClickMovement : MonoBehaviour
         }
         else //If not, it will travel to take it
         {
-            MovingSwithcer(true);
+            MovingSwitcher(true);
             navMesh.enabled = true;
             navMesh.SetDestination(target.position);
         }
     }
-    void MovingSwithcer(bool state)
+    void MovingSwitcher(bool state)
     {
         isMoving = state;
         if (WheelChairMovement.SharedInstance != null)
@@ -61,7 +61,7 @@ public class PointAndClickMovement : MonoBehaviour
     public void DestinationReached()
     {
         navMesh.ResetPath();
-        MovingSwithcer(false);
+        MovingSwitcher(false);
     }
     void OnTriggerEnter(Collider other)
     {

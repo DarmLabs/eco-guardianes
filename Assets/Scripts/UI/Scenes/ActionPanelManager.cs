@@ -99,8 +99,6 @@ public class ActionPanelManager : MonoBehaviour
             TargetObjectBase = ob;
         }
         panelOpened.Invoke();
-        interactableBase.BeingTargeted = true;
-        interactableBase.Glow(false);
         SetTravelListeners(interactableBase);
 
         if (TargetObjectBase != null)

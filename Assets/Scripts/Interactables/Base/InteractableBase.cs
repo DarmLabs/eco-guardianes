@@ -20,11 +20,13 @@ public class InteractableBase : MonoBehaviour
         outline = GetComponent<Outline>();
         canInteract = true;
     }
-    public void SearchMode()
+    public virtual void SearchMode()
     {
         if (canInteract)
         {
             ActionPanelManager.SharedInstance.EnableActionPanel(this);
+            BeingTargeted = true;
+            Glow(false);
         }
     }
     //Triggers
