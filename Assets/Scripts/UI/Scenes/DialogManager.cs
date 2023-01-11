@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public static DialogManager SharedInstance;
     [SerializeField] GameObject dialogPanel;
     [SerializeField] GameObject nextDialogArrow;
+    GameObject yesNoContainer;
+    [SerializeField] Button yesButton;
     [SerializeField] float characterPerSecond = 30f;
     [SerializeField] TextMeshProUGUI characterNameText;
     string characterCurrentText;
@@ -17,16 +20,17 @@ public class DialogManager : MonoBehaviour
     void Awake()
     {
         SharedInstance = this;
+        yesNoContainer = yesButton.transform.parent.gameObject;
     }
 
-    public IEnumerator SetDialog(string characterName = "", string messege = "", Dialog dialog = null)
+    public IEnumerator SetDialog(string characterName, string messege = "", Dialog dialog = null, bool hasMinigames = false)
     {
         characterNameText.text = "";
         dialogBoxText.text = "";
         DialogPanelSwitcher(true);
 
-        yield return PrintCharacterName(characterName == "" ? $"{PlayerCustomatization.SharedInstance.CharacterName} dice:" : $"{characterName} dice:");
-        if (dialog != null)
+        yield return PrintCharacterName(characterName);
+        if (dialog != null && !hasMinigames)
         {
             currentLine = 0;
             currentDialog = dialog;
@@ -45,7 +49,10 @@ public class DialogManager : MonoBehaviour
         else
         {
             yield return PrintDialog(messege);
-            DialogPanelSwitcher(false);
+            if (hasMinigames)
+            {
+                yesNoContainer.SetActive(true);
+            }
         }
     }
     bool CheckForMoreLines()
@@ -95,7 +102,7 @@ public class DialogManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.5f);
     }
-    void DialogPanelSwitcher(bool state)
+    public void DialogPanelSwitcher(bool state)
     {
         dialogPanel.SetActive(state);
         if (state)
@@ -106,5 +113,9 @@ public class DialogManager : MonoBehaviour
         {
             ActionPanelManager.SharedInstance.panelClosed.Invoke();
         }
+    }
+    public void SetYesButtonForSceneChange(string scene)
+    {
+        yesButton.onClick.AddListener(delegate { ScenesChanger.SharedInstance?.SceneChange(scene); });
     }
 }

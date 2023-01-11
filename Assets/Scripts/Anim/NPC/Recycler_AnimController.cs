@@ -10,7 +10,7 @@ public class Recycler_AnimController : Base_AnimController
     public override void Awake()
     {
         base.Awake();
-        idleMaxIndex = 5;
+        idleMaxIndex = 13;
         sitMaxIndex = 3;
         ChooseStartAnimation();
     }

@@ -6071,7 +6071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3323becdbbd8de4387d8c30d3eae75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleMaxIndex: 5
+  idleMaxIndex: 13
   sitMaxIndex: 3
   idleAnimStyle: 1
   sitAnimStyle: 1
@@ -6090,3 +6090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b494bab21bf9c31449c23b9f9518b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personName: 
+  dialog:
+    lines: []

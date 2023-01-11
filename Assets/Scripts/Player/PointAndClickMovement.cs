@@ -25,10 +25,6 @@ public class PointAndClickMovement : MonoBehaviour
             destinationObj.transform.position = navMesh.destination;
             MovingSwitcher(true);
         }
-        else
-        {
-            StartCoroutine(DialogManager.SharedInstance.SetDialog(messege: "No puedo llegar ahí"));
-        }
     }
     public void TravelToTarget(Transform target)
     {

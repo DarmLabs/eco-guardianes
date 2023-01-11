@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.0145491, g: 1.3012059, b: 1.1814568, a: 1}
+  m_IndirectSpecularColor: {r: 1.0145491, g: 1.3012104, b: 1.1814518, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -383,6 +383,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Rodrigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Necesitamos que las personas aprendan m\xE1s sobre reciclar"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &64777822
@@ -454,6 +469,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Lily
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Deber\xEDamos ayudarte pero pienso que no har\xE1 nada un poco de basura"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -689,6 +719,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Carla
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Pienso lo mismo, se deber\xEDa ense\xF1ar m\xE1s sobre reciclaje"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -7314,6 +7359,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Jorge
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Creo que est\xE1 sucia la fuente..."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1 &315359484
@@ -7447,6 +7507,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Maria
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Yo tengo una compostera en mi casa tambi\xE9n!"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -13856,6 +13931,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Ramiro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Si seguimos as\xED vamos a estar rodeado de basura!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &496186109
@@ -14111,6 +14201,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Mario
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Hace mucho calor \xBFSer\xE1 el calentamiento global?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -14398,6 +14503,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: 'Mati '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Vamos a otro lado, est\xE1 muy sucia esta plaza"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -20552,6 +20672,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Pamela
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Yo pienso que hay demasiada basura en esta plaza
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -27170,6 +27305,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Lorena
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Adem\xE1s que separen de la manera correcta!"
+      objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: m_IsActive
@@ -27601,6 +27751,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Pablo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Un poco de basura no da\xF1a a nadie"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &861732198
@@ -28023,6 +28188,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Pedro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Dejar\xE9 esta botella aqu\xED, no creo que haga nada malo"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1001 &960301412
@@ -28303,6 +28483,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Miguel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Tener una compostera en casa es lo mejor para ayudar al medio ambiente!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -28924,6 +29119,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Leo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Pienso que los recuperadores deber\xEDan limpiar m\xE1s"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
 --- !u!1 &1380706986
@@ -29089,103 +29299,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248bedfb229a24149a0880b143f13c5f, type: 3}
---- !u!1 &1381095802
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1381095803}
-  - component: {fileID: 1381095806}
-  - component: {fileID: 1381095805}
-  - component: {fileID: 1381095804}
-  m_Layer: 0
-  m_Name: Celular
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1381095803
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381095802}
-  m_LocalRotation: {x: 0.6255716, y: 0.08723216, z: 0.05293838, w: 0.7734651}
-  m_LocalPosition: {x: -0.072, y: 0.237, z: 0.185}
-  m_LocalScale: {x: 0.066403784, y: 0.66188306, z: 0.35056394}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 499654142}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 73.432, y: 44.868, z: 42.06}
---- !u!65 &1381095804
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381095802}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1381095805
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381095802}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1381095806
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381095802}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1388610320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2416558535004290719, guid: 9eca78c4741246343a55b50970b24318,
@@ -29256,6 +29369,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Camila
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Pienso que ser\xEDa lo mejor Rodri"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -35398,6 +35526,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1748000346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1422829270
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 499654142}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.011
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.103
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.155
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6501114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.1754389
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.04832779
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7377268
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -17.422
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -11.855
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -260.952
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 31e9dc95295a7014d9b5e7bfee1b289e,
+        type: 3}
+      propertyPath: m_Name
+      value: CelularRojo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31e9dc95295a7014d9b5e7bfee1b289e, type: 3}
 --- !u!1001 &1453890336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35467,6 +35669,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Julieta
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Se comieron toda la torta!
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -54858,6 +55075,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Valentina
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Pienso lo mismo Leo.
+      objectReference: {fileID: 0}
     - target: {fileID: 4977424616637435725, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: m_IsActive
@@ -55065,6 +55297,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: Daniela
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Creo que la yerba le har\xE1 bien a la tierra"
       objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -55358,6 +55605,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: personName
+      value: "Sof\xEDa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Creo que reciclar es lo mejor para poder ayudar al mundo
+      objectReference: {fileID: 0}
     - target: {fileID: 4674537219137505958, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: m_IsActive
@@ -55515,103 +55777,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e, type: 3}
---- !u!1 &1921309283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1921309284}
-  - component: {fileID: 1921309287}
-  - component: {fileID: 1921309286}
-  - component: {fileID: 1921309285}
-  m_Layer: 0
-  m_Name: Celular
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1921309284
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921309283}
-  m_LocalRotation: {x: 0.6255716, y: 0.08723216, z: 0.05293838, w: 0.7734651}
-  m_LocalPosition: {x: -0.072, y: 0.237, z: 0.185}
-  m_LocalScale: {x: 0.066403784, y: 0.66188306, z: 0.35056394}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1923952331}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 73.432, y: 44.868, z: 42.06}
---- !u!65 &1921309285
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921309283}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1921309286
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921309283}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1921309287
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921309283}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1923854402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6276138522770983962, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
@@ -56035,8 +56200,92 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Ricardo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Que bien! Har\xE9 lo mismo"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
+--- !u!1001 &2071798053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923952331}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.074
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.097
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.168
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.67718637
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.107628435
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.14092106
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.71412605
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 200.306
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -177.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -87.36499
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16e692ddbb469ef47be86e4b57f7ee8a,
+        type: 3}
+      propertyPath: m_Name
+      value: CelularAmarillo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16e692ddbb469ef47be86e4b57f7ee8a, type: 3}
 --- !u!1001 &2085182709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62310,6 +62559,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: personName
+      value: Joel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Hay un 20% m\xE1s de basura que el a\xF1o pasado!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
