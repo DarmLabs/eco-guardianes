@@ -17,8 +17,11 @@ public class CharacterCreatorSceneManager : MonoBehaviour
     }
     void Start()
     {
-        bool isCharacterCreated;
-        isCharacterCreated = SaveDataHandler.SharedInstance.LoadFirstTime();
+        bool isCharacterCreated = false;
+        if (SaveDataHandler.SharedInstance != null)
+        {
+            isCharacterCreated = SaveDataHandler.SharedInstance.LoadFirstTime();
+        }
         mainMenuButton.SetActive(isCharacterCreated);
     }
     public void ConfirmPanelSwitcher(bool state)
