@@ -1009,7 +1009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardScene: MapScene
-  saveButton: {fileID: 0}
+  saveButton: {fileID: 1164881034}
+  mainMenuButton: {fileID: 2887115660633633641}
   wheelChairToggle: {fileID: 1235625702}
   mainPage: {fileID: 486953463}
   confirmExitPanel: {fileID: 3549469682694778059}
