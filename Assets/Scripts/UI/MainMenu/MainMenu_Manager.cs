@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class MainMenu_Manager : MonoBehaviour
 {
+    const string mapSelectorSceneName = "MapScene";
+    const string characterCreationSceneName = "CharacterCreation";
+    bool isCharacterCreated;
     [SerializeField] GameObject mainMenuPanel;
     [SerializeField] GameObject confirmationPanel;
     [SerializeField] GameObject creditsPanel;
-    public void EnterGame(string sceneName)
+    [SerializeField] GameObject characterCreatorButton;
+    void Start()
+    {
+        isCharacterCreated = SaveDataHandler.SharedInstance.LoadFirstTime();
+        characterCreatorButton.SetActive(isCharacterCreated);
+    }
+    public void EnterGame()
     {
         if (ScenesChanger.SharedInstance != null)
         {
+            string sceneName = isCharacterCreated ? mapSelectorSceneName : characterCreationSceneName;
             ScenesChanger.SharedInstance.SceneChange(sceneName);
         }
+    }
+    public void EnterCharacterCreation()
+    {
+        ScenesChanger.SharedInstance.SceneChange(characterCreationSceneName);
     }
     public void MainMenuPanel(bool state)
     {

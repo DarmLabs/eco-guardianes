@@ -121,8 +121,13 @@ public class CharacterCreation : MonoBehaviour
     }
     public void InsertName(string characterName)
     {
-        Debug.Log(characterName);
-        characterData.characterName = characterName;
+        bool canPressSaveBtn = false;
+        if (characterName != "")
+        {
+            characterData.characterName = characterName;
+            canPressSaveBtn = true;
+        }
+        CharacterCreatorSceneManager.SharedInstance.CanPressSaveButton(canPressSaveBtn);
     }
     void SetAllOff(GameObject[] prefabs)
     {
