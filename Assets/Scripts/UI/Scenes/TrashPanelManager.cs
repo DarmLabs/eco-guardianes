@@ -11,7 +11,9 @@ public class TrashPanelManager : MonoBehaviour
     [SerializeField] GameObject trashPanel;
     [SerializeField] TextMeshProUGUI tutoQuestion;
     [SerializeField] Color canButtonColorSelected;
+    public Color CanButtonColorSelected => canButtonColorSelected;
     [SerializeField] Color canButtonColorUnselected;
+    public Color CanButtonColorsUnselected => canButtonColorUnselected;
     [SerializeField] CanButtonHelper canButtonRec;
     CanButtonHelper previousButton;
     TrashCategory currentCanCategory;
@@ -69,6 +71,9 @@ public class TrashPanelManager : MonoBehaviour
     IEnumerator WaitForFrame()
     {
         yield return new WaitForEndOfFrame();
+        previousButton = canButtonRec;
+        previousButton.SetTransparency(true);
+        SetTutoQuestion("recuperables");
         trashPanel.SetActive(false);
     }
     public void TrashPanelSwitcher(bool state)
@@ -107,9 +112,12 @@ public class TrashPanelManager : MonoBehaviour
     {
         tutoQuestion.text = $"¿{tutoQuestionBase}{canType}?";
     }
-    public void SetTransparencyOfAll(CanButtonHelper canButton = null)
+    public void PreviousButtonReset(CanButtonHelper canButton)
     {
-        //do transparency
+        previousButton.SetTransparency(false);
+        previousButton = canButton;
+        canButton.SetTransparency(true);
+        currentCanCategory = canButton.Category;
     }
     //For button setters
     public void SetCanCateogry()

@@ -11,8 +11,13 @@ public class CanButtonHelper : MonoBehaviour
     {
         _image = GetComponent<Image>();
     }
-    public void SetTransparency(Color color)
+    public void SetButtonForTransparency()
     {
-        _image.color = color;
+        TrashPanelManager.SharedInstance.PreviousButtonReset(this);
+    }
+    public void SetTransparency(bool isSelected)
+    {
+        Color selectedColor = isSelected ? TrashPanelManager.SharedInstance.CanButtonColorSelected : TrashPanelManager.SharedInstance.CanButtonColorsUnselected;
+        _image.color = selectedColor;
     }
 }
