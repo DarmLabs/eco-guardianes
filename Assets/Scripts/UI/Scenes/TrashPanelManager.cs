@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 public class TrashPanelManager : MonoBehaviour
 {
     public static TrashPanelManager SharedInstance;
     [SerializeField] TrashContainer[] containers;
     [SerializeField] GameObject trashPanel;
+    [SerializeField] TextMeshProUGUI tutoQuestion;
+    [SerializeField] Color canButtonColorSelected;
+    [SerializeField] Color canButtonColorUnselected;
+    [SerializeField] CanButtonHelper canButtonRec;
+    CanButtonHelper previousButton;
     TrashCategory currentCanCategory;
     public TrashCategory CurrentCanCategory
     {
@@ -17,6 +23,8 @@ public class TrashPanelManager : MonoBehaviour
     bool isOpened;
     public bool IsOpened => isOpened;
     //For sprite changes
+    [Space(10)]
+    [Header("For sprite changes")]
     [SerializeField] Sprite unfound;
     public Sprite Unfound => unfound;
     [SerializeField] Sprite found;
@@ -78,7 +86,6 @@ public class TrashPanelManager : MonoBehaviour
             {
                 containers[i].GetComponent<Button>().interactable = state;
             }
-
         }
     }
     public void ThrowTrash()
@@ -94,6 +101,15 @@ public class TrashPanelManager : MonoBehaviour
             trashPanel.SetActive(false);
             StarsManager.SharedInstance.TriggerWinCondition();
         }
+    }
+    const string tutoQuestionBase = "Que residuo quieres tirar en el tacho de ";
+    public void SetTutoQuestion(string canType)
+    {
+        tutoQuestion.text = $"¿{tutoQuestionBase}{canType}?";
+    }
+    public void SetTransparencyOfAll(CanButtonHelper canButton = null)
+    {
+        //do transparency
     }
     //For button setters
     public void SetCanCateogry()

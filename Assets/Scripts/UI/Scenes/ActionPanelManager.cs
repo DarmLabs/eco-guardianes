@@ -14,6 +14,7 @@ public class ActionPanelManager : MonoBehaviour
     [SerializeField] GameObject openObjectsSection;
     [SerializeField] GameObject trashCanSection;
     [SerializeField] GameObject hintButton;
+    [SerializeField] TextMeshProUGUI actionBoxText;
     [SerializeField] GameObject searhIntoPanel;
     [SerializeField] TextMeshProUGUI searchIntoText;
     [SerializeField] GameObject searchIntoButtons;
@@ -39,14 +40,23 @@ public class ActionPanelManager : MonoBehaviour
             travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable); });
             travelButtons[i].onClick.AddListener(delegate { interactable.BeingTargeted = true; });
         }
+        DisplaySections();
+    }
+    void DisplaySections()
+    {
         if (TargetObjectBase != null)
         {
-            hintButton.SetActive(true);
             if (TargetObjectBase.Type == ObjectType.TrashCan)
             {
                 trashCanSection.SetActive(true);
+                actionBoxText.text = "¿Quieres tirar residuos?";
+                hintButton.SetActive(false);
                 return;
             }
+
+            hintButton.SetActive(true);
+            actionBoxText.text = "¿Que quieres hacer?";
+
             if (TargetObjectBase.Type == ObjectType.Closed)
             {
                 closedObjectsSection.SetActive(true);

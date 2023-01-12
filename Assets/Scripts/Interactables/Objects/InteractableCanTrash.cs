@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class InteractableCanTrash : InteractableObjectBase
 {
-    Animator anim;
-    public override void Start()
-    {
-        base.Start();
-        anim = GetComponent<Animator>();
-    }
     public override void InteractWithObject()
     {
-        if (anim != null)
-        {
-            anim.Play("Open");
-        }
-        else
-        {
-            TrashPanelDisplay();
-        }
+        TrashPanelDisplay();
+    }
+    public override void Glow(bool state)
+    {
+        TrashCansManager.SharedInstance?.GlowAllCans(state);
     }
     public void TrashPanelDisplay() //Used at the end of OpenTacho animation
     {

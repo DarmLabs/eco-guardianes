@@ -7,6 +7,7 @@ public class InteractableBase : MonoBehaviour
     bool isClose; //If player is close to this object
     public bool IsClose => isClose;
     Outline outline;
+    public Outline Outline => outline;
     [HideInInspector] public bool BeingTargeted { get; set; } //If this item is being collected or is a trash can the player is heading towards
     bool canInteract; //If the player can interact with this object
     public bool CanInteract
@@ -65,7 +66,7 @@ public class InteractableBase : MonoBehaviour
     {
         Glow(false);
     }
-    public void Glow(bool state)
+    public virtual void Glow(bool state)
     {
         outline.enabled = state;
     }
