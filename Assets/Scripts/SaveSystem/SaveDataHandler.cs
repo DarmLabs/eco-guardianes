@@ -5,9 +5,10 @@ using System.IO;
 public class SaveDataHandler : MonoBehaviour
 {
     public static SaveDataHandler SharedInstance;
-    string dataPath = $"{Application.persistentDataPath}/";
+    string dataPath;
     void Awake()
     {
+        dataPath = $"{Application.persistentDataPath}/";
         SharedInstance = this;
         DontDestroyOnLoad(gameObject);
     }
