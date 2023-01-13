@@ -38,7 +38,8 @@ public class MapManager : MonoBehaviour
     }
     public void OnYesButton()
     {
-        ScenesChanger.SharedInstance.SceneChange(sceneForward);
+        LoadingPopupManager.SharedInstance?.LoadingPopupSwitcher(true);
+        ScenesChanger.SharedInstance?.SceneChange(sceneForward);
     }
     public void OnNoButton()
     {

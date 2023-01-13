@@ -40,7 +40,10 @@ public class CharacterCreatorSceneManager : MonoBehaviour
     public void OnSaveButton()
     {
         ScenesChanger.SharedInstance?.SceneChange(forwardScene);
-        SaveDataHandler.SharedInstance?.SaveFirstTime(true);
+        if (!SaveDataHandler.SharedInstance.LoadFirstTime())
+        {
+            SaveDataHandler.SharedInstance?.SaveFirstTime();
+        }
     }
     public void OnBackButton()
     {

@@ -43,7 +43,7 @@ public class PauseManager : MonoBehaviour
     {
         if (ScenesChanger.SharedInstance != null)
         {
-            ScenesChanger.SharedInstance.SceneChange("MainMenu");
+            ScenesChanger.SharedInstance.SceneChange(ConstManager.mainMenuSceneName);
         }
     }
     public void QuitGame()

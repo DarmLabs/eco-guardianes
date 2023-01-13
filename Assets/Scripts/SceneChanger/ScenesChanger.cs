@@ -24,7 +24,10 @@ public class ScenesChanger : MonoBehaviour
     }
     IEnumerator LoadAsyncScene(string scene, LoadSceneMode loadSceneMode)
     {
-        SceneCache.SharedInstance.SetCurrentScene(scene);
+        if (loadSceneMode != LoadSceneMode.Additive)
+        {
+            SceneCache.SharedInstance.SetCurrentScene(scene);
+        }
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene, loadSceneMode);
         while (!asyncLoad.isDone)
         {

@@ -76,6 +76,9 @@ public class TrashPanelManager : MonoBehaviour
         previousButton.SetTransparency(true);
         SetTutoQuestion("recuperables");
         trashPanel.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+        LoadingPopupManager.SharedInstance?.LoadingPopupSwitcher(false);
     }
     public void TrashPanelSwitcher(bool state)
     {

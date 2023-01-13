@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MainMenu_Manager : MonoBehaviour
 {
-    const string mapSelectorSceneName = "MapScene";
-    const string characterCreationSceneName = "CharacterCreation";
     bool isCharacterCreated;
     [SerializeField] GameObject mainMenuPanel;
     [SerializeField] GameObject confirmationPanel;
@@ -20,13 +18,13 @@ public class MainMenu_Manager : MonoBehaviour
     {
         if (ScenesChanger.SharedInstance != null)
         {
-            string sceneName = isCharacterCreated ? mapSelectorSceneName : characterCreationSceneName;
+            string sceneName = isCharacterCreated ? ConstManager.mapSceneName : ConstManager.characterCreationSceneName;
             ScenesChanger.SharedInstance.SceneChange(sceneName);
         }
     }
     public void EnterCharacterCreation()
     {
-        ScenesChanger.SharedInstance.SceneChange(characterCreationSceneName);
+        ScenesChanger.SharedInstance.SceneChange(ConstManager.characterCreationSceneName);
     }
     public void MainMenuPanel(bool state)
     {

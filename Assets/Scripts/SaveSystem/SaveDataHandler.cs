@@ -13,15 +13,18 @@ public class SaveDataHandler : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     #region MainMenuScene
-    public void SaveFirstTime(bool isCharacterCreated)
+    public void SaveFirstTime()
     {
-        FileHandler.SaveToJSON<bool>(isCharacterCreated, "mainMenuFlags");
+        MainMenuData mainMenuData = new MainMenuData(true);
+        Debug.Log(mainMenuData.isCharacterCreated);
+        FileHandler.SaveToJSON<MainMenuData>(mainMenuData, "mainMenuFlags");
     }
     public bool LoadFirstTime()
     {
         if (File.Exists($"{dataPath}mainMenuFlags"))
         {
-            return FileHandler.ReadFromJSON<bool>("mainMenuFlags");
+            MainMenuData mainMenuData = FileHandler.ReadFromJSON<MainMenuData>("mainMenuFlags");
+            return mainMenuData.isCharacterCreated;
         }
         return false;
     }
