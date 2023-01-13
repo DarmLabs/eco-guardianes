@@ -4828,7 +4828,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.4847727, y: 0.00000002156976, z: -0.000000011955123, w: 0.87464017}
+  m_LocalRotation: {x: 0.4847727, y: 0.000000021569758, z: -0.000000011955122, w: 0.87464017}
   m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7791,6 +7791,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1085287093198978721}
+        m_TargetAssemblyTypeName: TrashPanelManager, Assembly-CSharp
+        m_MethodName: NonCellsUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7860300107631254146}
         m_TargetAssemblyTypeName: MainButtonsManager, Assembly-CSharp
@@ -13177,7 +13189,7 @@ MonoBehaviour:
   tutoQuestion: {fileID: 3992501387240877228}
   canButtonColorSelected: {r: 1, g: 1, b: 1, a: 1}
   canButtonColorUnselected: {r: 1, g: 1, b: 1, a: 0.5882353}
-  canButtonRec: {fileID: 194106792509795911}
+  canButtons: {fileID: 3449983329985208403}
   unfound: {fileID: 848440559, guid: 41752ac6dffb9a340b6628097438a11a, type: 3}
   found: {fileID: -1088465874, guid: 41752ac6dffb9a340b6628097438a11a, type: 3}
   unfoundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

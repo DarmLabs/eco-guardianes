@@ -12,11 +12,12 @@ public class InteractableCanTrash : InteractableObjectBase
     {
         TrashCansManager.SharedInstance?.GlowAllCans(state);
     }
-    public void TrashPanelDisplay() //Used at the end of OpenTacho animation
+    public void TrashPanelDisplay()
     {
         TrashPanelManager.SharedInstance.TrashPanelSwitcher(true);
         TrashPanelManager.SharedInstance.ContainerButtonsSwitcher(true);
         TrashPanelManager.SharedInstance.CurrentCanCategory = Category;
+        TrashPanelManager.SharedInstance.NonCellsUI(true);
         MainButtonsManager.SharedInstance.MainButtonsSwitcher(false);
         MainButtonsManager.SharedInstance.SetTimeScale(0);
     }

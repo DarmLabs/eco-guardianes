@@ -14,7 +14,7 @@ public class TrashPanelManager : MonoBehaviour
     public Color CanButtonColorSelected => canButtonColorSelected;
     [SerializeField] Color canButtonColorUnselected;
     public Color CanButtonColorsUnselected => canButtonColorUnselected;
-    [SerializeField] CanButtonHelper canButtonRec;
+    [SerializeField] GameObject canButtons;
     CanButtonHelper previousButton;
     TrashCategory currentCanCategory;
     public TrashCategory CurrentCanCategory
@@ -67,11 +67,12 @@ public class TrashPanelManager : MonoBehaviour
             remainingObjects = OpenObjectsManager.SharedInstance.InteractableObjects.Length;
         }
         StartCoroutine(WaitForFrame());
+
     }
     IEnumerator WaitForFrame()
     {
         yield return new WaitForEndOfFrame();
-        previousButton = canButtonRec;
+        previousButton = canButtons.transform.GetChild(0).GetComponent<CanButtonHelper>();
         previousButton.SetTransparency(true);
         SetTutoQuestion("recuperables");
         trashPanel.SetActive(false);
@@ -118,6 +119,11 @@ public class TrashPanelManager : MonoBehaviour
         previousButton = canButton;
         canButton.SetTransparency(true);
         currentCanCategory = canButton.Category;
+    }
+    public void NonCellsUI(bool state)
+    {
+        canButtons.SetActive(state);
+        tutoQuestion.enabled = state;
     }
     //For button setters
     public void SetCanCateogry()
