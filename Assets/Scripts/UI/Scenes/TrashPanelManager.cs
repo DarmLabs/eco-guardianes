@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.Events;
+
 public class TrashPanelManager : MonoBehaviour
 {
     public static TrashPanelManager SharedInstance;
@@ -24,9 +26,10 @@ public class TrashPanelManager : MonoBehaviour
     }
     bool isOpened;
     public bool IsOpened => isOpened;
+    public UnityEvent<bool> hasNewTrash;
     //For sprite changes
     [Space(10)]
-    [Header("For sprite changes")]
+    [Header("For sprite changes on TrashContainers")]
     [SerializeField] Sprite unfound;
     public Sprite Unfound => unfound;
     [SerializeField] Sprite found;
@@ -49,13 +52,24 @@ public class TrashPanelManager : MonoBehaviour
         set => succeses = value;
     }
     int remainingObjects;
+
+    [Space(10)]
+    [Header("For sprite changes on TrashButton")]
+
+    [SerializeField] Sprite exlamation;
+    [SerializeField] Sprite questionMark;
+    Image newTrashMark;
+    UnityEngine.UI.Outline trashButtonOutline;
     void Awake()
     {
         SharedInstance = this;
         trashPanel.SetActive(true);
+        hasNewTrash.AddListener(NewTrash);
     }
     void Start()
     {
+        trashButtonOutline = MainButtonsManager.SharedInstance.TrashButton.GetComponent<UnityEngine.UI.Outline>();
+        newTrashMark = MainButtonsManager.SharedInstance.TrashButton.transform.GetChild(1).gameObject.GetComponent<Image>();
         if (OpenObjectsManager.SharedInstance?.InteractableObjects.Length == containers.Length && OpenObjectsManager.SharedInstance?.InteractableObjects.Length != 0)
         {
             for (int i = 0; i < OpenObjectsManager.SharedInstance.InteractableObjects.Length; i++)
@@ -86,6 +100,10 @@ public class TrashPanelManager : MonoBehaviour
         MainButtonsManager.SharedInstance.MainButtonsSwitcher(!state);
         MainButtonsManager.SharedInstance.onMainButtonClicked.Invoke();
         isOpened = state;
+    }
+    public void OnTrashPanel()
+    {
+        hasNewTrash.Invoke(false);
     }
     public void ContainerButtonsSwitcher(bool state)
     {
@@ -128,9 +146,17 @@ public class TrashPanelManager : MonoBehaviour
         canButtons.SetActive(state);
         tutoQuestion.enabled = state;
     }
-    //For button setters
+    # region For button setters
     public void SetCanCateogry()
     {
         currentCanCategory = TrashCategory.None;
     }
+    #endregion
+    #region Events Calls
+    void NewTrash(bool hasNew)
+    {
+        newTrashMark.sprite = hasNew ? exlamation : questionMark;
+        trashButtonOutline.enabled = hasNew;
+    }
+    #endregion
 }

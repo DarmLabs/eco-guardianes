@@ -31,5 +31,6 @@ public class InteractableObject : InteractableObjectBase
         gameObject.SetActive(false);
         TrashContainer.ObjectFound();
         TrashContainer.CorrectCategory = Category;
+        TrashPanelManager.SharedInstance.hasNewTrash.Invoke(true);
     }
 }

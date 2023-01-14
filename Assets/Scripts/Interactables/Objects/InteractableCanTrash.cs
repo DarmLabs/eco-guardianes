@@ -18,6 +18,7 @@ public class InteractableCanTrash : InteractableObjectBase
         TrashPanelManager.SharedInstance.ContainerButtonsSwitcher(true);
         TrashPanelManager.SharedInstance.CurrentCanCategory = Category;
         TrashPanelManager.SharedInstance.NonCellsUI(true);
+        TrashPanelManager.SharedInstance.OnTrashPanel();
         MainButtonsManager.SharedInstance.MainButtonsSwitcher(false);
         MainButtonsManager.SharedInstance.SetTimeScale(0);
     }

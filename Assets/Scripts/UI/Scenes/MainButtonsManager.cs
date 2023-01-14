@@ -9,6 +9,7 @@ public class MainButtonsManager : MonoBehaviour
     [SerializeField] GameObject pauseButton;
     MainButtonsMask pauseButtonMask;
     [SerializeField] GameObject trashButton;
+    public GameObject TrashButton => trashButton;
     MainButtonsMask trashButtonMask;
     public UnityEvent enterAnyMask;
     public UnityEvent leaveAnyMask;
