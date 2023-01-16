@@ -11,11 +11,6 @@ public enum AudioButtonType
 public class AudioButtonHelper : MonoBehaviour
 {
     [SerializeField] AudioButtonType type = AudioButtonType.None;
-    public AudioButtonType Type
-    {
-        get { return type; }
-        set { type = value; }
-    }
     Button btn;
     void Awake()
     {

@@ -36,22 +36,28 @@ public class AudioManager : MonoBehaviour
     public void ToggleMusic(Toggle toggle)
     {
         musicSource.enabled = toggle.isOn;
-        AssignNewAudioType(toggle.GetComponent<AudioButtonHelper>(), toggle.isOn);
+        AssignNewAudioType(toggle.GetComponent<AudioToggleHelper>(), toggle.isOn);
     }
     public void ToggleSFX(Toggle toggle)
     {
         sfxSource.enabled = toggle.isOn;
-        AssignNewAudioType(toggle.GetComponent<AudioButtonHelper>(), toggle.isOn);
+        AssignNewAudioType(toggle.GetComponent<AudioToggleHelper>(), toggle.isOn);
     }
-    public void AssignNewAudioType(AudioButtonHelper btnHelper, bool isOn)
+    public void AssignNewAudioType(AudioToggleHelper toggleHelper, bool isOn)
     {
-        if (btnHelper == null)
+        if (toggleHelper == null)
         {
+            Debug.LogError("ERROR: no exitse un Toggle Helper en este GameObject");
             return;
         }
         if (isOn)
         {
-            btnHelper.Type =
+            toggleHelper.Type = AudioButtonType.Negative;
         }
+        else
+        {
+            toggleHelper.Type = AudioButtonType.Confirm;
+        }
+        toggleHelper.PlayOnToggle();
     }
 }

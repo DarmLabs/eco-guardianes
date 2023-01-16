@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 50266705}
   - component: {fileID: 50266706}
+  - component: {fileID: 50266707}
   m_Layer: 5
   m_Name: SFXToggle
   m_TagString: Untagged
@@ -207,20 +208,22 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1920681891}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ToggleSFX
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 50266706}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
+--- !u!114 &50266707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50266704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4e82c26265fa84a914d72c0136e19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMusicToggle: 0
+  isSfxToggle: 1
 --- !u!1 &162086330
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 162086331}
   - component: {fileID: 162086332}
+  - component: {fileID: 162086333}
   m_Layer: 5
   m_Name: MusicToggle
   m_TagString: Untagged
@@ -305,20 +309,22 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1920681891}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ToggleMusic
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 162086332}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
+--- !u!114 &162086333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162086330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4e82c26265fa84a914d72c0136e19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMusicToggle: 1
+  isSfxToggle: 0
 --- !u!1001 &229729256
 PrefabInstance:
   m_ObjectHideFlags: 0

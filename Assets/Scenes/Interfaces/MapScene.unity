@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: 689778127}
   - component: {fileID: 689778126}
   - component: {fileID: 689778129}
+  - component: {fileID: 689778130}
   m_Layer: 5
   m_Name: AulaButton
   m_TagString: Untagged
@@ -872,6 +873,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requieredStars: 2
   requieredStarsText: {fileID: 1904719275}
+--- !u!114 &689778130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689778124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627677f99339c4946bc35ac2c6068282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &847961923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1124,7 @@ GameObject:
   - component: {fileID: 913466085}
   - component: {fileID: 913466084}
   - component: {fileID: 913466087}
+  - component: {fileID: 913466088}
   m_Layer: 5
   m_Name: PlazaButton
   m_TagString: Untagged
@@ -1247,6 +1262,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requieredStars: 4
   requieredStarsText: {fileID: 26013573}
+--- !u!114 &913466088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913466082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627677f99339c4946bc35ac2c6068282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &917820137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1396,7 @@ GameObject:
   - component: {fileID: 971656546}
   - component: {fileID: 971656545}
   - component: {fileID: 971656548}
+  - component: {fileID: 971656549}
   m_Layer: 5
   m_Name: PlantaButton
   m_TagString: Untagged
@@ -1505,6 +1534,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requieredStars: 9
   requieredStarsText: {fileID: 52548522}
+--- !u!114 &971656549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971656543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627677f99339c4946bc35ac2c6068282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &1026656739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +2030,7 @@ GameObject:
   - component: {fileID: 1457174230}
   - component: {fileID: 1457174229}
   - component: {fileID: 1457174228}
+  - component: {fileID: 1457174231}
   m_Layer: 5
   m_Name: CasaButton
   m_TagString: Untagged
@@ -2110,6 +2153,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457174226}
   m_CullTransparentMesh: 1
+--- !u!114 &1457174231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457174226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627677f99339c4946bc35ac2c6068282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &1570947983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,6 +2178,7 @@ GameObject:
   - component: {fileID: 1570947987}
   - component: {fileID: 1570947986}
   - component: {fileID: 1570947985}
+  - component: {fileID: 1570947988}
   m_Layer: 5
   m_Name: No
   m_TagString: Untagged
@@ -2245,6 +2302,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570947983}
   m_CullTransparentMesh: 1
+--- !u!114 &1570947988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570947983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627677f99339c4946bc35ac2c6068282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
 --- !u!1 &1694488355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +3061,7 @@ GameObject:
   - component: {fileID: 5793423486223696752}
   - component: {fileID: 932436158931661960}
   - component: {fileID: 8731316095313887866}
+  - component: {fileID: 8844901392290921303}
   m_Layer: 5
   m_Name: Si
   m_TagString: Untagged
@@ -2998,3 +3069,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8844901392290921303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844901392290921302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627677f99339c4946bc35ac2c6068282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
