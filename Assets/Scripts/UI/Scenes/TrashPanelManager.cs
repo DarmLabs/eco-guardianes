@@ -68,8 +68,8 @@ public class TrashPanelManager : MonoBehaviour
     }
     void Start()
     {
-        trashButtonOutline = MainButtonsManager.SharedInstance.TrashButton.GetComponent<UnityEngine.UI.Outline>();
-        newTrashMark = MainButtonsManager.SharedInstance.TrashButton.transform.GetChild(1).gameObject.GetComponent<Image>();
+        trashButtonOutline = MainButtonsManager.SharedInstance.TrashButton?.GetComponent<UnityEngine.UI.Outline>();
+        newTrashMark = MainButtonsManager.SharedInstance.TrashButton?.transform.GetChild(1).gameObject.GetComponent<Image>();
         if (OpenObjectsManager.SharedInstance?.InteractableObjects.Length == containers.Length && OpenObjectsManager.SharedInstance?.InteractableObjects.Length != 0)
         {
             for (int i = 0; i < OpenObjectsManager.SharedInstance.InteractableObjects.Length; i++)
@@ -155,8 +155,11 @@ public class TrashPanelManager : MonoBehaviour
     #region Events Calls
     void NewTrash(bool hasNew)
     {
-        newTrashMark.sprite = hasNew ? exlamation : questionMark;
-        trashButtonOutline.enabled = hasNew;
+        if (newTrashMark != null && trashButtonOutline != null)
+        {
+            newTrashMark.sprite = hasNew ? exlamation : questionMark;
+            trashButtonOutline.enabled = hasNew;
+        }
     }
     #endregion
 }

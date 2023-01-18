@@ -22,12 +22,12 @@ public class MainButtonsManager : MonoBehaviour
     void Start()
     {
         pauseButtonMask = pauseButton.GetComponent<MainButtonsMask>();
-        trashButtonMask = trashButton.GetComponent<MainButtonsMask>();
+        trashButtonMask = trashButton?.GetComponent<MainButtonsMask>();
 
         pauseButtonMask.enterMask.AddListener(EmitEnterMask);
-        trashButtonMask.enterMask.AddListener(EmitEnterMask);
+        trashButtonMask?.enterMask.AddListener(EmitEnterMask);
         pauseButtonMask.leaveMask.AddListener(EmitExitMask);
-        trashButtonMask.leaveMask.AddListener(EmitExitMask);
+        trashButtonMask?.leaveMask.AddListener(EmitExitMask);
 
         ActionPanelManager.SharedInstance.panelOpened.AddListener(DisableButtons);
         ActionPanelManager.SharedInstance.panelClosed.AddListener(EnableButtons);
@@ -39,7 +39,7 @@ public class MainButtonsManager : MonoBehaviour
     public void MainButtonsSwitcher(bool state)
     {
         pauseButton.SetActive(state);
-        trashButton.SetActive(state);
+        trashButton?.SetActive(state);
     }
     public void EmitEnterMask()
     {

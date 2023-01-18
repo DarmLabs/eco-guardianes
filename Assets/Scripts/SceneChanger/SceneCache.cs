@@ -17,5 +17,13 @@ public class SceneCache : MonoBehaviour
     {
         previousScene = this.currentScene;
         this.currentScene = currentScene;
+        CheckForUnnecesaryObjs();
+    }
+    public void CheckForUnnecesaryObjs()
+    {
+        if (currentScene == ConstManager.plantaDentro || currentScene == ConstManager.plantaFuera)
+        {
+            MasterManager.SharedInstance.DestroyUnnecesaryObjects();
+        }
     }
 }

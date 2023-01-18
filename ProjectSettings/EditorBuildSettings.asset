@@ -27,9 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Escenarios/Plaza.unity
     guid: 474f138144f3653439ace5aa07c34407
   - enabled: 1
-    path: Assets/Scenes/Escenarios/PlantaDentro.unity
+    path: Assets/Scenes/Escenarios/Planta de reciclado (Adentro).unity
     guid: e10ed7db82f386944a8cb9b5b7a73b39
   - enabled: 1
-    path: Assets/Scenes/Escenarios/Planta de reciclado.unity
+    path: Assets/Scenes/Escenarios/Planta de reciclado (Afuera).unity
     guid: bc6a654eef4bc5240bd2f0e9d1dc4ecb
   m_configObjects: {}
