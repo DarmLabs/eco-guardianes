@@ -40,16 +40,16 @@ public class ZoneManager : MonoBehaviour
         switch (zoneName)
         {
             case "HairZone":
-                selectedText.text = "Eligiendo color del pelo...";
+                selectedText.text = "Color de cabello";
                 break;
             case "PantZone":
-                selectedText.text = "Eligiendo color del pantalon...";
+                selectedText.text = "Color del pantalon";
                 break;
             case "ShirtZone":
-                selectedText.text = "Eligiendo color de la remera...";
+                selectedText.text = "Color de la remera";
                 break;
             case "ShoeZone":
-                selectedText.text = "Eligiendo color de las zapatillas...";
+                selectedText.text = "Color de las zapatillas";
                 break;
         }
     }
