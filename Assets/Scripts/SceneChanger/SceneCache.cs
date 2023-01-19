@@ -24,7 +24,10 @@ public class SceneCache : MonoBehaviour
         if (currentScene == ConstManager.plantaDentro || currentScene == ConstManager.plantaFuera)
         {
             MasterManager.SharedInstance.DestroyUnnecesaryObjects();
-            StartCoroutine(LoadingPopupManager.SharedInstance?.WaitForSwitchPopup(2f, false));
+            if (LoadingPopupManager.SharedInstance != null)
+            {
+                StartCoroutine(LoadingPopupManager.SharedInstance.WaitForSwitchPopup(2f, false));
+            }
         }
     }
 }

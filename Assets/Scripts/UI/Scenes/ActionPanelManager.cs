@@ -40,33 +40,36 @@ public class ActionPanelManager : MonoBehaviour
             travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable); });
             travelButtons[i].onClick.AddListener(delegate { interactable.BeingTargeted = true; });
         }
-        DisplaySections();
     }
     void DisplaySections()
     {
         if (TargetObjectBase != null)
         {
-            if (TargetObjectBase.Type == ObjectType.TrashCan)
+            string actionText = "";
+            bool hintButtonState = true;
+
+            switch (TargetObjectBase.Type)
             {
-                trashCanSection.SetActive(true);
-                actionBoxText.text = "¿Quieres tirar residuos?";
-                hintButton.SetActive(false);
-                return;
+                case ObjectType.TrashCan:
+                    trashCanSection.SetActive(true);
+                    actionText = ConstManager.actionQuestionTrashCan;
+                    hintButtonState = false;
+                    break;
+                case ObjectType.Closed:
+                    closedObjectsSection.SetActive(true);
+                    actionText = ConstManager.actionQuestionDefault;
+                    hintButtonState = true;
+                    break;
+                case ObjectType.Open:
+                    openObjectsSection.SetActive(true);
+                    actionText = targetObject.ObjectActionText != "" ?
+                    $"{targetObject.ObjectActionText}\n{ConstManager.actionQuestionDefault}" : ConstManager.actionQuestionDefault;
+                    hintButtonState = true;
+                    break;
             }
 
-            hintButton.SetActive(true);
-            actionBoxText.text = "¿Que quieres hacer?";
-
-            if (TargetObjectBase.Type == ObjectType.Closed)
-            {
-                closedObjectsSection.SetActive(true);
-                return;
-            }
-            if (TargetObjectBase.Type == ObjectType.Open)
-            {
-                openObjectsSection.SetActive(true);
-                return;
-            }
+            hintButton.SetActive(hintButtonState);
+            actionBoxText.text = actionText;
         }
         else
         {
@@ -116,6 +119,8 @@ public class ActionPanelManager : MonoBehaviour
         {
             CheckObjectType(TargetObjectBase);
         }
+
+        DisplaySections();
     }
     public void DisableActionPanel()
     {

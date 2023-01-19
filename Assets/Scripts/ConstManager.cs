@@ -11,5 +11,7 @@ public static class ConstManager
     public const string loadingSceneName = "LoadingScene";
     public const string plantaDentro = "Planta de reciclado (Adentro)";
     public const string plantaFuera = "Planta de reciclado (Afuera)";
+    public const string actionQuestionTrashCan = "¿Quieres tirar residuos?";
+    public const string actionQuestionDefault = "¿Que quieres hacer?";
     #endregion 
 }

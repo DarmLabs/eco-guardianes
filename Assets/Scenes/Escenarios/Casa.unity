@@ -6364,6 +6364,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: un frasco de dulce
   viewOffset: {x: 0, y: 1, z: -1}
+  objectActionText: "Mam\xE1 dejo este frasco de dulce vac\xEDo cuando merendo."
 --- !u!1 &324733421
 GameObject:
   m_ObjectHideFlags: 0
@@ -12640,6 +12641,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: un paquete de hamburgesa
   viewOffset: {x: -1, y: 1, z: 0}
+  objectActionText: 
 --- !u!1001 &381426286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18633,6 +18635,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: unas tapas de frascos
   viewOffset: {x: 0, y: 1, z: -1}
+  objectActionText: 
 --- !u!1 &428376722
 GameObject:
   m_ObjectHideFlags: 0
@@ -25018,6 +25021,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: cascaras de papa y cebolla
   viewOffset: {x: -1, y: 1, z: -1}
+  objectActionText: 
 --- !u!4 &613038514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1796666043888524025, guid: a7e6d9b6e96c60449aa81e253013f2b8,
@@ -31027,6 +31031,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: una hamburgesa sin terminar
   viewOffset: {x: 0, y: 1, z: -1}
+  objectActionText: 
 --- !u!1001 &714393173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31141,6 +31146,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: una caja de huevos vacia
   viewOffset: {x: -1, y: 0.5, z: 0}
+  objectActionText: 
 --- !u!4 &742977761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 688450675321799006, guid: b6bc3aef8d937f04f90cdabd3675ab34,
@@ -37575,6 +37581,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: un papel con aceite
   viewOffset: {x: -1, y: 1, z: 0}
+  objectActionText: 
 --- !u!1 &1172373513
 GameObject:
   m_ObjectHideFlags: 0
@@ -44641,6 +44648,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: lechuga y tomate seca
   viewOffset: {x: 0, y: 1, z: -1}
+  objectActionText: 
 --- !u!1001 &1846036677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44961,6 +44969,7 @@ MonoBehaviour:
   objectInfo: 
   objectPhrase: una caja vieja
   viewOffset: {x: 0, y: 1, z: -2}
+  objectActionText: 
 --- !u!23 &50036425021027607
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46016,23 +46025,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.87464017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4847727
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008529019
+      value: 0.000000021569763
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004727243
+      value: -0.000000011955125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.987306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68.43736
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.87464017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4847727
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008529019
+      value: 0.000000021569763
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004727243
+      value: -0.000000011955125
       objectReference: {fileID: 0}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}

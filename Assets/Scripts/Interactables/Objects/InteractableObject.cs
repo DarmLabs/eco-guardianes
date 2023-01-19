@@ -3,10 +3,12 @@ using UnityEngine.Events;
 
 public class InteractableObject : InteractableObjectBase
 {
-    [SerializeField] string objectPhrase;
+    [TextArea][SerializeField] string objectPhrase;
+    public string ObjectPhrase => objectPhrase;
     [SerializeField] Vector3 viewOffset;
     public Vector3 ViewOffset => viewOffset;
-    public string ObjectPhrase => objectPhrase;
+    [TextArea][SerializeField] string objectActionText;
+    public string ObjectActionText => objectActionText;
     TrashContainer trashContainer;
     public TrashContainer TrashContainer
     {

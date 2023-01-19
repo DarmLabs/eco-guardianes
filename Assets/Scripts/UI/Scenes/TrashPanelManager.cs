@@ -87,7 +87,10 @@ public class TrashPanelManager : MonoBehaviour
         SetTutoQuestion("recuperables");
         trashPanel.SetActive(false);
 
-        StartCoroutine(LoadingPopupManager.SharedInstance?.WaitForSwitchPopup(2f, false));
+        if (LoadingPopupManager.SharedInstance != null)
+        {
+            StartCoroutine(LoadingPopupManager.SharedInstance.WaitForSwitchPopup(2f, false));
+        }
     }
     public void TrashPanelSwitcher(bool state)
     {
@@ -146,7 +149,6 @@ public class TrashPanelManager : MonoBehaviour
     public void SetCanCateogry()
     {
         currentCanCategory = TrashCategory.None;
-        Debug.Log(EventSystem.current.currentSelectedGameObject.name);
     }
     #endregion
     #region Events Calls
