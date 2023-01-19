@@ -17,6 +17,7 @@ public class DialogManager : MonoBehaviour
     string dialogCurrentText;
     Dialog currentDialog;
     int currentLine = 0;
+    bool isWriting = false;
     void Awake()
     {
         SharedInstance = this;
@@ -25,34 +26,41 @@ public class DialogManager : MonoBehaviour
 
     public IEnumerator SetDialog(string characterName, string messege = "", Dialog dialog = null, bool hasMinigames = false)
     {
-        characterNameText.text = "";
-        dialogBoxText.text = "";
-        DialogPanelSwitcher(true);
-
-        yield return PrintCharacterName(characterName);
-        if (dialog != null && !hasMinigames)
+        if (!isWriting)
         {
-            currentLine = 0;
-            currentDialog = dialog;
-            yield return PrintDialog(dialog.Lines[0]);
-            currentLine++;
-            if (CheckForMoreLines())
+            isWriting = true;
+
+            characterNameText.text = "";
+            dialogBoxText.text = "";
+            DialogPanelSwitcher(true);
+
+            yield return PrintCharacterName($"{characterName} dice:");
+            if (dialog != null && !hasMinigames)
             {
-                nextDialogArrow.SetActive(true);
+                currentLine = 0;
+                currentDialog = dialog;
+                yield return PrintDialog(dialog.Lines[0]);
+                currentLine++;
+                if (CheckForMoreLines())
+                {
+                    nextDialogArrow.SetActive(true);
+                }
+                else
+                {
+                    nextDialogArrow.SetActive(false);
+                    DialogPanelSwitcher(false);
+                }
             }
             else
             {
-                nextDialogArrow.SetActive(false);
-                DialogPanelSwitcher(false);
+                yield return PrintDialog(messege);
+                if (hasMinigames)
+                {
+                    yesNoContainer.SetActive(true);
+                }
             }
-        }
-        else
-        {
-            yield return PrintDialog(messege);
-            if (hasMinigames)
-            {
-                yesNoContainer.SetActive(true);
-            }
+
+            isWriting = false;
         }
     }
     bool CheckForMoreLines()

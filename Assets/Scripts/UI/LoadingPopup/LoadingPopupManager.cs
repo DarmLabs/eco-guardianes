@@ -19,4 +19,9 @@ public class LoadingPopupManager : MonoBehaviour
     {
         loadingPopup.SetActive(state);
     }
+    public IEnumerator WaitForSwitchPopup(float secs, bool state)
+    {
+        yield return new WaitForSeconds(secs);
+        LoadingPopupSwitcher(state);
+    }
 }

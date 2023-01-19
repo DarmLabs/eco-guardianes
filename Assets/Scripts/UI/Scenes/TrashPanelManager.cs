@@ -19,11 +19,6 @@ public class TrashPanelManager : MonoBehaviour
     [SerializeField] GameObject canButtons;
     CanButtonHelper previousButton;
     TrashCategory currentCanCategory;
-    public TrashCategory CurrentCanCategory
-    {
-        get { return currentCanCategory; }
-        set { currentCanCategory = value; }
-    }
     bool isOpened;
     public bool IsOpened => isOpened;
     public UnityEvent<bool> hasNewTrash;
@@ -68,6 +63,7 @@ public class TrashPanelManager : MonoBehaviour
     }
     void Start()
     {
+        currentCanCategory = TrashCategory.Rec;
         trashButtonOutline = MainButtonsManager.SharedInstance.TrashButton?.GetComponent<UnityEngine.UI.Outline>();
         newTrashMark = MainButtonsManager.SharedInstance.TrashButton?.transform.GetChild(1).gameObject.GetComponent<Image>();
         if (OpenObjectsManager.SharedInstance?.InteractableObjects.Length == containers.Length && OpenObjectsManager.SharedInstance?.InteractableObjects.Length != 0)
@@ -91,8 +87,7 @@ public class TrashPanelManager : MonoBehaviour
         SetTutoQuestion("recuperables");
         trashPanel.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
-        LoadingPopupManager.SharedInstance?.LoadingPopupSwitcher(false);
+        StartCoroutine(LoadingPopupManager.SharedInstance?.WaitForSwitchPopup(2f, false));
     }
     public void TrashPanelSwitcher(bool state)
     {
@@ -118,6 +113,7 @@ public class TrashPanelManager : MonoBehaviour
     public void ThrowTrash()
     {
         TrashContainer container = EventSystem.current.currentSelectedGameObject.GetComponent<TrashContainer>();
+        Debug.Log(currentCanCategory);
         container.TrashCanColor(currentCanCategory);
     }
     public void CheckRemainingObjects()
@@ -150,6 +146,7 @@ public class TrashPanelManager : MonoBehaviour
     public void SetCanCateogry()
     {
         currentCanCategory = TrashCategory.None;
+        Debug.Log(EventSystem.current.currentSelectedGameObject.name);
     }
     #endregion
     #region Events Calls
