@@ -83,4 +83,8 @@ public class PointAndClickMovement : MonoBehaviour
         }
         interactable.InteractWithObject();
     }
+    public void ResetDestinationObject()
+    {
+        destinationObj.transform.position = startingDestPos;
+    }
 }

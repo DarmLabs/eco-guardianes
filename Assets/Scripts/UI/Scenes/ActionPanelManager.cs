@@ -9,10 +9,7 @@ public class ActionPanelManager : MonoBehaviour
     [Header("Needed GameObjects & Others")]
     [SerializeField] GameObject actionPanel;
     [SerializeField] GameObject infoPanel;
-    [SerializeField] Button[] travelButtons;
-    [SerializeField] GameObject closedObjectsSection;
-    [SerializeField] GameObject openObjectsSection;
-    [SerializeField] GameObject trashCanSection;
+    [SerializeField] Button travelButton;
     [SerializeField] GameObject hintButton;
     [SerializeField] TextMeshProUGUI actionBoxText;
     [SerializeField] GameObject searhIntoPanel;
@@ -33,49 +30,40 @@ public class ActionPanelManager : MonoBehaviour
     public void SetTravelListeners(InteractableBase interactable)
     {
         infoPanel.SetActive(false);
-
-        for (int i = 0; i < travelButtons.Length; i++)
-        {
-            travelButtons[i].onClick.RemoveAllListeners();
-            travelButtons[i].onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable); });
-            travelButtons[i].onClick.AddListener(delegate { interactable.BeingTargeted = true; });
-        }
+        travelButton.onClick.RemoveAllListeners();
+        travelButton.onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable); });
+        travelButton.onClick.AddListener(delegate { interactable.BeingTargeted = true; });
     }
-    void DisplaySections()
+    void DifferInteractables()
     {
+        string actionText = "";
+        bool hintButtonState = true;
         if (TargetObjectBase != null)
         {
-            string actionText = "";
-            bool hintButtonState = true;
-
+            Debug.Log(TargetObjectBase.Type);
             switch (TargetObjectBase.Type)
             {
                 case ObjectType.TrashCan:
-                    trashCanSection.SetActive(true);
                     actionText = ConstManager.actionQuestionTrashCan;
                     hintButtonState = false;
                     break;
                 case ObjectType.Closed:
-                    closedObjectsSection.SetActive(true);
-                    actionText = ConstManager.actionQuestionDefault;
+                    actionText = targetContainer.ObjectInfo != "" ? $"{targetContainer.ObjectInfo}\n{ConstManager.actionQuestionClosedObject}" : ConstManager.actionQuestionClosedObject;
                     hintButtonState = true;
                     break;
                 case ObjectType.Open:
-                    openObjectsSection.SetActive(true);
                     actionText = targetObject.ObjectActionText != "" ?
-                    $"{targetObject.ObjectActionText}\n{ConstManager.actionQuestionDefault}" : ConstManager.actionQuestionDefault;
+                    $"{targetObject.ObjectActionText}\n{ConstManager.actionQuestionOpenObject}" : ConstManager.actionQuestionOpenObject;
                     hintButtonState = true;
                     break;
             }
-
-            hintButton.SetActive(hintButtonState);
-            actionBoxText.text = actionText;
         }
         else
         {
-            closedObjectsSection.SetActive(true);
-            hintButton.SetActive(false);
+            hintButtonState = false;
         }
+        hintButton.SetActive(hintButtonState);
+        actionBoxText.text = actionText;
     }
     public void View()
     {
@@ -120,14 +108,11 @@ public class ActionPanelManager : MonoBehaviour
             CheckObjectType(TargetObjectBase);
         }
 
-        DisplaySections();
+        DifferInteractables();
     }
     public void DisableActionPanel()
     {
         actionPanel.SetActive(false);
-        closedObjectsSection.SetActive(false);
-        openObjectsSection.SetActive(false);
-        trashCanSection.SetActive(false);
 
         isOpened = false;
 

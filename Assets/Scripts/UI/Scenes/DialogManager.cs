@@ -125,5 +125,6 @@ public class DialogManager : MonoBehaviour
     public void SetYesButtonForSceneChange(string scene)
     {
         yesButton.onClick.AddListener(delegate { ScenesChanger.SharedInstance?.SceneChange(scene); });
+        yesButton.onClick.AddListener(delegate { LoadingPopupManager.SharedInstance?.LoadingPopupSwitcher(true); });
     }
 }

@@ -2938,7 +2938,7 @@ PrefabInstance:
     - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_Name
-      value: Recuperador Variant (8)
+      value: Recuperador Outside
       objectReference: {fileID: 0}
     - target: {fileID: 6652130500806870395, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -2980,7 +2980,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
 --- !u!4 &1190513733 stripped
 Transform:
@@ -3631,6 +3632,28 @@ Transform:
   m_Father: {fileID: 1282249984}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1616323922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1190513732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1616323929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616323922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd12f04066068b44281b0cc3731fb7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personName: Ariel
+  minigameMessege: "\xBFQuieres ir a la parte de afuera de la central? All\xED podras
+    compactar tus residuos para hacer fardos."
+  sceneName: Planta de reciclado (Afuera)
 --- !u!1001 &1616538622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4829,9 +4852,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2046531765 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+  m_CorrespondingSourceObject: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
     type: 3}
-  m_PrefabInstance: {fileID: 2090694721}
+  m_PrefabInstance: {fileID: 8293065137028101453}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2053913272
 PrefabInstance:
@@ -5138,174 +5161,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1719902604}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2090694721
+--- !u!1001 &8293065137028101453
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 198789234}
     m_Modifications:
-    - target: {fileID: 796108166, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
-      propertyPath: idleAnimStyle
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 796108166, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
-      propertyPath: poseAnimStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 796108166, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
-      propertyPath: isPerformingAction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 266966619885808243, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1136709618658751745, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197313363088801259, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1326328102956234275, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262752440773902547, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346713808710055232, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3398186750164871323, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814179352108523229, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126851710646247051, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4709266983648374775, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4829283522768170761, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942343087862786588, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 99.14142
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 62.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -20.818031
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 6003477197812886688, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 2325617149976666540, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 3102294964732312342, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
       propertyPath: m_Name
-      value: Recuperador Variant (6)
+      value: Recuperador Minigame
       objectReference: {fileID: 0}
-    - target: {fileID: 6652130500806870395, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 9101789461909535274, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: sceneName
+      value: Recycle_Minigame
       objectReference: {fileID: 0}
-    - target: {fileID: 6685827640024886855, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 9101789461909535274, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: personName
+      value: Ramiro
       objectReference: {fileID: 0}
-    - target: {fileID: 7000492987841526223, guid: 2b13d4159b9876740bf8454121d9190f,
+    - target: {fileID: 9101789461909535274, guid: 1793f3a1b6533d3418b49758fced6165,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7538105328324570390, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8191538050148523956, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525878655153498482, guid: 2b13d4159b9876740bf8454121d9190f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: minigameMessege
+      value: "\xBFQuieres aprender a clasificar los residuos recuperables y divertirte?
+        \xA1Prueba el minijuego de la separaci\xF3n!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 1793f3a1b6533d3418b49758fced6165, type: 3}

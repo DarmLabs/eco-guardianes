@@ -12,6 +12,7 @@ public static class ConstManager
     public const string plantaDentro = "Planta de reciclado (Adentro)";
     public const string plantaFuera = "Planta de reciclado (Afuera)";
     public const string actionQuestionTrashCan = "¿Quieres tirar residuos?";
-    public const string actionQuestionDefault = "¿Que quieres hacer?";
+    public const string actionQuestionOpenObject = "¿Quieres juntarlo/a?";
+    public const string actionQuestionClosedObject = "¿Quieres abrirlo/a?";
     #endregion 
 }
