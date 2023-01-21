@@ -87,7 +87,7 @@ public class StarsManager : MonoBehaviour
             return;
         }
         StarsData starsData = SaveDataHandler.SharedInstance.LoadStarsData();
-        if (starsData.starsCount <= starsAchived)
+        if (starsData.starsCount < starsAchived)
         {
             starsData.starsCount = starsAchived;
             SaveDataHandler.SharedInstance.SaveStarsData(starsData, "starsData");

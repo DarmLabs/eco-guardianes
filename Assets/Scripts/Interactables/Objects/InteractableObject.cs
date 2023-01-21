@@ -26,7 +26,6 @@ public class InteractableObject : InteractableObjectBase
         {
             LookAt = transform;
         }
-        TrashContainer.ObjectUnfound();
     }
     public override void InteractWithObject()
     {

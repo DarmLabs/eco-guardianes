@@ -71,6 +71,7 @@ public class TrashPanelManager : MonoBehaviour
             for (int i = 0; i < OpenObjectsManager.SharedInstance.InteractableObjects.Length; i++)
             {
                 OpenObjectsManager.SharedInstance.InteractableObjects[i].TrashContainer = containers[i];
+                OpenObjectsManager.SharedInstance.InteractableObjects[i].TrashContainer.ObjectUnfound();
                 containers[i].ObjSprite.sprite = OpenObjectsManager.SharedInstance.InteractableObjects[i].ObjSprite;
                 containers[i].CorrectCategory = OpenObjectsManager.SharedInstance.InteractableObjects[i].Category;
             }

@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Interfaces/MapScene.unity
     guid: 7332ff827f665b24e9d005bf1b07a733
   - enabled: 1
-    path: Assets/Scenes/Interfaces/LoadingScene.unity
-    guid: 5e5976ddc4c238f408c4a2d10f3eb386
-  - enabled: 1
     path: Assets/Scenes/Escenarios/Casa.unity
     guid: b72e25b3f2aee604db71b9f8070b0c28
   - enabled: 1

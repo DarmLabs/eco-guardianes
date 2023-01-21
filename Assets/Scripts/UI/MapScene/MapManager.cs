@@ -45,6 +45,10 @@ public class MapManager : MonoBehaviour
     {
         ConfirmScene(false);
     }
+    public void OnBackButton()
+    {
+        ScenesChanger.SharedInstance?.SceneChange(ConstManager.mainMenuSceneName);
+    }
     public void OnSceneButtonClicked(string sceneForward)
     {
         this.sceneForward = sceneForward;
