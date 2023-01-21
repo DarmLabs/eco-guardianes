@@ -40,7 +40,6 @@ public class ActionPanelManager : MonoBehaviour
         bool hintButtonState = true;
         if (TargetObjectBase != null)
         {
-            Debug.Log(TargetObjectBase.Type);
             switch (TargetObjectBase.Type)
             {
                 case ObjectType.TrashCan:

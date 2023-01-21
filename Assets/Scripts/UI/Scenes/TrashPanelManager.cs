@@ -117,7 +117,6 @@ public class TrashPanelManager : MonoBehaviour
     public void ThrowTrash()
     {
         TrashContainer container = EventSystem.current.currentSelectedGameObject.GetComponent<TrashContainer>();
-        Debug.Log(currentCanCategory);
         container.TrashCanColor(currentCanCategory);
     }
     public void CheckRemainingObjects()

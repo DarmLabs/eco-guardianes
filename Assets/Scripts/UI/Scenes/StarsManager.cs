@@ -29,6 +29,7 @@ public class StarsManager : MonoBehaviour
         if (succeses >= maxObjects - 6)
         {
             SetStars(succeses);
+            SaveStars();
         }
         else
         {
@@ -72,12 +73,10 @@ public class StarsManager : MonoBehaviour
     }
     public void ResetScene()
     {
-        SaveStars();
         ScenesChanger.SharedInstance?.ReloadScene();
     }
     public void GoToMap(string scene)
     {
-        SaveStars();
         ScenesChanger.SharedInstance?.SceneChange(scene);
     }
     void SaveStars()
@@ -87,6 +86,7 @@ public class StarsManager : MonoBehaviour
             return;
         }
         StarsData starsData = SaveDataHandler.SharedInstance.LoadStarsData();
+        Debug.Log(starsData.starsCount);
         if (starsData.starsCount < starsAchived)
         {
             starsData.starsCount = starsAchived;

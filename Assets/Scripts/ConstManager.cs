@@ -9,6 +9,9 @@ public static class ConstManager
     public const string mapSceneName = "MapScene";
     public const string characterCreationSceneName = "CharacterCreation";
     public const string loadingSceneName = "LoadingScene";
+    public const string cocinaSceneName = "Casa";
+    public const string escuelaSceneName = "Escuela";
+    public const string plazaSceneName = "Plaza";
     public const string plantaDentro = "Planta de reciclado (Adentro)";
     public const string plantaFuera = "Planta de reciclado (Afuera)";
     public const string actionQuestionTrashCan = "¿Quieres tirar residuos?";

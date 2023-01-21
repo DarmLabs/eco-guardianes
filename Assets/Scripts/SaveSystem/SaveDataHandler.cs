@@ -32,19 +32,20 @@ public class SaveDataHandler : MonoBehaviour
     #region MapScene
     public void SaveStarsData(StarsData starsData, string filename)
     {
+        Debug.Log($"{filename}_{SceneCache.SharedInstance.currentScene}");
         FileHandler.SaveToJSON<StarsData>(starsData, $"{filename}_{SceneCache.SharedInstance.currentScene}");
     }
     public StarsData LoadStarsData()
     {
         if (File.Exists($"{dataPath}starsData_{SceneCache.SharedInstance.currentScene}"))
         {
-            FileHandler.ReadFromJSON<StarsData>($"starsData_{SceneCache.SharedInstance.currentScene}");
+            return FileHandler.ReadFromJSON<StarsData>($"starsData_{SceneCache.SharedInstance.currentScene}");
         }
         return new StarsData(0);
     }
     public int LoadGlobalStars()
     {
-        string[] scenes = { "Casa", "Escuela", "Plaza" };
+        string[] scenes = { ConstManager.cocinaSceneName, ConstManager.escuelaSceneName, ConstManager.plazaSceneName };
         int globalStars = 0;
         for (int i = 0; i < scenes.Length; i++)
         {
