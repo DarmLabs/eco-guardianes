@@ -15,7 +15,6 @@ public class MasterManager : MonoBehaviour
         for (int i = 0; i < unnecesaryObjetctsOnPlantas.Length; i++)
         {
             Destroy(unnecesaryObjetctsOnPlantas[i]);
-            Debug.Log("?");
         }
     }
 }

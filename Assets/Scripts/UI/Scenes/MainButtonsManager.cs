@@ -39,7 +39,10 @@ public class MainButtonsManager : MonoBehaviour
     public void MainButtonsSwitcher(bool state)
     {
         pauseButton.SetActive(state);
-        trashButton?.SetActive(state);
+        if (trashButton != null)
+        {
+            trashButton.SetActive(state);
+        }
     }
     public void EmitEnterMask()
     {
