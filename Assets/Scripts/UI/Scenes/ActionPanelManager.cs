@@ -9,7 +9,7 @@ public class ActionPanelManager : MonoBehaviour
     [Header("Needed GameObjects & Others")]
     [SerializeField] GameObject actionPanel;
     [SerializeField] GameObject infoPanel;
-    [SerializeField] Button travelButton;
+    [SerializeField] Button interactButton;
     [SerializeField] GameObject hintButton;
     [SerializeField] TextMeshProUGUI actionBoxText;
     [SerializeField] GameObject searhIntoPanel;
@@ -27,12 +27,10 @@ public class ActionPanelManager : MonoBehaviour
     {
         SharedInstance = this;
     }
-    public void SetTravelListeners(InteractableBase interactable)
+    void SetListenerFromInteractables(InteractableBase interactable)
     {
-        infoPanel.SetActive(false);
-        travelButton.onClick.RemoveAllListeners();
-        travelButton.onClick.AddListener(delegate { PointAndClickMovement.SharedInstance.TravelToTarget(interactable); });
-        travelButton.onClick.AddListener(delegate { interactable.BeingTargeted = true; });
+        interactButton.onClick.RemoveAllListeners();
+        interactButton.onClick.AddListener(interactable.InteractWithObject);
     }
     void DifferInteractables()
     {
@@ -77,6 +75,7 @@ public class ActionPanelManager : MonoBehaviour
     }
     public void EnableActionPanel(InteractableBase interactableBase)
     {
+        Debug.Log("enabled");
         TargetObjectBase = null;
         targetContainer = null;
         targetObject = null;
@@ -100,7 +99,10 @@ public class ActionPanelManager : MonoBehaviour
             TargetObjectBase = ob;
         }
         panelOpened.Invoke();
-        SetTravelListeners(interactableBase);
+
+        infoPanel.SetActive(false);
+
+        SetListenerFromInteractables(interactableBase);
 
         if (TargetObjectBase != null)
         {

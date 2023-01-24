@@ -25,7 +25,9 @@ public class InteractableBase : MonoBehaviour
     {
         if (canInteract)
         {
-            ActionPanelManager.SharedInstance.EnableActionPanel(this);
+            PointAndClickMovement.SharedInstance.ResetDestinationObject();
+            PointAndClickMovement.SharedInstance.TravelToTarget(this);
+            BeingTargeted = true;
             Glow(false);
         }
     }
@@ -48,6 +50,10 @@ public class InteractableBase : MonoBehaviour
         {
             isClose = false;
         }
+    }
+    public virtual void TargetObject()
+    {
+        ActionPanelManager.SharedInstance.EnableActionPanel(this);
     }
     public virtual void InteractWithObject()
     {

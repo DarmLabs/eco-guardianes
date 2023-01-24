@@ -705,7 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionPanel: {fileID: 2841955901443609672}
   infoPanel: {fileID: 9206684322103079021}
-  travelButton: {fileID: 860267980477238720}
+  interactButton: {fileID: 860267980477238720}
   hintButton: {fileID: 2841955901752344049}
   actionBoxText: {fileID: 3370492061055575643}
   searhIntoPanel: {fileID: 7280914117246295075}
@@ -4832,7 +4832,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.4847727, y: 0.000000021569758, z: -0.000000011955122, w: 0.87464017}
+  m_LocalRotation: {x: 0.38268346, y: 0.00000002248122, z: -0.000000009312027, w: 0.92387956}
   m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5128,8 +5128,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955901183631824}
-  m_LocalRotation: {x: 0.4847727, y: -0.000000008529019, z: 0.000000004727243, w: 0.87464017}
-  m_LocalPosition: {x: 243.36946, y: 2.987306, z: 68.43736}
+  m_LocalRotation: {x: 0.38268346, y: 0.00000002248122, z: -0.000000009312027, w: 0.92387956}
+  m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6583,16 +6583,20 @@ MonoBehaviour:
   - {fileID: 8893712083698594839}
   - {fileID: 7192504681882602789}
   - {fileID: 2073782733176598917}
+  hairMat: {fileID: 0}
   shirtStyles:
   - {fileID: 2653111246580558349}
   - {fileID: 6610342478997068695}
+  shirtMat: {fileID: 0}
   pantStyles:
   - {fileID: 1589866141364618818}
   - {fileID: 2802298224547493531}
+  pantMat: {fileID: 0}
   shoeStyles:
   - {fileID: 1116474627740919973}
   - {fileID: 3427082908794148657}
   - {fileID: 8225014465276834740}
+  shoeMat: {fileID: 0}
   wheelChair: {fileID: 3148524131440416115}
   bodyMeshes:
   - {fileID: 6761499250773012974}

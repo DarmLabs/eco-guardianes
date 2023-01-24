@@ -17,7 +17,7 @@ public class InteractablePersonWithMinigame : InteractableBase
             Glow(false);
         }
     }
-    public override void InteractWithObject()
+    public override void TargetObject()
     {
         StartCoroutine(DialogManager.SharedInstance.SetDialog(characterName: personName, messege: minigameMessege, hasMinigames: true));
         DialogManager.SharedInstance.SetYesButtonForSceneChange(sceneName);

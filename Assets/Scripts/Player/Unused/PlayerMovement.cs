@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
         InteractableObjectBase targetScript = target.GetComponent<InteractableObjectBase>();
         if (targetScript.IsClose)//If it's close to the object, the player will take it
         {
-            targetScript.InteractWithObject();
+            targetScript.TargetObject();
         }
         else //If not, it will travel to take it
         {

@@ -13,18 +13,8 @@ public class InteractablePerson : InteractableBase
             this.enabled = false;
         }
     }
-    public override void InteractWithObject()
+    public override void TargetObject()
     {
         StartCoroutine(DialogManager.SharedInstance.SetDialog(personName, dialog: dialog));
-    }
-    public override void SearchMode()
-    {
-        if (CanInteract)
-        {
-            PointAndClickMovement.SharedInstance.ResetDestinationObject();
-            PointAndClickMovement.SharedInstance.TravelToTarget(this);
-            BeingTargeted = true;
-            Glow(false);
-        }
     }
 }

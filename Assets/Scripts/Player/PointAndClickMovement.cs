@@ -31,7 +31,7 @@ public class PointAndClickMovement : MonoBehaviour
         if (interactable.IsClose)//If it's close to the object, the player will take it
         {
             StartCoroutine(LookAt(interactable));
-            interactable.InteractWithObject();
+            interactable.TargetObject();
             DestinationReached();
         }
         else //If not, it will travel to take it
@@ -81,7 +81,7 @@ public class PointAndClickMovement : MonoBehaviour
 
             yield return null;
         }
-        interactable.InteractWithObject();
+        interactable.TargetObject();
     }
     public void ResetDestinationObject()
     {
