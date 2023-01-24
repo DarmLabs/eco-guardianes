@@ -29,6 +29,7 @@ public class ScenesChanger : MonoBehaviour
         {
             yield return null;
         }
+        Time.timeScale = 1;
         if (loadSceneMode != LoadSceneMode.Additive)
         {
             SceneCache.SharedInstance.SetCurrentScene(scene);
