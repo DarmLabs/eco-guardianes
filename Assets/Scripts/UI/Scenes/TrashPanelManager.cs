@@ -54,7 +54,7 @@ public class TrashPanelManager : MonoBehaviour
     [SerializeField] Sprite exlamation;
     [SerializeField] Sprite questionMark;
     Image newTrashMark;
-    UnityEngine.UI.Outline trashButtonOutline;
+    Animator trashButtonAnim;
     void Awake()
     {
         SharedInstance = this;
@@ -64,7 +64,7 @@ public class TrashPanelManager : MonoBehaviour
     void Start()
     {
         currentCanCategory = TrashCategory.Rec;
-        trashButtonOutline = MainButtonsManager.SharedInstance.TrashButton?.GetComponent<UnityEngine.UI.Outline>();
+        trashButtonAnim = MainButtonsManager.SharedInstance.TrashButton?.GetComponent<Animator>();
         newTrashMark = MainButtonsManager.SharedInstance.TrashButton?.transform.GetChild(1).gameObject.GetComponent<Image>();
         if (OpenObjectsManager.SharedInstance?.InteractableObjects.Length == containers.Length && OpenObjectsManager.SharedInstance?.InteractableObjects.Length != 0)
         {
@@ -154,10 +154,12 @@ public class TrashPanelManager : MonoBehaviour
     #region Events Calls
     void NewTrash(bool hasNew)
     {
-        if (newTrashMark != null && trashButtonOutline != null)
+        if (newTrashMark != null && trashButtonAnim != null)
         {
             newTrashMark.sprite = hasNew ? exlamation : questionMark;
-            trashButtonOutline.enabled = hasNew;
+
+            string animToPlay = hasNew ? "TrashButtonBlink" : "Idle";
+            trashButtonAnim.Play(animToPlay);
         }
     }
     #endregion

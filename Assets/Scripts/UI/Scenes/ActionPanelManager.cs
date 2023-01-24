@@ -75,7 +75,6 @@ public class ActionPanelManager : MonoBehaviour
     }
     public void EnableActionPanel(InteractableBase interactableBase)
     {
-        Debug.Log("enabled");
         TargetObjectBase = null;
         targetContainer = null;
         targetObject = null;
