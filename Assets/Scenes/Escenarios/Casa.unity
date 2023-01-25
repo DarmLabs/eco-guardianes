@@ -32135,7 +32135,7 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -1849160518, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: "Es de cart\xF3n, servir\xE1 para hacer compost."
+  objectInfo: "Es de cart\xF3n, se puede reciclar y reutilizar!"
   objectPhrase: una caja de huevos vacia
   viewOffset: {x: -1, y: 0.5, z: 0}
   objectActionText: 
@@ -47897,7 +47897,7 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -2103667886, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: "El cart\xF3n es un material compostable..."
+  objectInfo: "Esta caja ya no sirve pero el cart\xF3n puede reutilizarse..."
   objectPhrase: una caja vieja
   viewOffset: {x: 0, y: 1, z: -2}
   objectActionText: 
@@ -49005,22 +49005,22 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000021569763
+      value: -0.000000008529019
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000011955125
+      value: 0.000000004727243
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000021569763
+      value: -0.000000008529019
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000011955125
+      value: 0.000000004727243
       objectReference: {fileID: 0}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
