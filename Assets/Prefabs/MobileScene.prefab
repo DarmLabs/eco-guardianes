@@ -4832,7 +4832,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.38268346, y: -0.000000022481224, z: 0.0000000093120285, w: 0.92387956}
+  m_LocalRotation: {x: 0.4847727, y: -0.000000008529019, z: 0.000000004727243, w: 0.87464017}
   m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5128,8 +5128,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955901183631824}
-  m_LocalRotation: {x: 0.38268346, y: -0.000000022481224, z: 0.0000000093120285, w: 0.92387956}
-  m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
+  m_LocalRotation: {x: 0.4847727, y: -0.000000008529019, z: 0.000000004727243, w: 0.87464017}
+  m_LocalPosition: {x: 243.36946, y: 2.987306, z: 68.43736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6583,20 +6583,20 @@ MonoBehaviour:
   - {fileID: 8893712083698594839}
   - {fileID: 7192504681882602789}
   - {fileID: 2073782733176598917}
-  hairMat: {fileID: 0}
+  hairMat: {fileID: 2100000, guid: 952eb8487ae19c44ea14dc77d524208d, type: 2}
   shirtStyles:
   - {fileID: 2653111246580558349}
   - {fileID: 6610342478997068695}
-  shirtMat: {fileID: 0}
+  shirtMat: {fileID: 2100000, guid: 8f7f8525ce0e477418f1ca1b09c34722, type: 2}
   pantStyles:
   - {fileID: 1589866141364618818}
   - {fileID: 2802298224547493531}
-  pantMat: {fileID: 0}
+  pantMat: {fileID: 2100000, guid: b9b75fd6c5dd23848a854419b4a63028, type: 2}
   shoeStyles:
   - {fileID: 1116474627740919973}
   - {fileID: 3427082908794148657}
   - {fileID: 8225014465276834740}
-  shoeMat: {fileID: 0}
+  shoeMat: {fileID: 2100000, guid: f178af4907fc3fd40b9c106a228f987d, type: 2}
   wheelChair: {fileID: 3148524131440416115}
   bodyMeshes:
   - {fileID: 6761499250773012974}
