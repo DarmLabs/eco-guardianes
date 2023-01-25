@@ -6693,7 +6693,7 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -2139482083, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: 
+  objectInfo: "Est\xE1 vaci\xF3 y es de vidrio, se puede reutilizar..."
   objectPhrase: un frasco de dulce
   viewOffset: {x: 0, y: 1, z: -1}
   objectActionText: "Mam\xE1 dejo este frasco de dulce vac\xEDo cuando merendo."
@@ -7111,17 +7111,17 @@ PrefabInstance:
     - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Prueba de dialogo 1
+      value: Estoy muy cansada como para acomodar...
       objectReference: {fileID: 0}
     - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: Prueba de dialogo 2
+      value: Necesito ayuda para acomodar la cocina
       objectReference: {fileID: 0}
     - target: {fileID: 4299265346790487002, guid: 2ba03d1f1f6408d469f4fec8bbd6f13e,
         type: 3}
@@ -13515,7 +13515,7 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: 961004560, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: 
+  objectInfo: "Esta echo de pl\xE1stico"
   objectPhrase: un paquete de hamburgesa
   viewOffset: {x: -1, y: 1, z: 0}
   objectActionText: 
@@ -19519,7 +19519,7 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -577250224, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: 
+  objectInfo: "Est\xE1n echas de aluminio puede servirles a los recuperadores"
   objectPhrase: unas tapas de frascos
   viewOffset: {x: 0, y: 1, z: -1}
   objectActionText: 
@@ -26000,7 +26000,7 @@ MonoBehaviour:
   category: 2
   type: 1
   objSprite: {fileID: -618091208, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: 
+  objectInfo: Puede servir para fertilizar la tierra
   objectPhrase: cascaras de papa y cebolla
   viewOffset: {x: -1, y: 1, z: -1}
   objectActionText: 
@@ -32015,7 +32015,7 @@ MonoBehaviour:
   category: 1
   type: 1
   objSprite: {fileID: -844586616, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: 
+  objectInfo: Este es un alimento procesado, por lo tanto no se puede recuperar!
   objectPhrase: una hamburgesa sin terminar
   viewOffset: {x: 0, y: 1, z: -1}
   objectActionText: 
@@ -32135,7 +32135,7 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -1849160518, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: 
+  objectInfo: "Es de cart\xF3n, servir\xE1 para hacer compost."
   objectPhrase: una caja de huevos vacia
   viewOffset: {x: -1, y: 0.5, z: 0}
   objectActionText: 
@@ -39387,7 +39387,7 @@ MonoBehaviour:
   category: 1
   type: 1
   objSprite: {fileID: 440965520, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: 
+  objectInfo: Papel de cocina con aceite, sirve para compostar!
   objectPhrase: un papel con aceite
   viewOffset: {x: -1, y: 1, z: 0}
   objectActionText: 
@@ -41300,6 +41300,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Ese sandwich estaba rico, pero no lo pude terminar...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: No recuerdo en que cesto iba, vos te acordas?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca78c4741246343a55b50970b24318, type: 3}
@@ -47383,7 +47398,7 @@ MonoBehaviour:
   category: 2
   type: 1
   objSprite: {fileID: 711217848, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: 
+  objectInfo: Restos de verduras puede servir de compost
   objectPhrase: lechuga y tomate seca
   viewOffset: {x: 0, y: 1, z: -1}
   objectActionText: 
@@ -47882,7 +47897,7 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -2103667886, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: 
+  objectInfo: "El cart\xF3n es un material compostable..."
   objectPhrase: una caja vieja
   viewOffset: {x: 0, y: 1, z: -2}
   objectActionText: 
