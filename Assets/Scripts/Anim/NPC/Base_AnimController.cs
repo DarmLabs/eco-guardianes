@@ -6,6 +6,7 @@ public class Base_AnimController : MonoBehaviour
 {
     Animator anim;
     NavMeshObstacle obstacle;
+    BoxCollider mainCollider;
     Vector3 originalObstacleCenter;
     Vector3 originalObstacleSize;
     public const string idleId = "Idle_";
@@ -26,6 +27,7 @@ public class Base_AnimController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         obstacle = GetComponent<NavMeshObstacle>();
+        mainCollider = GetComponent<BoxCollider>();
         originalObstacleCenter = obstacle.center;
         originalObstacleSize = obstacle.size;
     }
@@ -61,5 +63,7 @@ public class Base_AnimController : MonoBehaviour
     {
         obstacle.center = must ? new Vector3(obstacle.center.x, obstacle.center.y, obstacle.center.z - 0.8f) : originalObstacleCenter;
         obstacle.size = must ? new Vector3(obstacle.size.x, obstacle.size.y, obstacle.size.z + 0.5f) : originalObstacleSize;
+        mainCollider.center = obstacle.center;
+        mainCollider.size = obstacle.size;
     }
 }
