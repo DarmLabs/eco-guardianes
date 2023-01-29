@@ -20,7 +20,7 @@ public class CharacterCreatorSceneManager : MonoBehaviour
         bool isCharacterCreated = false;
         if (SaveDataHandler.SharedInstance != null)
         {
-            isCharacterCreated = SaveDataHandler.SharedInstance.LoadFirstTime();
+            isCharacterCreated = SaveDataHandler.SharedInstance.LoadMainMenuFirstTime();
         }
         mainMenuButton.SetActive(isCharacterCreated);
     }
@@ -40,9 +40,9 @@ public class CharacterCreatorSceneManager : MonoBehaviour
     public void OnSaveButton()
     {
         ScenesChanger.SharedInstance?.SceneChange(forwardScene);
-        if (!SaveDataHandler.SharedInstance.LoadFirstTime())
+        if (!SaveDataHandler.SharedInstance.LoadMainMenuFirstTime())
         {
-            SaveDataHandler.SharedInstance?.SaveFirstTime();
+            SaveDataHandler.SharedInstance?.SaveMainMenuFirstTime();
         }
     }
     public void OnBackButton()

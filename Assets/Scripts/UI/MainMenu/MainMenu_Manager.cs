@@ -11,7 +11,7 @@ public class MainMenu_Manager : MonoBehaviour
     [SerializeField] GameObject characterCreatorButton;
     void Start()
     {
-        isCharacterCreated = SaveDataHandler.SharedInstance.LoadFirstTime();
+        isCharacterCreated = SaveDataHandler.SharedInstance.LoadMainMenuFirstTime();
         characterCreatorButton.SetActive(isCharacterCreated);
     }
     public void EnterGame()
