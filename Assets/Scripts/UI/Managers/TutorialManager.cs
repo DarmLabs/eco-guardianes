@@ -7,20 +7,29 @@ using DG.Tweening;
 public class TutorialManager : MonoBehaviour
 {
     TutorialData tutorialData;
-    [SerializeField] GameObject[] tutoStages;
+    PlayerInteraction playerInteraction;
+    [SerializeField] GameObject tutoPanel;
+    [SerializeField] GameObject[] tutoItems;
     [SerializeField] GameObject cutoutPanel;
     [SerializeField] GameObject skipTutoButton;
     [SerializeField] Button nextStageButton;
     [SerializeField] RectTransform tutoTextBox;
     TextMeshProUGUI tutoText;
-    [SerializeField] float characterPerSecond = 30f;
+    [SerializeField] float characterPerSecond = 50f;
     [SerializeField] InteractableObject interactableObjectUsed;
     void Start()
     {
         tutorialData = SaveDataHandler.SharedInstance?.LoadTutoFirstTime();
 
+        playerInteraction = PointAndClickMovement.SharedInstance.gameObject.GetComponent<PlayerInteraction>();
         tutoText = tutoTextBox.GetComponentInChildren<TextMeshProUGUI>();
         StartCoroutine(FirstStage());
+    }
+
+    public void TutoSwitcher(bool state)
+    {
+        tutoPanel.SetActive(state);
+        playerInteraction.enabled = !state;
     }
     public void ActivateTuto()
     {
@@ -61,11 +70,11 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator ThirdStage()
     {
-        tutoStages[0].SetActive(false);
+        tutoItems[0].SetActive(false);
         ResetTutoItems();
 
         Sequence seq = DOTween.Sequence();
-        seq.Append(tutoTextBox.DOLocalMoveY(-370, 1f));
+        seq.Append(tutoTextBox.DOLocalMoveY(-355, 1f));
         seq.Join(tutoTextBox.DOSizeDelta(new Vector2(1185, 300), 1f));
         yield return seq.Play();
 
@@ -83,8 +92,8 @@ public class TutorialManager : MonoBehaviour
         ResetTutoItems();
 
         Vector2 interactableCords = Camera.main.WorldToScreenPoint(interactableObjectUsed.transform.position);
-        tutoStages[1].transform.position = interactableCords;
-        cutoutPanel.transform.SetParent(tutoStages[1].transform);
+        tutoItems[1].transform.position = interactableCords;
+        cutoutPanel.transform.SetParent(tutoItems[1].transform);
 
         interactableObjectUsed.Outline.enabled = true;
 
@@ -95,9 +104,22 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator FifthStage()
     {
-        yield return null;
+        ResetTutoItems();
+
+        cutoutPanel.transform.SetParent(tutoPanel.transform);
+        tutoItems[1].transform.position = MainButtonsManager.SharedInstance.TrashButton.transform.position;
+        cutoutPanel.transform.SetParent(tutoItems[1].transform);
+
+        yield return PrintDialog(ConstManager.tuto_fifthStageMessege);
+
+        nextStageButton.onClick.AddListener(delegate { StartCoroutine(SixthStage()); });
+        nextStageButton.gameObject.SetActive(true);
     }
 
+    IEnumerator SixthStage()
+    {
+        yield return null;
+    }
     IEnumerator PrintDialog(string line)
     {
         foreach (var character in line)

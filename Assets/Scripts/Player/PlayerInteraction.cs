@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    //[SerializeField] bool closeMode;
     bool canInteract = true;
     void Start()
     {
