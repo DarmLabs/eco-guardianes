@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public static PauseManager SharedInstance;
+    PlayerInteraction playerInteraction;
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject confirmExit;
     [SerializeField] GameObject confirmMainMenu;
@@ -16,9 +17,14 @@ public class PauseManager : MonoBehaviour
     {
         SharedInstance = this;
     }
+    void Start()
+    {
+        playerInteraction = PointAndClickMovement.SharedInstance.gameObject.GetComponent<PlayerInteraction>();
+    }
     public void PausePanelSwitcher(bool state)
     {
         pausePanel.SetActive(state);
+        playerInteraction.enabled = !state;
         isOpened = state;
         MainButtonsManager.SharedInstance.MainButtonsSwitcher(!state);
         MainButtonsManager.SharedInstance.onMainButtonClicked.Invoke();

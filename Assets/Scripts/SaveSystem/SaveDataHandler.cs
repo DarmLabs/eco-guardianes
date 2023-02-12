@@ -16,7 +16,6 @@ public class SaveDataHandler : MonoBehaviour
     public void SaveMainMenuFirstTime()
     {
         MainMenuData mainMenuData = new MainMenuData(true);
-        Debug.Log(mainMenuData.isCharacterCreated);
         FileHandler.SaveToJSON<MainMenuData>(mainMenuData, ConstManager.mainMenuFlags);
     }
     public bool LoadMainMenuFirstTime()

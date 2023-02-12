@@ -46567,7 +46567,7 @@ PrefabInstance:
     - target: {fileID: 2093882069070822415, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -77.96246
+      value: -74.9
       objectReference: {fileID: 0}
     - target: {fileID: 2093882069070822415, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -46622,12 +46622,17 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896617
+      value: -0.000000015896617
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584594
+      value: 0.000000006584594
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 243.36946
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -46652,13 +46657,23 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896617
+      value: -0.000000015896617
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584594
+      value: 0.000000006584594
       objectReference: {fileID: 0}
+    - target: {fileID: 7866192223499961966, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: centerTrashCan
+      value: 
+      objectReference: {fileID: 1664998920}
+    - target: {fileID: 7866192223499961966, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: interactableObjectUsed
+      value: 
+      objectReference: {fileID: 1402324628}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_Name
@@ -53246,6 +53261,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34ca88ea5f7186f43abbb157d431dae4,
     type: 3}
   m_PrefabInstance: {fileID: 1653863717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1664998920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8867956042936945258, guid: a150aea4496483a41b87fbfb8c2f10a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1088854985}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1697673428
 PrefabInstance:

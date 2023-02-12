@@ -5,6 +5,9 @@ using UnityEngine.AI;
 public class PointAndClickMovement : MonoBehaviour
 {
     public static PointAndClickMovement SharedInstance;
+    Vector3 initialPosition;
+    public Vector3 InitialPosition => initialPosition;
+    public Vector3 CurrentPosition { get; set; }
     [HideInInspector] public bool isMoving { get; private set; }
     NavMeshAgent navMesh;
     Animator anim;
@@ -15,6 +18,7 @@ public class PointAndClickMovement : MonoBehaviour
         SharedInstance = this;
         navMesh = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        initialPosition = transform.position;
     }
     public void TravelToPoint(Vector3 destination)
     {

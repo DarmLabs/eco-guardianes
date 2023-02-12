@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17277353, g: 0.2158997, b: 0.29783306, a: 1}
+  m_IndirectSpecularColor: {r: 0.1727732, g: 0.21589926, b: 0.29783252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -346,6 +346,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85d7bed1d17289f4d9f495e15a874735, type: 3}
+--- !u!1 &84448878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6310355427281172650, guid: fac46725a889b2b4298608a3e83c112c,
+    type: 3}
+  m_PrefabInstance: {fileID: 491487038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &102833150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6269681597461863163, guid: 38a7a24f774b4a64592a6273056a8337,
@@ -1428,6 +1434,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85d7bed1d17289f4d9f495e15a874735, type: 3}
+--- !u!1 &410812411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6820593752922027586, guid: fac46725a889b2b4298608a3e83c112c,
+    type: 3}
+  m_PrefabInstance: {fileID: 491487038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &441156656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1514,6 +1526,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 275151947432038113, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: unnecesaryObjetctsOnPlantas.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 275151947432038113, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: unnecesaryObjetctsOnPlantas.Array.data[3]
+      value: 
+      objectReference: {fileID: 84448878}
+    - target: {fileID: 275151947432038113, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: unnecesaryObjetctsOnPlantas.Array.data[4]
+      value: 
+      objectReference: {fileID: 410812411}
     - target: {fileID: 2093882069070822415, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1627,12 +1654,12 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000019698938
+      value: -0.000000022481213
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000081595655
+      value: 0.000000009312022
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -1662,12 +1689,12 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000019698938
+      value: -0.000000022481213
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000081595655
+      value: 0.000000009312022
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901747416066, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}

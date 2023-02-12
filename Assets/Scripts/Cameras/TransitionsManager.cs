@@ -8,7 +8,9 @@ class TransitionsManager : MonoBehaviour
     [Header("Needed GameObjects & Others")]
     Camera mainCamera;
     [SerializeField] Cinemachine.CinemachineVirtualCamera viewCamera;
+    public Cinemachine.CinemachineVirtualCamera ViewCamera => viewCamera;
     [SerializeField] Cinemachine.CinemachineVirtualCamera playerCamera;
+    public Cinemachine.CinemachineVirtualCamera PlayerCamera => playerCamera;
     [SerializeField] Cinemachine.CinemachineBrain brain;
     LayerMask playerLayer = 7;
     int oldMask;
@@ -34,7 +36,6 @@ class TransitionsManager : MonoBehaviour
             case ObjectType.Open:
                 InteractableObject targetOpenObj = targetObject.GetComponent<InteractableObject>();
                 SetCameraPosAndLookAt(targetObject.LookAt, targetObject.transform.position + targetOpenObj.ViewOffset);
-
                 break;
             case ObjectType.TrashCan:
                 SetCameraPosAndLookAt(targetObject.LookAt, targetObject.transform.position);
@@ -47,7 +48,7 @@ class TransitionsManager : MonoBehaviour
         SetPosAndLookAtFromType(targetObject);
         StartCoroutine(ViewTransition());
     }
-    void SetCameraPosAndLookAt(Transform lookAt, Vector3 position)
+    public void SetCameraPosAndLookAt(Transform lookAt, Vector3 position)
     {
         viewCamera.transform.position = position;
         viewCamera.LookAt = lookAt;
@@ -67,9 +68,10 @@ class TransitionsManager : MonoBehaviour
     }
 
     //General transitioner
-    IEnumerator WaitForTransition(Cinemachine.CinemachineVirtualCamera vCamera, int priority)
+    public IEnumerator WaitForTransition(Cinemachine.CinemachineVirtualCamera vCamera, int priority, float time = 1)
     {
         vCamera.m_Priority = priority;
+        brain.m_DefaultBlend.m_Time = time;
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => brain.IsBlending == false);
     }

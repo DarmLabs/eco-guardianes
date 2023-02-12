@@ -33981,12 +33981,12 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000022481217
+      value: 0.00000002248122
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000009312026
+      value: -0.000000009312027
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -34011,13 +34011,23 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000022481217
+      value: 0.00000002248122
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000009312026
+      value: -0.000000009312027
       objectReference: {fileID: 0}
+    - target: {fileID: 7866192223499961966, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: centerTrashCan
+      value: 
+      objectReference: {fileID: 3630188488054699686}
+    - target: {fileID: 7866192223499961966, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: interactableObjectUsed
+      value: 
+      objectReference: {fileID: 621318701}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_Name
@@ -73953,6 +73963,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92293c1e6ecff2488ca9f0ada4ba42a, type: 3}
+--- !u!1 &3630188488054699686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4512726553010948904, guid: f92293c1e6ecff2488ca9f0ada4ba42a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3630188488054699685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5264075250563823012
 PrefabInstance:
   m_ObjectHideFlags: 0

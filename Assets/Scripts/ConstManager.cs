@@ -7,7 +7,7 @@ public static class ConstManager
     #region SaveDataNamePaths
     public const string mainMenuFlags = "mainMenuFlags";
     public const string starsData = "starsData_";
-    public const string tutoFlags = "mainMenuFlags";
+    public const string tutoFlags = "tutoFlags";
     #endregion
     #region ScenesNames
     public const string mainMenuSceneName = "MainMenu";
@@ -33,5 +33,11 @@ public static class ConstManager
     public const string tuto_forthStageMessege = "Estos objetos son los residuos que debes juntar, hay un maximo de 9 por mapa, debes tocarlos para recolectarlos.";
     public const string tuto_fifthStageMessege = "Al presionar este boton podras ver el panel de los residuos que juntaste y los que te faltan.";
     public const string tuto_sixthStageMessege = "Cada vez que juntes un residuo nuevo el boton aparecera resaltado.";
+    public const string tuto_seventhStageMessege = "Este es el panel de residuos, arriba puedes seleccionar en que tacho quieres tirar los residuos.";
+    public const string tuto_eighthStageMessege = "Los residuos de todo el mapa aparecen acá, cuando encuentras uno se vera su imagen y podras pulsarlo para tirarlo al tacho seleccionado.";
+    public const string tuto_ninthStageMessege = "Este mensaje muestra que tacho esta seleccionado.";
+    public const string tuto_tenthStageMessege = "¡Al interactuar con estos tachos puedes arrojar basura!";
+    public const string tuto_endStageMessege = "¡Felicitaciones! ¡Terminaste el tutorial ahora ve y se un verdadero Eco Guardian!";
+    public const string tuto_skip = "Has saltado el tutorial, puedes acceder a este siempre que quieras desde el menú de pausa.";
     #endregion
 }
