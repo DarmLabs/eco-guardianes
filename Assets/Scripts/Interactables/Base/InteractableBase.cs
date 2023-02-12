@@ -62,7 +62,11 @@ public class InteractableBase : MonoBehaviour
     //Mouse Detection
     void OnMouseEnter()
     {
-        if (!ActionPanelManager.SharedInstance.IsOpened && !TrashPanelManager.SharedInstance.IsOpened && !PauseManager.SharedInstance.IsOpened && canInteract && isActiveAndEnabled && !overMainButtons)
+        bool mustInteract = !ActionPanelManager.SharedInstance.IsOpened && !TrashPanelManager.SharedInstance.IsOpened &&
+        !PauseManager.SharedInstance.IsOpened && canInteract && isActiveAndEnabled && !overMainButtons &&
+        !TutorialManager.SharedInstance.IsTutorialRunning;
+
+        if (mustInteract)
         {
             Glow(true);
             MainButtonsManager.SharedInstance.enterAnyMask.AddListener(OnMainMaskEnter);

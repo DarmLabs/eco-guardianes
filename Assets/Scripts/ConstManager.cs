@@ -31,6 +31,7 @@ public static class ConstManager
     public const string tuto_thirdStageMessege_PC = "Para moverte debes hacer click sobre el piso.";
     public const string tuto_thirdStageMessege_MOBILE = "Para moverte debes tocar el piso con tu dedo.";
     public const string tuto_forthStageMessege = "Estos objetos son los residuos que debes juntar, hay un maximo de 9 por mapa, debes tocarlos para recolectarlos.";
-    public const string tuto_fifthStageMessege = "Al presionar este boton podras ver el panel de los residuos que juntaste y los que te faltan, cada vez que juntes un nuevo objeto el boton resaltara.";
+    public const string tuto_fifthStageMessege = "Al presionar este boton podras ver el panel de los residuos que juntaste y los que te faltan.";
+    public const string tuto_sixthStageMessege = "Cada vez que juntes un residuo nuevo el boton aparecera resaltado.";
     #endregion
 }

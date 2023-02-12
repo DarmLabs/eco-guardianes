@@ -9,9 +9,17 @@ using UnityEngine.Events;
 public class TrashPanelManager : MonoBehaviour
 {
     public static TrashPanelManager SharedInstance;
-    [SerializeField] TrashContainer[] containers;
+    [Header("Main Items")]
     [SerializeField] GameObject trashPanel;
+    public GameObject TrashPanel => trashPanel;
+    [SerializeField] TrashContainer[] containers;
     [SerializeField] TextMeshProUGUI tutoQuestion;
+    [SerializeField] GameObject closeButton;
+    public GameObject CloseButton => closeButton;
+    bool isOpened;
+    public bool IsOpened => isOpened;
+    public UnityEvent<bool> hasNewTrash;
+    [Header("Trash Type Buttons Items")]
     [SerializeField] Color canButtonColorSelected;
     public Color CanButtonColorSelected => canButtonColorSelected;
     [SerializeField] Color canButtonColorUnselected;
@@ -19,9 +27,7 @@ public class TrashPanelManager : MonoBehaviour
     [SerializeField] GameObject canButtons;
     CanButtonHelper previousButton;
     TrashCategory currentCanCategory;
-    bool isOpened;
-    public bool IsOpened => isOpened;
-    public UnityEvent<bool> hasNewTrash;
+
     //For sprite changes
     [Space(10)]
     [Header("For sprite changes on TrashContainers")]
@@ -144,6 +150,14 @@ public class TrashPanelManager : MonoBehaviour
     {
         canButtons.SetActive(state);
         tutoQuestion.enabled = state;
+    }
+    public void SwitchItemsForTutorial(bool state)
+    {
+        for (int i = 0; i < canButtons.transform.childCount; i++)
+        {
+            Button canButton = canButtons.transform.GetChild(i).GetComponent<Button>();
+            canButton.interactable = state;
+        }
     }
     # region For button setters
     public void SetCanCateogry()

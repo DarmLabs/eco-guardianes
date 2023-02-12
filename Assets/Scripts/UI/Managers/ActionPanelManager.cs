@@ -62,16 +62,18 @@ public class ActionPanelManager : MonoBehaviour
         hintButton.SetActive(hintButtonState);
         actionBoxText.text = actionText;
     }
-    public void View()
+    public void Hint()
     {
         panelOpened.Invoke();
-        TransitionsManager.SharedInstance.ViewAction(TargetObjectBase);
+        PointAndClickMovement.SharedInstance.enabled = false;
+        TransitionsManager.SharedInstance.HintAction(TargetObjectBase);
     }
-    public void ViewInsideObject()
+    public void HintInsideObject()
     {
         InteractableContainer container = TargetObjectBase.GetComponent<InteractableContainer>();
+
         panelOpened.Invoke();
-        TransitionsManager.SharedInstance.ViewAction(container.InsideObject, true);
+        TransitionsManager.SharedInstance.HintAction(container.InsideObject, true);
     }
     public void EnableActionPanel(InteractableBase interactableBase)
     {
