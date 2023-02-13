@@ -26,6 +26,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] Button nextStageButton;
     [SerializeField] RectTransform tutoTextBox;
     TextMeshProUGUI tutoText;
+    [Header("Position Items")]
+    [SerializeField] RectTransform[] handPointForMovement;
     [SerializeField] InteractableObject interactableObjectUsed;
     [SerializeField] GameObject centerTrashCan;
     Coroutine inWaitCoroutine;
@@ -63,6 +65,7 @@ public class TutorialManager : MonoBehaviour
         PointAndClickMovement.SharedInstance.transform.position = PointAndClickMovement.SharedInstance.InitialPosition;
         IsTutorialRunning = true;
         TutoSwitcher(true);
+        skipTutoButton.SetActive(true);
         if (!tutorialData.firstTimePassed)
         {
             inWaitCoroutine = StartCoroutine(FirstStage());
@@ -122,23 +125,25 @@ public class TutorialManager : MonoBehaviour
         });
         nextStageButton.gameObject.SetActive(true);
 
-        yield return TutorialHandWarp(new Vector3(366, 18, 0), 5);
-        yield return TutorialHandMove(new Vector3(-487, 182, 0), 1, 1);
+        yield return TutorialHandWarp(handPointForMovement[0].position, 5);
+        yield return TutorialHandMove(handPointForMovement[1].position, 1, 1);
     }
     IEnumerator ForthStage()
     {
         ResetTutoItems();
 
         Vector2 interactableCords = Camera.main.WorldToScreenPoint(interactableObjectUsed.transform.position);
+        markerHole.gameObject.SetActive(true);
+        cutoutPanel.SetActive(true);
         MarkerHoleHelper(interactableCords, new Vector2(140, 130));
 
         interactableObjectUsed.Outline.enabled = true;
 
         hand.SetActive(true);
-        yield return TutorialHandWarp(new Vector3(114, 329, 0));
+        yield return TutorialHandWarp(interactableCords);
         yield return PrintDialog(ConstManager.tuto_forthStageMessege);
 
-        nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(FifthStage()); });
+        nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(FifthStage()); interactableObjectUsed.Outline.enabled = false; });
         nextStageButton.gameObject.SetActive(true);
     }
     IEnumerator FifthStage()
@@ -147,7 +152,7 @@ public class TutorialManager : MonoBehaviour
         MarkerHoleHelper(MainButtonsManager.SharedInstance.TrashButton.transform.position, new Vector2(140, 130));
 
         hand.SetActive(true);
-        yield return TutorialHandWarp(new Vector3(865, 212, 0), rotation: new Vector3(0, 0, -25));
+        yield return TutorialHandWarp(MainButtonsManager.SharedInstance.TrashButton.transform.position, rotation: new Vector3(0, 0, -25));
         yield return PrintDialog(ConstManager.tuto_fifthStageMessege);
 
         nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(SixthStage()); });
@@ -162,7 +167,7 @@ public class TutorialManager : MonoBehaviour
         trashButton.SetActive(true);
 
         hand.SetActive(true);
-        yield return TutorialHandMove(new Vector3(54, 127, 0), 1, 0.5f);
+        yield return TutorialHandMove(trashButton.transform.position, 1, 0.5f);
         yield return PrintDialog(ConstManager.tuto_sixthStageMessege);
 
         nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(SeventhStage()); trashButton.SetActive(false); });
@@ -236,7 +241,10 @@ public class TutorialManager : MonoBehaviour
 
         Vector2 trashCanCords = Camera.main.WorldToScreenPoint(centerTrashCan.transform.position + new Vector3(0, 0.75f, 0));
         MarkerHoleHelper(trashCanCords, new Vector2(702, 250));
+
         tutoPanel.SetActive(true);
+        hand.SetActive(true);
+        yield return TutorialHandWarp(trashCanCords);
 
         yield return PrintDialog(ConstManager.tuto_tenthStageMessege);
 
@@ -279,6 +287,8 @@ public class TutorialManager : MonoBehaviour
     IEnumerator SkipTutorial()
     {
         ResetTutoItems();
+
+        interactableObjectUsed.Outline.enabled = false;
 
         completePanel.SetActive(true);
         skipTutoButton.SetActive(false);
@@ -329,7 +339,7 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator TutorialHandWarp(Vector3 target, float time = 0, Vector3? rotation = null)
     {
-        hand.transform.localPosition = target;
+        hand.transform.position = target;
         if (rotation != null)
         {
             hand.transform.Rotate((Vector3)rotation);
@@ -340,7 +350,7 @@ public class TutorialManager : MonoBehaviour
     IEnumerator TutorialHandMove(Vector3 target, float moveDuration, float endAnimTime = 0)
     {
         handAnim.Play("Idle");
-        hand.transform.DOLocalMove(target, moveDuration);
+        hand.transform.DOMove(target, moveDuration);
         yield return new WaitForSeconds(moveDuration);
         handAnim.Play("Mark");
         yield return new WaitForSeconds(endAnimTime);
