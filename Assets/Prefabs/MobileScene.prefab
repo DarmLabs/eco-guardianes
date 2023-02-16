@@ -863,6 +863,9 @@ MonoBehaviour:
   - {fileID: 7054758655891529845}
   starExplosionPrefab: {fileID: 1196699807190039102, guid: 30a10f2ad9416504e94994945caad05e,
     type: 3}
+  buttonsForTuto:
+  - {fileID: 5349320406355249810}
+  - {fileID: 567118536825263798}
 --- !u!1 &531306285872334201
 GameObject:
   m_ObjectHideFlags: 0
@@ -5210,8 +5213,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.3826834, y: -0.000000015896621, z: 0.000000006584595, w: 0.92387956}
-  m_LocalPosition: {x: 243.36946, y: 2.9869995, z: 65.81246}
+  m_LocalRotation: {x: 0.38268346, y: -0.000000022481217, z: 0.000000009312026, w: 0.92387956}
+  m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5504,8 +5507,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955901183631824}
-  m_LocalRotation: {x: 0.38268343, y: -0.000000015896617, z: 0.000000006584594, w: 0.92387956}
-  m_LocalPosition: {x: 243.36946, y: 2.9869995, z: 65.81246}
+  m_LocalRotation: {x: 0.38268346, y: -0.000000022481217, z: 0.000000009312026, w: 0.92387956}
+  m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

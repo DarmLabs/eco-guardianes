@@ -37,6 +37,7 @@ public static class ConstManager
     public const string tuto_eighthStageMessege = "Los residuos de todo el mapa aparecen acá, cuando encuentras uno se vera su imagen y podras pulsarlo para tirarlo al tacho seleccionado.";
     public const string tuto_ninthStageMessege = "Este mensaje muestra que tacho esta seleccionado.";
     public const string tuto_tenthStageMessege = "¡Al interactuar con estos tachos puedes arrojar basura!";
+    public const string tuto_eleventhStageMessege = "¡Cuando termines de juntar todos los residuos del mapa conseguiras estrellas, con estas podras desbloquear otros mapas!";
     public const string tuto_endStageMessege = "¡Felicitaciones! ¡Terminaste el tutorial ahora ve y se un verdadero Eco Guardian!";
     public const string tuto_skip = "Has saltado el tutorial, puedes acceder a este siempre que quieras desde el menú de pausa.";
     #endregion

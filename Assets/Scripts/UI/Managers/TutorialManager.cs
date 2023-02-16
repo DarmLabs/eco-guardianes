@@ -75,6 +75,7 @@ public class TutorialManager : MonoBehaviour
             inWaitCoroutine = StartCoroutine(SecondStage());
         }
     }
+    #region "Stages"
     IEnumerator FirstStage()
     {
         skipTutoButton.SetActive(true);
@@ -158,7 +159,6 @@ public class TutorialManager : MonoBehaviour
         nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(SixthStage()); });
         nextStageButton.gameObject.SetActive(true);
     }
-
     IEnumerator SixthStage()
     {
         ResetTutoItems(true);
@@ -167,8 +167,8 @@ public class TutorialManager : MonoBehaviour
         trashButton.SetActive(true);
 
         hand.SetActive(true);
-        yield return TutorialHandMove(trashButton.transform.position, 1, 0.5f);
         yield return PrintDialog(ConstManager.tuto_sixthStageMessege);
+        yield return TutorialHandMove(trashButton.transform.position, 1, 0.5f);
 
         nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(SeventhStage()); trashButton.SetActive(false); });
         nextStageButton.gameObject.SetActive(true);
@@ -248,25 +248,41 @@ public class TutorialManager : MonoBehaviour
 
         yield return PrintDialog(ConstManager.tuto_tenthStageMessege);
 
-        nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(EndStage()); });
+        nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(EleventhStage()); });
+        nextStageButton.gameObject.SetActive(true);
+    }
+    IEnumerator EleventhStage()
+    {
+        ResetTutoItems();
+
+        MainButtonsManager.SharedInstance.MainButtonsSwitcher(false);
+        tutoPanel.SetActive(false);
+
+        yield return TransitionsManager.SharedInstance.WaitForTransition(TransitionsManager.SharedInstance.ViewCamera, 9);
+        tutoTextBox.transform.localPosition = new Vector3(78, -368, 0);
+        tutoTextBox.sizeDelta = new Vector2(1059, 268);
+        tutoPanel.SetActive(true);
+        MainButtonsManager.SharedInstance.MainButtonsSwitcher(true);
+
+        yield return PrintDialog(ConstManager.tuto_eleventhStageMessege);
+        StarsManager.SharedInstance.TriggerForTutorial();
+
+        MarkerHoleHelper(new Vector3(1034, 601, 0), new Vector2(661, 556));
+        yield return new WaitForSeconds(1f);
+
+        nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(EndStage()); StarsManager.SharedInstance.DisableForTutorial(); });
         nextStageButton.gameObject.SetActive(true);
     }
     IEnumerator EndStage()
     {
         ResetTutoItems();
 
-        MainButtonsManager.SharedInstance.MainButtonsSwitcher(false);
-        tutoPanel.SetActive(false);
         skipTutoButton.SetActive(false);
         completePanel.SetActive(true);
         cutoutPanel.SetActive(false);
 
-        yield return TransitionsManager.SharedInstance.WaitForTransition(TransitionsManager.SharedInstance.ViewCamera, 9);
-
         tutoTextBox.transform.localPosition = textBoxOriginalPos;
         tutoTextBox.sizeDelta = textBoxOriginalSize;
-        MainButtonsManager.SharedInstance.MainButtonsSwitcher(true);
-        tutoPanel.SetActive(true);
 
         yield return PrintDialog(ConstManager.tuto_endStageMessege);
 
@@ -280,6 +296,8 @@ public class TutorialManager : MonoBehaviour
         });
         nextStageButton.gameObject.SetActive(true);
     }
+    #endregion
+    #region "Tools"
     public void SkipTutorialButton()
     {
         StartCoroutine(SkipTutorial());
@@ -365,6 +383,7 @@ public class TutorialManager : MonoBehaviour
         markerHole.sizeDelta = sizeDelta;
         cutoutPanel.transform.SetParent(markerHole.transform);
     }
+    #endregion
 }
 [Serializable]
 public class TutorialData
