@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5eea24311a9c1e4292f462495b817ea
+guid: 0dc68684bdd68c84991ee06ae47afe54
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -71,7 +71,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -124,29 +124,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: controles_0
+      name: Cartas de la memoria_ Recuperables_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 272
-        width: 172
-        height: 83
+        x: 10
+        y: 798
+        width: 300
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c9aac0a1a1e2e45a1a57296365d55f
-      internalID: -34306534
+      spriteID: c34f716afb1a5d542a132e849169c4f6
+      internalID: -521678808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_1
+      name: Cartas de la memoria_ Recuperables_1
       rect:
         serializedVersion: 2
-        x: 185
-        y: 272
-        width: 90
-        height: 83
+        x: 322
+        y: 798
+        width: 300
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e0b4499ff088a84f89a715e78b9ce47
-      internalID: 1271217486
+      spriteID: 8528e1f7cea8f3f4a81cc8f9632f1383
+      internalID: -1402002560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_2
+      name: Cartas de la memoria_ Recuperables_2
       rect:
         serializedVersion: 2
-        x: 287
-        y: 272
-        width: 90
-        height: 83
+        x: 634
+        y: 798
+        width: 300
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64beb67e4a9ea8448a1e8fa6feca3f4b
-      internalID: 1851282669
+      spriteID: 991565844f4311d4bb4e9013db4e9a3a
+      internalID: -553829453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_3
+      name: Cartas de la memoria_ Recuperables_3
       rect:
         serializedVersion: 2
-        x: 390
-        y: 272
-        width: 90
-        height: 83
+        x: 946
+        y: 798
+        width: 300
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 987fb75031ef1c0438aaadebb079822b
-      internalID: 1556868674
+      spriteID: ca7b8f9cd24f4a7468cbebfd3fc5db86
+      internalID: -29862164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_4
+      name: Cartas de la memoria_ Recuperables_4
       rect:
         serializedVersion: 2
-        x: 488
-        y: 134
-        width: 143
-        height: 219
+        x: 1260
+        y: 805
+        width: 300
+        height: 387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a8fa7a3579169e46a682fab15611af3
-      internalID: -1010673697
+      spriteID: 8cdeb9b47fb6b7443877485c18891254
+      internalID: -1515764079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_5
+      name: Cartas de la memoria_ Recuperables_5
       rect:
         serializedVersion: 2
-        x: 4
-        y: 184
-        width: 125
-        height: 83
+        x: 1567
+        y: 805
+        width: 299
+        height: 387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbf96a08048604f4db6be1e503a6976f
-      internalID: 568290013
+      spriteID: 9c787f559fd2def4f96847cdc017030c
+      internalID: -931934997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_6
+      name: Cartas de la memoria_ Recuperables_6
       rect:
         serializedVersion: 2
-        x: 181
-        y: 184
-        width: 90
-        height: 83
+        x: 10
+        y: 403
+        width: 300
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 815e77197c014b641a3287a0fe8dd401
-      internalID: -1537777851
+      spriteID: 9795571883f5cfa47bac1d23cd79b2dc
+      internalID: -1623880534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_7
+      name: Cartas de la memoria_ Recuperables_7
       rect:
         serializedVersion: 2
-        x: 285
-        y: 184
-        width: 90
-        height: 83
+        x: 318
+        y: 403
+        width: 301
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e2fa80e415d2f54a8576731378176f6
-      internalID: -1039043299
+      spriteID: 4819356dd396b834c9c9a39287770676
+      internalID: -804477395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_8
+      name: Cartas de la memoria_ Recuperables_8
       rect:
         serializedVersion: 2
-        x: 385
-        y: 184
-        width: 90
-        height: 83
+        x: 634
+        y: 403
+        width: 301
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +310,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0997c5c59373a724393eaacc5d274fa3
-      internalID: -2080371621
+      spriteID: d0e7383b214af1849920afd257ca4c74
+      internalID: 1733396443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_9
+      name: Cartas de la memoria_ Recuperables_9
       rect:
         serializedVersion: 2
-        x: 4
-        y: 92
-        width: 349
-        height: 83
+        x: 946
+        y: 403
+        width: 300
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +331,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60fa4351428fee846867faf0617f1d43
-      internalID: 693293186
+      spriteID: 470fc61f306238e41a3e7acb5be37894
+      internalID: -992338841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_10
+      name: Cartas de la memoria_ Recuperables_10
       rect:
         serializedVersion: 2
-        x: 371
-        y: 50
-        width: 29
-        height: 116
+        x: 1264
+        y: 404
+        width: 299
+        height: 387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,20 +352,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a38474d67a1cee4d913ffeecfce0269
-      internalID: -659792847
+      spriteID: 60a0a50827396b1429c1f5d008d2d733
+      internalID: -1780136058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_11
+      name: Cartas de la memoria_ Recuperables_11
       rect:
         serializedVersion: 2
-        x: 422
-        y: 39
-        width: 46
-        height: 134
+        x: 1570
+        y: 404
+        width: 300
+        height: 387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,20 +373,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7786ce47aad90bf4ca3a114a504e4d86
-      internalID: -1052446968
+      spriteID: abed665abeb9b8e4c9c9ac8967a0e744
+      internalID: 428370163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_12
+      name: Cartas de la memoria_ Recuperables_12
       rect:
         serializedVersion: 2
-        x: 496
-        y: 18
-        width: 106
-        height: 106
+        x: 10
+        y: 9
+        width: 299
+        height: 387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,20 +394,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ed47bc1b80935545a0bbe85a23b6440
-      internalID: 1861991134
+      spriteID: be555d867ae306b4696811569f9d6aa2
+      internalID: 454990943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_13
+      name: Cartas de la memoria_ Recuperables_13
       rect:
         serializedVersion: 2
-        x: 16
-        y: 23
-        width: 74
-        height: 64
+        x: 317
+        y: 8
+        width: 299
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c159cfa7baece1418f6ed89b833e4a1
-      internalID: -1015688558
+      spriteID: 6128e338884e1a54f9f6c892f95ea07d
+      internalID: 2112135442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_14
+      name: Cartas de la memoria_ Recuperables_14
       rect:
         serializedVersion: 2
-        x: 132
-        y: 5
-        width: 195
-        height: 83
+        x: 635
+        y: 9
+        width: 300
+        height: 387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,8 +436,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf665a48fd7f7cc44a1aa88ef21f0391
-      internalID: 886977755
+      spriteID: 75f70a5b7c39b814a99e49e14d73679c
+      internalID: -2094713926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartas de la memoria_ Recuperables_15
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 9
+        width: 300
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b485542d8fac94b458e7499e650e1b8a
+      internalID: 1487987616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartas de la memoria_ Recuperables_16
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 4
+        width: 300
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1332bfe3df5597649a6b994c5f65e55e
+      internalID: 203790816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartas de la memoria_ Recuperables_17
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 9
+        width: 300
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f576c7b18a9ad2e498133205ef2599e5
+      internalID: -298285632
       vertices: []
       indices: 
       edges: []
@@ -457,7 +508,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 09d41903b6a30ef4b8e7f591f37bc26d
     internalID: 0
     vertices: []
     indices: 
@@ -465,21 +516,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      controles_5: 568290013
-      controles_11: -1052446968
-      controles_0: -34306534
-      controles_3: 1556868674
-      controles_7: -1039043299
-      controles_12: 1861991134
-      controles_14: 886977755
-      controles_8: -2080371621
-      controles_6: -1537777851
-      controles_1: 1271217486
-      controles_4: -1010673697
-      controles_10: -659792847
-      controles_9: 693293186
-      controles_2: 1851282669
-      controles_13: -1015688558
+      Cartas de la memoria_ Recuperables_9: -992338841
+      Cartas de la memoria_ Recuperables_7: -804477395
+      Cartas de la memoria_ Recuperables_12: 454990943
+      Cartas de la memoria_ Recuperables_1: -1402002560
+      Cartas de la memoria_ Recuperables_15: 1487987616
+      Cartas de la memoria_ Recuperables_13: 2112135442
+      Cartas de la memoria_ Recuperables_11: 428370163
+      Cartas de la memoria_ Recuperables_6: -1623880534
+      Cartas de la memoria_ Recuperables_2: -553829453
+      Cartas de la memoria_ Recuperables_3: -29862164
+      Cartas de la memoria_ Recuperables_14: -2094713926
+      Cartas de la memoria_ Recuperables_17: -298285632
+      Cartas de la memoria_ Recuperables_10: -1780136058
+      Cartas de la memoria_ Recuperables_4: -1515764079
+      Cartas de la memoria_ Recuperables_5: -931934997
+      Cartas de la memoria_ Recuperables_16: 203790816
+      Cartas de la memoria_ Recuperables_8: 1733396443
+      Cartas de la memoria_ Recuperables_0: -521678808
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
