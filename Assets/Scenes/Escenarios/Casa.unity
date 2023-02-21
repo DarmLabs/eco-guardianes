@@ -6693,10 +6693,10 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -2139482083, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: "Est\xE1 vaci\xF3 y es de vidrio, se puede reutilizar..."
+  objectInfo: "Esta vaci\xF3 y es de vidrio, se puede reutilizar..."
   objectPhrase: un frasco de dulce
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: "Mam\xE1 dejo este frasco de dulce vac\xEDo cuando merendo."
+  objectActionText: "Mam\xE1 dej\xF3 este frasco de dulce vac\xEDo cuando merend\xF3."
 --- !u!1001 &324021112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13515,10 +13515,11 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: 961004560, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: "Esta echo de pl\xE1stico"
+  objectInfo: "Est\xE1 hecho de pl\xE1stico, puede reciclarse."
   objectPhrase: un paquete de hamburgesa
   viewOffset: {x: -1, y: 1, z: 0}
-  objectActionText: 
+  objectActionText: "\xA1Oh! El paquete de hamburguesas se cay\xF3 de la mesada cuando
+    pap\xE1 las cocinaba."
 --- !u!1001 &381426286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19519,10 +19520,10 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -577250224, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: "Est\xE1n echas de aluminio puede servirles a los recuperadores"
+  objectInfo: "Est\xE1n hechas de aluminio puede servirles a los recuperadores."
   objectPhrase: unas tapas de frascos
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "La tapa del frasco de la mermelada, a mam\xE1 le costaba abrirlo."
 --- !u!1 &428376722
 GameObject:
   m_ObjectHideFlags: 0
@@ -26000,10 +26001,11 @@ MonoBehaviour:
   category: 2
   type: 1
   objSprite: {fileID: -618091208, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: Puede servir para fertilizar la tierra
+  objectInfo: Puede servir para fertilizar la tierra.
   objectPhrase: cascaras de papa y cebolla
   viewOffset: {x: -1, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Las c\xE1scaras que dej\xF3 mam\xE1 cuando ayud\xF3 a pap\xE1
+    a hacer las hamburguesas."
 --- !u!4 &613038514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1796666043888524025, guid: a7e6d9b6e96c60449aa81e253013f2b8,
@@ -32015,10 +32017,10 @@ MonoBehaviour:
   category: 1
   type: 1
   objSprite: {fileID: -844586616, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: Este es un alimento procesado, por lo tanto no se puede recuperar!
-  objectPhrase: una hamburgesa sin terminar
+  objectInfo: "\xA1Este es un alimento procesado, por lo tanto, no se puede recuperar!"
+  objectPhrase: una hamburguesa sin terminar
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "\xA1Uf! Estaba s\xFAper lleno, no pude terminarla."
 --- !u!1001 &714393173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32135,10 +32137,11 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -1849160518, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: "Es de cart\xF3n, se puede reciclar y reutilizar!"
+  objectInfo: "\xA1Es de cart\xF3n, se puede reciclar y reutilizar!"
   objectPhrase: una caja de huevos vacia
   viewOffset: {x: -1, y: 0.5, z: 0}
-  objectActionText: 
+  objectActionText: "\xA1Ya no hay m\xE1s huevos en la caja, los usamos todos para
+    las hamburguesas! "
 --- !u!1001 &724609861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39393,10 +39396,12 @@ MonoBehaviour:
   category: 1
   type: 1
   objSprite: {fileID: 440965520, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: Papel de cocina con aceite, sirve para compostar!
+  objectInfo: "\xA1Papel de cocina con aceite, mam\xE1 lo tira siempre en el tacho
+    negro!"
   objectPhrase: un papel con aceite
   viewOffset: {x: -1, y: 1, z: 0}
-  objectActionText: 
+  objectActionText: "Pap\xE1 cocin\xF3 las hamburguesas y utilizo este papel, hay
+    que tirarlo."
 --- !u!1 &1172373513
 GameObject:
   m_ObjectHideFlags: 0
@@ -47404,10 +47409,10 @@ MonoBehaviour:
   category: 2
   type: 1
   objSprite: {fileID: 711217848, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: Restos de verduras puede servir de compost
+  objectInfo: Restos de verduras puede servir de compost.
   objectPhrase: lechuga y tomate seca
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "\xA1Los restos del tomate y la lechuga que comimos con las hamburguesas!"
 --- !u!1001 &1846036677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47903,10 +47908,10 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -2103667886, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: "Esta caja ya no sirve pero el cart\xF3n puede reutilizarse..."
+  objectInfo: "Esta caja ya no sirve, pero el cart\xF3n puede reutilizarse..."
   objectPhrase: una caja vieja
   viewOffset: {x: 0, y: 1, z: -2}
-  objectActionText: 
+  objectActionText: "Esta caja guardaba cosas viejas de Pap\xE1, pero est\xE1 rota..."
 --- !u!23 &50036425021027607
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49126,12 +49131,12 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008529019
+      value: 0.000000021569763
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004727243
+      value: -0.000000011955125
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -49156,12 +49161,12 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008529019
+      value: 0.000000021569763
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004727243
+      value: -0.000000011955125
       objectReference: {fileID: 0}
     - target: {fileID: 3933555724768622989, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}

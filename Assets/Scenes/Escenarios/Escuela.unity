@@ -477,10 +477,10 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -1011799312, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: "En que cesto ir\xE1 esta botella de vidrio vac\xEDa?"
+  objectInfo: "\xBFEn qu\xE9 cesto ir\xE1 esta botella de vidrio vac\xEDa?"
   objectPhrase: una botella de gaseosa de vidirio
   viewOffset: {x: -1, y: 1, z: 0}
-  objectActionText: 
+  objectActionText: "\xBFLucas estaba tomando gaseosa, donde estar\xE1 la tapa?"
 --- !u!114 &156953587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6975,11 +6975,11 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -1518393298, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: "Juli se fu\xE9 al recreo y no tir\xF3 todo este pl\xE1stico donde
-    se debe"
+  objectInfo: "Juli se fue al recreo y no tir\xF3 todo este pl\xE1stico donde se
+    debe."
   objectPhrase: muchos papeles de caramelo
   viewOffset: {x: 0, y: 1, z: -0.5}
-  objectActionText: 
+  objectActionText: A Juli se le van a caer los dientes de comer tantos caramelos.
 --- !u!1001 &364350622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7543,10 +7543,10 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: 1536748160, guid: ca96931e215262d45b21a21578f17f93, type: 3}
-  objectInfo: A pesar de que se haya roto, es papel y puede reciclarse
+  objectInfo: A pesar de que se haya roto, es papel y puede reciclarse.
   objectPhrase: un afiche roto
   viewOffset: {x: -1, y: 1, z: 0}
-  objectActionText: 
+  objectActionText: "Marcos tumb\xF3 el afiche cuando sali\xF3 corriendo al recreo."
 --- !u!114 &485365334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13545,7 +13545,7 @@ MonoBehaviour:
   objectInfo: "Esta manzana servir\xE1 para compost, la arrojar\xE9 por la se\xF1o..."
   objectPhrase: los restos de una manzana
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "La se\xF1o comi\xF3 esta manzana durante el recreo."
 --- !u!114 &491698070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32759,7 +32759,8 @@ MonoBehaviour:
   objectInfo: "Ya no sirven, pero es pl\xE1stico que puede reutilizarse"
   objectPhrase: unos fibrones rotos
   viewOffset: {x: -1, y: 1, z: 0}
-  objectActionText: 
+  objectActionText: "Estos fibrones hace mucho que est\xE1n ac\xE1, no s\xE9 qui\xE9n
+    los dejo."
 --- !u!114 &1125464464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39680,10 +39681,10 @@ MonoBehaviour:
   category: 2
   type: 1
   objSprite: {fileID: -915968248, guid: ca96931e215262d45b21a21578f17f93, type: 3}
-  objectInfo: "Mart\xEDn no sabe que sirve de compost esta cascara de naranja?"
+  objectInfo: "\xBFMart\xEDn, no sabe que sirve de compost esta c\xE1scara de naranja?"
   objectPhrase: cascaras de naranja
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Mart\xEDn estaba comiendo naranja en el medio de la clase."
 --- !u!1001 &1232763908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40430,10 +40431,11 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: 539076767, guid: ca96931e215262d45b21a21578f17f93, type: 3}
-  objectInfo: La tapa de la botella de vidrio, es de aluminio
+  objectInfo: La tapa de la botella de vidrio, es de aluminio.
   objectPhrase: una tapita de gaseosa
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "As\xED que ac\xE1 termino la tapita, se le debe haber ca\xEDdo
+    a Lucas."
 --- !u!114 &1402324629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46627,17 +46629,17 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.3826834
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001589663
+      value: -0.000000015896617
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584598
+      value: 0.000000006584594
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -46662,17 +46664,17 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.3826834
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001589663
+      value: -0.000000015896617
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584598
+      value: 0.000000006584594
       objectReference: {fileID: 0}
     - target: {fileID: 4772342421343976687, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -47299,10 +47301,11 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -1694400395, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: "Luci dej\xF3 todos estos papeles!"
+  objectInfo: "\xA1Luci dej\xF3 todos estos papeles!"
   objectPhrase: muchos papelitos cortados
   viewOffset: {x: 1, y: 1, z: 0}
-  objectActionText: 
+  objectActionText: 'Luci estaba haciendo un dibujo con papeles, creo que estos le
+    sobraron. '
 --- !u!114 &1630729647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53974,10 +53977,11 @@ MonoBehaviour:
   category: 1
   type: 1
   objSprite: {fileID: 1710747275, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: "Cami estaba resfriada, pero estos pa\xF1uelos ya no se pueden recuperar!"
+  objectInfo: "\xA1Cami estaba resfriada, pero estos pa\xF1uelos ya no se pueden
+    recuperar!"
   objectPhrase: "unos pa\xF1uelos sucios"
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "\xA1Pobre Cami, esta superresfriada!"
 --- !u!114 &1839616079
 MonoBehaviour:
   m_ObjectHideFlags: 0

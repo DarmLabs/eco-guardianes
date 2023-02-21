@@ -8576,7 +8576,7 @@ MonoBehaviour:
   objectInfo: "Deber\xEDan utilizarla para hacer compost."
   objectPhrase: yerba usada
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Los chicos tiraron la yerba aqu\xED."
 --- !u!65 &281618996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16072,7 +16072,7 @@ MonoBehaviour:
   objectInfo: "La botella de vidrio que dej\xF3 Pedro, sin duda no va en este lugar..."
   objectPhrase: una botella de vidrio
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Pedro dej\xF3 la botella y se olvid\xF3 de tirarla."
 --- !u!65 &381220809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24725,7 +24725,7 @@ MonoBehaviour:
   objectInfo: "Echa de pl\xE1stico, pero no va ac\xE1 en el suelo..."
   objectPhrase: un paquete de galletitas vacia
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Alg\xFAn chico quiso tirar el paquete, pero no llego al tacho."
 --- !u!65 &621318705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32384,7 +32384,7 @@ MonoBehaviour:
   objectInfo: "Est\xE1 en el camino y puede servir para ser compostable!"
   objectPhrase: una rama
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Seguro se cay\xF3 de alg\xFAn \xE1rbol."
 --- !u!65 &796931491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33996,12 +33996,12 @@ PrefabInstance:
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000002248122
+      value: -0.000000022481217
       objectReference: {fileID: 0}
     - target: {fileID: 2841955900446381187, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000009312027
+      value: 0.000000009312026
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -34026,12 +34026,12 @@ PrefabInstance:
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000002248122
+      value: -0.000000022481217
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000009312027
+      value: 0.000000009312026
       objectReference: {fileID: 0}
     - target: {fileID: 4772342421343976687, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
@@ -43763,10 +43763,11 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: 256996839, guid: ed4684d869d254c4b969ae5c31d419b1, type: 3}
-  objectInfo: "Una lata vac\xEDa de aluminio puede reutilizarse de muchas maneras!"
+  objectInfo: "\xA1Una lata vac\xEDa de aluminio puede reutilizarse de muchas maneras!"
   objectPhrase: una lata de gaseosa
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Un chico dejo est\xE1 lata de gaseosa, estaba muy distra\xEDdo
+    con el celular."
 --- !u!65 &1419363616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50463,7 +50464,7 @@ MonoBehaviour:
   objectInfo: . . . esto no sirve para nada
   objectPhrase: una caca de perro
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "\xA1Alg\xFAn perro uso la plaza como ba\xF1o!"
 --- !u!65 &1565497197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56565,7 +56566,7 @@ MonoBehaviour:
   objectInfo: "Los chicos dejaron esta bandeja de cart\xF3n, pero puede recuperarse!"
   objectPhrase: una bandeja de torta vacia
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Los chicos terminaron la torta superr\xE1pido."
 --- !u!65 &1631727155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62561,10 +62562,11 @@ MonoBehaviour:
   category: 0
   type: 1
   objSprite: {fileID: -1168350489, guid: 5ca3bea18a7362649b1042782168d823, type: 3}
-  objectInfo: 'Plastico reutilizable! '
+  objectInfo: "\xA1Plastico reutilizable! "
   objectPhrase: una botella de plastico
   viewOffset: {x: 1, y: 1, z: 0}
-  objectActionText: 
+  objectActionText: Esta botella se ve graciosa flotando, pero no es un barco, debo
+    tirarla.
 --- !u!65 &1687106350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72973,7 +72975,7 @@ MonoBehaviour:
   objectInfo: No es lugar para un diario echo de papel estar en esta fuente...
   objectPhrase: un diario
   viewOffset: {x: 0, y: 1, z: -1}
-  objectActionText: 
+  objectActionText: "Este diario cay\xF3 en la fuente, debe de haber sido el viento."
 --- !u!65 &2085182714
 BoxCollider:
   m_ObjectHideFlags: 0
