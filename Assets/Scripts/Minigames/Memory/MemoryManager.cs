@@ -72,17 +72,19 @@ public class MemoryManager : MonoBehaviour
             {
                 score++;
                 CheckScore();
+                ResetCards();
             }
             else
             {
-                StartCoroutine(firstCard.RotateToBack());
-                StartCoroutine(secondCard.RotateToBack());
-                StartCoroutine(CheckLives());
+                StartCoroutine(WaitAndRotateBackCards(0.5f));
             }
-            flippedCount = 0;
-            firstCard = null;
-            secondCard = null;
         }
+    }
+    void ResetCards()
+    {
+        flippedCount = 0;
+        firstCard = null;
+        secondCard = null;
     }
     void CheckScore()
     {
@@ -101,5 +103,13 @@ public class MemoryManager : MonoBehaviour
         {
             MemoryUIManager.SharedInstance.ActivateEndPanel();
         }
+    }
+    IEnumerator WaitAndRotateBackCards(float secs)
+    {
+        yield return new WaitForSeconds(secs);
+        StartCoroutine(firstCard.RotateToBack());
+        StartCoroutine(secondCard.RotateToBack());
+        StartCoroutine(CheckLives());
+        ResetCards();
     }
 }
