@@ -318,6 +318,8 @@ public class TutorialManager : MonoBehaviour
         TrashPanelManager.SharedInstance.TrashPanel.SetActive(false);
         TrashPanelManager.SharedInstance.SwitchItemsForTutorial(true);
 
+        StarsManager.SharedInstance.DisableForTutorial();
+
         tutoTextBox.transform.localPosition = textBoxOriginalPos;
         tutoTextBox.sizeDelta = textBoxOriginalSize;
 
