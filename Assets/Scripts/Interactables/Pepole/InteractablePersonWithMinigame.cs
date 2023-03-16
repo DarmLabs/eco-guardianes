@@ -7,6 +7,7 @@ public class InteractablePersonWithMinigame : InteractableBase
     [SerializeField] string personName;
     [TextArea][SerializeField] string minigameMessege;
     [SerializeField] string sceneName;
+    [SerializeField] bool isOther;
     public override void SearchMode()
     {
         if (CanInteract)
@@ -19,7 +20,7 @@ public class InteractablePersonWithMinigame : InteractableBase
     }
     public override void TargetObject()
     {
-        StartCoroutine(DialogManager.SharedInstance.SetDialog(characterName: personName, messege: minigameMessege, hasMinigames: true));
+        StartCoroutine(DialogManager.SharedInstance.SetDialog(characterName: personName, messege: minigameMessege, hasMinigames: true, isOther: isOther));
         DialogManager.SharedInstance.SetYesButtonForSceneChange(sceneName);
     }
 

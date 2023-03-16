@@ -24,7 +24,7 @@ public class DialogManager : MonoBehaviour
         yesNoContainer = yesButton.transform.parent.gameObject;
     }
 
-    public IEnumerator SetDialog(string characterName, string messege = "", Dialog dialog = null, bool hasMinigames = false)
+    public IEnumerator SetDialog(string characterName = "", string messege = "", Dialog dialog = null, bool hasMinigames = false, bool isOther = false)
     {
         if (!isWriting)
         {
@@ -33,8 +33,7 @@ public class DialogManager : MonoBehaviour
             characterNameText.text = "";
             dialogBoxText.text = "";
             DialogPanelSwitcher(true);
-
-            yield return PrintCharacterName($"{characterName} dice:");
+            yield return PrintCharacterName(isOther == true ? "" : $"{characterName} dice:");
             if (dialog != null && !hasMinigames)
             {
                 currentLine = 0;

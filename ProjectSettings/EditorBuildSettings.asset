@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Escenarios/Casa.unity
     guid: b72e25b3f2aee604db71b9f8070b0c28
   - enabled: 1
+    path: Assets/Scenes/Escenarios/Patio.unity
+    guid: d452981194423914eb09cd8fcf2c2b45
+  - enabled: 1
     path: Assets/Scenes/Escenarios/Escuela.unity
     guid: 21af5612ad2dfc144bd9283ea6c0f63f
   - enabled: 1

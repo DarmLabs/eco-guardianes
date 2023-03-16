@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InteractableBase : MonoBehaviour
 {
@@ -62,6 +63,10 @@ public class InteractableBase : MonoBehaviour
     //Mouse Detection
     void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         bool mustInteract = !ActionPanelManager.SharedInstance.IsOpened && !TrashPanelManager.SharedInstance.IsOpened &&
         !PauseManager.SharedInstance.IsOpened && canInteract && isActiveAndEnabled && !overMainButtons &&
         !TutorialManager.SharedInstance.IsTutorialRunning;
