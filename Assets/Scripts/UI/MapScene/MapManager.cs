@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class MapManager : MonoBehaviour
 {
-    int globalStars;
+    int globalStars = 0;
     [SerializeField] TextMeshProUGUI currentStarsText;
     [SerializeField] GameObject confirmationPanel;
     [SerializeField] GameObject starsHUD;
@@ -13,13 +13,10 @@ public class MapManager : MonoBehaviour
     [SerializeField] RequieredStars[] sceneStars;
     void Awake()
     {
-        if (SaveDataHandler.SharedInstance != null)
+        StarsData starsData = SaveDataHandler.SharedInstance?.LoadStarsData();
+        if (starsData != null)
         {
-            globalStars = SaveDataHandler.SharedInstance.LoadGlobalStars();
-        }
-        else
-        {
-            globalStars = 0;
+            globalStars = starsData.starsCasaCount + starsData.starsEscuelaCount + starsData.starsPlazaCount;
         }
     }
     void Start()

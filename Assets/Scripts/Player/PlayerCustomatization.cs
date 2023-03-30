@@ -28,14 +28,10 @@ public class PlayerCustomatization : MonoBehaviour
     }
     void Start()
     {
-        if (File.Exists(Application.persistentDataPath + "/characterPropieties"))
+        characterData = SaveDataHandler.SharedInstance?.LoadCharacterData();
+        if (characterData != null)
         {
-            characterData = FileHandler.ReadFromJSON<CharacterData>("characterPropieties");
             CharacterLoad();
-        }
-        else
-        {
-            Debug.LogError("No hay guardado para cargar el personaje, crea uno primero");
         }
     }
     void CharacterLoad()

@@ -107,10 +107,32 @@ public class StarsManager : MonoBehaviour
             return;
         }
         StarsData starsData = SaveDataHandler.SharedInstance.LoadStarsData();
-        if (starsData.starsCount < starsAchived)
+
+        MapStarsCountSetter(SceneCache.SharedInstance?.currentScene, starsData);
+        SaveDataHandler.SharedInstance.SaveStarsData(starsData);
+    }
+    void MapStarsCountSetter(string mapId, StarsData starsData)
+    {
+        switch (mapId)
         {
-            starsData.starsCount = starsAchived;
-            SaveDataHandler.SharedInstance.SaveStarsData(starsData, ConstManager.starsData);
+            case "Casa":
+                if (starsData.starsCasaCount < starsAchived)
+                {
+                    starsData.starsCasaCount = starsAchived;
+                }
+                break;
+            case "Escuela":
+                if (starsData.starsEscuelaCount < starsAchived)
+                {
+                    starsData.starsEscuelaCount = starsAchived;
+                }
+                break;
+            case "Plaza":
+                if (starsData.starsPlazaCount < starsAchived)
+                {
+                    starsData.starsPlazaCount = starsAchived;
+                }
+                break;
         }
     }
 }

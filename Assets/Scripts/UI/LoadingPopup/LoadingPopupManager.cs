@@ -9,7 +9,6 @@ public class LoadingPopupManager : MonoBehaviour
     void Awake()
     {
         SharedInstance = this;
-        DontDestroyOnLoad(gameObject);
     }
     void Start()
     {

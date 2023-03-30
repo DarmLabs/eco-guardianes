@@ -7,7 +7,6 @@ public class ScenesChanger : MonoBehaviour
     public static ScenesChanger SharedInstance;
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         SharedInstance = this;
     }
     public void AddScene(string sceneName)

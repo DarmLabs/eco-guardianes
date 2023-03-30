@@ -11,18 +11,15 @@ public class CharacterCreatorSceneManager : MonoBehaviour
     [SerializeField] Toggle wheelChairToggle;
     [SerializeField] GameObject mainPage;
     [SerializeField] GameObject confirmExitPanel;
+    MainMenuData mainMenuData;
     void Awake()
     {
         SharedInstance = this;
     }
     void Start()
     {
-        bool isCharacterCreated = false;
-        if (SaveDataHandler.SharedInstance != null)
-        {
-            isCharacterCreated = SaveDataHandler.SharedInstance.LoadMainMenuFirstTime();
-        }
-        mainMenuButton.SetActive(isCharacterCreated);
+        mainMenuData = SaveDataHandler.SharedInstance?.LoadMainMenuFirstTime();
+        mainMenuButton.SetActive(mainMenuData.isCharacterCreated);
     }
     public void ConfirmPanelSwitcher(bool state)
     {
@@ -39,11 +36,12 @@ public class CharacterCreatorSceneManager : MonoBehaviour
     }
     public void OnSaveButton()
     {
-        ScenesChanger.SharedInstance?.SceneChange(forwardScene);
-        if (!SaveDataHandler.SharedInstance.LoadMainMenuFirstTime())
+        if (!mainMenuData.isCharacterCreated)
         {
-            SaveDataHandler.SharedInstance?.SaveMainMenuFirstTime();
+            mainMenuData.isCharacterCreated = true;
+            SaveDataHandler.SharedInstance?.SaveMainMenuFirstTime(mainMenuData);
         }
+        ScenesChanger.SharedInstance?.SceneChange(forwardScene);
     }
     public void OnBackButton()
     {

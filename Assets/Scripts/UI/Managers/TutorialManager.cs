@@ -44,10 +44,6 @@ public class TutorialManager : MonoBehaviour
         playerInteraction = PointAndClickMovement.SharedInstance.gameObject.GetComponent<PlayerInteraction>();
         handAnim = hand.GetComponent<Animator>();
         tutoText = tutoTextBox.GetComponentInChildren<TextMeshProUGUI>();
-        if (tutorialData == null)
-        {
-            tutorialData = new TutorialData(true);
-        }
         if (!tutorialData.firstTimePassed)
         {
             ActivateTuto();
@@ -86,8 +82,8 @@ public class TutorialManager : MonoBehaviour
 
         if (tutorialData != null)
         {
-            SaveDataHandler.SharedInstance?.SaveTutoFirstTime();
             tutorialData.firstTimePassed = true;
+            SaveDataHandler.SharedInstance?.SaveTutoFirstTime(tutorialData);
         }
 
         ResetTutoItems();

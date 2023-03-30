@@ -23,14 +23,10 @@ public class CharacterCreation : MonoBehaviour
     }
     void Start()
     {
-        if (File.Exists(Application.persistentDataPath + "/characterPropieties"))
+        characterData = SaveDataHandler.SharedInstance?.LoadCharacterData();
+        if (characterData != null)
         {
-            characterData = FileHandler.ReadFromJSON<CharacterData>("characterPropieties");
             InitialLoad();
-        }
-        else
-        {
-            characterData = new CharacterData(0, 0, 0, 0, 0, "", new string[partsMaterials.Length]);
         }
     }
     void InitialLoad()
@@ -187,6 +183,6 @@ public class CharacterCreation : MonoBehaviour
     public void SaveCharacterData()
     {
         RetriveMaterialHex();
-        FileHandler.SaveToJSON(characterData, "characterPropieties");
+        SaveDataHandler.SharedInstance?.SaveCharacterData(characterData);
     }
 }

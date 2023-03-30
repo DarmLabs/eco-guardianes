@@ -14,7 +14,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip NegativeButton => negativeButton;
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         SharedInstance = this;
     }
     public void PlayMusic(AudioClip clip)

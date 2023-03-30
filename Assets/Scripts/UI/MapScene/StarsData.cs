@@ -5,9 +5,13 @@ using System;
 [Serializable]
 public class StarsData
 {
-    public int starsCount;
-    public StarsData(int starsCount)
+    public int starsCasaCount;
+    public int starsPlazaCount;
+    public int starsEscuelaCount;
+    public StarsData(int starsCasaCount, int starsPlazaCount, int starsEscuelaCount)
     {
-        this.starsCount = starsCount;
+        this.starsCasaCount = starsCasaCount;
+        this.starsPlazaCount = starsPlazaCount;
+        this.starsEscuelaCount = starsEscuelaCount;
     }
 }
