@@ -6,12 +6,13 @@ public class SaveDataHandler : MonoBehaviour
 {
     public static SaveDataHandler SharedInstance;
     string dataPath;
+    public string DataPath => dataPath;
     SaveData saveData;
+    int saveDataId;
     void Awake()
     {
         dataPath = $"{Application.persistentDataPath}/";
         SharedInstance = this;
-        saveData = LoadSaveData();
     }
     #region CharacterCreation
     public void SaveCharacterData(CharacterData characterData)
@@ -56,12 +57,17 @@ public class SaveDataHandler : MonoBehaviour
 
     void SaveSaveData()
     {
-        FileHandler.SaveToJSON<SaveData>(saveData, "saveData");
+        FileHandler.SaveToJSON<SaveData>(saveData, $"saveData{saveDataId}");
+    }
+
+    public void SetSaveDataId(int id)
+    {
+        saveDataId = id;
     }
 
     SaveData LoadSaveData()
     {
-        if (File.Exists($"{dataPath}saveData"))
+        if (File.Exists($"{dataPath}saveData{saveDataId}"))
         {
             return FileHandler.ReadFromJSON<SaveData>("saveData");
         }
