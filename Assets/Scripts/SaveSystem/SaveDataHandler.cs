@@ -31,6 +31,7 @@ public class SaveDataHandler : MonoBehaviour
     }
     public MainMenuData LoadMainMenuFirstTime()
     {
+        Debug.Log(saveData);
         return saveData.mainMenuData;
     }
     #endregion
@@ -57,12 +58,17 @@ public class SaveDataHandler : MonoBehaviour
 
     void SaveSaveData()
     {
+        if (saveDataId < 1 || saveDataId > 3)
+        {
+            return;
+        }
         FileHandler.SaveToJSON<SaveData>(saveData, $"saveData{saveDataId}");
     }
 
     public void SetSaveDataId(int id)
     {
         saveDataId = id;
+        saveData = LoadSaveData();
     }
 
     SaveData LoadSaveData()

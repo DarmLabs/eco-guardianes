@@ -10,7 +10,6 @@ public class SceneCache : MonoBehaviour
     void Awake()
     {
         SharedInstance = this;
-        DontDestroyOnLoad(gameObject);
         currentScene = SceneManager.GetActiveScene().name;
     }
     public void SetCurrentScene(string currentScene)
