@@ -20,7 +20,7 @@ public class SceneCache : MonoBehaviour
     }
     public void CheckForUnnecesaryObjs()
     {
-        if (currentScene == ConstManager.plantaDentro || currentScene == ConstManager.plantaFuera)
+        if (currentScene == ConstManager.plantaDentro || currentScene == ConstManager.plantaFuera || currentScene == ConstManager.patio)
         {
             MasterManager.SharedInstance.DestroyUnnecesaryObjects();
             if (LoadingPopupManager.SharedInstance != null)

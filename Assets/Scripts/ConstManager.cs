@@ -19,6 +19,7 @@ public static class ConstManager
     public const string plazaSceneName = "Plaza";
     public const string plantaDentro = "Planta de reciclado (Adentro)";
     public const string plantaFuera = "Planta de reciclado (Afuera)";
+    public const string patio = "Patio";
     #endregion
     #region Action Messeges
     public const string actionQuestionTrashCan = "¿Quieres tirar residuos?";

@@ -44,9 +44,12 @@ public class TutorialManager : MonoBehaviour
         playerInteraction = PointAndClickMovement.SharedInstance.gameObject.GetComponent<PlayerInteraction>();
         handAnim = hand.GetComponent<Animator>();
         tutoText = tutoTextBox.GetComponentInChildren<TextMeshProUGUI>();
-        if (!tutorialData.firstTimePassed)
+        if (tutorialData != null)
         {
-            ActivateTuto();
+            if (!tutorialData.firstTimePassed)
+            {
+                ActivateTuto();
+            }
         }
     }
 
