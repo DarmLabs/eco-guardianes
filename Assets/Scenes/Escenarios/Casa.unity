@@ -33109,7 +33109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personName: 
-  minigameMessege: "\xBFEstas seguro que quieres ir al patio?"
+  minigameMessege: "En el patio esta el compost \xBFVamos?"
   sceneName: Patio
   isOther: 1
 --- !u!114 &1113127306
@@ -47220,6 +47220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
         type: 3}
+      propertyPath: personName
+      value: "Pap\xE1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216580620104223055, guid: 9eca78c4741246343a55b50970b24318,
+        type: 3}
       propertyPath: dialog.lines.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -55101,6 +55106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.000000011955122
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 243.36946
       objectReference: {fileID: 0}
     - target: {fileID: 2841955901183631829, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}

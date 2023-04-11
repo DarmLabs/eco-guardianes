@@ -33,7 +33,7 @@ public class DialogManager : MonoBehaviour
             characterNameText.text = "";
             dialogBoxText.text = "";
             DialogPanelSwitcher(true);
-            yield return PrintCharacterName(isOther == true ? "" : $"{characterName} dice:");
+            yield return PrintCharacterName(isOther == true ? "Dices:" : $"{characterName} dice:");
             if (dialog != null && !hasMinigames)
             {
                 currentLine = 0;

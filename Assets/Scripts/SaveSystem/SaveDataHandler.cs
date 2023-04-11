@@ -75,7 +75,7 @@ public class SaveDataHandler : MonoBehaviour
     {
         if (File.Exists($"{dataPath}saveData{saveDataId}"))
         {
-            return FileHandler.ReadFromJSON<SaveData>("saveData");
+            return FileHandler.ReadFromJSON<SaveData>($"saveData{saveDataId}");
         }
         return new SaveData(
         new CharacterData(0, 0, 0, 0, 0, "", new string[4]),
