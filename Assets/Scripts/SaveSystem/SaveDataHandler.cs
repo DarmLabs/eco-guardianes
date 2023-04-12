@@ -31,7 +31,6 @@ public class SaveDataHandler : MonoBehaviour
     }
     public MainMenuData LoadMainMenuFirstTime()
     {
-        Debug.Log(saveData);
         return saveData.mainMenuData;
     }
     #endregion
