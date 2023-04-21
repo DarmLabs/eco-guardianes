@@ -10,4 +10,8 @@ public class PalaEventScript : MonoBehaviour
     {
         forEnableObject.SetActive(true);
     }
+    public void TriggerNextStep()
+    {
+        StartCoroutine(CompostGuide.SharedInstance.StepTwo());
+    }
 }
