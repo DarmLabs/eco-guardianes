@@ -43,10 +43,13 @@ public static class ConstManager
     public const string tuto_skip = "Has saltado el tutorial, puedes acceder a este siempre que quieras desde el menú de pausa.";
     #endregion
     #region  Compost Steps
-    public const string compostSteps_firstStep = "¡Hola! Hagamos un compost, para emepzar quizas necesitamos un poco de tierra, usa la pala para juntar un poco";
-    public const string compostSteps_secondStep = "Bien, ya tenemos tierra ahora debemos decidir que tirar primero, tenemos residuos humedos en este caso cascara de papa y cebolla, y por otro lado ramas que son residuos secos. Elige uno";
-    public const string compostSteps_thirdStep = "¡Muy bien! Los residuos secos van primero, ahora pon los humedos tambien";
-    public const string compostSteps_thirdStepWrong = "Primero van los residuos secos para que el compost pueda airearse mejor, pon esos primero";
-    public const string compostSteps_forthStep = "Bien ahora necesitamos regarlo un poco, solo un poco, no queremos que parezca un pantano, solo humedezcamoslo";
+    public const string compostSteps_firstStep = "¡Hola! Hagamos un compost, para emepzar quizas necesitamos un poco de tierra, usa la pala para juntar un poco.";
+    public const string compostSteps_secondStep = "Bien, ya tenemos tierra ahora debemos decidir que tirar primero, tenemos residuos humedos en este caso cascara de papa y cebolla, y por otro lado ramas que son residuos secos. Elige uno.";
+    public const string compostSteps_thirdStep = "¡Muy bien! Los residuos secos van primero, ahora pon los humedos tambien.";
+    public const string compostSteps_thirdStepWrong = "Primero van los residuos secos para que el compost pueda airearse mejor, pon esos primero.";
+    public const string compostSteps_forthStep = "Bien ahora necesitamos regarlo un poco, solo un poco, no queremos que parezca un pantano, solo humedezcamoslo.";
+    public const string compostSteps_fifthStep = "Ahora que esta humedecido el compost esta listo, esperemos algunos días para ver como sigue.";
+    public const string compostSteps_sixthStepP1 = "El compost parece estar demasiado humedo y esta empezando a soltar feo olor, debemos remover el compost.";
+    public const string compostSteps_sixthStepP2 = "Tambien debemos agregar materiales secos para evitar que absorvan la humedad.";
     #endregion
 }
