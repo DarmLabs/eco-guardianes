@@ -14,6 +14,7 @@ public class CompostGuide : MonoBehaviour
     [SerializeField] Button regarButton;
     [SerializeField] Button waitButton;
     [SerializeField] Button removerButton;
+    [SerializeField] Button finishButton;
     [SerializeField] GameObject waitingScreen;
     void Awake()
     {
@@ -83,7 +84,34 @@ public class CompostGuide : MonoBehaviour
         removerButton.gameObject.SetActive(false);
         dryButton.transform.position = removerButton.transform.position;
         guideText.text = ConstManager.compostSteps_sixthStepP2;
+        dryButton.interactable = true;
         dryButton.gameObject.SetActive(true);
+        dryButton.onClick.AddListener(StepSeven);
+    }
+    void StepSeven()
+    {
+        dryButton.gameObject.SetActive(false);
+        waitButton.onClick.RemoveAllListeners();
+        waitButton.onClick.AddListener(StepEight);
+        waitButton.gameObject.SetActive(true);
+        guideText.text = ConstManager.compostSteps_sevenStep;
+    }
+    void StepEight()
+    {
+        StartCoroutine(StartWaitingScreen());
+        waitButton.gameObject.SetActive(false);
+        guideText.text = ConstManager.compostSteps_eightStep;
+        wetButton.onClick.RemoveAllListeners();
+        wetButton.onClick.AddListener(FinalStep);
+        wetButton.transform.position = dryButton.transform.position;
+        wetButton.gameObject.SetActive(true);
+    }
+    void FinalStep()
+    {
+        wetButton.gameObject.SetActive(false);
+        finishButton.onClick.AddListener(delegate { ScenesChanger.SharedInstance?.SceneChange(ConstManager.mapSceneName); });
+        guideText.text = ConstManager.compostSteps_finalStep;
+        finishButton.gameObject.SetActive(true);
     }
     IEnumerator StartWaitingScreen()
     {

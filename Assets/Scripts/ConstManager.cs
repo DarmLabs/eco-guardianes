@@ -50,6 +50,9 @@ public static class ConstManager
     public const string compostSteps_forthStep = "Bien ahora necesitamos regarlo un poco, solo un poco, no queremos que parezca un pantano, solo humedezcamoslo.";
     public const string compostSteps_fifthStep = "Ahora que esta humedecido el compost esta listo, esperemos algunos días para ver como sigue.";
     public const string compostSteps_sixthStepP1 = "El compost parece estar demasiado humedo y esta empezando a soltar feo olor, debemos remover el compost.";
-    public const string compostSteps_sixthStepP2 = "Tambien debemos agregar materiales secos para evitar que absorvan la humedad.";
+    public const string compostSteps_sixthStepP2 = "Tambien debemos agregar materiales secos para que absorvan la humedad.";
+    public const string compostSteps_sevenStep = "Vamos a esperar un días más para ver como va el compost.";
+    public const string compostSteps_eightStep = "El compost parece estar demasiado seco, deberiamos sumarle humedad agregando residuos de este tipo.";
+    public const string compostSteps_finalStep = "Eso es todo, recuerda que si huele a tierra humeda tu compost esta listo. Presiona terminar para ir al mapa.";
     #endregion
 }
