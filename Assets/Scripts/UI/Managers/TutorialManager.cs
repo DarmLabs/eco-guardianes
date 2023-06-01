@@ -29,7 +29,11 @@ public class TutorialManager : MonoBehaviour
     [Header("Position Items")]
     [SerializeField] RectTransform[] handPointForMovement;
     [SerializeField] InteractableObject interactableObjectUsed;
+    [SerializeField] GameObject uiCenterTrashCan;
+    [SerializeField] GameObject trashContainer;
+    [SerializeField] GameObject trashText;
     [SerializeField] GameObject centerTrashCan;
+    [SerializeField] GameObject starsCenterText;
     Coroutine inWaitCoroutine;
     void Awake()
     {
@@ -175,7 +179,7 @@ public class TutorialManager : MonoBehaviour
     IEnumerator SeventhStage()
     {
         ResetTutoItems();
-        MarkerHoleHelper(new Vector3(1025, 870, 0), new Vector2(805, 201));
+        MarkerHoleHelper(uiCenterTrashCan.transform.position, new Vector2(805, 201));
         markerHole.gameObject.SetActive(true);
 
         TrashPanelManager.SharedInstance.CloseButton.SetActive(false);
@@ -194,7 +198,7 @@ public class TutorialManager : MonoBehaviour
     IEnumerator EighthStage()
     {
         ResetTutoItems();
-        MarkerHoleHelper(new Vector3(1030, 500, 0), new Vector2(735, 555));
+        MarkerHoleHelper(trashContainer.transform.position, new Vector2(735, 555));
 
         Sequence seq = DOTween.Sequence();
         seq.Append(tutoTextBox.DOLocalMove(new Vector3(52, 380, 0), 1f));
@@ -208,12 +212,12 @@ public class TutorialManager : MonoBehaviour
     IEnumerator NinthStage()
     {
         ResetTutoItems();
-        MarkerHoleHelper(new Vector3(1014, 166, 0), new Vector2(702, 144));
+        MarkerHoleHelper(trashText.transform.position, new Vector2(702, 144));
 
         Sequence seq = DOTween.Sequence();
         seq.Append(tutoTextBox.DOLocalMoveY(-116, 1f));
         yield return seq.Play();
-        yield return PrintDialog(ConstManager.tuto_eighthStageMessege);
+        yield return PrintDialog(ConstManager.tuto_ninthStageMessege);
 
         nextStageButton.onClick.AddListener(delegate
         {
@@ -266,7 +270,7 @@ public class TutorialManager : MonoBehaviour
         yield return PrintDialog(ConstManager.tuto_eleventhStageMessege);
         StarsManager.SharedInstance.TriggerForTutorial();
 
-        MarkerHoleHelper(new Vector3(1034, 601, 0), new Vector2(661, 556));
+        MarkerHoleHelper(starsCenterText.transform.position, new Vector2(661, 556));
         yield return new WaitForSeconds(1f);
 
         nextStageButton.onClick.AddListener(delegate { inWaitCoroutine = StartCoroutine(EndStage()); StarsManager.SharedInstance.DisableForTutorial(); });

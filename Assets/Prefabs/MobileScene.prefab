@@ -5290,7 +5290,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955900446381186}
-  m_LocalRotation: {x: 0.38268346, y: 0.00000002248122, z: -0.000000009312027, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268346, y: -0.00000002248122, z: 0.000000009312027, w: 0.92387956}
   m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5584,8 +5584,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841955901183631824}
-  m_LocalRotation: {x: 0.30909064, y: 0.63597405, z: -0.3090907, w: 0.63597405}
-  m_LocalPosition: {x: 235.97948, y: 2.987102, z: 76.46}
+  m_LocalRotation: {x: 0.38268346, y: -0.00000002248122, z: 0.000000009312027, w: 0.92387956}
+  m_LocalPosition: {x: 243.36946, y: 2.987, z: 65.81246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14286,7 +14286,11 @@ MonoBehaviour:
   - {fileID: 1973654422197240288}
   - {fileID: 4772342421343976687}
   interactableObjectUsed: {fileID: 0}
+  uiCenterTrashCan: {fileID: 8030980331982826405}
+  trashContainer: {fileID: 5770810138346583816}
+  trashText: {fileID: 2240436203276369296}
   centerTrashCan: {fileID: 0}
+  starsCenterText: {fileID: 2295884426105940658}
 --- !u!1 &6315783112182597550
 GameObject:
   m_ObjectHideFlags: 0
