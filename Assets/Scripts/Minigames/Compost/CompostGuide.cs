@@ -109,7 +109,7 @@ public class CompostGuide : MonoBehaviour
     void FinalStep()
     {
         wetButton.gameObject.SetActive(false);
-        finishButton.onClick.AddListener(delegate { ScenesChanger.SharedInstance?.SceneChange(ConstManager.mapSceneName); });
+        finishButton.onClick.AddListener(delegate { ScenesChanger.SharedInstance?.SceneChange(ConstManager.mapSceneName); AchievementsManager.SharedInstance?.AchievementEarned(1); });
         guideText.text = ConstManager.compostSteps_finalStep;
         finishButton.gameObject.SetActive(true);
     }

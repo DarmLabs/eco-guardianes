@@ -32,6 +32,10 @@ public class ScenesChanger : MonoBehaviour
         if (loadSceneMode != LoadSceneMode.Additive)
         {
             SceneCache.SharedInstance.SetCurrentScene(scene);
+            if (scene == ConstManager.mainMenuSceneName)
+            {
+                SceneTrigger.SharedInstance?.EnableManager();
+            }
         }
     }
 }

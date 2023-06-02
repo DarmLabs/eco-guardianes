@@ -53,6 +53,15 @@ public class SaveDataHandler : MonoBehaviour
     {
         return saveData.tutorialData;
     }
+
+    public void SaveAchievements(AchievementsData achievementsData)
+    {
+        saveData.achievementsData = achievementsData;
+    }
+    public AchievementsData LoadAchievementsData()
+    {
+        return saveData.achievementsData;
+    }
     #endregion
 
     void SaveSaveData()
@@ -79,8 +88,9 @@ public class SaveDataHandler : MonoBehaviour
         return new SaveData(
         new CharacterData(0, 0, 0, 0, 0, "", new string[4]),
         new MainMenuData(false),
-        new StarsData(0, 0, 0),
-        new TutorialData(false)
+        new StarsData(0, 0, 0, false),
+        new TutorialData(false),
+        new AchievementsData(false, false, false, false, false)
         );
     }
     void OnApplicationQuit()

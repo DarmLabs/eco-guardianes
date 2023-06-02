@@ -4,16 +4,20 @@ using UnityEngine;
 using TMPro;
 public class MapManager : MonoBehaviour
 {
+    StarsData starsData;
+    AchievementsData achievementsData;
     int globalStars = 0;
     [SerializeField] TextMeshProUGUI currentStarsText;
     [SerializeField] GameObject confirmationPanel;
+    [SerializeField] GameObject secondaryConfirmationPanel;
     [SerializeField] GameObject starsHUD;
     [SerializeField] TextMeshProUGUI sceneText;
+    [SerializeField] GameObject newMapMark;
     string sceneForward;
     [SerializeField] RequieredStars[] sceneStars;
     void Awake()
     {
-        StarsData starsData = SaveDataHandler.SharedInstance?.LoadStarsData();
+        starsData = SaveDataHandler.SharedInstance?.LoadStarsData();
         if (starsData != null)
         {
             globalStars = starsData.starsCasaCount + starsData.starsEscuelaCount + starsData.starsPlazaCount;
@@ -32,6 +36,11 @@ public class MapManager : MonoBehaviour
                 sceneStars[i].transform.GetChild(0).gameObject.SetActive(false);
             }
         }
+
+        if (starsData.starsCasaCount == 3 && !starsData.newMapMarkPassed)
+        {
+            newMapMark.SetActive(true);
+        }
     }
     public void OnYesButton()
     {
@@ -40,21 +49,40 @@ public class MapManager : MonoBehaviour
     }
     public void OnNoButton()
     {
-        ConfirmScene(false);
+        ConfirmsPanelsSwitcher(false, confirmationPanel);
     }
     public void OnBackButton()
     {
         ScenesChanger.SharedInstance?.SceneChange(ConstManager.mainMenuSceneName);
     }
+    public void OnSceneButton(string scene)
+    {
+        ScenesChanger.SharedInstance?.SceneChange(scene);
+    }
+    public void CloseSecondaryConfirmPanel()
+    {
+        ConfirmsPanelsSwitcher(false, secondaryConfirmationPanel);
+    }
     public void OnSceneButtonClicked(string sceneForward)
     {
-        this.sceneForward = sceneForward;
-        sceneText.text = $"¿Quieres ir a la {sceneForward}?";
-        ConfirmScene(true);
+        if (sceneForward == "Casa" && starsData?.starsCasaCount == 3)
+        {
+            ConfirmsPanelsSwitcher(true, secondaryConfirmationPanel);
+            starsData.newMapMarkPassed = true;
+            newMapMark.SetActive(false);
+            SaveDataHandler.SharedInstance.SaveStarsData(starsData);
+        }
+        else
+        {
+            this.sceneForward = sceneForward;
+            sceneText.text = $"¿Quieres ir a la {sceneForward}?";
+            ConfirmsPanelsSwitcher(true, confirmationPanel);
+        }
+
     }
-    void ConfirmScene(bool state)
+    void ConfirmsPanelsSwitcher(bool state, GameObject confirmPanel)
     {
         starsHUD.SetActive(!state);
-        confirmationPanel.SetActive(state);
+        confirmPanel.SetActive(state);
     }
 }
