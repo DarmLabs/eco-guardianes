@@ -6,6 +6,7 @@ public class AchievementsManager : MonoBehaviour
 {
     public static AchievementsManager SharedInstance;
     AchievementsData achievementsData;
+    public AchievementsData AchievementsData => achievementsData;
     void Awake()
     {
         SharedInstance = this;
