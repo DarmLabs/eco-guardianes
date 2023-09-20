@@ -9,6 +9,7 @@ public class MainButtonsManager : MonoBehaviour
     [SerializeField] GameObject pauseButton;
     MainButtonsMask pauseButtonMask;
     [SerializeField] GameObject trashButton;
+    [SerializeField] GameObject logrosBtn;
     public GameObject TrashButton => trashButton;
     MainButtonsMask trashButtonMask;
     public UnityEvent enterAnyMask;
@@ -42,6 +43,10 @@ public class MainButtonsManager : MonoBehaviour
         if (trashButton != null)
         {
             trashButton.SetActive(state);
+        }
+        if (logrosBtn != null)
+        {
+            logrosBtn.SetActive(state);
         }
     }
     public void EmitEnterMask()

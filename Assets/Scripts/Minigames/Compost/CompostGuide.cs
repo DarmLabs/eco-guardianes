@@ -23,6 +23,10 @@ public class CompostGuide : MonoBehaviour
     }
     void Start()
     {
+        if (LoadingPopupManager.SharedInstance != null)
+        {
+            StartCoroutine(LoadingPopupManager.SharedInstance.WaitForSwitchPopup(2f, false));
+        }
         guideText.text = ConstManager.compostSteps_firstStep;
     }
     void SwitchTrashButtons(bool state)

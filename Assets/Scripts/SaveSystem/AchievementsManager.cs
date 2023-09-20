@@ -36,5 +36,6 @@ public class AchievementsManager : MonoBehaviour
                 break;
         }
         SaveDataHandler.SharedInstance?.SaveAchievements(achievementsData);
+        AchievementsManagerUI.SharedInstance.CheckLogros();
     }
 }

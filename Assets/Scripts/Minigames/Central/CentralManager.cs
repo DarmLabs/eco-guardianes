@@ -66,6 +66,7 @@ public class CentralManager : MonoBehaviour
         if (objectsRePooled == spawner.ResiduosInitialCount && spawner.FinishedSpawn)
         {
             CentralManagerUI.SharedInstance.ActivateEndPanel();
+            SaveDataHandler.SharedInstance.SaveCentral(true);
         }
     }
     void CheckLives()

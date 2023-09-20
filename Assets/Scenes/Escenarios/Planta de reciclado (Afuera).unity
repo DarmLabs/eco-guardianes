@@ -486,12 +486,12 @@ PrefabInstance:
     - target: {fileID: 2668569106440599608, guid: 908a68042f68339419032d3ab84c6bab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2668569106440599608, guid: 908a68042f68339419032d3ab84c6bab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.035
+      value: 0.0288
       objectReference: {fileID: 0}
     - target: {fileID: 5138100706129036532, guid: 908a68042f68339419032d3ab84c6bab,
         type: 3}
@@ -541,6 +541,32 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 108393050}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &108393052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 908a68042f68339419032d3ab84c6bab,
+    type: 3}
+  m_PrefabInstance: {fileID: 108393050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &108393053
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108393052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbeb1bdc7b2009e4bba59a5274230d0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &115615220
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +904,38 @@ MonoBehaviour:
   minigameMessege: "\xBFQuieres ir al interior de la central? All\xED podras separar
     residuos."
   sceneName: Planta de reciclado (Adentro)
+  isOther: 0
+--- !u!1 &245468894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 245468895}
+  m_Layer: 0
+  m_Name: FardoManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &245468895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245468894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.827878, y: 6.9299216, z: -101.02405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &303872369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1963,6 +2021,31 @@ PrefabInstance:
       propertyPath: idleAnimStyle
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: personName
+      value: Juana
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Compactare el plastico para ti!
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: Listo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: "Seras un eco guardian despu\xE9s de esto!"
+      objectReference: {fileID: 0}
     - target: {fileID: 266966619885808243, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_IsActive
@@ -2086,7 +2169,7 @@ PrefabInstance:
     - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_Name
-      value: Recuperador Variant (4)
+      value: Recuperador Yellow
       objectReference: {fileID: 0}
     - target: {fileID: 7538105328324570390, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -2126,6 +2209,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 539800079}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &539800081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+    type: 3}
+  m_PrefabInstance: {fileID: 539800079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &539800082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539800081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809ba9127ac6b414e857882b0650359a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementId: 2
 --- !u!1001 &547026002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2303,6 +2405,11 @@ PrefabInstance:
       propertyPath: m_FollowOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7860300107631254146, guid: fac46725a889b2b4298608a3e83c112c,
+        type: 3}
+      propertyPath: logrosBtn
+      value: 
+      objectReference: {fileID: 1810383831}
     - target: {fileID: 8160634070297112049, guid: fac46725a889b2b4298608a3e83c112c,
         type: 3}
       propertyPath: m_Name
@@ -2310,6 +2417,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fac46725a889b2b4298608a3e83c112c, type: 3}
+--- !u!224 &547026003 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2841955902364097224, guid: fac46725a889b2b4298608a3e83c112c,
+    type: 3}
+  m_PrefabInstance: {fileID: 547026002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &653621013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7949832419908943374, guid: 3caff3027b6dcfe40b99f2941cd7e5b0,
@@ -2414,6 +2527,31 @@ PrefabInstance:
     - target: {fileID: 796108166, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
       propertyPath: idleAnimStyle
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: personName
+      value: Mauro
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Ya estan todos los fardos compactados? Perfecto.
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: Lo vendemos a empresas que hacer productos a partir de estos materiales.
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: "Con esto se cierra el circulo de la econom\xEDa circular!"
       objectReference: {fileID: 0}
     - target: {fileID: 266966619885808243, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -2538,7 +2676,12 @@ PrefabInstance:
     - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_Name
-      value: Recuperador Variant (5)
+      value: Recuperador Venta
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6685827640024886855, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -2588,6 +2731,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 668446740}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &668446742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+    type: 3}
+  m_PrefabInstance: {fileID: 668446740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &668446743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668446742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809ba9127ac6b414e857882b0650359a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementId: 0
 --- !u!1001 &949519438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2764,6 +2926,31 @@ PrefabInstance:
       propertyPath: idleAnimStyle
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: personName
+      value: Kevin
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Vamos a compactar todo el vidrio para que lo puedas vender.
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: "El fardo esta ac\xE1 a mi derecha."
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: Con esto empresas podran crear productos a partir de material reciclable.
+      objectReference: {fileID: 0}
     - target: {fileID: 266966619885808243, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_IsActive
@@ -2897,7 +3084,7 @@ PrefabInstance:
     - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_Name
-      value: Recuperador Variant (1)
+      value: Recuperador White
       objectReference: {fileID: 0}
     - target: {fileID: 6652130500806870395, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -2952,6 +3139,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1095684506}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1095684508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1095684506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1095684509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095684508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809ba9127ac6b414e857882b0650359a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementId: 3
 --- !u!1 &1293192608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,6 +3293,31 @@ PrefabInstance:
       propertyPath: idleAnimStyle
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: personName
+      value: "Mar\xEDa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Compactare todo el carton y papel para ti!
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: "Aqu\xED tienes el fardo querido."
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: "Con esto est\xE1s ayudando mucho al medioambiente."
+      objectReference: {fileID: 0}
     - target: {fileID: 266966619885808243, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_IsActive
@@ -3215,7 +3446,7 @@ PrefabInstance:
     - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_Name
-      value: Recuperador Variant (3)
+      value: Recuperador Blue
       objectReference: {fileID: 0}
     - target: {fileID: 6652130500806870395, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -3255,6 +3486,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1531709957}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1531709959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1531709957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1531709960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531709959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809ba9127ac6b414e857882b0650359a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementId: 5
 --- !u!1001 &1535352302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3265,6 +3515,31 @@ PrefabInstance:
     - target: {fileID: 796108166, guid: 2b13d4159b9876740bf8454121d9190f, type: 3}
       propertyPath: idleAnimStyle
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: personName
+      value: Roberto
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Vamos a compactar el metal as\xED lo lo puedes vender."
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: "Listo, ac\xE1 esta el fardo. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 207022398006977491, guid: 2b13d4159b9876740bf8454121d9190f,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: "Vender estos materiales cierra el circulo de la econom\xEDa circular!"
       objectReference: {fileID: 0}
     - target: {fileID: 266966619885808243, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -3384,7 +3659,7 @@ PrefabInstance:
     - target: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
       propertyPath: m_Name
-      value: Recuperador Variant (2)
+      value: Recuperador Black
       objectReference: {fileID: 0}
     - target: {fileID: 6652130500806870395, guid: 2b13d4159b9876740bf8454121d9190f,
         type: 3}
@@ -3439,6 +3714,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1535352302}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1535352304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348793550242264602, guid: 2b13d4159b9876740bf8454121d9190f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1535352302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1535352305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535352304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809ba9127ac6b414e857882b0650359a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementId: 4
 --- !u!1 &1547593735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +4059,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 908a68042f68339419032d3ab84c6bab,
     type: 3}
   m_PrefabInstance: {fileID: 1741851530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1810383830
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 547026003}
+    m_Modifications:
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626144992, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286851779626145007, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievements
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6, type: 3}
+--- !u!1 &1810383831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 286851778293357261, guid: 2b96d31d99ba63c4c85c10a7f9c0c9a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1810383830}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1833882092
 GameObject:
@@ -4247,6 +4666,7 @@ MonoBehaviour:
   minigameMessege: "\xBFQuieres jugar al juego de la memoria? \xA1Fortaleceras tu
     memoria!"
   sceneName: Memory_Minigame
+  isOther: 0
 --- !u!1001 &2062848013
 PrefabInstance:
   m_ObjectHideFlags: 0

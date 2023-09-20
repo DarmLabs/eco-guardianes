@@ -515,6 +515,7 @@ GameObject:
   - component: {fileID: 286851778087450130}
   - component: {fileID: 286851778087450132}
   - component: {fileID: 286851778087450131}
+  - component: {fileID: 2051431515490812322}
   m_Layer: 5
   m_Name: LogroWhite
   m_TagString: Untagged
@@ -582,6 +583,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2051431515490812322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286851778087450129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &286851778110391113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1359,7 @@ GameObject:
   - component: {fileID: 286851779377610356}
   - component: {fileID: 286851779377610358}
   - component: {fileID: 286851779377610357}
+  - component: {fileID: 3537691217757960943}
   m_Layer: 5
   m_Name: LogroBlue
   m_TagString: Untagged
@@ -1410,6 +1427,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3537691217757960943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286851779377610355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &286851779427908838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1606,7 @@ GameObject:
   - component: {fileID: 286851779442979014}
   - component: {fileID: 286851779442978872}
   - component: {fileID: 286851779442979015}
+  - component: {fileID: 8288276275096526839}
   m_Layer: 5
   m_Name: LogroGray
   m_TagString: Untagged
@@ -1641,6 +1674,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8288276275096526839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286851779442979013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &286851779478295473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1700,7 @@ GameObject:
   - component: {fileID: 286851779478295474}
   - component: {fileID: 286851779478295476}
   - component: {fileID: 286851779478295475}
+  - component: {fileID: 23065673439065749}
   m_Layer: 5
   m_Name: LogroYellow
   m_TagString: Untagged
@@ -1719,6 +1768,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &23065673439065749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286851779478295473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &286851779626145007
 GameObject:
   m_ObjectHideFlags: 0

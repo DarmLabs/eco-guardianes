@@ -11,12 +11,14 @@ public class SaveData
     public StarsData starsData;
     public TutorialData tutorialData;
     public AchievementsData achievementsData;
-    public SaveData(CharacterData characterData, MainMenuData mainMenuData, StarsData starsData, TutorialData tutorialData, AchievementsData achievementsData)
+    public bool hasCompletedCental;
+    public SaveData(CharacterData characterData, MainMenuData mainMenuData, StarsData starsData, TutorialData tutorialData, AchievementsData achievementsData, bool hasCompletedCental)
     {
         this.characterData = characterData;
         this.mainMenuData = mainMenuData;
         this.starsData = starsData;
         this.tutorialData = tutorialData;
         this.achievementsData = achievementsData;
+        this.hasCompletedCental = hasCompletedCental;
     }
 }

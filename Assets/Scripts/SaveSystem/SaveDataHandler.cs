@@ -53,7 +53,8 @@ public class SaveDataHandler : MonoBehaviour
     {
         return saveData.tutorialData;
     }
-
+    #endregion
+    #region  Achievements
     public void SaveAchievements(AchievementsData achievementsData)
     {
         saveData.achievementsData = achievementsData;
@@ -63,6 +64,16 @@ public class SaveDataHandler : MonoBehaviour
         return saveData.achievementsData;
     }
     #endregion
+    #region Central
+    public void SaveCentral(bool state)
+    {
+        saveData.hasCompletedCental = state;
+    }
+    public bool LoadCentalData()
+    {
+        return saveData.hasCompletedCental;
+    }
+    #endregion
 
     void SaveSaveData()
     {
@@ -70,7 +81,7 @@ public class SaveDataHandler : MonoBehaviour
         {
             return;
         }
-        FileHandler.SaveToJSON<SaveData>(saveData, $"saveData{saveDataId}");
+        FileHandler.SaveToJSON(saveData, $"saveData{saveDataId}");
     }
 
     public void SetSaveDataId(int id)
@@ -90,7 +101,8 @@ public class SaveDataHandler : MonoBehaviour
         new MainMenuData(false),
         new StarsData(0, 0, 0, false),
         new TutorialData(false),
-        new AchievementsData(false, false, false, false, false)
+        new AchievementsData(false, false, false, false, false),
+        false
         );
     }
     void OnApplicationQuit()

@@ -4,9 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 public class AchievementsManagerUI : MonoBehaviour
 {
+    public static AchievementsManagerUI SharedInstance;
     [SerializeField] GameObject logrosPanel;
     [SerializeField] Image logroYellow, logroWhite, logroGray, logroBlue, logroCompost;
 
+    void Awake()
+    {
+        SharedInstance = this;
+    }
     void Start()
     {
         CheckLogros();
@@ -15,7 +20,7 @@ public class AchievementsManagerUI : MonoBehaviour
     {
         logrosPanel.SetActive(state);
     }
-    void CheckLogros()
+    public void CheckLogros()
     {
         AchievementsData data = AchievementsManager.SharedInstance?.AchievementsData;
         if (data != null)
@@ -37,5 +42,9 @@ public class AchievementsManagerUI : MonoBehaviour
                 logroImg.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             }
         }
+    }
+    public void EndGame()
+    {
+        LogrosPanelSwitcher(true);
     }
 }

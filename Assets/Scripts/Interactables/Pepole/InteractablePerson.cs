@@ -10,11 +10,20 @@ public class InteractablePerson : InteractableBase
     {
         if (dialog.Lines.Count == 0)
         {
-            this.enabled = false;
+            enabled = false;
         }
     }
     public override void TargetObject()
     {
-        StartCoroutine(DialogManager.SharedInstance.SetDialog(personName, dialog: dialog));
+        StartCoroutine(Dialogue());
+    }
+    IEnumerator Dialogue()
+    {
+        yield return DialogManager.SharedInstance.SetDialog(personName, dialog: dialog);
+        if (GetComponent<DisableUntil>() != null)
+        {
+            DisableUntil disableUntil = GetComponent<DisableUntil>();
+            disableUntil.EarnAchievement();
+        }
     }
 }
